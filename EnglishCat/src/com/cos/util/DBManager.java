@@ -8,20 +8,26 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
+
 public class DBManager {
-	public static Connection getConnection() {
+	public static Connection getConnection(){
 		Connection conn = null;
+		PreparedStatement pstmt;
+		ResultSet rs;
 		try {
 			Context initContext = new InitialContext();
 			Context envContext  = (Context)initContext.lookup("java:/comp/env");
 			DataSource ds = (DataSource)envContext.lookup("jdbc/myoracle");
 			conn = ds.getConnection();
-			System.out.println("DB 연결 성공");
+			System.out.println("DB연결 성공");
 		} catch (Exception e) {
 			e.printStackTrace();
+			System.out.println("DB연결 실패");
 		}
 		return conn;
 	}
+	
+	
 	
 	public static void close(Connection conn, PreparedStatement pstmt, ResultSet rs) {
 		try {
@@ -33,6 +39,7 @@ public class DBManager {
 		}
 	}
 
+	
 	public static void close(Connection conn, PreparedStatement pstmt) {
 		try {
 			pstmt.close();
@@ -42,3 +49,5 @@ public class DBManager {
 		}
 	}
 }
+
+
