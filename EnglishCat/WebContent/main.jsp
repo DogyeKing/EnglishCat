@@ -1,12 +1,16 @@
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">    
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <meta name="author" content="Bright">
 
-    <title>Bright – Bootstrap HTML5 Education Template</title>
+    <title>Bright â Bootstrap HTML5 Education Template</title>
     <!-- Bootstrap CSS -->    
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Main Style -->
@@ -36,169 +40,7 @@
   </head>
   <body>
     
-    <!-- Header area wrapper Starts -->
-    <header id="header-wrap">
-      <!-- Roof area Starts -->
-      <div id="roof" class="hidden-xs">
-          <div class="container">
-              <!-- Wellcome Starts -->
-              <div class="pull-left">
-                <i class="fa fa-map-o" aria-hidden="true"></i> Sydney NSW 2052, Australia
-              </div>
-              <!-- Wellcome End -->
-
-              <!-- Quick Contacts Starts -->
-              <div class="quick-contacts pull-right">
-                  <span><i class="fa fa-phone"></i> +61 2 9385 1000</span>
-                  <span><i class="fa fa-envelope"></i><a href="#">hello@brightuniversity.edu</a></span>
-                  <span><a href="login.html"><i class="fa fa-user"></i> Login</a> / <a href="login.html">Register</a></span>
-              </div>
-              <!-- Quick Contacts End -->
-          </div>
-      </div>
-      <!-- Roof area End -->
-
-      <!-- Navbar Start -->
-      <nav class="navbar navbar-default main-navigation" role="navigation" data-spy="affix" data-offset-top="50">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt=""></a>
-            </div>
-            <!-- Brand End -->
-
-            <!-- Search Icon -->
-            <div class="header-search pull-right">
-                <a class="open-search">
-                    <i class="fa fa-search"></i>
-                </a>
-            </div>  
-            <!-- Collapse Navbar -->
-            <div class="collapse navbar-collapse" id="navbar">
-              <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown dropdown-toggle">
-                  <a class="active" href="index.html" data-toggle="dropdown">Home <i class="fa fa-angle-down"></i></a>
-                  <ul class="dropdown-menu">
-                    <li><a class="active" href="index.html">Home Page 1</a></li>    
-                    <li><a href="index-1.html">Home Page 2</a></li>     
-                  </ul>                        
-                </li>
-                <li class="dropdown dropdown-toggle">
-                  <a href="#" data-toggle="dropdown">Courses <i class="fa fa-angle-down"></i></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="courses-list.html">Courses List</a></li>    
-                    <li><a href="courses-grid.html">Courses Grid</a></li>  
-                    <li><a href="courses-single.html">Single Course</a></li>   
-                  </ul>                        
-                </li>
-                <li class="dropdown dropdown-toggle">
-                  <a href="#" data-toggle="dropdown">Pages <i class="fa fa-angle-down"></i></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="about.html">About Page</a></li>                     
-                    <li><a href="gallery.html">Image Gallery</a></li>
-                    <li><a href="faq.html">FAQ</a></li>    
-                    <li><a href="login.html">Login Page</a></li> 
-                    <li><a href="single-teacher.html">Single Teacher</a></li> 
-                    <li><a href="registration.html">Registration Form</a></li> 
-                    <li><a href="contact.html">Contacts</a></li> 
-                    <li><a href="404.html">404</a></li> 
-                  </ul>                        
-                </li>
-                <li class="dropdown dropdown-toggle">
-                  <a href="#" data-toggle="dropdown">Events <i class="fa fa-angle-down"></i></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="event-grid.html">Events Grid</a></li>                     
-                    <li><a href="event.html">Single Event</a></li>
-                  </ul>                        
-                </li> 
-                <li class="dropdown dropdown-toggle">
-                  <a href="#" data-toggle="dropdown">Blog <i class="fa fa-angle-down"></i></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="blog.html">Blog - Right Sidebar</a></li>                     
-                    <li><a href="blog-left-sidebar.html">Blog - Left Sidebar</a></li>
-                    <li><a href="blog-full-width.html">Blog - Full Width</a></li>   
-                    <li><a href="single-post.html">Blog Single Post</a></li>   
-                  </ul>                        
-                </li>              
-                <li><a href="contact.html">Contact</a></li>
-              </ul>
-            </div>  
-             <!-- Form for navbar search area -->
-            <form class="full-search">
-              <div class="container">
-                <div class="row">
-                  <input class="form-control" type="text" placeholder="Search">
-                  <a class="close-search">
-                  <span class="fa fa-times">
-                  </span>
-                  </a>
-                </div>
-              </div>
-            </form>
-            <!-- Search form ends -->   
-
-            <!-- Mobile Menu Start -->
-            <ul class="wpb-mobile-menu">
-              <li>
-                <a class="active" href="index.html">Home</a>
-                <ul>
-                  <li><a class="active" href="index.html">Home Page 1</a></li>    
-                  <li><a href="index-1.html">Home Page 2</a></li>     
-                </ul>                        
-              </li>
-              <li>
-                <a href="#">Courses</a>
-                <ul>
-                  <li><a href="courses-list.html">Courses List</a></li>    
-                  <li><a href="courses-grid.html">Courses Grid</a></li>  
-                  <li><a href="courses-single.html">Single Course</a></li>   
-                </ul>                        
-              </li>
-              <li>
-                <a href="#">Pages</a>
-                <ul>
-                  <li><a href="about.html">About Page</a></li>                     
-                  <li><a href="gallery.html">Image Gallery</a></li>
-                  <li><a href="faq.html">FAQ</a></li>    
-                  <li><a href="login.html">Login Page</a></li> 
-                  <li><a href="single-teacher.html">Single Teacher</a></li> 
-                  <li><a href="registration.html">Registration Form</a></li> 
-                  <li><a href="contact.html">Contacts</a></li> 
-                  <li><a href="404.html">404</a></li> 
-                </ul>                        
-              </li>
-              <li>
-                <a href="#">Events</a>
-                <ul>
-                  <li><a href="event-grid.html">Events Grid</a></li>                     
-                  <li><a href="event.html">Single Event</a></li>
-                </ul>                        
-              </li> 
-              <li>
-                <a href="#">Blog</a>
-                <ul>
-                  <li><a href="blog.html">Blog - Right Sidebar</a></li>                     
-                  <li><a href="blog-left-sidebar.html">Blog - Left Sidebar</a></li>
-                  <li><a href="blog-full-width.html">Blog - Full Width</a></li>   
-                  <li><a href="single-post.html">Blog Single Post</a></li>   
-                </ul>                        
-              </li>              
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <!-- Mobile Menu End -->
-
-          </div>
-      </nav>
-      <!-- Navbar End -->
-
-    </header>
-    <!-- Header area wrapper End -->
+  <jsp:include page="/include/header.jsp"/>
 
     <!-- Main Carousel Section Start -->
     <div id="carousel-area">
@@ -387,7 +229,7 @@
                             </div>
                             <div class="course-content">
                                 <h3><a href="courses-single.html">Computer Science</a></h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis vitae temporibus enim sed. Optio, reprehenderit, ex.Repellendus,…</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis vitae temporibus enim sed. Optio, reprehenderit, ex.Repellendus,â¦</p>
                                 <a href="#" class="btn btn-common btn-sm">Apply Now</a>
                             </div>
                         </div>
@@ -409,7 +251,7 @@
                             </div>
                             <div class="course-content">
                                 <h3><a href="courses-single.html">Micro Biology</a></h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis vitae temporibus enim sed. Optio, reprehenderit, ex.Repellendus,…</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis vitae temporibus enim sed. Optio, reprehenderit, ex.Repellendus,â¦</p>
                                 <a href="#" class="btn btn-common btn-sm">Apply Now</a>
                             </div>
                         </div>
@@ -431,7 +273,7 @@
                             </div>
                             <div class="course-content">
                                 <h3><a href="courses-single.html">Gobal Economic</a></h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis vitae temporibus enim sed. Optio, reprehenderit, ex.Repellendus,…</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis vitae temporibus enim sed. Optio, reprehenderit, ex.Repellendus,â¦</p>
                                 <a href="#" class="btn btn-common btn-sm">Apply Now</a>
                             </div>
                         </div>
@@ -453,7 +295,7 @@
                             </div>
                             <div class="course-content">
                                 <h3><a href="courses-single.html">Crash Course on Android/iOS</a></h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis vitae temporibus enim sed. Optio, reprehenderit, ex.Repellendus,…</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis vitae temporibus enim sed. Optio, reprehenderit, ex.Repellendus,â¦</p>
                                 <a href="#" class="btn btn-common btn-sm">Apply Now</a>
                             </div>
                         </div>
@@ -475,7 +317,7 @@
                             </div>
                             <div class="course-content">
                                 <h3><a href="courses-single.html">Diving into Big Data</a></h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis vitae temporibus enim sed. Optio, reprehenderit, ex.Repellendus,…</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis vitae temporibus enim sed. Optio, reprehenderit, ex.Repellendus,â¦</p>
                                 <a href="#" class="btn btn-common btn-sm">Apply Now</a>
                             </div>
                         </div>
@@ -497,7 +339,7 @@
                             </div>
                             <div class="course-content">
                                 <h3><a href="courses-single.html">Getting Started with Java</a></h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis vitae temporibus enim sed. Optio, reprehenderit, ex.Repellendus,…</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis vitae temporibus enim sed. Optio, reprehenderit, ex.Repellendus,â¦</p>
                                 <a href="#" class="btn btn-common btn-sm">Apply Now</a>
                             </div>
                         </div>
@@ -943,103 +785,9 @@
     <!-- NewsLetter Section End -->
 
     <!-- Footer Section -->
-    <footer>
-      <!-- Container Starts -->
-      <div class="container">
-        <!-- Row Starts -->
-        <div class="row">
-          <!-- Footer Widget Starts -->
-          <div class="footer-widget col-md-3 col-sm-6 col-xs-12">
-            <h3 class="small-title">
-              Contact Info
-            </h3>
-            <p>
-              A powerhouse of cutting-edge education, research & teaching in The World
-            </p>  
-            <ul class="address">
-                <li><i class="fa fa-home"></i> Sydney NSW 2052, Australia</li>
-                <li><i class="fa fa-phone"></i> +61 2 9385 1000</li>
-                <li><i class="fa fa-envelope"></i> hello@brightuniversity.edu</li>
-            </ul>        
-          </div><!-- Footer Widget Ends -->
-          
-          <!-- Footer Widget Starts -->
-          <div class="footer-widget col-md-3 col-sm-6 col-xs-12">
-            <h3 class="small-title">
-              Latest News
-            </h3>
-            <ul class="recent-post">
-              <li class="post">
-                <a href="assets/img/flicker/img1.jpg" class="lightbox">
-                <img alt="" src="assets/img/flicker/img1.jpg">
-                </a>
-                <p class="text">Fightin'the system like true modern <br><span>Nov 05,2016</span></p>
-              </li>
-              <li class="post">
-                <a href="assets/img/flicker/img1.jpg" class="lightbox">
-                <img alt="" src="assets/img/flicker/img2.jpg">
-                </a>
-                <p class="text">Will we're movin' on up to the east side <br><span>Nov 09,2016</span></p>
-              </li>
-            </ul>
-          </div>
-          <!-- Footer Widget Ends -->        
 
-          <!-- Footer Widget Starts -->
-          <div class="footer-widget col-md-3 col-sm-6 col-xs-12">
-            <h3 class="small-title">
-              Our Courses
-            </h3>
-            <ul class="list">
-              <li><a href="#">Web design</a></li>
-              <li><a href="#">Android Developer</a></li>
-              <li><a href="#">PHP Tranning</a></li>
-              <li><a href="#">IOS Developer</a></li>
-              <li><a href="#">App Design Package</a></li>
-            </ul>
-          </div>
-          <!-- Footer Widget Ends -->
+ <jsp:include page="/include/footer.jsp"/>
 
-          <!-- Footer Widget Starts -->
-          <div class="footer-widget col-md-3 col-sm-6 col-xs-12">
-            <h3 class="small-title">
-              College Gallery
-            </h3>
-            <div class="plain-flicker-gallery">
-              <a href="#" title="Pan Masala"><img src="assets/img/flicker/img1.jpg" alt=""></a>
-              <a href="#" title="Sports Template for Joomla"><img src="assets/img/flicker/img2.jpg" alt=""></a>
-              <a href="" title="Apple Keyboard"><img src="assets/img/flicker/img3.jpg" alt=""></a>
-              <a href="" title="Hard Working"><img src="assets/img/flicker/img4.jpg" alt=""></a>
-              <a href="" title="Smile"><img src="assets/img/flicker/img5.jpg" alt=""></a>
-              <a href="" title="Puzzle"><img src="assets/img/flicker/img6.jpg" alt=""></a>
-            </div>
-          </div><!-- Footer Widget Ends -->
-        </div><!-- Row Ends -->
-      </div><!-- Container Ends -->
-      
-      <!-- Copyright -->
-      <div id="copyright">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6  col-sm-6">
-              <p class="copyright-text">
-                © All rights reserved 2017 - Design &amp; Developed by <a href="http://graygrids.com">GrayGrids</a>
-              </p>
-            </div>
-            <div class="col-md-6  col-sm-6">                
-              <div class="bottom-social-icons pull-right">  
-                <a class="facebook" target="_blank" href="https://web.facebook.com/GrayGrids"><i class="fa fa-facebook"></i></a> 
-                <a class="twitter" target="_blank" href="https://twitter.com/GrayGrids"><i class="fa fa-twitter"></i></a>
-                <a class="google-plus" target="_blank" href="https://plus.google.com"><i class="fa fa-google-plus"></i></a>
-                <a class="linkedin" target="_blank" href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-              </div>            
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Copyright  End-->
-      
-    </footer>
     <!-- Footer Section End-->
 
     <!-- Go To Top Link -->
