@@ -19,10 +19,10 @@ public class DBManager {
 			Context envContext  = (Context)initContext.lookup("java:/comp/env");
 			DataSource ds = (DataSource)envContext.lookup("jdbc/myoracle");
 			conn = ds.getConnection();
-			System.out.println("DB¿¬°á ¼º°ø");
+			System.out.println("DB ì—°ê²°ì„±ê³µ");
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("DB¿¬°á ½ÇÆÐ");
+			System.out.println("DB ì‹¤íŒ¨");
 		}
 		return conn;
 	}
