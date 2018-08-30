@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -10,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <meta name="author" content="Bright">
 
-    <title>Bright â Bootstrap HTML5 Education Template</title>
+    <title>Bright a Bootstrap HTML5 Education Template</title>
     <!-- Bootstrap CSS -->    
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Main Style -->
@@ -229,7 +228,7 @@
                             </div>
                             <div class="course-content">
                                 <h3><a href="courses-single.html">Computer Science</a></h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis vitae temporibus enim sed. Optio, reprehenderit, ex.Repellendus,â¦</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis vitae temporibus enim sed. Optio, reprehenderit, ex.Repellendus,a¦</p>
                                 <a href="#" class="btn btn-common btn-sm">Apply Now</a>
                             </div>
                         </div>
@@ -251,7 +250,7 @@
                             </div>
                             <div class="course-content">
                                 <h3><a href="courses-single.html">Micro Biology</a></h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis vitae temporibus enim sed. Optio, reprehenderit, ex.Repellendus,â¦</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis vitae temporibus enim sed. Optio, reprehenderit, ex.Repellendus,a¦</p>
                                 <a href="#" class="btn btn-common btn-sm">Apply Now</a>
                             </div>
                         </div>
@@ -273,7 +272,7 @@
                             </div>
                             <div class="course-content">
                                 <h3><a href="courses-single.html">Gobal Economic</a></h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis vitae temporibus enim sed. Optio, reprehenderit, ex.Repellendus,â¦</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis vitae temporibus enim sed. Optio, reprehenderit, ex.Repellendus,a¦</p>
                                 <a href="#" class="btn btn-common btn-sm">Apply Now</a>
                             </div>
                         </div>
@@ -295,7 +294,7 @@
                             </div>
                             <div class="course-content">
                                 <h3><a href="courses-single.html">Crash Course on Android/iOS</a></h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis vitae temporibus enim sed. Optio, reprehenderit, ex.Repellendus,â¦</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis vitae temporibus enim sed. Optio, reprehenderit, ex.Repellendus,a¦</p>
                                 <a href="#" class="btn btn-common btn-sm">Apply Now</a>
                             </div>
                         </div>
@@ -317,7 +316,7 @@
                             </div>
                             <div class="course-content">
                                 <h3><a href="courses-single.html">Diving into Big Data</a></h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis vitae temporibus enim sed. Optio, reprehenderit, ex.Repellendus,â¦</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis vitae temporibus enim sed. Optio, reprehenderit, ex.Repellendus,a¦</p>
                                 <a href="#" class="btn btn-common btn-sm">Apply Now</a>
                             </div>
                         </div>
@@ -339,7 +338,7 @@
                             </div>
                             <div class="course-content">
                                 <h3><a href="courses-single.html">Getting Started with Java</a></h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis vitae temporibus enim sed. Optio, reprehenderit, ex.Repellendus,â¦</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis vitae temporibus enim sed. Optio, reprehenderit, ex.Repellendus,a¦</p>
                                 <a href="#" class="btn btn-common btn-sm">Apply Now</a>
                             </div>
                         </div>

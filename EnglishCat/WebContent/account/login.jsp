@@ -1,15 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">    
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <meta name="author" content="Bright">
-    <title>Bright a Bootstrap HTML5 Education Template</title>
+    <title>Bright – Bootstrap HTML5 Education Template</title>
     <!-- Bootstrap CSS -->    
     <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/bootstrap.min.css">
     <!-- Main Style -->
@@ -34,26 +30,6 @@
     <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/responsive.css">
     <!-- Color CSS Styles  -->
     <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/assets/css/colors/sky.css" media="screen" />
-    
-    <script>
-    function goPopup(){
-	// 주소검색을 수행할 팝업 페이지를 호출합니다.
-	// 호출된 페이지(jusopopup.jsp)에서 실제 주소검색URL(http://www.juso.go.kr/addrlink/addrLinkUrl.do)를 호출하게 됩니다.
-	var pop = window.open("/EnglishCat/popup/jusoPopup.jsp","pop","width=570,height=420, scrollbars=yes, resizable=yes"); 
-	
-	// 모바일 웹인 경우, 호출된 페이지(jusopopup.jsp)에서 실제 주소검색URL(http://www.juso.go.kr/addrlink/addrMobileLinkUrl.do)를 호출하게 됩니다.
-    //var pop = window.open("/popup/jusoPopup.jsp","pop","scrollbars=yes, resizable=yes"); 
-	}
-
-
-	function jusoCallBack(roadFullAddr){
-		// 팝업페이지에서 주소입력한 정보를 받아서, 현 페이지에 정보를 등록합니다.
-		document.form.roadFullAddr.value = roadFullAddr;
-		
-		
-	}
-
-	</script>
 
   </head>
   <body>
@@ -91,7 +67,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="<%=request.getContextPath()%>/index.jsp"><img src="<%=request.getContextPath()%>/assets/img/logo.png" alt=""></a>
+              <a class="navbar-brand" href="<%=request.getContextPath()%>/index.html"><img src="<%=request.getContextPath()%>/assets/img/logo.png" alt=""></a>
             </div>
             <!-- Brand End -->
 
@@ -105,50 +81,50 @@
             <div class="collapse navbar-collapse" id="navbar">
               <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown dropdown-toggle">
-                  <a href="index.jsp" data-toggle="dropdown">Home <i class="fa fa-angle-down"></i></a>
+                  <a href="<%=request.getContextPath()%>/index.html" data-toggle="dropdown">Home <i class="fa fa-angle-down"></i></a>
                   <ul class="dropdown-menu">
-                    <li><a href="index.jsp">Home Page 1</a></li>    
-                    <li><a href="index-1.jsp">Home Page 2</a></li>     
+                    <li><a href="<%=request.getContextPath()%>/index.html">Home Page 1</a></li>    
+                    <li><a href="<%=request.getContextPath()%>/index-1.html">Home Page 2</a></li>     
                   </ul>                        
                 </li>
                 <li class="dropdown dropdown-toggle">
                   <a href="#" data-toggle="dropdown">Courses <i class="fa fa-angle-down"></i></a>
                   <ul class="dropdown-menu">
-                    <li><a href="courses-list.jsp">Courses List</a></li>    
-                    <li><a href="courses-grid.jsp">Courses Grid</a></li>  
-                    <li><a href="courses-single.jsp">Single Course</a></li>   
+                    <li><a href="<%=request.getContextPath()%>/courses-list.html">Courses List</a></li>    
+                    <li><a href="<%=request.getContextPath()%>/courses-grid.html">Courses Grid</a></li>  
+                    <li><a href="<%=request.getContextPath()%>/courses-single.html">Single Course</a></li>   
                   </ul>                        
                 </li>
                 <li class="dropdown dropdown-toggle">
                   <a class="active" href="#" data-toggle="dropdown">Pages <i class="fa fa-angle-down"></i></a>
                   <ul class="dropdown-menu">
-                    <li><a href="about.jsp">About Page</a></li>                     
-                    <li><a href="gallery.jsp">Image Gallery</a></li>
-                    <li><a href="faq.jsp">FAQ</a></li>    
-                    <li><a href="login.jsp">Login Page</a></li> 
-                    <li><a href="single-teacher.jsp">Single Teacher</a></li> 
-                    <li><a class="active" href="registration.jsp">Registration Form</a></li> 
-                    <li><a href="contact.jsp">Contacts</a></li> 
-                    <li><a href="404.jsp">404</a></li> 
+                    <li><a href="<%=request.getContextPath()%>/about.html">About Page</a></li>                     
+                    <li><a href="<%=request.getContextPath()%>/gallery.html">Image Gallery</a></li>
+                    <li><a href="<%=request.getContextPath()%>/faq.html">FAQ</a></li>    
+                    <li><a class="active" href="<%=request.getContextPath()%>/login.html">Login Page</a></li> 
+                    <li><a href="<%=request.getContextPath()%>/single-teacher.html">Single Teacher</a></li> 
+                    <li><a href="<%=request.getContextPath()%>/registration.html">Registration Form</a></li> 
+                    <li><a href="<%=request.getContextPath()%>/contact.html">Contacts</a></li> 
+                    <li><a href="<%=request.getContextPath()%>/404.html">404</a></li> 
                   </ul>                        
                 </li>
                 <li class="dropdown dropdown-toggle">
                   <a href="#" data-toggle="dropdown">Events <i class="fa fa-angle-down"></i></a>
                   <ul class="dropdown-menu">
-                    <li><a href="event-grid.jsp">Events Grid</a></li>                     
-                    <li><a href="event.jsp">Single Event</a></li>
+                    <li><a href="<%=request.getContextPath()%>/event-grid.html">Events Grid</a></li>                     
+                    <li><a href="<%=request.getContextPath()%>/event.html">Single Event</a></li>
                   </ul>                        
                 </li> 
                 <li class="dropdown dropdown-toggle">
                   <a href="#" data-toggle="dropdown">Blog <i class="fa fa-angle-down"></i></a>
                   <ul class="dropdown-menu">
-                    <li><a href="blog.jsp">Blog - Right Sidebar</a></li>                     
-                    <li><a href="blog-left-sidebar.jsp">Blog - Left Sidebar</a></li>
-                    <li><a href="blog-full-width.jsp">Blog - Full Width</a></li>   
-                    <li><a href="single-post.jsp">Blog Single Post</a></li>   
+                    <li><a href="<%=request.getContextPath()%>/blog.html">Blog - Right Sidebar</a></li>                     
+                    <li><a href="<%=request.getContextPath()%>/blog-left-sidebar.html">Blog - Left Sidebar</a></li>
+                    <li><a href="<%=request.getContextPath()%>/blog-full-width.html">Blog - Full Width</a></li>   
+                    <li><a href="<%=request.getContextPath()%>/single-post.html">Blog Single Post</a></li>   
                   </ul>                        
                 </li>              
-                <li><a href="contact.jsp">Contact</a></li>
+                <li><a href="<%=request.getContextPath()%>/contact.html">Contact</a></li>
               </ul>
             </div>  
              <!-- Form for navbar search area -->
@@ -168,50 +144,50 @@
             <!-- Mobile Menu Start -->
             <ul class="wpb-mobile-menu">
               <li>
-                <a href="index.jsp">Home</a>
+                <a href="index.html">Home</a>
                 <ul>
-                  <li><a href="index.jsp">Home Page 1</a></li>    
-                  <li><a href="index-1.jsp">Home Page 2</a></li>     
+                  <li><a href="<%=request.getContextPath()%>/index.html">Home Page 1</a></li>    
+                  <li><a href="<%=request.getContextPath()%>/index-1.html">Home Page 2</a></li>     
                 </ul>                        
               </li>
               <li>
                 <a href="#">Courses</a>
                 <ul>
-                  <li><a href="courses-list.jsp">Courses List</a></li>    
-                  <li><a href="courses-grid.jsp">Courses Grid</a></li>  
-                  <li><a href="courses-single.jsp">Single Course</a></li>   
+                  <li><a href="<%=request.getContextPath()%>/courses-list.html">Courses List</a></li>    
+                  <li><a href="<%=request.getContextPath()%>/courses-grid.html">Courses Grid</a></li>  
+                  <li><a href="<%=request.getContextPath()%>/courses-single.html">Single Course</a></li>   
                 </ul>                        
               </li>
               <li>
                 <a class="active" href="#">Pages</a>
                 <ul>
-                  <li><a href="about.jsp">About Page</a></li>                     
-                  <li><a href="gallery.jsp">Image Gallery</a></li>
-                  <li><a href="faq.jsp">FAQ</a></li>    
-                  <li><a href="login.jsp">Login Page</a></li> 
-                  <li><a href="single-teacher.jsp">Single Teacher</a></li> 
-                  <li><a class="active" href="registration.jsp">Registration Form</a></li> 
-                  <li><a href="contact.jsp">Contacts</a></li> 
-                  <li><a href="404.jsp">404</a></li> 
+                  <li><a href="<%=request.getContextPath()%>/about.html">About Page</a></li>                     
+                  <li><a href="<%=request.getContextPath()%>/gallery.html">Image Gallery</a></li>
+                  <li><a href="<%=request.getContextPath()%>/faq.html">FAQ</a></li>    
+                  <li><a class="active" href="<%=request.getContextPath()%>/login.html">Login Page</a></li> 
+                  <li><a href="<%=request.getContextPath()%>/single-teacher.html">Single Teacher</a></li> 
+                  <li><a href="<%=request.getContextPath()%>/registration.html">Registration Form</a></li> 
+                  <li><a href="<%=request.getContextPath()%>/contact.html">Contacts</a></li> 
+                  <li><a href="<%=request.getContextPath()%>/404.html">404</a></li> 
                 </ul>                        
               </li>
               <li>
                 <a href="#">Events</a>
                 <ul>
-                  <li><a href="event-grid.jsp">Events Grid</a></li>                     
-                  <li><a href="event.jsp">Single Event</a></li>
+                  <li><a href="<%=request.getContextPath()%>/event-grid.html">Events Grid</a></li>                     
+                  <li><a href="<%=request.getContextPath()%>/event.html">Single Event</a></li>
                 </ul>                        
               </li> 
               <li>
                 <a href="#">Blog</a>
                 <ul>
-                  <li><a href="blog.jsp">Blog - Right Sidebar</a></li>                     
-                  <li><a href="blog-left-sidebar.jsp">Blog - Left Sidebar</a></li>
-                  <li><a href="blog-full-width.jsp">Blog - Full Width</a></li>   
-                  <li><a href="single-post.jsp">Blog Single Post</a></li>   
+                  <li><a href="<%=request.getContextPath()%>/blog.html">Blog - Right Sidebar</a></li>                     
+                  <li><a href="<%=request.getContextPath()%>/blog-left-sidebar.html">Blog - Left Sidebar</a></li>
+                  <li><a href="<%=request.getContextPath()%>/blog-full-width.html">Blog - Full Width</a></li>   
+                  <li><a href="<%=request.getContextPath()%>/single-post.html">Blog Single Post</a></li>   
                 </ul>                        
               </li>              
-              <li><a href="contact.jsp">Contact</a></li>
+              <li><a href="<%=request.getContextPath()%>/contact.html">Contact</a></li>
             </ul>
             <!-- Mobile Menu End -->
 
@@ -228,10 +204,10 @@
         <div class="row">         
           <div class="col-md-12">
             <div class="breadcrumb-wrapper">
-              <h2 class="page-title">Form Fields</h2>
-              <a href="/index.jsp">Home</a>
+              <h2 class="page-title">My Account</h2>
+              <a href="index.html">Home</a>
               <span>/</span>
-              <span class="current">Form Fields</span>
+              <span class="current">My Account</span>
             </div>
           </div>
         </div>
@@ -243,66 +219,42 @@
     <section id="content">
       <div class="container">
         <div class="row">
+          <div class="col-md-6">
+            <h2 class="medium-title">Login</h2>   
+            <!-- Form -->
+            <form method="post" class="login">                
+              <div class="form-group">
+                <label for="username">User ID <span class="required">*</span></label>
+                <input class="form-control" name="id" id="username" maxlength="20" type="text" required autofocus>
+              </div>
+              <div class="form-group">
+                <label for="password">Password <span class="required">*</span></label>
+                <input class="form-control" name="password" id="password" type="password" required>
+              </div>              
+              <div class="form-group">
+                <label for="rememberme" class="inline">
+                <input name="rememberme" id="rememberme" type="checkbox" value="on">Remember me</label>
+                <a href="#">Lost your password?</a>
+              </div>
+              <button type="submit" id="submit" class="btn btn-common">Login</button>    
+            </form>
+          </div>
           <!-- <div class="col-md-6">
-            <h2 class="medium-title">Login Form</h2>   
-            Form
-            <form class="login-form" role="form" method="post">
+            <h2 class="medium-title">Register</h2>   
+            Register Form
+            <form action="" id="register-form" class="register-form" role="form" method="post">
               <div class="form-group">
-                <input type="text" class="form-control" name="name" placeholder="Name (required)">   
-              </div> 
+                <label for="username">Email address<span class="required">*</span></label>
+                <input class="form-control" name="username" id="username" type="text">
+              </div>
               <div class="form-group">
-                <input type="email" class="form-control" name="EMAIL" placeholder="Email">  
-              </div>       
-              <button type="submit" id="submit" class="btn btn-common">Login Account</button>                
+                <label for="password">Password <span class="required">*</span></label>
+                <input class="form-control" name="password" id="password" type="password">
+              </div>         
+              <button type="submit" id="submit" class="btn btn-common">Register</button>  
             </form>
           </div> -->
-          <div class="col-md-6">
-            <h2 class="medium-title">Register Form</h2>   
-            <!-- Register Form -->
-            <form class="register-form" role="form" method="post">
-                <div class="form-group">
-                	<label class="form-control-label">ID</label>                 
-     				<input class="form-control" type="text" name="id" maxlength="20" required autofocus>
-                </div>
-                
-                <div class="form-group">  
-                	<label class="form-control-label">Password</label>               
-     				<input class="form-control" type="password" name="password" maxlength="20" required>
-                </div>
-                
-                <div class="form-group">   
-                	<label class="form-control-label">Password Check</label>              
-     				<input class="form-control" type="password" name="confirm" maxlength="20" required>
-                </div>
-                
-                <div class="form-group">
-                <label class="form-control-label">Name</label>
-                  <input class="form-control" type="text" name="username" maxlength="20">
-                </div>    
-                
-                <div class="form-group">
-                <label class="form-control-label">Phone</label>
-                  <input class="form-control" type="tel" name="phone" maxlength="20">
-                </div>
-                
-                <div class="form-group">
-                 <label class="form-control-label">Email</label>	
-                  <input class="form-control" type="Email" name="Email" maxlength="20">
-                </div> 
-                
-                <div class="form-group">
-     			<label class="form-control-label">Address</label>
-     			<button class="btn btn-outline-info float-right" type="button" onclick="goPopup()">Search Korean Address</button>
-     			
-     			<div id="list"></div>
-				<div id="callBackDiv">			
-     			<input class="form-control form-control-lg" type="text" name="roadFullAddr" id="roadFullAddr" maxlength="20" required readonly>
-     			</div>
-     			</div>                 
-                              
-                <button class="btn btn-common" type="submit" id="submit">Create Account</button>
-            </form>
-     		</div>
+        </div>
       </div>
     </section>
     <!-- End Content Section  -->
@@ -350,14 +302,14 @@
             </h3>
             <ul class="recent-post">
               <li class="post">
-                <a href="assets/img/flicker/img1.jpg" class="lightbox">
-                <img alt="" src="assets/img/flicker/img1.jpg">
+                <a href="<%=request.getContextPath()%>/assets/img/flicker/img1.jpg" class="lightbox">
+                <img alt="" src="<%=request.getContextPath()%>/assets/img/flicker/img1.jpg">
                 </a>
                 <p class="text">Fightin'the system like true modern <br><span>Nov 05,2016</span></p>
               </li>
               <li class="post">
-                <a href="assets/img/flicker/img1.jpg" class="lightbox">
-                <img alt="" src="assets/img/flicker/img2.jpg">
+                <a href="<%=request.getContextPath()%>/assets/img/flicker/img1.jpg" class="lightbox">
+                <img alt="" src="<%=request.getContextPath()%>/assets/img/flicker/img2.jpg">
                 </a>
                 <p class="text">Will we're movin' on up to the east side <br><span>Nov 09,2016</span></p>
               </li>
@@ -386,12 +338,12 @@
               College Gallery
             </h3>
             <div class="plain-flicker-gallery">
-              <a href="#" title="Pan Masala"><img src="assets/img/flicker/img1.jpg" alt=""></a>
-              <a href="#" title="Sports Template for Joomla"><img src="assets/img/flicker/img2.jpg" alt=""></a>
-              <a href="" title="Apple Keyboard"><img src="assets/img/flicker/img3.jpg" alt=""></a>
-              <a href="" title="Hard Working"><img src="assets/img/flicker/img4.jpg" alt=""></a>
-              <a href="" title="Smile"><img src="assets/img/flicker/img5.jpg" alt=""></a>
-              <a href="" title="Puzzle"><img src="assets/img/flicker/img6.jpg" alt=""></a>
+              <a href="#" title="Pan Masala"><img src="<%=request.getContextPath()%>/assets/img/flicker/img1.jpg" alt=""></a>
+              <a href="#" title="Sports Template for Joomla"><img src="<%=request.getContextPath()%>/assets/img/flicker/img2.jpg" alt=""></a>
+              <a href="" title="Apple Keyboard"><img src="<%=request.getContextPath()%>/assets/img/flicker/img3.jpg" alt=""></a>
+              <a href="" title="Hard Working"><img src="<%=request.getContextPath()%>/assets/img/flicker/img4.jpg" alt=""></a>
+              <a href="" title="Smile"><img src="<%=request.getContextPath()%>/assets/img/flicker/img5.jpg" alt=""></a>
+              <a href="" title="Puzzle"><img src="<%=request.getContextPath()%>/assets/img/flicker/img6.jpg" alt=""></a>
             </div>
           </div><!-- Footer Widget Ends -->
         </div><!-- Row Ends -->
@@ -403,7 +355,7 @@
           <div class="row">
             <div class="col-md-6  col-sm-6">
               <p class="copyright-text">
-                Â© All rights reserved 2017 - Design &amp; Developed by <a href="http://graygrids.com">GrayGrids</a>
+                © All rights reserved 2017 - Design &amp; Developed by <a href="http://graygrids.com">GrayGrids</a>
               </p>
             </div>
             <div class="col-md-6  col-sm-6">                
