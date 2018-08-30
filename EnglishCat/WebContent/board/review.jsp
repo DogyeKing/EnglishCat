@@ -28,7 +28,7 @@
 </tr>
 </c:forEach>
 </table>
-<a href="#">글쓰기</a>
+<a href="<%=request.getContextPath() %>/board/insert.jsp">글쓰기</a>
 	
 </body>
 </html>
