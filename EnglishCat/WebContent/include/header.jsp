@@ -34,7 +34,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="index.html"><img src="<%=request.getContextPath()%>/assets/img/logo.png" alt=""></a>
+              <a class="navbar-brand" href="<%=request.getContextPath()%>/board?cmd=reviewBoard"><img src="<%=request.getContextPath()%>/assets/img/logo.png" alt=""></a>
             </div>
             <!-- Brand End -->
 
