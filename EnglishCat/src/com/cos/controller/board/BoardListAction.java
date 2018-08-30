@@ -18,14 +18,14 @@ public class BoardListAction implements Action {
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String url = "/board/review.jsp";
-		ContReviewDAO dao = new ContReviewDAO();
+		ContReviewDAO contReviewdao = new ContReviewDAO();
 
 		int pageNum = 1;
 		if (request.getParameter("pageNum") != null) {
 			pageNum = Integer.parseInt(request.getParameter("pageNum"));
 		}
 
-		List<ContReviewVO> list = dao.select_paging();
+		List<ContReviewVO> list = contReviewdao.select_paging();
 
 		request.setAttribute("list", list);
 		request.setAttribute("pageNum", pageNum);

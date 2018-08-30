@@ -43,5 +43,27 @@ public class ContReviewDAO {
 			
 			
 		}
+		
+		public int insert(ContReviewVO contReview) {
+			String SQL = "insert into cont_review(cont_title, cont_content, user_id) value(?,?,?)";
+			Connection conn = DBManager.getConnection();
+			
+			try {
+				pstmt = conn.prepareStatement(SQL);
+				pstmt.setString(1, contReview.getCont_title());
+				pstmt.setString(2, contReview.getCont_content());
+				pstmt.setString(3, contReview.getCont_id());
+				pstmt.executeUpdate();
+				return 1;
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				DBManager.close(conn, pstmt);
+			}	return -1;
+					
+			
+		}
+		
+		
 	
 }
