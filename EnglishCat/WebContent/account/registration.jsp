@@ -259,35 +259,35 @@
           <div class="col-md-6">
             <h2 class="medium-title">Register Form</h2>   
             <!-- Register Form -->
-            <form class="register-form" role="form" method="post">
+            <form class="register-form" role="form" method="post" action="#">
                 <div class="form-group">
                 	<label class="form-control-label">ID</label>                 
-     				<input class="form-control" type="text" name="id" maxlength="20" required autofocus>
+     				<input class="form-control" type="text" name="user_id" maxlength="20" required autofocus>
                 </div>
                 
                 <div class="form-group">  
                 	<label class="form-control-label">Password</label>               
-     				<input class="form-control" type="password" name="password" maxlength="20" required>
+     				<input class="form-control" type="password" name="user_pass" maxlength="20" required>
                 </div>
                 
                 <div class="form-group">   
                 	<label class="form-control-label">Password Check</label>              
-     				<input class="form-control" type="password" name="confirm" maxlength="20" required>
+     				<input class="form-control" type="password" name="user_pass_check" maxlength="20" required>
                 </div>
                 
                 <div class="form-group">
                 <label class="form-control-label">Name</label>
-                  <input class="form-control" type="text" name="username" maxlength="20">
+                  <input class="form-control" type="text" name="user_name" maxlength="20">
                 </div>    
                 
                 <div class="form-group">
                 <label class="form-control-label">Phone</label>
-                  <input class="form-control" type="tel" name="phone" maxlength="20">
+                  <input class="form-control" type="tel" name="user_phone" maxlength="20">
                 </div>
                 
                 <div class="form-group">
                  <label class="form-control-label">Email</label>	
-                  <input class="form-control" type="Email" name="Email" maxlength="20">
+                  <input class="form-control" type="Email" name="user_mail" maxlength="20">
                 </div> 
                 
                 <div class="form-group">

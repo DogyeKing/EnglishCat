@@ -20,6 +20,8 @@ public class ActionFactory {
 	public Action getAction(String cmd) {
 		if(cmd.equals("reviewBoard")) {
 			return new BoardListAction();
+		}else if(cmd.equals("member_regist")){
+			
 		}
 		return null;
 	}
