@@ -12,8 +12,6 @@ import javax.sql.DataSource;
 public class DBManager {
 	public static Connection getConnection(){
 		Connection conn = null;
-		PreparedStatement pstmt;
-		ResultSet rs;
 		try {
 			Context initContext = new InitialContext();
 			Context envContext  = (Context)initContext.lookup("java:/comp/env");
