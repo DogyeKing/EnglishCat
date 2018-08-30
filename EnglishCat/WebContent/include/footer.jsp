@@ -30,13 +30,13 @@
             <ul class="recent-post">
               <li class="post">
                 <a href="<%=request.getContextPath()%>/assets/img/flicker/img1.jpg" class="lightbox">
-                <img alt="" src="assets/img/flicker/img1.jpg">
+                <img alt="" src="<%=request.getContextPath()%>/assets/img/flicker/img1.jpg">
                 </a>
                 <p class="text">Fightin'the system like true modern <br><span>Nov 05,2016</span></p>
               </li>
               <li class="post">
                 <a href="<%=request.getContextPath()%>/assets/img/flicker/img1.jpg" class="lightbox">
-                <img alt="" src="assets/img/flicker/img2.jpg">
+                <img alt="" src="<%=request.getContextPath()%>/assets/img/flicker/img2.jpg">
                 </a>
                 <p class="text">Will we're movin' on up to the east side <br><span>Nov 09,2016</span></p>
               </li>

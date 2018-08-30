@@ -16,7 +16,7 @@
               <div class="quick-contacts pull-right">
                   <span><i class="fa fa-phone"></i> +61 2 9385 1000</span>
                   <span><i class="fa fa-envelope"></i><a href="#">hello@brightuniversity.edu</a></span>
-                  <span><a href="login.html"><i class="fa fa-user"></i> Login</a> / <a href="login.html">Register</a></span>
+                  <span><a href="<%=request.getContextPath()%>/account/login.jsp"><i class="fa fa-user"></i> Login</a> / <a href="<%=request.getContextPath()%>/account/registration.jsp">Register</a></span>
               </div>
               <!-- Quick Contacts End -->
           </div>
