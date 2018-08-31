@@ -3,6 +3,32 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
     
+        <!-- Bootstrap CSS -->    
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/bootstrap.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/main.css">
+    <!-- Normalize Style -->
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/normalize.css">
+    <!-- Fonts Awesome -->
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/fonts/font-awesome.min.css">
+ 
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/extras/animate.css" type="text/css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/extras/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/extras/owl.theme.css" type="text/css">
+    <!-- Rev Slider Css -->
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/extras/settings.css" type="text/css">
+    <!-- Nivo Lightbox Css -->
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/extras/nivo-lightbox.css" type="text/css">
+    <!-- Slicknav Css -->
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/slicknav.css" type="text/css">
+    <!-- Responsive Style -->
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/responsive.css">
+
+    <!-- Color CSS Styles  -->
+    <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/assets/css/colors/sky.css" media="screen" />
+    
   <!-- Header area wrapper Starts -->
     <header id="header-wrap">
       <!-- Roof area Starts -->

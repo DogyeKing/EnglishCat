@@ -30,7 +30,7 @@
 			
 			</table>
 			<a class="btn btn-outline-primary" href="#">수정</a>
-			<a class="btn btn-outline-primary" href="#">삭제</a>
+			<a class="btn btn-outline-primary" href="/board?cmd=delete">삭제</a>
 
 </body>
 </html>

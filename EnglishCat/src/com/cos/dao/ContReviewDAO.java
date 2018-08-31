@@ -15,6 +15,8 @@ public class ContReviewDAO {
 		private PreparedStatement pstmt;
 		private ResultSet rs;
 		
+		
+		//게시판 리스트 뽑기
 		public List<ContReviewVO> select_paging(){
 			String SQL = "select * from tb_cont_review";
 			Connection conn = DBManager.getConnection();
@@ -43,6 +45,8 @@ public class ContReviewDAO {
 			
 		}
 		
+		
+		//게시판 글쓰기
 		public int write(ContReviewVO contReview) {
 			String SQL = "insert into tb_cont_review(cont_id, cont_title, cont_content, user_id, insert_dt) values (?,?,?,?,sysdate)";
 			Connection conn = DBManager.getConnection();
@@ -65,6 +69,7 @@ public class ContReviewDAO {
 
 		}
 		
+		//게시판 삭제
 		public int delete(String cont_id ) {
 			String SQL = "delete tb_cont_review where cont_id = ?";
 			Connection conn = DBManager.getConnection();
@@ -78,6 +83,34 @@ public class ContReviewDAO {
 			} finally {
 				DBManager.close(conn, pstmt);
 			} return -1;
+		}
+		
+		
+		//게시판 보기
+		public ContReviewVO view(String cont_id) {
+			String SQL = "select * from tb_cont_review where cont_id = ?";
+			Connection conn = DBManager.getConnection();
+			try {
+				pstmt = conn.prepareStatement(SQL);
+				pstmt.setString(1, cont_id);
+				rs = pstmt.executeQuery();
+				
+					if(rs.next()) {
+						ContReviewVO contReviewVO = new ContReviewVO();
+						contReviewVO.setCont_id(rs.getString("cont_id"));
+						contReviewVO.setCont_title(rs.getString("cont_title"));
+						contReviewVO.setCont_content(rs.getString("cont_content"));
+						contReviewVO.setUser_id(rs.getString("user_id"));
+						contReviewVO.setCont_read_cnt(rs.getInt("cont_read_cnt"));
+						return contReviewVO;
+					}
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				DBManager.close(conn, pstmt);
+			} return null;
+			
+			
 		}
 	
 }
