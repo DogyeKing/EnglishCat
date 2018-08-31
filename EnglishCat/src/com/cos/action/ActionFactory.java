@@ -1,6 +1,7 @@
 package com.cos.action;
 
 import com.cos.controller.board.BoardListAction;
+import com.cos.controller.board.BoardWriteAction;
 
 public class ActionFactory {
 	private static String naming = "ActionFactory : ";
@@ -22,6 +23,8 @@ public class ActionFactory {
 			return new BoardListAction();
 		}else if(cmd.equals("member_regist")){
 			
+		}else if(cmd.equals("board_write")) {
+			return new BoardWriteAction();
 		}
 		return null;
 	}

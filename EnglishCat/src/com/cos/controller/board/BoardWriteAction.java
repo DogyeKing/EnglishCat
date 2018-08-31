@@ -11,11 +11,11 @@ import com.cos.dao.ContReviewDAO;
 import com.cos.dto.ContReviewVO;
 import com.cos.util.Script;
 
-public class BoardInsertAction implements Action{
+public class BoardWriteAction implements Action{
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "/board/review.jsp";
+		String url = "main.jsp";
 		
 		
 		ContReviewVO contReviewVO = new ContReviewVO();
@@ -24,7 +24,7 @@ public class BoardInsertAction implements Action{
 		contReviewVO.setCont_title(request.getParameter("cont_title"));
 		contReviewVO.setCont_content(request.getParameter("cont_content"));
 		
-		int result = contReviewDAO.insert(contReviewVO);
+		int result = contReviewDAO.write(contReviewVO);
 		if(result == 1) {
 			Script.moving(response, "글쓰기 성공", url);
 		}else if(result == -1){
