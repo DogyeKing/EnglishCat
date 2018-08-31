@@ -8,6 +8,7 @@
    <script type="text/javascript" src="<%=request.getContextPath()%>/editor/photo_uploader/plugin/hp_SE2M_AttachQuickPhoto.js" charset="utf-8"></script>
 
  <!-- Page Content -->
+ <body>
   <div class="container">
     <div class="row">
       <!-- Blog Entries Column -->
@@ -18,19 +19,21 @@
                     <legend class="border-bottom mb-4">New Post</legend>
                     <div class="form-group">
                        <label class="form-control-label">Title</label>
-                       <input class="form-control form-control-lg" type="text" name="title" required autofocus>
+                       <input class="form-control form-control-lg" type="text" name="cont_title" required autofocus>
                     </div>
                     <div class="form-group">
                        <label class="form-control-label">Content</label>
-                       <textarea id="textAreaContent" name="content" rows="15" cols="80" style="width:100%"></textarea>
+                       <textarea id="textAreaContent" name="cont_content" rows="15" cols="80" style="width:100%"></textarea>
                     </div>                 
                     <div class="form-group">
-                       <button class="btn btn-outline-info" type="button" onclick="submitContents(this)">Update</button>
+                       <button class="btn btn-outline-info" type="button" onclick="submitContents(this)">글쓰기</button>
                     </div>
                  </fieldset>
               </form>
            </div>
       </div>
+</div>
+</div>
 
 <script>
   var form = document.w_form;
@@ -64,7 +67,4 @@
   }
 </script>
 
-
-
 </body>
-</html>

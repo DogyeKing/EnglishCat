@@ -19,7 +19,7 @@
 					<td>read</td>
 
 				</tr>
-				<c:forEach var="item" items="${list}">
+		
 					<tr>
 						<td>${item.cont_id}</td>
 						<td>${item.cont_title}</td>
@@ -27,9 +27,10 @@
 						<td>${item.user_id}</td>
 						<td>${item.cont_read_cnt}</td>
 					</tr>
-				</c:forEach>
+			
 			</table>
-			<a href="<%=request.getContextPath()%>/board/writeForm.jsp">글쓰기</a>
+			<a class="btn btn-outline-primary" href="#">수정</a>
+			<a class="btn btn-outline-primary" href="#">삭제</a>
 
 </body>
 </html>

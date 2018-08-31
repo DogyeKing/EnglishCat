@@ -20,18 +20,17 @@ public class ContReviewDAO {
 			Connection conn = DBManager.getConnection();
 			try {
 				pstmt = conn.prepareStatement(SQL);		
-				System.out.println("SQL문 : " +SQL);
 				rs = pstmt.executeQuery();
 				List<ContReviewVO> list = new ArrayList<>();
 	
 				while (rs.next()) {
-					ContReviewVO contReview = new ContReviewVO();
-					contReview.setCont_id(rs.getString("cont_id"));
-					contReview.setCont_title(rs.getString("cont_title"));
-					contReview.setCont_content(rs.getString("cont_content"));
-					contReview.setUser_id(rs.getString("user_id"));
-					contReview.setCont_read_cnt(rs.getInt("cont_read_cnt"));
-					list.add(contReview);					
+					ContReviewVO contReviewVO = new ContReviewVO();
+					contReviewVO.setCont_id(rs.getString("cont_id"));
+					contReviewVO.setCont_title(rs.getString("cont_title"));
+					contReviewVO.setCont_content(rs.getString("cont_content"));
+					contReviewVO.setUser_id(rs.getString("user_id"));
+					contReviewVO.setCont_read_cnt(rs.getInt("cont_read_cnt"));
+					list.add(contReviewVO);					
 				}
 				
 				return list;
@@ -44,15 +43,18 @@ public class ContReviewDAO {
 			
 		}
 		
-		public int insert(ContReviewVO contReview) {
-			String SQL = "insert into cont_review(cont_title, cont_content, user_id) value(?,?,?)";
+		public int write(ContReviewVO contReview) {
+			String SQL = "insert into tb_cont_review(cont_id, cont_title, cont_content, user_id, insert_dt) values (?,?,?,?,sysdate)";
 			Connection conn = DBManager.getConnection();
 			
 			try {
 				pstmt = conn.prepareStatement(SQL);
-				pstmt.setString(1, contReview.getCont_title());
-				pstmt.setString(2, contReview.getCont_content());
-				pstmt.setString(3, contReview.getCont_id());
+				
+				pstmt.setString(1, "1243");
+				pstmt.setString(2, contReview.getCont_title());
+				pstmt.setString(3, contReview.getCont_content());
+				pstmt.setString(4, "2343");				
+				
 				pstmt.executeUpdate();
 				return 1;
 			} catch (Exception e) {
@@ -60,10 +62,22 @@ public class ContReviewDAO {
 			} finally {
 				DBManager.close(conn, pstmt);
 			}	return -1;
-					
-			
+
 		}
 		
-		
+		public int delete(String cont_id ) {
+			String SQL = "delete tb_cont_review where cont_id = ?";
+			Connection conn = DBManager.getConnection();
+			try {
+				pstmt = conn.prepareStatement(SQL);
+				pstmt.setString(1, cont_id);
+				pstmt.executeUpdate();
+				return 1;
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				DBManager.close(conn, pstmt);
+			} return -1;
+		}
 	
 }
