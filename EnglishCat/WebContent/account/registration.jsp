@@ -259,7 +259,7 @@
           <div class="col-md-6">
             <h2 class="medium-title">Register Form</h2>   
             <!-- Register Form -->
-            <form class="register-form" role="form" method="post" action="#">
+            <form class="register-form" name="form" role="form" method="post" action="<%=request.getContextPath()%>/member?cmd=member_register" onsubmit="return hangulCheck(this)">
                 <div class="form-group">
                 	<label class="form-control-label">ID</label>                 
      				<input class="form-control" type="text" name="user_id" maxlength="20" required autofocus>
@@ -291,12 +291,11 @@
                 </div> 
                 
                 <div class="form-group">
-     			<label class="form-control-label">Address</label>
-     			<button class="btn btn-outline-info float-right" type="button" onclick="goPopup()">Search Korean Address</button>
-     			
-     			<div id="list"></div>
-				<div id="callBackDiv">			
-     			<input class="form-control form-control-lg" type="text" name="roadFullAddr" id="roadFullAddr" maxlength="20" required readonly>
+     					<label class="form-control-label">Address</label>
+     					<button class="btn btn-outline-info float-right" type="button" onclick="goPopup()">Search Korean Address</button>
+     					<div id="list"></div>
+						<div id="callBackDiv">
+     					<input class="form-control form-control-lg" type="text" name="roadFullAddr" id="roadFullAddr" maxlength="20" required readonly>
      			</div>
      			</div>                 
                               

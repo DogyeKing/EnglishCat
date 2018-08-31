@@ -15,7 +15,7 @@ import com.cos.action.ActionFactory;
 public class MemberController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	private static String naming = "BoardController : ";
+	private static String naming = "MemberController : ";
 	
     public MemberController() {
         super();

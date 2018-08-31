@@ -10,15 +10,22 @@
 <%@page import="java.util.Properties"%>
 <%@page import="com.cos.dao.RegistDAO"%>
 <%@page import="com.cos.util.SHA256"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+
+
+
+
 <%
 	RegistDAO dao = new RegistDAO();
 	String id = null;
-	if(session.getAttribute("id") != null){
-		id = (String)session.getAttribute("id");
+	if(session.getAttribute("user_id") != null){
+		id = (String)session.getAttribute("user_id");
 	}
 	
-	int emailChecked = dao.select_emailcheck(id);
+	int emailChecked = dao.select_user_mail_yn(id);
+	System.out.println("ec : " + emailChecked);
 	if(emailChecked == 1){
 		Script.moving(response, "이미 인증된 회원입니다.");
 	}else if(emailChecked == -1){
@@ -33,7 +40,7 @@
 	}
 	
 	System.out.println("HOST : "+ host);
-	String from = "ssarmango6@gmail.com";
+	String from = "englishcat5600@gmail.com";
 	String to = dao.select_email(id);
 	String salt = dao.select_salt(id);
 	String code = SHA256.getEncrypt(to, salt);
@@ -79,34 +86,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+  
+     <title>Bright a Bootstrap HTML5 Education Template</title>
+    <!-- Bootstrap CSS -->    
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/bootstrap.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/main.css">
+    <!-- Normalize Style -->
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/normalize.css">
+    <!-- Fonts Awesome -->
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/fonts/font-awesome.min.css">
+ 
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/extras/animate.css" type="text/css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/extras/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/extras/owl.theme.css" type="text/css">
+    <!-- Rev Slider Css -->
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/extras/settings.css" type="text/css">
+    <!-- Nivo Lightbox Css -->
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/extras/nivo-lightbox.css" type="text/css">
+    <!-- Slicknav Css -->
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/slicknav.css" type="text/css">
+    <!-- Responsive Style -->
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/responsive.css">
+
+    <!-- Color CSS Styles  -->
+    <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/assets/css/colors/sky.css" media="screen" />
+  
   <title>Cos Blog</title>
-  <!-- Bootstrap core CSS -->
-  <link href="<%=request.getContextPath()%>/css/bootstrap.css" rel="stylesheet">
-  <!-- Custom styles for this template -->
-  <link href="<%=request.getContextPath()%>/css/blog-home.css" rel="stylesheet">
-  <!-- Bootstrap core JavaScript -->
-  <script src="<%=request.getContextPath()%>/js/jquery.min.js"></script>
-  <script src="<%=request.getContextPath()%>/js/bootstrap.bundle.min.js"></script>
-  <script src="<%=request.getContextPath()%>/js/validation.js"></script>
 </head>
 <body>
 <!-- Navigation -->
 <jsp:include page="/include/header.jsp"/>
 
+<br>
+<br>
 <div class="container">
 	<!-- Login Form -->
 	<div class="row">
   	<!-- Blog Entries Column -->
 	  <div class="col-md-12 my-order">
 			<div class="content-section">
+		
 					<div class="alert alert-success md-4" role="alert">
 						이메일 주소 인증 메일이 전송되었습니다. 회원가입시 입력했던 이메일에 들어가셔서 인증해주세요.
+
 					</div>
 			</div>
 		</div>
   </div>
+  						<br>
+  						<br>
+						<br>				
+						<br>				
+						<br>
+						<br>								
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+																
   <!-- ./row -->
   </div>
 <!-- ./container -->
 </body>
+<!-- footer -->
+
+<jsp:include page="/include/footer.jsp"/>
+
 </html>

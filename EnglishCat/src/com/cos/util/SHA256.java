@@ -7,6 +7,7 @@ import java.util.Arrays;
 
 public class SHA256 {
 	public static String getEncrypt(String source, String salt) {
+		System.out.println(source+"&"+salt);
         return getEncrypt(source, salt.getBytes());
     }
     

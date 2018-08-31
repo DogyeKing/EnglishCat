@@ -6,14 +6,23 @@ public class RegistVO {
 	private String user_name;
 	private String user_phone;
 	private String user_mail;
-	private String user_address;
+	
 	private String user_zipcode;
 	private String auth_group;
 	private String insert_dt;
 	private String update_dt;
 	private String delete_yn;
 	private String salt;
+	private String roadFullAddr;
 	
+	public String getRoadFullAddr() {
+		return roadFullAddr;
+	}
+	public void setRoadFullAddr(String roadFullAddr) {
+		this.roadFullAddr = roadFullAddr;
+	}
+
+
 	public String getSalt() {
 		return salt;
 	}
@@ -23,12 +32,7 @@ public class RegistVO {
 	public String getUser_id() {
 		return user_id;
 	}
-	public String getUser_address() {
-		return user_address;
-	}
-	public void setUser_address(String user_address) {
-		this.user_address = user_address;
-	}
+	
 	public void setUser_id(String user_id) {
 		this.user_id = user_id;
 	}

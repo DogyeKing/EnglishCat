@@ -22,7 +22,7 @@
 	boolean isTrue = emailHash.equals(code) ? true : false;
 	
 	if(isTrue){
-		int result = dao.update_emailcheck(id);
+		int result = dao.update_user_mail_yn(id);
 		if(result == 1){
 			Script.moving(response, "인증에 성공하였습니다.", url);
 		}else{
