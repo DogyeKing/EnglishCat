@@ -6,8 +6,8 @@
 	String url = request.getContextPath()+"/index.jsp";
 	RegistDAO dao = new RegistDAO();
 	String id = null;
-	if(session.getAttribute("id") != null){
-		id = (String)session.getAttribute("id");
+	if(session.getAttribute("user_id") != null){
+		id = (String)session.getAttribute("user_id");
 	}
 	
 	String code = request.getParameter("code");
