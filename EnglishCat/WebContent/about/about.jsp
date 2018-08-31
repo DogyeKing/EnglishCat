@@ -10,30 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <meta name="author" content="Bright">
     <title>Bright – Bootstrap HTML5 Education Template</title>
-    <!-- Bootstrap CSS -->    
-    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/bootstrap.min.css">
-    <!-- Main Style -->
-    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/main.css">
-    <!-- Normalize Style -->
-    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/normalize.css">
-    <!-- Fonts Awesome -->
-    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/fonts/font-awesome.min.css">
- 
-    <!-- Animate CSS -->
-    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/extras/animate.css" type="text/css">
-    <!-- Owl Carousel -->
-    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/extras/owl.carousel.css" type="text/css">
-    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/extras/owl.theme.css" type="text/css">
-    <!-- Rev Slider Css -->
-    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/extras/settings.css" type="text/css">
-    <!-- Nivo Lightbox Css -->
-    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/extras/nivo-lightbox.css" type="text/css">
-    <!-- Slicknav Css -->
-    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/slicknav.css" type="text/css">
-    <!-- Responsive Style -->
-    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/responsive.css">
-    <!-- Color CSS Styles  -->
-    <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/assets/css/colors/sky.css" media="screen" />
+
+  <!-- navigation -->
+
 
   </head>
 
@@ -41,7 +20,7 @@
     
     <!-- Header area wrapper Starts -->
    
-   <jsp:include page="/include/header.jsp"/>
+  <%@include file="../../include/header.jsp" %>
    
     <!-- Header area wrapper End -->
 
@@ -274,19 +253,7 @@
     </div>
 
     <!-- jQuery  -->
-    <script type="text/javascript" src="<%=request.getContextPath()%>/assets/js/jquery.min.js"></script>
-    <script type="text/javascript" src="<%=request.getContextPath()%>/assets/js/bootstrap.min.js"></script>
-     <script type="text/javascript" src="<%=request.getContextPath()%>/assets/js/jquery.mixitup.js"></script>
-     <script type="text/javascript" src="<%=request.getContextPath()%>/assets/js/nivo-lightbox.min.js"></script>
-    <script type="text/javascript" src="<%=request.getContextPath()%>/assets/js/jquery.countdown.js"></script>  
-    <script type="text/javascript" src="<%=request.getContextPath()%>/assets/js/jquery.counterup.min.js"></script>   
-    <script type="text/javascript" src="<%=request.getContextPath()%>/assets/js/owl.carousel.min.js"></script> 
-    <script type="text/javascript" src="<%=request.getContextPath()%>/assets/js/form-validator.min.js"></script>
-    <script type="text/javascript" src="<%=request.getContextPath()%>/assets/js/contact-form-script.js"></script>  
-    <script type="text/javascript" src="<%=request.getContextPath()%>/assets/js/jquery.themepunch.revolution.min.js"></script>
-    <script type="text/javascript" src="<%=request.getContextPath()%>/assets/js/jquery.themepunch.tools.min.js"></script>    
-    <script type="text/javascript" src="<%=request.getContextPath()%>/assets/js/jquery.slicknav.js"></script>
-    <script src="<%=request.getContextPath()%>/assets/js/main.js"></script>
+    <%@include file="../../include/jquery.jsp" %>
 
   </body>
 </html>
