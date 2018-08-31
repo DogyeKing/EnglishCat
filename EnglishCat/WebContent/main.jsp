@@ -783,7 +783,7 @@
     </div>
 
     <!-- jQuery  -->
-    <%@include file="../../include/jquery.jsp" %>
+    <%@include file="include/jquery.jsp" %>
 
   </body>
 </html>

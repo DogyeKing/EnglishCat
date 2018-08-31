@@ -20,7 +20,7 @@
     
     <!-- Header area wrapper Starts -->
    
-  <%@include file="../../include/header.jsp" %>
+  <%@include file="../include/header.jsp" %>
    
     <!-- Header area wrapper End -->
 
@@ -253,7 +253,7 @@
     </div>
 
     <!-- jQuery  -->
-    <%@include file="../../include/jquery.jsp" %>
+    <%@include file="../include/jquery.jsp" %>
 
   </body>
 </html>
