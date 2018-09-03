@@ -38,7 +38,7 @@
 	
 	System.out.println("HOST : "+ host);
 	String from = "englishcat5600@gmail.com";
-	String to = dao.select_email(id);
+	String to = dao.select_user_mail(id);
 	String salt = dao.select_salt(id);
 	String code = SHA256.getEncrypt(to, salt);
 	
