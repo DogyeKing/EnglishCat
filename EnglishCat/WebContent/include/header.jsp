@@ -108,6 +108,7 @@
                   <ul class="dropdown-menu">
                     <li><a href="event-grid.html">Events Grid</a></li>                     
                     <li><a href="event.html">Single Event</a></li>
+                    <li><a href="<%=request.getContextPath()%>/course/juniorCourse.jsp">주니어과정</a></li>
                   </ul>                        
                 </li> 
                 <li class="dropdown dropdown-toggle">
