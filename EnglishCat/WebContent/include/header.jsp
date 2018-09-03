@@ -92,22 +92,22 @@
             <div class="collapse navbar-collapse" id="navbar">
               <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown dropdown-toggle">
-                  <a class="active" href="index.jsp" data-toggle="dropdown">Home <i class="fa fa-angle-down"></i></a>
+                  <a class="active" href="index.jsp" data-toggle="dropdown">잉글리쉬 캣 <i class="fa fa-angle-down"></i></a>
                   <ul class="dropdown-menu">
                     <li><a class="active" href="index.html">Home Page 1</a></li>    
                     <li><a href="index-1.html">Home Page 2</a></li>     
                   </ul>                        
                 </li>
                 <li class="dropdown dropdown-toggle">
-                  <a href="#" data-toggle="dropdown">Courses <i class="fa fa-angle-down"></i></a>
+                  <a href="#" data-toggle="dropdown">수강안내 <i class="fa fa-angle-down"></i></a>
                   <ul class="dropdown-menu">
-                    <li><a href="courses-list.html">Courses List</a></li>    
-                    <li><a href="courses-grid.html">Courses Grid</a></li>  
-                    <li><a href="courses-single.html">Single Course</a></li>   
+                    <li><a href="<%=request.getContextPath()%>/about/fee.jsp">수강료 안내</a></li>    
+                    <li><a href="<%=request.getContextPath()%>/about/skypeInstall.jsp">Skype 설치하기</a></li>  
+                    <li><a href="<%=request.getContextPath()%>/about/about.jsp">Skype 화상영어 장점</a></li>   
                   </ul>                        
                 </li>
                 <li class="dropdown dropdown-toggle">
-                  <a href="#" data-toggle="dropdown">Pages <i class="fa fa-angle-down"></i></a>
+                  <a href="#" data-toggle="dropdown">수강신청 <i class="fa fa-angle-down"></i></a>
                   <ul class="dropdown-menu">
                     <li><a href="<%=request.getContextPath()%>/about/about.jsp">About Page</a></li>                     
                     <li><a href="gallery.html">Image Gallery</a></li>
@@ -120,14 +120,14 @@
                   </ul>                        
                 </li>
                 <li class="dropdown dropdown-toggle">
-                  <a href="#" data-toggle="dropdown">Events <i class="fa fa-angle-down"></i></a>
+                  <a href="#" data-toggle="dropdown">수업과정 <i class="fa fa-angle-down"></i></a>
                   <ul class="dropdown-menu">
                     <li><a href="event-grid.html">Events Grid</a></li>                     
                     <li><a href="event.html">Single Event</a></li>
                   </ul>                        
                 </li> 
                 <li class="dropdown dropdown-toggle">
-                  <a href="#" data-toggle="dropdown">Blog <i class="fa fa-angle-down"></i></a>
+                  <a href="#" data-toggle="dropdown">커뮤니티 <i class="fa fa-angle-down"></i></a>
                   <ul class="dropdown-menu">
                     <li><a href="blog.html">Blog - Right Sidebar</a></li>                     
                     <li><a href="blog-left-sidebar.html">Blog - Left Sidebar</a></li>
@@ -135,7 +135,7 @@
                     <li><a href="single-post.html">Blog Single Post</a></li>   
                   </ul>                        
                 </li>              
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html">마이페이지</a></li>
               </ul>
             </div>  
              <!-- Form for navbar search area -->

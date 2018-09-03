@@ -25,15 +25,15 @@
     <!-- Header area wrapper End -->
 
     <!-- Page Header Start -->
-    <div class="page-header" style="background: url(<%=request.getContextPath()%>/assets/img/banner1.jpg);">
+    <div class="page-header" style="background: url(<%=request.getContextPath()%>/assets/img/about/skype1.jpg);">
       <div class="container">
         <div class="row">         
           <div class="col-md-12">
             <div class="breadcrumb-wrapper">
-              <h2 class="page-title">About Us</h2>
+              <h2 class="page-title">Skype 화상영어 장점</h2>
               <a href="index.html">Home</a>
               <span>/</span>
-              <span class="current">About Us</span>
+              <span class="current">Skype</span>
             </div>
           </div>
         </div>
@@ -47,18 +47,21 @@
         <div class="row">
           <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="about-header">
-                <h3 class="medium-title">Welecome To Bright University</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias laudantium nemo eveniet excepturi, suscipit amet illo autem quasi, sequi illum quisquam doloremque est magni accusamus quo, officia voluptates temporibus cum. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <h3 class="medium-title">Skype 화상영어 장점은?</h3>
+                <p>스카이프를 이용하면 네이티브 선생님들과 직접 얼굴을 보면서 수업을 진행할 수 있습니다.
+                	때문에 선생님들과 친밀한 관계를 쌓을 수 있으며 더 편안한 분위기에서 수업을 진행 할 수 있습니다.
+                	또 스카이프를 무료로 사용한다는 장점때문에 일반 전화 영어에 비해 합리적인 수강료 책정을
+                	할 수 있습니다.</p>
             </div>
             <ul class="info-list">
-              <li><a href="#"><i class="fa fa-check"></i> Narwhal quinoa sriacha organic.</a></li>
-              <li><a href="#"><i class="fa fa-check"></i> Artisan paleo flannel, polaroid umami franzen.</a></li>
-              <li><a href="#"><i class="fa fa-check"></i> Sriracha vegan typewriter tofu gentrify.</a></li>
+              <li><a href="#"><i class="fa fa-check"></i> 다른 메신저들에 비해 깨끗한 음질로 통화를 할 수 있습니다.</a></li>
+              <li><a href="#"><i class="fa fa-check"></i> 수강생의 니즈에 맞춰 화상수업이나, 음성수업을 선택 할 수 있습니다.</a></li>
+              <li><a href="#"><i class="fa fa-check"></i> 녹음 기능으로 수업내용을 직접 복습하여 자신의 영어를 객관적으로 체크할 수 있습니다.</a></li>
             </ul>
         </div>
         <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="img-thumb">
-                <img src="<%=request.getContextPath()%>/assets/img/about/img1.jpg" alt="">
+                <img src="<%=request.getContextPath()%>/assets/img/about/skype3.jpg" alt="">
             </div>
         </div>
         </div>
@@ -72,26 +75,30 @@
         <div class="row">
           <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="video">
-              <iframe width="560" height="365" src="https://www.youtube.com/embed/LuJKrTGKFpI" frameborder="0" allowfullscreen></iframe>
-            </div>
+              <iframe width="560" height="365" src="https://www.youtube.com/embed/1yV3hsoswx8" frameborder="0" allowfullscreen></iframe>
+            </div>			
           </div>
+          
+          
           <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="why-us-content">
-              <h3 class="medium-title">What Students say</h3>
+              <h3 class="medium-title">자주하는 질문</h3>
               <!-- accordion start -->
               <div class="accordion-group" id="accordion">
                 <div class="panel panel-default">
                   <div class="panel-heading">
                     <h4 class="panel-title">
                       <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                        We have a team of experienced teachers
+                      	녹음은 어떻게 하나요? 녹음 서비스 추가 비용이 있나요?
                       </a>
                       </h4>
                     </div>
                     <div id="collapseOne" class="panel-collapse collapse in">
                       <div class="panel-body">
                         <p>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis eius quod minima unde quisquam cum ducimus, quasi commodi porro! 
+                    	스카이프는 프로그램 자체에서 녹음을 지원 함으로 무료로 수강자가 직접 녹음이 가능합니다.
+                    	프로그램으로는 스카이프가 지원하는 'Power Gramo" 또는 일반 프로그램 '곰 녹음기'가 있습니다.
+
                         </p>
                       </div>
                     </div>
@@ -100,14 +107,18 @@
                     <div class="panel-heading">
                       <h4 class="panel-title">
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                          Diversity training programs, curriculum understandable
+                        	Skype 통화 음질 상태는 어떤가요?
                         </a>
                       </h4>
                     </div>
                     <div id="collapseTwo" class="panel-collapse collapse">
                       <div class="panel-body">
                         <p>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis eius quod minima unde quisquam cum ducimus, quasi commodi porro!
+                          	스카이프는 전세계적으로 2억5천만 명 이상이 사용하는 가장 대중적인 통신프로그램인 동시에,
+                          	 최고의 퀄리티를 자랑하고 있습니다. 최근에는 많은 기술발달로 유선전화와 동일한 수준의 통화음질을 
+                          	 보여주고 있습니다.
+                          	 간혹, 카카오톡과 비교되며 음질을 걱정하기도 합니다만, 동일한 환경에서 카카오톡은 보이스톡, 스카이프는
+                          	 보이스 뿐만 아니라 화상을 사용 시, 월등한 품질을 보장합니다.
                         </p>
                       </div>
                     </div>
@@ -116,14 +127,18 @@
                     <div class="panel-heading">
                       <h4 class="panel-title">
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                          Learn everywhere, everytime on devices
+                          Skype수업은 화상으로 진행되나요?
                         </a>
                       </h4>
                     </div>
                     <div id="collapseThree" class="panel-collapse collapse">
                       <div class="panel-body">
                         <p>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis eius quod minima unde quisquam cum ducimus, quasi commodi porro!
+                         	스카이프는 챗팅, 화상통화, 전자칠판 게다가 녹음기능까지 사용할 수 있는 복합 화영엉어 프로그램입니다.
+                         	수업 중, 스카이프가 지원하는 채팅기능으로 선생님이 화상으로 강의를 진행하면서 챗팅을 통하여 의사전달
+                         	 및 교정이 가능하다는 장점도 있습니다.
+                         	 또한, 선생님의 얼굴을 보며 수업을 진행하기때문에 회화 경험없는 초등학생, 기초가 부족한 주부, 컴퓨터를
+                         	 다루기 힘든 할아버님까지 초보자에게도 쉽게 수업이 가능합니다.
                         </p>
                       </div>
                     </div>                  
@@ -132,14 +147,17 @@
                     <div class="panel-heading">
                       <h4 class="panel-title">
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapsefour">
-                          Brightcation promotion programs for outstanding students
+                          	지방출장 또는 해외에서도 수업할 수 있나요?
                         </a>
                       </h4>
                     </div>
                     <div id="collapsefour" class="panel-collapse collapse">
                       <div class="panel-body">
                         <p>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis eius quod minima unde quisquam cum ducimus, quasi commodi porro!
+                          	인터넷만 설치돼 있으면 전세계 어느 곳에서든 스카이프로 수업이 가능합니다.
+                          	인터넷 또는 WIFI로 연결이 가능하면, 컴퓨터나 노트북, 스마트폰으로 전세계 어느 곳에서
+                          	위캔스 화상영어 수업이 가능합니다.
+                          	
                         </p>
                       </div>
                     </div>                  
@@ -153,7 +171,7 @@
     </section>
     <!-- Why Choose Us Section End -->
 
-    <!-- Teacher Section Start -->
+<%--     <!-- Teacher Section Start -->
     <section class="teacher section">
       <div class="container">
         <div class="row">
@@ -217,9 +235,9 @@
         </div>
       </div>
     </section>
-    <!-- Teacher Section End -->
+    <!-- Teacher Section End --> --%>
 
-    <!-- Start Call to Action Section -->
+<!--     Start Call to Action Section
     <div class="cta">
       <div class="container">
         <div class="row">
@@ -232,7 +250,7 @@
         </div>
       </div>
     </div>
-    <!-- End Call to Action Section -->
+    End Call to Action Section -->
 
  <jsp:include page="/include/footer.jsp"/>
     <!-- Footer Section End-->
