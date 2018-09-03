@@ -222,14 +222,14 @@
           <div class="col-md-6">
             <h2 class="medium-title">Login</h2>   
             <!-- Form -->
-            <form method="post" class="login">                
+            <form method="post" class="login" action="<%=request.getContextPath()%>/member?cmd=member_login" onsubmit="return hangulCheck(this)">                
               <div class="form-group">
                 <label for="username">User ID <span class="required">*</span></label>
-                <input class="form-control" name="id" id="username" maxlength="20" type="text" required autofocus>
+                <input class="form-control" name="user_id" id="username" maxlength="20" type="text" required autofocus>
               </div>
               <div class="form-group">
                 <label for="password">Password <span class="required">*</span></label>
-                <input class="form-control" name="password" id="password" type="password" required>
+                <input class="form-control" name="user_pass" id="password" type="password" required>
               </div>              
               <div class="form-group">
                 <label for="rememberme" class="inline">

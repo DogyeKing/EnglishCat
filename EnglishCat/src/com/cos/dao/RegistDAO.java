@@ -39,7 +39,35 @@ public class RegistDAO {
 		return -1;
 	}
 	
-	public String select_email(String user_id) {
+	// select_id
+			public int select_id(RegistVO regist) {
+				String SQL = "SELECT user_mail_yn FROM TB_USER_INFO WHERE user_id = ? AND user_pass= ?";
+				Connection conn = DBManager.getConnection();
+				try {
+					pstmt = conn.prepareStatement(SQL);
+					pstmt.setString(1, regist.getUser_id());
+					pstmt.setString(2, regist.getUser_pass());
+					rs = pstmt.executeQuery();
+
+					if (rs.next()){
+						String user_mail_yn = rs.getString("user_mail_yn");
+						if(user_mail_yn == "YES"){
+							return 1;
+						}else{
+							return 2;
+						}
+					}
+				} catch (Exception e) {
+					e.printStackTrace();
+				} finally {
+					DBManager.close(conn, pstmt, rs);
+				}
+				return -1;
+			}
+	
+			
+			
+	public String select_user_mail(String user_id) {
 		String SQL = "SELECT user_mail FROM tb_user_info WHERE user_id = ?";
 		Connection conn = DBManager.getConnection();
 		try {
@@ -82,8 +110,8 @@ public class RegistDAO {
 		Connection conn = DBManager.getConnection();
 		try {
 			pstmt = conn.prepareStatement(SQL);
-			pstmt.setString(1, "YES");
-			pstmt.setString(2, user_id);
+			/*pstmt.setString(1, "YES");*/
+			pstmt.setString(1, user_id);
 			pstmt.executeUpdate();
 			return 1;
 		} catch (Exception e) {
@@ -103,7 +131,7 @@ public class RegistDAO {
 			rs = pstmt.executeQuery();
 			if(rs.next()) {
 				String user_mail_yn = rs.getString("user_mail_yn");
-				System.out.println("yn : " + user_mail_yn);
+				
 				if(user_mail_yn.equals("YES")) {
 					return 1;
 				}else {
@@ -116,5 +144,29 @@ public class RegistDAO {
 			DBManager.close(conn, pstmt, rs);
 		}
 		return -1;
+	}
+	
+	public RegistVO select(String user_id) {
+		String SQL = "SELECT * FROM tb_user_info WHERE id = ?";
+		Connection conn = DBManager.getConnection();
+		try {
+			pstmt = conn.prepareStatement(SQL);
+			pstmt.setString(1, user_id);
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				RegistVO regist = new RegistVO();
+				regist.setUser_id(rs.getString("user_id"));
+				regist.setUser_name(rs.getString("user_name"));
+				regist.setRoadFullAddr(rs.getString("roadFullAddr"));
+				regist.setUser_mail(rs.getString("user_mail"));
+				regist.setUser_mail_yn(rs.getString("user_mail_yn"));
+
+				return regist;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 }

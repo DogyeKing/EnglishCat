@@ -1,14 +1,11 @@
 package com.cos.action;
 
 import com.cos.controller.board.BoardListAction;
-
-
-
 import com.cos.controller.board.BoardViewAction;
-
-import com.cos.controller.member.MemberRegisterAction;
-
 import com.cos.controller.board.BoardWriteAction;
+import com.cos.controller.member.MemberLoginAction;
+import com.cos.controller.member.MemberLogoutAction;
+import com.cos.controller.member.MemberRegisterAction;
 
 
 public class ActionFactory {
@@ -32,7 +29,10 @@ public class ActionFactory {
 
 		}else if(cmd.equals("member_register")) {
 			return new MemberRegisterAction();
-
+		}else if(cmd.equals("member_login")) {
+			return new MemberLoginAction();
+		}else if(cmd.equals("member_logout")) {
+			return new MemberLogoutAction();
 		}else if(cmd.equals("board_write")) {
 			return new BoardWriteAction();
 

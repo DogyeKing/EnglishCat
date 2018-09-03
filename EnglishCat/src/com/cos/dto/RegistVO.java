@@ -14,6 +14,7 @@ public class RegistVO {
 	private String delete_yn;
 	private String salt;
 	private String roadFullAddr;
+	private String user_mail_yn;
 	
 	public String getRoadFullAddr() {
 		return roadFullAddr;
@@ -90,5 +91,11 @@ public class RegistVO {
 	public void setUser_mail(String user_mail) {
 		this.user_mail = user_mail;
 	}
+	public String isUser_mail_yn() {
+		return user_mail_yn;
+	}
+	public void setUser_mail_yn(String user_mail_yn) {
+		this.user_mail_yn = user_mail_yn;
+	}	
 	
 }

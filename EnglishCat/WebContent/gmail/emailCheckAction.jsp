@@ -5,14 +5,14 @@
 <%
 	String url = request.getContextPath()+"/index.jsp";
 	RegistDAO dao = new RegistDAO();
-	String id = null;
+	String user_id = null;
 	if(session.getAttribute("user_id") != null){
-		id = (String)session.getAttribute("user_id");
+		user_id = (String)session.getAttribute("user_id");
 	}
 	
 	String code = request.getParameter("code");
-	String email = dao.select_email(id);
-	String salt = dao.select_salt(id);
+	String email = dao.select_email(user_id);
+	String salt = dao.select_salt(user_id);
 	String emailHash = SHA256.getEncrypt(email, salt);
 	
 	System.out.println("email : "+email);
@@ -22,7 +22,7 @@
 	boolean isTrue = emailHash.equals(code) ? true : false;
 	
 	if(isTrue){
-		int result = dao.update_user_mail_yn(id);
+		int result = dao.update_user_mail_yn(user_id);
 		if(result == 1){
 			Script.moving(response, "인증에 성공하였습니다.", url);
 		}else{
