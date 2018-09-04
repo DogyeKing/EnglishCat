@@ -1,0 +1,96 @@
+SELECT * FROM ALL_TAB_COMMENTS
+WHERE OWNER = 'HONG'
+ORDER BY TABLE_NAME
+;
+
+SELECT * FROM TB_CODE_AUTH        ;
+SELECT * FROM TB_CODE_CONT_ID    ;
+SELECT * FROM TB_CODE_OPINION   ;
+SELECT * FROM TB_CONT_OPINION  ;
+SELECT * FROM TB_CONT_READ_CNT;
+SELECT * FROM TB_CONT_REVIEW;
+SELECT * FROM TB_NAV_MAIN  ;
+SELECT * FROM TB_USER_INFO;
+
+
+INSERT INTO TB_USER_INFO VALUES
+(
+'ID'||trim((select to_char(max(to_number(substr(user_pid, 3, 4)))+1, '0000')
+from tb_user_info)),
+'id','pass','name','phone','mail','addr','zip','auth_cd',SYSDATE,SYSDATE, 'admin','','NO','salt','NO')
+;
+
+/*insert into tb_nav_main values
+(
+'main001'||trim((select to_char(max(to_number(substr(user_pid, 3, 4)))+1, '0000')
+from tb_nav_main)),
+'id','pass','name','phone','mail','addr','zip','auth_cd',SYSDATE,SYSDATE, 'admin','','NO','salt','NO')
+;   */
+
+INSERT INTO TB_code_cont_id VALUES
+(
+    'MAIN001'
+    , 'RV'
+    , '0000'
+)
+;
+ SELECT * FROM TB_cont_review
+;
+
+
+-- 게시판 INSERT 문
+WITH PID AS (SELECT CODE_HEAD, CODE_PATTERN, LENGTH(CODE_HEAD) CODE_HEAD_LEN, LENGTH(CODE_PATTERN) CODE_PATTERN_LEN FROM TB_CODE_CONT_ID WHERE NAV_PID = 'MAIN001')
+	, CON_CNT AS (SELECT COUNT(1) CON_CNT FROM TB_CONT_REVIEW)
+--SELECT * FROM PID;
+--SELECT LENGTH(CODE_HEAD)||TRIM(TO_CHAR((TO_NUMBER(CODE_PATTERN)+1), CODE_PATTERN)) FROM PID;
+;
+INSERT INTO TB_cont_review(
+	CONT_ID
+	, CONT_TITLE
+	, CONT_CONTENT
+	, USER_PID
+	, INSERT_DT
+	, UPDATE_DT                    
+	, UPDATE_PID
+	, DELETE_YN
+	)
+VALUES (
+	 DECODE(
+	 	(
+	 	SELECT COUNT(1) CON_CNT FROM TB_CONT_REVIEW)
+	 	, 0, (SELECT CODE_HEAD||TRIM(TO_CHAR((TO_NUMBER(CODE_PATTERN)+1), CODE_PATTERN)) FROM TB_CODE_CONT_ID WHERE NAV_PID = 'MAIN001')
+	 	, (SELECT CODE_HEAD||TRIM(TO_CHAR(MAX(TO_NUMBER(SUBSTR(CONT_ID, LENGTH(CODE_HEAD)+1, LENGTH(CODE_PATTERN))))+1, CODE_PATTERN)) FROM TB_CODE_CONT_ID WHERE NAV_PID = 'MAIN001')
+	 	)
+	, 'TITLE'
+	, 'CONTENT'
+	, 'USER_PID'
+	, SYSDATE
+	, NULL
+	, NULL
+	, NULL
+)
+;
+
+INSERT INTO TB_cont_review VALUES
+('',
+trim((select to_char(max(to_number(substr(user_pid, 3, 4)))+1, '0000') from TB_CODE_CONT_ID WHERE NAV_PID = )
+||trim((select to_char(max(to_number(substr(user_pid, 3, 4)))+1, '0000') from tb_user_info)),
+'id','pass','name','phone','mail','addr','zip','auth_cd',SYSDATE,SYSDATE, 'admin','','NO','salt','NO')
+;
+
+
+
+
+CREATE OR REPLACE FUNCTION FN_CODE_HEAD(V_NAV_PID IN VARCHAR2(10))
+	RETURN VARCHAR2
+	IS V_CODE_HEAD VARCHAR2(10);
+BEGIN
+	SELECT CODE_HEAD
+	INTO V_CODE_HEAD
+	FROM TB_CODE_CONT_ID
+	WHERE NAV_PID = V_NAV_PID;
+
+  RETURN (V_CODE_HEAD);
+
+END;
+/
