@@ -1,5 +1,6 @@
 eclipse.preferences.version=1
 encoding//WebContent/about/about.jsp=UTF-8
 encoding//WebContent/account/login.jsp=UTF-8
+encoding//WebContent/course/courses-grid.jsp=UTF-8
 encoding//WebContent/course/juniorCourse.jsp=UTF-8
 encoding//WebContent/include/header.jsp=UTF-8

@@ -46,7 +46,7 @@
             <div class="item-list">
               <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="thumb">
-                  <img src="<%=request.getContextPath() %>/assets/img/courses/img-1.jpg" alt="">
+                  <img src="<%=request.getContextPath() %>/assets/img/courses/story11.jpg" alt="">
                   <div class="courses-price">
                       <p class="years">Duration: 3 Years</p>
                       <span class="price">$2000</span>
@@ -55,7 +55,7 @@
               </div> 
               <div class="col-md-8 col-sm-6 col-xs-12">
                 <div class="item-body">
-                  <h3 class="medium-title"><a href="courses-single.html">Become a PHP Master and Make Money Fast</a></h3>
+                  <h3 class="medium-title"><a href="courses-single.html">Level 1</a></h3>
                   <div class="meta"> 
                     <span class="meta-part"><a href="#"><i class="fa fa-user"></i> Michael Windzor</a></span>
                     <span class="meta-part"><a href="#"><i class="fa fa-group"></i> 100</a></span>
@@ -70,7 +70,7 @@
             <div class="item-list">
               <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="thumb">
-                  <img src="<%=request.getContextPath() %>/assets/img/courses/img-2.jpg" alt="">
+                  <img src="<%=request.getContextPath() %>/assets/img/courses/story22.jpg" alt="">
                   <div class="courses-price">
                       <p class="years">Duration: 3 Years</p>
                       <span class="price">$2000</span>
@@ -79,7 +79,7 @@
               </div> 
               <div class="col-md-8 col-sm-6 col-xs-12">
                 <div class="item-body">
-                  <h3 class="medium-title"><a href="courses-single.html">Become a PHP Master and Make Money Fast</a></h3>
+                  <h3 class="medium-title"><a href="courses-single.html">Level 2</a></h3>
                   <div class="meta"> 
                     <span class="meta-part"><a href="#"><i class="fa fa-user"></i> Michael Windzor</a></span>
                     <span class="meta-part"><a href="#"><i class="fa fa-group"></i> 100</a></span>
@@ -94,7 +94,7 @@
             <div class="item-list">
               <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="thumb">
-                  <img src="<%=request.getContextPath() %>/assets/img/courses/img-3.jpg" alt="">
+                  <img src="<%=request.getContextPath() %>/assets/img/courses/story33.jpg" alt="">
                   <div class="courses-price">
                       <p class="years">Duration: 3 Years</p>
                       <span class="price">$2000</span>
@@ -103,7 +103,7 @@
               </div> 
               <div class="col-md-8 col-sm-6 col-xs-12">
                 <div class="item-body">
-                  <h3 class="medium-title"><a href="courses-single.html">Become a PHP Master and Make Money Fast</a></h3>
+                  <h3 class="medium-title"><a href="courses-single.html">Level 3</a></h3>
                   <div class="meta"> 
                     <span class="meta-part"><a href="#"><i class="fa fa-user"></i> Michael Windzor</a></span>
                     <span class="meta-part"><a href="#"><i class="fa fa-group"></i> 100</a></span>
@@ -118,7 +118,7 @@
             <div class="item-list">
               <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="thumb">
-                  <img src="<%=request.getContextPath() %>/assets/img/courses/img-4.jpg" alt="">
+                  <img src="<%=request.getContextPath() %>/assets/img/courses/story44.jpg" alt="">
                   <div class="courses-price">
                       <p class="years">Duration: 3 Years</p>
                       <span class="price">$2000</span>
@@ -127,7 +127,7 @@
               </div> 
               <div class="col-md-8 col-sm-6 col-xs-12">
                 <div class="item-body">
-                  <h3 class="medium-title"><a href="courses-single.html">Become a PHP Master and Make Money Fast</a></h3>
+                  <h3 class="medium-title"><a href="courses-single.html">Level 4</a></h3>
                   <div class="meta"> 
                     <span class="meta-part"><a href="#"><i class="fa fa-user"></i> Michael Windzor</a></span>
                     <span class="meta-part"><a href="#"><i class="fa fa-group"></i> 100</a></span>
@@ -142,7 +142,7 @@
             <div class="item-list">
               <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="thumb">
-                  <img src="<%=request.getContextPath() %>/assets/img/courses/img-5.jpg" alt="">
+                  <img src="<%=request.getContextPath() %>/assets/img/courses/story55.jpg" alt="">
                   <div class="courses-price">
                       <p class="years">Duration: 3 Years</p>
                       <span class="price">$2000</span>
@@ -151,13 +151,13 @@
               </div> 
               <div class="col-md-8 col-sm-6 col-xs-12">
                 <div class="item-body">
-                  <h3 class="medium-title"><a href="courses-single.html">Become a PHP Master and Make Money Fast</a></h3>
+                  <h3 class="medium-title"><a href="courses-single.html">Level 5</a></h3>
                   <div class="meta"> 
                     <span class="meta-part"><a href="#"><i class="fa fa-user"></i> Michael Windzor</a></span>
                     <span class="meta-part"><a href="#"><i class="fa fa-group"></i> 100</a></span>
                     <span class="meta-part"><a href="#"><i class="fa fa-commenting"></i> 5</a></span>
                   </div>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea vero doloribus facilis dolor est in provident laboriosam esse corrupti et quia fuga perspiciatis reiciendis minima autem itaque reprehenderit, labore repellendus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi incidunt animi ratione eos architecto aspernatur, mollitia sequi. Eius, perferendis nostrum fugit! Sequi deleniti itaque unde aspernatur.</p>
+                  <p>Lorem ipsum dolor sit amet, consecetur adipisicing elit. Ea vero doloribus facilis dolor est in provident laboriosam esse corrupti et quia fuga perspiciatis reiciendis minima autem itaque reprehenderit, labore repellendus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi incidunt animi ratione eos architecto aspernatur, mollitia sequi. Eius, perferendis nostrum fugit! Sequi deleniti itaque unde aspernatur.</p>
                   <a href="#" class="btn btn-common btn-sm">Apply Now</a>
                 </div>
               </div>
