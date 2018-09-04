@@ -11,6 +11,7 @@ public class RegistDAO {
 	private PreparedStatement pstmt;
 	private ResultSet rs;
 	
+	// registration
 	public int insert(RegistVO regist) {
 		System.out.println("insert start");
 		String SQL = "INSERT INTO TB_USER_INFO VALUES (?,?,?,?,?,?,?,?,'NO',SYSDATE,SYSDATE,'NO','NO')";
@@ -51,7 +52,7 @@ public class RegistDAO {
 
 					if (rs.next()){
 						String user_mail_yn = rs.getString("user_mail_yn");
-						if(user_mail_yn == "YES"){
+						if(user_mail_yn.equals("YES")){
 							return 1;
 						}else{
 							return 2;
@@ -122,6 +123,7 @@ public class RegistDAO {
 		return -1;
 	}
 	
+	//이메일 인증
 	public int select_user_mail_yn(String user_id) {
 		String SQL = "SELECT user_mail_yn FROM tb_user_info WHERE user_id = ?";
 		Connection conn = DBManager.getConnection();
@@ -145,6 +147,7 @@ public class RegistDAO {
 		}
 		return -1;
 	}
+	
 	
 	public RegistVO select(String user_id) {
 		String SQL = "SELECT * FROM tb_user_info WHERE id = ?";

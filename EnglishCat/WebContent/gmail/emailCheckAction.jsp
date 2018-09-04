@@ -11,7 +11,7 @@
 	}
 	
 	String code = request.getParameter("code");
-	String email = dao.select_email(user_id);
+	String email = dao.select_user_mail(user_id);
 	String salt = dao.select_salt(user_id);
 	String emailHash = SHA256.getEncrypt(email, salt);
 	
