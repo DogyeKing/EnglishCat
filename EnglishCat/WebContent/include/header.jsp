@@ -95,8 +95,8 @@
                 <li class="dropdown dropdown-toggle">
                   <a class="active" href="index.jsp" data-toggle="dropdown">잉글리쉬 캣 <i class="fa fa-angle-down"></i></a>
                   <ul class="dropdown-menu">
-                    <li><a class="active" href="index.html">Home Page 1</a></li>    
-                    <li><a href="index-1.html">Home Page 2</a></li>     
+                    <li><a href="<%=request.getContextPath()%>/home/englishCat.jsp">잉글리쉬캣 소개</a></li>    
+             <!--        <li><a href="index-1.html">Home Page 2</a></li>     --> 
                   </ul>                        
                 </li>
                 <li class="dropdown dropdown-toggle">
@@ -123,8 +123,8 @@
                 <li class="dropdown dropdown-toggle">
                   <a href="#" data-toggle="dropdown">수업과정 <i class="fa fa-angle-down"></i></a>
                   <ul class="dropdown-menu">
-                    <li><a href="event-grid.html">Events Grid</a></li>                     
-                    <li><a href="event.html">Single Event</a></li>
+                    <li><a href="<%=request.getContextPath()%>/course/single-teacher.jsp">강사 소개</a></li>                     
+                    <li><a href="<%=request.getContextPath()%>/course/courses-grid.jsp">시니어 과정</a></li>
                     <li><a href="<%=request.getContextPath()%>/course/juniorCourse.jsp">주니어과정</a></li>
                   </ul>                        
                 </li> 

@@ -2915,3 +2915,11 @@ fieldset[disabled] .btn {
   text-align: left;
   font-size: 14px;
 }
+
+.common_table_border {
+    table-layout: fixed;
+    border-top: 1px solid #5b5b5b;
+    border-bottom: 1px solid #5b5b5b;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
