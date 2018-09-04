@@ -172,4 +172,25 @@ public class RegistDAO {
 		}
 		return null;
 	}
+	
+	public int check_id(String user_id) {
+		String SQL = "SELECT user_id FROM TB_USER_INFO WHERE user_id = ?";
+		Connection conn = DBManager.getConnection();
+		try {
+			pstmt = conn.prepareStatement(SQL);
+			pstmt.setString(1, user_id);			
+			rs = pstmt.executeQuery();
+
+			if (rs.next()){				
+					return 1; //id 존재
+				}else{
+					return 2; //없음
+				}			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBManager.close(conn, pstmt, rs);
+		}
+		return -1;
+	}
 }

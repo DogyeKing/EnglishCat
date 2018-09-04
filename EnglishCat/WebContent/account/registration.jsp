@@ -81,17 +81,19 @@
             <form class="register-form" name="form" role="form" method="post" action="<%=request.getContextPath()%>/member?cmd=member_register" onsubmit="return hangulCheck(this)">
                 <div class="form-group">
                 	<label class="form-control-label">ID</label>                 
-     				<input class="form-control" type="text" name="user_id" maxlength="20" required autofocus>
-                </div>
+     				<input class="form-control" type="text" name="user_id" id="user_id" maxlength="20" required autofocus>
+     				<small id="checkMsg"></small>
+                </div>              
                 
                 <div class="form-group">  
                 	<label class="form-control-label">Password</label>               
-     				<input class="form-control" type="password" name="user_pass" maxlength="20" required>
+     				<input class="form-control" type="password" name="user_pass" id="user_pass" maxlength="20" required>
                 </div>
                 
                 <div class="form-group">   
                 	<label class="form-control-label">Password Check</label>              
-     				<input class="form-control" type="password" name="user_pass_check" maxlength="20" required>
+     				<input class="form-control" type="password" name="user_pass_check" id="user_pass_check" maxlength="20" required>
+     				<small id="checkPwd"></small>
                 </div>
                 
                 <div class="form-group">
@@ -160,6 +162,72 @@
 
     <!-- jQuery  -->
   <%@include file="../include/jquery.jsp" %>
+  
+  <!-- email check -->
+    <script>
+    
+        document.getElementById("user_id").onchange = sendId;    
+ 
+    function sendId() {
+       var dom = document.getElementById("user_id");
+       var result = dom.value;
+       console.log("result : "+result);
+       $.ajax({
+         type : "POST",
+         url : "<%=request.getContextPath()%>/member?cmd=member_idcheck",
+        dataType : "text",
+        contentType : "application/text;charset=utf-8",
+        data : result,
+        success : function(data){           
+           var listView = document.getElementById('checkMsg');
+           if(result ==''){
+              listView.innerHTML = "ID를 입력해주세요";
+              listView.style.color = "red";
+              document.getElementById("user_id").setCustomValidity("ID를 입력해주세요.");
+           } else if(data==2){
+              listView.innerHTML = "사용 할 수 있는 ID 입니다";
+              listView.style.color = "blue";
+              document.getElementById("user_id").setCustomValidity('');
+             } else if(data==1){
+              listView.innerHTML = "이미 등록된 ID 입니다";
+              listView.style.color = "red";
+              document.getElementById("user_id").setCustomValidity("이미 존재하는 ID입니다.");
+             } 
+        },
+        error : function(jqXHR,textStatus,errorThrown){
+           console.log("에러 발생~~\n"+textStatus+":"+errorThrown);
+        }
+      });
+    }
+    
+    
+    
+    </script>
+    <!-- //email check -->
+    <!-- password-script -->
+    <script>
+    
+    document.getElementById("user_pass").onchange = checkPwd;
+    document.getElementById("user_pass_check").onchange = checkPwd;
+    
+    function checkPwd(){
+         var pw1 = document.getElementById("user_pass").value;
+         var pw2 = document.getElementById("user_pass_check").value;
+         console.log("pw1 : "+pw1+"& pw2 : "+pw2);
+         if(pw1!=pw2){
+          document.getElementById('checkPwd').style.color = "red";
+          document.getElementById('checkPwd').innerHTML = "동일한 암호를 입력하세요."; 
+          document.getElementById("user_pass_check").setCustomValidity("동일한 암호를 입력하세요.");
+         }else{
+          document.getElementById('checkPwd').style.color = "black";
+          document.getElementById('checkPwd').innerHTML = "암호가 확인 되었습니다.";
+          document.getElementById("user_pass_check").setCustomValidity('');
+         }         
+   }       
+    </script>
+    <!-- //password-script -->
+  
+
 
   </body>
 </html>

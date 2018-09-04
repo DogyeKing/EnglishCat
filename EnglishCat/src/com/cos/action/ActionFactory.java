@@ -3,6 +3,7 @@ package com.cos.action;
 import com.cos.controller.board.BoardListAction;
 import com.cos.controller.board.BoardViewAction;
 import com.cos.controller.board.BoardWriteAction;
+import com.cos.controller.member.MemberIDCheckAction;
 import com.cos.controller.member.MemberLoginAction;
 import com.cos.controller.member.MemberLogoutAction;
 import com.cos.controller.member.MemberRegisterAction;
@@ -23,10 +24,9 @@ public class ActionFactory {
 		return instance;
 	}
 	
-	public Action getAction(String cmd) {
+	public Action getAction(String cmd) {		
 		if(cmd.equals("reviewBoard")) {
 			return new BoardListAction();
-
 		}else if(cmd.equals("member_register")) {
 			return new MemberRegisterAction();
 		}else if(cmd.equals("member_login")) {
@@ -35,9 +35,10 @@ public class ActionFactory {
 			return new MemberLogoutAction();
 		}else if(cmd.equals("board_write")) {
 			return new BoardWriteAction();
-
 		}else if(cmd.equals("board_view")) {
 			return new BoardViewAction();
+		}else if(cmd.equals("member_idcheck")) {			
+			return new MemberIDCheckAction();
 		}
 		return null;
 	}
