@@ -17,3 +17,4 @@
     <script type="text/javascript" src="<%=request.getContextPath()%>/assets/js/jquery.themepunch.tools.min.js"></script>    
     <script type="text/javascript" src="<%=request.getContextPath()%>/assets/js/jquery.slicknav.js"></script>
     <script src="<%=request.getContextPath()%>/assets/js/main.js"></script>
+    

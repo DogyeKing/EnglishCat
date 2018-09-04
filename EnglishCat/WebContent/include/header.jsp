@@ -5,6 +5,7 @@
     
         <!-- Bootstrap CSS -->    
     <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/bootstrap.min.css">
+    
     <!-- Main Style -->
     <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/main.css">
     <!-- Normalize Style -->
@@ -25,7 +26,7 @@
     <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/slicknav.css" type="text/css">
     <!-- Responsive Style -->
     <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/responsive.css">
-
+    
     <!-- Color CSS Styles  -->
     <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/assets/css/colors/sky.css" media="screen" />
     

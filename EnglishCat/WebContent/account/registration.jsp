@@ -12,6 +12,7 @@
     <title>Bright a Bootstrap HTML5 Education Template</title>
 
 
+	<script src="<%=request.getContextPath()%>/assets/js/validation.js"></script>
 
     <script>
     function goPopup(){
@@ -80,30 +81,34 @@
             <!-- Register Form -->
             <form class="register-form" name="form" role="form" method="post" action="<%=request.getContextPath()%>/member?cmd=member_register" onsubmit="return hangulCheck(this)">
                 <div class="form-group">
-                	<label class="form-control-label">ID</label>                 
-     				<input class="form-control" type="text" name="user_id" id="user_id" maxlength="20" required autofocus>
+                	<label class="form-control-label">ID</label>
+
+                
+     				<input class="form-control" type="text" name="user_id" id="user_id" maxlength="15" required autofocus onkeydown="fn_press_han(this);" style="ime-mode:disabled;"/>
      				<small id="checkMsg"></small>
                 </div>              
                 
                 <div class="form-group">  
                 	<label class="form-control-label">Password</label>               
-     				<input class="form-control" type="password" name="user_pass" id="user_pass" maxlength="20" required>
+     				<input class="form-control" type="password" name="user_pass" id="user_pass" maxlength="15" required>
                 </div>
                 
                 <div class="form-group">   
                 	<label class="form-control-label">Password Check</label>              
-     				<input class="form-control" type="password" name="user_pass_check" id="user_pass_check" maxlength="20" required>
+     				<input class="form-control" type="password" name="user_pass_check" id="user_pass_check" maxlength="15" required>
      				<small id="checkPwd"></small>
                 </div>
                 
                 <div class="form-group">
                 <label class="form-control-label">Name</label>
-                  <input class="form-control" type="text" name="user_name" maxlength="20">
+                  <input class="form-control" type="text" name="user_name" maxlength="10">
                 </div>    
                 
                 <div class="form-group">
                 <label class="form-control-label">Phone</label>
-                  <input class="form-control" type="tel" name="user_phone" maxlength="20">
+                	<input class="form-control" type="text" maxlength="15" onkeypress="return fn_press(event, 'numbers');" onkeydown="fn_press_han(this);" style="ime-mode:disabled;"/>
+
+                  	<!-- <input class="form-control" type="tel" name="user_phone" maxlength="20"> -->
                 </div>
                 
                 <div class="form-group">
@@ -113,7 +118,7 @@
                 
                 <div class="form-group">
      					<label class="form-control-label">Address</label>
-     					<button class="btn btn-warning pull-right" type="button" onclick="goPopup()">Search Korean Address</button>
+     					<button class="btn btn-primary pull-right" type="button" onclick="goPopup()">Search Korean Address</button>
      					<div id="list"></div>
 						<div id="callBackDiv">
      					<input class="form-control form-control-lg" type="text" name="roadFullAddr" id="roadFullAddr" maxlength="20" required readonly>
@@ -227,6 +232,26 @@
     </script>
     <!-- //password-script -->
   
+
+	<script>
+	/* 숫자만 입력받기 */
+    function fn_press(event, type) {
+        if(type == "numbers") {
+            if(event.keyCode < 48 || event.keyCode > 57) return false;
+            //onKeyDown일 경우 좌, 우, tab, backspace, delete키 허용 정의 필요
+        }
+    }
+    /* 한글입력 방지 */
+    function fn_press_han(obj)
+    {
+        //좌우 방향키, 백스페이스, 딜리트, 탭키에 대한 예외
+        if(event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 37 || event.keyCode == 39
+        || event.keyCode == 46 ) return;
+        //obj.value = obj.value.replace(/[\a-zㄱ-ㅎㅏ-ㅣ가-힣]/g, '');
+        obj.value = obj.value.replace(/[\ㄱ-ㅎㅏ-ㅣ가-힣]/g, '');
+    }
+
+    </script>
 
 
   </body>
