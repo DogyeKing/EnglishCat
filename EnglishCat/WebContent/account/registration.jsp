@@ -43,7 +43,7 @@
     
 
     <!-- Page Header Start -->
-    <div class="page-header" style="background: url(assets/img/banner1.jpg);">
+    <div class="page-header" style="background: url(<%=request.getContextPath()%>/assets/img/banner1.jpg);">
       <div class="container">
         <div class="row">         
           <div class="col-md-12">
@@ -128,6 +128,14 @@
                 <button class="btn btn-common" type="submit" id="submit">Create Account</button>
             </form>
      		</div>
+     		
+     		     <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="img-thumb">
+                <img src="<%=request.getContextPath()%>/assets/img/login/regi2.jpg" alt="">
+            </div>
+        </div>
+        </div>
+      </div>
       </div>
     </section>
     <!-- End Content Section  -->
