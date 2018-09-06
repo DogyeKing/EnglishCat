@@ -10,6 +10,8 @@
 		user_id = (String)session.getAttribute("user_id");
 	}
 	
+	System.out.println(user_id);
+	
 	String code = request.getParameter("code");
 	String email = dao.select_user_mail(user_id);
 	String salt = dao.select_salt(user_id);
@@ -22,7 +24,7 @@
 	boolean isTrue = emailHash.equals(code) ? true : false;
 	
 	if(isTrue){
-		int result = dao.update_user_mail_yn(user_id);
+		int result = dao.update_user_mail_avail_yn(user_id);
 		if(result == 1){
 			Script.moving(response, "인증에 성공하였습니다.", url);
 		}else{

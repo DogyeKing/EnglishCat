@@ -1,21 +1,41 @@
 package com.cos.dto;
 
 public class RegistVO {
+	private String user_pid;
 	private String user_id;
 	private String user_pass;
 	private String user_name;
 	private String user_phone;
 	private String user_mail;
-	
+	private String roadFullAddr;
 	private String user_zipcode;
-	private String auth_group;
+	private String salt;
+	private String user_mail_avail_yn;
+	private String auth_code;
 	private String insert_dt;
 	private String update_dt;
+	private String update_pid;
 	private String delete_yn;
-	private String salt;
-	private String roadFullAddr;
-	private String user_mail_yn;
 	
+	
+	public String getUser_pid() {
+		return user_pid;
+	}
+	public void setUser_pid(String user_pid) {
+		this.user_pid = user_pid;
+	}
+	public String getUser_mail_avail_yn() {
+		return user_mail_avail_yn;
+	}
+	public void setUser_mail_avail_yn(String user_mail_avail_yn) {
+		this.user_mail_avail_yn = user_mail_avail_yn;
+	}
+	public String getUpdate_pid() {
+		return update_pid;
+	}
+	public void setUpdate_pid(String update_pid) {
+		this.update_pid = update_pid;
+	}
 	public String getRoadFullAddr() {
 		return roadFullAddr;
 	}
@@ -61,11 +81,11 @@ public class RegistVO {
 	public void setUser_zipcode(String user_zipcode) {
 		this.user_zipcode = user_zipcode;
 	}
-	public String getAuth_group() {
-		return auth_group;
+	public String getAuth_code() {
+		return auth_code;
 	}
-	public void setAuth_group(String auth_group) {
-		this.auth_group = auth_group;
+	public void setAuth_code(String auth_code) {
+		this.auth_code = auth_code;
 	}
 	public String getInsert_dt() {
 		return insert_dt;
@@ -91,11 +111,11 @@ public class RegistVO {
 	public void setUser_mail(String user_mail) {
 		this.user_mail = user_mail;
 	}
-	public String isUser_mail_yn() {
-		return user_mail_yn;
+	public String getuser_mail_avail_yn() {
+		return user_mail_avail_yn;
 	}
-	public void setUser_mail_yn(String user_mail_yn) {
-		this.user_mail_yn = user_mail_yn;
+	public void setuser_mail_avail_yn(String user_mail_avail_yn) {
+		this.user_mail_avail_yn = user_mail_avail_yn;
 	}	
 	
 }

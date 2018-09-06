@@ -14,7 +14,9 @@ public class RegistDAO {
 	// registration
 	public int insert(RegistVO regist) {
 		System.out.println("insert start");
-		String SQL = "INSERT INTO TB_USER_INFO VALUES (?,?,?,?,?,?,?,?,'NO',SYSDATE,SYSDATE,'NO','NO')";
+		String SQL = "INSERT INTO TB_USER_INFO VALUES (FN_NEXT_PID('USERPID'), ?, ?, ?, ?, ?, ?, ?, ?, 'NO', 'USER', SYSDATE, NULL, NULL, NULL)";
+		
+		/*String SQL = "INSERT INTO TB_USER_INFO VALUES (?,?,?,?,?,?,?,?,'NO',SYSDATE,SYSDATE,'NO','NO')";*/
 		Connection conn = DBManager.getConnection();
 		System.out.println("connection ok");
 		try {
@@ -42,7 +44,7 @@ public class RegistDAO {
 	
 	// select_id
 			public int select_id(RegistVO regist) {
-				String SQL = "SELECT user_mail_yn FROM TB_USER_INFO WHERE user_id = ? AND user_pass= ?";
+				String SQL = "SELECT user_mail_avail_yn FROM TB_USER_INFO WHERE user_id = ? AND user_pass= ?";
 				Connection conn = DBManager.getConnection();
 				try {
 					pstmt = conn.prepareStatement(SQL);
@@ -51,8 +53,8 @@ public class RegistDAO {
 					rs = pstmt.executeQuery();
 
 					if (rs.next()){
-						String user_mail_yn = rs.getString("user_mail_yn");
-						if(user_mail_yn.equals("YES")){
+						String user_mail_avail_yn = rs.getString("user_mail_avail_yn");
+						if(user_mail_avail_yn.equals("YES")){
 							return 1;
 						}else{
 							return 2;
@@ -106,13 +108,13 @@ public class RegistDAO {
 		return null;
 	}
 	
-	public int update_user_mail_yn(String user_id) {
-		String SQL = "UPDATE tb_user_info SET user_mail_yn = ? WHERE user_id = ?";
+	public int update_user_mail_avail_yn(String user_id) {
+		String SQL = "UPDATE tb_user_info SET user_mail_avail_yn = ? WHERE user_id = ?";
 		Connection conn = DBManager.getConnection();
 		try {
 			pstmt = conn.prepareStatement(SQL);
-			/*pstmt.setString(1, "YES");*/
-			pstmt.setString(1, user_id);
+			pstmt.setString(1, "YES");
+			pstmt.setString(2, user_id);
 			pstmt.executeUpdate();
 			return 1;
 		} catch (Exception e) {
@@ -124,17 +126,16 @@ public class RegistDAO {
 	}
 	
 	//이메일 인증
-	public int select_user_mail_yn(String user_id) {
-		String SQL = "SELECT user_mail_yn FROM tb_user_info WHERE user_id = ?";
+	public int select_user_mail_avail_yn(String user_id) {
+		String SQL = "SELECT user_mail_avail_yn FROM tb_user_info WHERE user_id = ?";
 		Connection conn = DBManager.getConnection();
 		try {
 			pstmt = conn.prepareStatement(SQL);
 			pstmt.setString(1, user_id);
 			rs = pstmt.executeQuery();
 			if(rs.next()) {
-				String user_mail_yn = rs.getString("user_mail_yn");
-				
-				if(user_mail_yn.equals("YES")) {
+				String user_mail_avail_yn = rs.getString("user_mail_avail_yn");
+				if(user_mail_avail_yn.equals("YES")) {
 					return 1;
 				}else {
 					return 2;
@@ -150,7 +151,7 @@ public class RegistDAO {
 	
 	
 	public RegistVO select(String user_id) {
-		String SQL = "SELECT * FROM tb_user_info WHERE id = ?";
+		String SQL = "SELECT * FROM tb_user_info WHERE user_id = ?";
 		Connection conn = DBManager.getConnection();
 		try {
 			pstmt = conn.prepareStatement(SQL);
@@ -163,7 +164,7 @@ public class RegistDAO {
 				regist.setUser_name(rs.getString("user_name"));
 				regist.setRoadFullAddr(rs.getString("roadFullAddr"));
 				regist.setUser_mail(rs.getString("user_mail"));
-				regist.setUser_mail_yn(rs.getString("user_mail_yn"));
+				regist.setuser_mail_avail_yn(rs.getString("user_mail_avail_yn"));
 
 				return regist;
 			}

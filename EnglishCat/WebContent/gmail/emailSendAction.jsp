@@ -21,7 +21,7 @@
 		id = (String)session.getAttribute("user_id");
 	}
 	
-	int emailChecked = dao.select_user_mail_yn(id);
+	int emailChecked = dao.select_user_mail_avail_yn(id);
 	System.out.println("ec : " + emailChecked);
 	if(emailChecked == 1){
 		Script.moving(response, "이미 인증된 회원입니다.");
