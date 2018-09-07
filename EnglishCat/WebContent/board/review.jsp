@@ -24,8 +24,8 @@
 						<td>${item.cont_id}</td>
 						<td>${item.cont_title}</td>
 						<td>${item.cont_content}</td>
-						<td>${item.user_id}</td>
-						<td>${item.cont_read_cnt}</td>
+						<td>${item.user_pid}</td>
+
 					</tr>
 				</c:forEach>
 			</table>

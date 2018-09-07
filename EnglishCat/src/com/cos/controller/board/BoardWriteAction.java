@@ -18,19 +18,23 @@ public class BoardWriteAction implements Action{
 		String url = "main.jsp";
 		
 		
-		ContReviewVO contReviewVO = new ContReviewVO();
+ContReviewVO contReviewVO = new ContReviewVO();
 		ContReviewDAO contReviewDAO = new ContReviewDAO();
 		
 		contReviewVO.setCont_title(request.getParameter("cont_title"));
 		contReviewVO.setCont_content(request.getParameter("cont_content"));
-		
+		contReviewVO.setUser_pid(request.getParameter("user_pid"));
+		System.out.println("안뙤니?");
 		int result = contReviewDAO.write(contReviewVO);
+
 		if(result == 1) {
+			System.out.println("끌스끼 썽꽁");
 			Script.moving(response, "글쓰기 성공", url);
+			
 		}else if(result == -1){
 			Script.moving(response, "글쓰기 실패");
 		}
-		
+	
 		
 	}
 }

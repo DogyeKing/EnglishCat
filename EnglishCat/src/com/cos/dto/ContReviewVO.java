@@ -4,15 +4,11 @@ public class ContReviewVO {
 	private String cont_id;
 	private String cont_title;
 	private String cont_content;
-	private String user_id;
-	
-	private int cont_read_cnt;
-	private int cont_like_cnt;
-	private int cont_dis_cnt;
+	private String user_pid;
 	private String insert_dt;
 	private String update_dt;
+	private String update_pid;
 	private String delete_yn;
-	
 	
 	public String getCont_id() {
 		return cont_id;
@@ -32,29 +28,11 @@ public class ContReviewVO {
 	public void setCont_content(String cont_content) {
 		this.cont_content = cont_content;
 	}
-	public String getUser_id() {
-		return user_id;
+	public String getUser_pid() {
+		return user_pid;
 	}
-	public void setUser_id(String user_id) {
-		this.user_id = user_id;
-	}
-	public int getCont_read_cnt() {
-		return cont_read_cnt;
-	}
-	public void setCont_read_cnt(int cont_read_cnt) {
-		this.cont_read_cnt = cont_read_cnt;
-	}
-	public int getCont_like_cnt() {
-		return cont_like_cnt;
-	}
-	public void setCont_like_cnt(int cont_like_cnt) {
-		this.cont_like_cnt = cont_like_cnt;
-	}
-	public int getCont_dis_cnt() {
-		return cont_dis_cnt;
-	}
-	public void setCont_dis_cnt(int cont_dis_cnt) {
-		this.cont_dis_cnt = cont_dis_cnt;
+	public void setUser_pid(String user_pid) {
+		this.user_pid = user_pid;
 	}
 	public String getInsert_dt() {
 		return insert_dt;
@@ -68,12 +46,21 @@ public class ContReviewVO {
 	public void setUpdate_dt(String update_dt) {
 		this.update_dt = update_dt;
 	}
+	public String getUpdate_pid() {
+		return update_pid;
+	}
+	public void setUpdate_pid(String update_pid) {
+		this.update_pid = update_pid;
+	}
 	public String getDelete_yn() {
 		return delete_yn;
 	}
 	public void setDelete_yn(String delete_yn) {
 		this.delete_yn = delete_yn;
 	}
+	
+	
+	
 
 	
 	

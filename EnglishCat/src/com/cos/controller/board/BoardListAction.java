@@ -20,15 +20,15 @@ public class BoardListAction implements Action {
 		String url = "board/review.jsp";
 		ContReviewDAO contReviewdao = new ContReviewDAO();
 
-		int pageNum = 1;
+/*		int pageNum = 1;
 		if (request.getParameter("pageNum") != null) {
 			pageNum = Integer.parseInt(request.getParameter("pageNum"));
-		}
+		}*/
 
-		List<ContReviewVO> list = contReviewdao.select_paging();
+		List<ContReviewVO> list = contReviewdao.contReviewSelectList();
 
 		request.setAttribute("list", list);
-		request.setAttribute("pageNum", pageNum);
+	/*	request.setAttribute("pageNum", pageNum);*/
 		
 		RequestDispatcher dis = request.getRequestDispatcher(url);
 		dis.forward(request, response);

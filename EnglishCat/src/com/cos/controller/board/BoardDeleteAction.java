@@ -14,7 +14,7 @@ public class BoardDeleteAction implements Action{
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "index.jsp";
+/*		String url = "index.jsp";
 		ContReviewDAO contReviewDAO = new ContReviewDAO();
 		
 		String cont_id = request.getParameter("cont_id");
@@ -25,7 +25,7 @@ public class BoardDeleteAction implements Action{
 			Script.moving(response, "게시글 삭제", url);
 		} else if(result == -1){
 			Script.moving(response, "게시글 삭제 실패");
-		}
+		}*/
 		
 	}
 	
