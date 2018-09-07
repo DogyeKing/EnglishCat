@@ -13,11 +13,11 @@ import com.cos.dao.ContReviewDAO;
 import com.cos.dto.ContReviewVO;
 import com.cos.util.Script;
 
-public class BoardListAction implements Action {
+public class ReviewListAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "board/review.jsp";
+		String url = "board/reviewList.jsp";
 		ContReviewDAO contReviewdao = new ContReviewDAO();
 
 /*		int pageNum = 1;

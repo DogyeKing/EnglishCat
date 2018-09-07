@@ -50,17 +50,23 @@ public class ContReviewDAO {
 	//게시판 글쓰기
 		public int write(ContReviewVO contReview) {
 			String SQL = "INSERT INTO TB_CONT_REVIEW (CONT_ID, CONT_TITLE, CONT_CONTENT, USER_PID, INSERT_DT, UPDATE_DT, UPDATE_PID, DELETE_YN) VALUES (FN_NEXT_PID('MAIN001'), ?, ?, ?, SYSDATE, NULL, NULL, NULL)";
-			
+
 			Connection conn = DBManager.getConnection();
 			
 			try { 
 				pstmt = conn.prepareStatement(SQL); 
-			
+
+		/*		pstmt.setString(1, "a");
+				pstmt.setString(2, "a");
+				pstmt.setString(3, "a");
+				*/
 				pstmt.setString(1, contReview.getCont_title());
 				pstmt.setString(2, contReview.getCont_content());
 				pstmt.setString(3, contReview.getUser_pid());
+				
+		/*		System.out.println("aaa : \n" + SQL);*/
 				pstmt.executeUpdate();
-				System.out.println("짞똥하니?");
+				System.out.println("가즈아~~");
 				return 1;
 
 			} catch (Exception e) {

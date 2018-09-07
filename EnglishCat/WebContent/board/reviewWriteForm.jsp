@@ -3,18 +3,26 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
+
+<%@include file="/include/header.jsp"%>
+
  <!-- Smart Editor -->
    <script type="text/javascript" src="<%=request.getContextPath()%>/editor/js/HuskyEZCreator.js" charset="utf-8"></script>
    <script type="text/javascript" src="<%=request.getContextPath()%>/editor/photo_uploader/plugin/hp_SE2M_AttachQuickPhoto.js" charset="utf-8"></script>
 
  <!-- Page Content -->
  <body>
+ <br>
+ <br>
   <div class="container">
     <div class="row">
       <!-- Blog Entries Column -->
       <div class="col-md-8">
            <div class="content-section">
-              <form name="w_form" method="POST" action="<%=request.getContextPath()%>/board?cmd=board_write">
+              <form name="w_form" method="POST" action="<%=request.getContextPath()%>/board?cmd=review_write">
+           		
+           		
+           		   <input type="hidden" name="user_pid" value="ID0001">
                  <fieldset class="form-group">
                     <legend class="border-bottom mb-4">New Post</legend>
                     <div class="form-group">
@@ -67,4 +75,10 @@
   }
 </script>
 
+
 </body>
+<br>
+<br>
+<br>
+<%@include file="/include/footer.jsp"%>
+<%@include file="/include/jquery.jsp"%>

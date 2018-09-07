@@ -80,7 +80,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="<%=request.getContextPath()%>/board?cmd=reviewBoard"><img src="<%=request.getContextPath()%>/assets/img/logo.png" alt=""></a>
+              <a class="navbar-brand" href="<%=request.getContextPath()%>/index.jsp"><img src="<%=request.getContextPath()%>/assets/img/logo.png" alt=""></a>
             </div>
             <!-- Brand End -->
 
@@ -134,10 +134,10 @@
                   <ul class="dropdown-menu">
                     <li><a href="blog.html">Blog - Right Sidebar</a></li>                     
                     <li><a href="blog-left-sidebar.html">Blog - Left Sidebar</a></li>
-                    <li><a href="blog-full-width.html">Blog - Full Width</a></li>   
+                    <li><a href="<%=request.getContextPath()%>/board?cmd=review_list">수강후기</a></li>   
                     <li><a href="single-post.html">Blog Single Post</a></li>   
                   </ul>                        
-                </li>              
+                </li>             
                 <li><a href="contact.html">마이페이지</a></li>
               </ul>
             </div>  
