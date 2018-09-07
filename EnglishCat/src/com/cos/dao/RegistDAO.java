@@ -194,4 +194,22 @@ public class RegistDAO {
 		}
 		return -1;
 	}
+	
+	public int update(RegistVO regist) {
+		String SQL = "UPDATE TB_USER_INFO SET user_pass = ?, roadFullAddr = ?, user_mail = ? WHERE user_id = ?";
+		Connection conn = DBManager.getConnection();
+		try {
+			pstmt = conn.prepareStatement(SQL);
+			
+			pstmt.setString(1, regist.getUser_pass());
+			pstmt.setString(2, regist.getRoadFullAddr());
+			pstmt.setString(3, regist.getUser_mail());
+			pstmt.setString(4, regist.getUser_id());
+			pstmt.executeUpdate();
+			return 1;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return -1;
+	}
 }

@@ -77,14 +77,13 @@
             </form>
           </div> -->
           <div class="col-md-6">
-            <h2 class="medium-title">Register Form</h2>   
+            <h2 class="medium-title">Modified Form</h2>   
             <!-- Register Form -->
-            <form class="register-form" name="form" role="form" method="post" action="<%=request.getContextPath()%>/member?cmd=member_register" onsubmit="return hangulCheck(this)">
+            <form class="register-form" name="form" role="form" method="post" action="<%=request.getContextPath()%>/member?cmd=member_updateProc" onsubmit="return hangulCheck(this)">
                 <div class="form-group">
                 	<label class="form-control-label">ID</label>
-
                 
-     				<input class="form-control" type="text" name="user_id" id="user_id" maxlength="15" required autofocus onkeydown="fn_press_han(this);" style="ime-mode:disabled;"/>
+     				<input class="form-control" type="text" name="user_id" id="user_id" maxlength="15" required readonly autofocus value="${member.user_id}" onkeydown="fn_press_han(this);" style="ime-mode:disabled;"/>
      				<small id="checkMsg"></small>
                 </div>              
                 
@@ -101,7 +100,7 @@
                 
                 <div class="form-group">
                 <label class="form-control-label">Name</label>
-                  <input class="form-control" type="text" name="user_name" maxlength="10">
+                  <input class="form-control" type="text" name="user_name" value="${member.user_name}" maxlength="10" required readonly>
                 </div>    
                 
                 <div class="form-group">
@@ -113,7 +112,7 @@
                 
                 <div class="form-group">
                  <label class="form-control-label">Email</label>	
-                  <input class="form-control" type="Email" name="user_mail" maxlength="20">
+                  <input class="form-control" type="Email" name="user_mail" maxlength="20" value="${member.user_mail}">
                 </div> 
                 
                 <div class="form-group">
@@ -121,11 +120,11 @@
      					<button class="btn btn-primary pull-right" type="button" onclick="goPopup()">Search Korean Address</button>
      					<div id="list"></div>
 						<div id="callBackDiv">
-     					<input class="form-control form-control-lg" type="text" name="roadFullAddr" id="roadFullAddr" maxlength="20" required readonly>
+     					<input class="form-control form-control-lg" type="text" name="roadFullAddr" id="roadFullAddr" maxlength="20" value="${member.roadFullAddr}" required readonly>
      			</div>
      			</div>                 
                               
-                <button class="btn btn-common" type="submit" id="submit">Create Account</button>
+                <button class="btn btn-common" type="submit" id="submit">Modified</button>
             </form>
      		</div>
      		

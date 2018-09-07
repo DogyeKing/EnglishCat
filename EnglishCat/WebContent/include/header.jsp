@@ -55,7 +55,8 @@
               	 <c:otherwise>
               	 <span><i class="fa fa-phone"></i> +61 2 9385 1000</span>
               	 <span><i class="fa fa-envelope"></i><a href="#">hello@brightuniversity.edu</a></span>
-              	  <span><a href="<%=request.getContextPath()%>/member?cmd=member_logout"><i class="fa fa-user"></i> Logout</a></span>	
+              	 <span><a href="<%=request.getContextPath()%>/member?cmd=member_update"><i class="fa fa-user"></i> Account</a></span>
+              	 <span><a href="<%=request.getContextPath()%>/member?cmd=member_logout"><i class="fa fa-user"></i> Logout</a></span>	
               
               </c:otherwise>
               </c:choose>

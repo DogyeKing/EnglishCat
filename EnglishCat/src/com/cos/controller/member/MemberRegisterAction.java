@@ -48,13 +48,19 @@ public class MemberRegisterAction implements Action{
 			user_name = request.getParameter("user_name");
 		}
 		
+		if(request.getParameter("user_phone") != null) {
+			user_phone = request.getParameter("user_phone");
+		}
+
+		if(request.getParameter("user_mail") != null) {
+			user_mail = request.getParameter("user_mail");
+		}
+		
 		if(request.getParameter("roadFullAddr") != null) {
 			roadFullAddr = request.getParameter("roadFullAddr");
 		}
 		
-		if(request.getParameter("user_mail") != null) {
-			user_mail = request.getParameter("user_mail");
-		}
+		
 		regist.setUser_id(user_id);
 		
 		regist.setUser_pass(user_pass);
