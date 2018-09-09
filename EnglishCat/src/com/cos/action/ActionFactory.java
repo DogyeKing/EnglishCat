@@ -1,5 +1,6 @@
 package com.cos.action;
 
+import com.cos.controller.board.ReviewDetailAction;
 import com.cos.controller.board.ReviewListAction;
 import com.cos.controller.board.ReviewWriteAction;
 import com.cos.controller.member.MemberIDCheckAction;
@@ -42,6 +43,8 @@ public class ActionFactory {
 			return new ReviewWriteAction();
 		}else if(cmd.equals("member_idcheck")) {			
 			return new MemberIDCheckAction();
+		}else if(cmd.equals("review_detail")) {
+			return new ReviewDetailAction();
 		}
 		return null;
 	}

@@ -9,42 +9,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <meta name="author" content="Bright">
 
+<title>Home</title>
+</head>
+<body>
+<%@include file="/include/header.jsp" %>
+<br>
+<br>
+<section id="view">
+      <div class="container">
+         <h2 class="text-center text-uppercase text-secondary mb-0">수강후기</h2>
+         <!-- <hr class="star-dark mb-5"> -->
+         <br>
+         
+         <div id="cont_id" class="row">
+            <div class="col-lg-8 mx-auto">
+               <div id="board-list" class="container">
+                  <!-- 부트스트랩 이용한 그리드 시스템 -->
+                  <div class="row">
+                     <!-- 12칸 분할 -->
+                     <div class="col-lg-2"></div>
+                     <div class="col-lg-8">
+            <table class="table table-striped">
+		
+		
+	
+           		<tr>
+					<td>번호</td>
+					<td>제목</td>
+					<td>내용</td>
+					<td>아이디</td>
+			
+				</tr>
 
-<%@include file="/include/header.jsp"%>
+			
+					<tr>
+						<td>${item.cont_id}</td>
+						<td>${item.cont_title}</td>
+						<td>${item.cont_content}</td>
+						<td>${item.user_pid}</td>
+				
 
- <!-- Page Content -->
- <body>
- <br>
- <br>
-  <div class="container">
-    <div class="row">
-      <!-- Blog Entries Column -->
-      <div class="col-md-8">
-           <div class="content-section">
-              
-                 <fieldset class="form-group">
-                    <legend class="border-bottom mb-4">수강후기</legend>
-                    <div class="form-group">
-                       <label class="form-control-label">${item.cont_title }</label>
-                       <input class="form-control form-control-lg" type="text" name="cont_title" required autofocus>
-                    </div>
-                    <div class="form-group">
-                       <label class="form-control-label">${item.cont_content }</label>
-                       <textarea id="textAreaContent" name="cont_content" rows="15" cols="80" style="width:100%"></textarea>
-                    </div>                 
-                    <div class="form-group">
-                       <button class="btn btn-outline-info" type="button" onclick="#">수정</button>
-                       <button class="btn btn-outline-info" type="button" onclick="#">삭제</button>
-                    </div>
-                 </fieldset>
-              
-           </div>
+					</tr>
+			
+               </table>
+               
+                     </div>
+                     <!-- row(12분할) END -->
+                  </div>
+                  <!-- container END -->
+               </div>
+
+            </div>
+         </div>
       </div>
-</div>
-</div>
+ 
+      
+   </section>
+   
+  <!-- Go To Top Link -->
+    <a href="#" class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </a>
+
+    <div class="loader">
+      <div class="preloader2">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+    </div>
+
+
+    <!-- Footer Section -->
+
+ <jsp:include page="/include/footer.jsp"/>
+
+    <!-- Footer Section End-->
+
+    <!-- jQuery  -->
+    <%@include file="../include/jquery.jsp" %>
+   
+   
 </body>
 <br>
 <br>
 <br>
-<%@include file="/include/footer.jsp"%>
-<%@include file="/include/jquery.jsp"%>
+<br>
+
+
+
+</html>
+
