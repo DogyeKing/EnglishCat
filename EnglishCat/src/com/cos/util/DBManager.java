@@ -12,12 +12,12 @@ import javax.sql.DataSource;
 public class DBManager {
 	public static Connection getConnection(){
 		Connection conn = null;
-		System.out.println("getConnection start");
 		try {
 			Context initContext = new InitialContext();
 			Context envContext  = (Context)initContext.lookup("java:/comp/env");
 			DataSource ds = (DataSource)envContext.lookup("jdbc/myoracle");
 			conn = ds.getConnection();
+			System.out.println("DB연결됨");
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("DB 실패");

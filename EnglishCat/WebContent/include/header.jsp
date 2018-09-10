@@ -105,7 +105,7 @@
                   <ul class="dropdown-menu">
                     <li><a href="<%=request.getContextPath()%>/about/fee.jsp">수강료 안내</a></li>    
                     <li><a href="<%=request.getContextPath()%>/about/skypeInstall.jsp">Skype 설치하기</a></li>  
-                    <li><a href="<%=request.getContextPath()%>/about/about.jsp">Skype 화상영어 장점</a></li>   
+                    <li><a href="<%=request.getContextPath()%>/about/skypeJang.jsp">Skype 화상영어 장점</a></li>   
                   </ul>                        
                 </li>
                 <li class="dropdown dropdown-toggle">
@@ -124,8 +124,8 @@
                 <li class="dropdown dropdown-toggle">
                   <a href="#" data-toggle="dropdown">수업과정 <i class="fa fa-angle-down"></i></a>
                   <ul class="dropdown-menu">
-                    <li><a href="<%=request.getContextPath()%>/course/single-teacher.jsp">강사 소개</a></li>                     
-                    <li><a href="<%=request.getContextPath()%>/course/courses-grid.jsp">시니어 과정</a></li>
+                    <li><a href="<%=request.getContextPath()%>/course/teacher.jsp">강사 소개</a></li>                     
+                    <li><a href="<%=request.getContextPath()%>/course/seniorCourse.jsp">시니어 과정</a></li>
                     <li><a href="<%=request.getContextPath()%>/course/juniorCourse.jsp">주니어과정</a></li>
                   </ul>                        
                 </li> 
