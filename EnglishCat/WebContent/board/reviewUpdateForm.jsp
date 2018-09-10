@@ -19,19 +19,20 @@
       <!-- Blog Entries Column -->
       <div class="col-md-8">
            <div class="content-section">
-              <form name="w_form" method="POST" action="<%=request.getContextPath()%>/board?cmd=review_update">
+              <form name="w_form" method="POST" action="<%=request.getContextPath()%>/board?cmd=review_updateProc">
            		
            		
-           		   <input type="hidden" name="user_pid" value="ID0001">
+           		   <input type="hidden" name="user_pid" value="${contReviewVO.user_pid}">
+           		      <input type="hidden" name="cont_id" value="${contReviewVO.cont_id}">
                  <fieldset class="form-group">
-                    <legend class="border-bottom mb-4">업데이트</legend>
+                    <legend class="border-bottom mb-4">업데이트</legend>                   
                     <div class="form-group">
-                       <label class="form-control-label">Title</label>
-                       <input class="form-control form-control-lg" type="text" name="cont_title" required autofocus>
+                       <label class="form-control-label">title</label>
+                       <input class="form-control form-control-lg" name="cont_title" type="text" value="${contReviewVO.cont_title}" required autofocus>
                     </div>
                     <div class="form-group">
-                       <label class="form-control-label">Content</label>
-                       <textarea id="textAreaContent" name="cont_content" rows="15" cols="80" style="width:100%"></textarea>
+                       <label class="form-control-label">content</label>
+                       <textarea id="textAreaContent" name="cont_content" rows="15" cols="80" style="width:100%">${contReviewVO.cont_content}</textarea>
                     </div>                 
                     <div class="form-group">
                        <button class="btn btn-outline-info" type="button" onclick="submitContents(this)">글쓰기</button>

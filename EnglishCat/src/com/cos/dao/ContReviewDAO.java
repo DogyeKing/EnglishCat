@@ -20,7 +20,6 @@ public class ContReviewDAO {
 		public List<ContReviewVO> contReviewSelectList(){
 			String SQL = "select * from tb_cont_review";
 			Connection conn = DBManager.getConnection();
-			System.out.println("리스트 뽑자");
 			try {
 				pstmt = conn.prepareStatement(SQL);		
 				rs = pstmt.executeQuery();
@@ -37,7 +36,6 @@ public class ContReviewDAO {
 					contReviewVO.setUpdate_pid(rs.getString("update_pid"));
 					contReviewVO.setDelete_yn(rs.getString("delete_yn"));
 					list.add(contReviewVO);		
-					System.out.println("뽑아짐");
 				}
 				return list;
 			}catch (Exception e) {
@@ -57,18 +55,10 @@ public class ContReviewDAO {
 			
 			try { 
 				pstmt = conn.prepareStatement(SQL); 
-
-		/*		pstmt.setString(1, "a");
-				pstmt.setString(2, "a");
-				pstmt.setString(3, "a");
-				*/
 				pstmt.setString(1, contReview.getCont_title());
 				pstmt.setString(2, contReview.getCont_content());
 				pstmt.setString(3, contReview.getUser_pid());
-				
-		/*		System.out.println("aaa : \n" + SQL);*/
 				pstmt.executeUpdate();
-				System.out.println("가즈아~~");
 				return 1;
 
 			} catch (Exception e) {
@@ -106,14 +96,15 @@ public class ContReviewDAO {
 				
 				}
 				
+				//게시판 수정
 				public int update(ContReviewVO contReviewVO) {
-					String SQL = "update tb_cont_review set title = ?, content = ? where num = ?";
+					String SQL = "update tb_cont_review set cont_title = ?, cont_content = ? where cont_id = ?";
 					Connection conn = DBManager.getConnection();
 					try {
 						pstmt = conn.prepareStatement(SQL);
 						pstmt.setString(1, contReviewVO.getCont_title());
 						pstmt.setString(2, contReviewVO.getCont_content());
-						pstmt.setString(3, contReviewVO.getUpdate_pid());
+						pstmt.setString(3, contReviewVO.getCont_id());
 						pstmt.executeUpdate();
 						return 1;
 					} catch (Exception e) {
@@ -122,9 +113,9 @@ public class ContReviewDAO {
 						DBManager.close(conn, pstmt);
 					} return -1;
 				}
-}
+
 		
-/*		//게시판 삭제
+		//게시판 삭제
 		public int delete(String cont_id ) {
 			String SQL = "delete tb_cont_review where cont_id = ?";
 			Connection conn = DBManager.getConnection();
@@ -132,15 +123,16 @@ public class ContReviewDAO {
 				pstmt = conn.prepareStatement(SQL);
 				pstmt.setString(1, cont_id);
 				pstmt.executeUpdate();
+				pstmt.executeUpdate();
 				return 1;
 			} catch (Exception e) {
 				e.printStackTrace();
 			} finally {
 				DBManager.close(conn, pstmt);
 			} return -1;
-		}*/
+		}
 		
-		
+}
 
 	
 
