@@ -25,9 +25,11 @@ public class ReviewWriteAction implements Action{
 		contReviewVO.setCont_content(request.getParameter("cont_content"));
 		//session과 user_id와 연동하기 
 		contReviewVO.setUser_pid(request.getParameter("user_pid"));
+/*	
+		
 		System.out.println(contReviewVO.getCont_title());
 		System.out.println(contReviewVO.getCont_content());
-		System.out.println(contReviewVO.getUser_pid());
+		System.out.println(contReviewVO.getUser_pid());*/
 		
 		int result = contReviewDAO.write(contReviewVO);
 		System.out.println(result);

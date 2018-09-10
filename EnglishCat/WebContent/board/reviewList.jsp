@@ -40,7 +40,7 @@
 
 				<c:forEach var="item" items="${list}">
 					<tr>
-						<td>${item.cont_id}</td>
+						<td><a href="<%=request.getContextPath()%>/board?cmd=review_detail&cont_id=${item.cont_id}">${item.cont_id}</a></td>
 						<td>${item.cont_title}</td>
 						<td>${item.cont_content}</td>
 						<td>${item.user_pid}</td>
@@ -60,14 +60,40 @@
          </div>
       </div>
    </section>
+   
+  <!-- Go To Top Link -->
+    <a href="#" class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </a>
+
+    <div class="loader">
+      <div class="preloader2">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+    </div>
+
+
+    <!-- Footer Section -->
+
+ <jsp:include page="/include/footer.jsp"/>
+
+    <!-- Footer Section End-->
+
+    <!-- jQuery  -->
+    <%@include file="../include/jquery.jsp" %>
+   
+   
 </body>
 <br>
 <br>
 <br>
 <br>
 
-<%@include file="/include/footer.jsp" %>
-<%@include file="/include/jquery.jsp" %>
+
 
 </html>
 

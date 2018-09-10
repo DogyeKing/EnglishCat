@@ -132,10 +132,10 @@
                 <li class="dropdown dropdown-toggle">
                   <a href="#" data-toggle="dropdown">커뮤니티 <i class="fa fa-angle-down"></i></a>
                   <ul class="dropdown-menu">
-                    <li><a href="blog.html">Blog - Right Sidebar</a></li>                     
-                    <li><a href="blog-left-sidebar.html">Blog - Left Sidebar</a></li>
+                    <li><a href="blog.html">공지사항</a></li>                     
+                    <li><a href="<%=request.getContextPath()%>/board/faqList.jsp">FAQ</a></li>
                     <li><a href="<%=request.getContextPath()%>/board?cmd=review_list">수강후기</a></li>   
-                    <li><a href="single-post.html">Blog Single Post</a></li>   
+                    <li><a href="single-post.html">자유게시판</a></li>   
                   </ul>                        
                 </li>             
                 <li><a href="contact.html">마이페이지</a></li>
