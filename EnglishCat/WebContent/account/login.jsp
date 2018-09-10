@@ -75,6 +75,7 @@
             </form>
             
             
+            <!-- 네아로 도전중 -->
              <%
 			    String clientId = "UF9JmYLiZGmrawFZDLar";//애플리케이션 클라이언트 아이디값";
 			    String redirectURI = URLEncoder.encode("http://localhost:8000/EnglishCat/account/callback.jsp", "UTF-8");

@@ -1,9 +1,13 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="com.cos.util.APIExamMemberProfile"%>
+<%@ page import="org.json.simple.parser.JSONParser"%>
+<%@ page import="org.json.simple.JSONObject"%>
 <%@ page import="java.net.URLEncoder" %>
 <%@ page import="java.net.URL" %>
 <%@ page import="java.net.HttpURLConnection" %>
 <%@ page import="java.io.BufferedReader" %>
 <%@ page import="java.io.InputStreamReader" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
   <head>
     <title>네이버로그인</title>
@@ -44,7 +48,22 @@
       }
       br.close();
       if(responseCode==200) {
-        out.println(res.toString());
+        JSONParser parser = new JSONParser();
+        JSONObject getData = (JSONObject)parser.parse(res.toString());
+        JSONObject resp = (JSONObject) getData.get("response");
+        String id = resp.get("id").toString();
+        String gender = resp.get("gender").toString();
+        String email = resp.get("email").toString();
+        String name = resp.get("name").toString();
+		RegistDAO regist = new RegistDAO()
+				if(regist == null) {
+					
+					
+				}
+		
+
+        id = new APIExamMemberProfile().getProfile(getData.get("access_token").toString());
+        
       }
     } catch (Exception e) {
       System.out.println(e);
