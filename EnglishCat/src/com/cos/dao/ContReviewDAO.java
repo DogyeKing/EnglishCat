@@ -20,11 +20,12 @@ public class ContReviewDAO {
 		public List<ContReviewVO> contReviewSelectList(){
 			String SQL = "select * from tb_cont_review";
 			Connection conn = DBManager.getConnection();
+			System.out.println("리스트 뽑자");
 			try {
 				pstmt = conn.prepareStatement(SQL);		
 				rs = pstmt.executeQuery();
 				List<ContReviewVO> list = new ArrayList<>();
-	
+				System.out.println(rs.next());					
 				while (rs.next()) {
 					ContReviewVO contReviewVO = new ContReviewVO();
 					contReviewVO.setCont_id(rs.getString("cont_id"));
@@ -35,7 +36,8 @@ public class ContReviewDAO {
 					contReviewVO.setUpdate_dt(rs.getString("update_pid"));
 					contReviewVO.setUpdate_pid(rs.getString("update_pid"));
 					contReviewVO.setDelete_yn(rs.getString("delete_yn"));
-					list.add(contReviewVO);					
+					list.add(contReviewVO);		
+					System.out.println("뽑아짐");
 				}
 				return list;
 			}catch (Exception e) {
@@ -102,6 +104,23 @@ public class ContReviewDAO {
 					} return null;
 					
 				
+				}
+				
+				public int update(ContReviewVO contReviewVO) {
+					String SQL = "update tb_cont_review set title = ?, content = ? where num = ?";
+					Connection conn = DBManager.getConnection();
+					try {
+						pstmt = conn.prepareStatement(SQL);
+						pstmt.setString(1, contReviewVO.getCont_title());
+						pstmt.setString(2, contReviewVO.getCont_content());
+						pstmt.setString(3, contReviewVO.getUpdate_pid());
+						pstmt.executeUpdate();
+						return 1;
+					} catch (Exception e) {
+						e.printStackTrace();
+					} finally {
+						DBManager.close(conn, pstmt);
+					} return -1;
 				}
 }
 		

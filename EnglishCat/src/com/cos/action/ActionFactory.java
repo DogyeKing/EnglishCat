@@ -2,6 +2,7 @@ package com.cos.action;
 
 import com.cos.controller.board.ReviewDetailAction;
 import com.cos.controller.board.ReviewListAction;
+import com.cos.controller.board.ReviewUpdateAction;
 import com.cos.controller.board.ReviewWriteAction;
 import com.cos.controller.member.MemberIDCheckAction;
 import com.cos.controller.member.MemberLoginAction;
@@ -45,6 +46,8 @@ public class ActionFactory {
 			return new MemberIDCheckAction();
 		}else if(cmd.equals("review_detail")) {
 			return new ReviewDetailAction();
+		}else if(cmd.equals("review_update")) {
+			return null;
 		}
 		return null;
 	}

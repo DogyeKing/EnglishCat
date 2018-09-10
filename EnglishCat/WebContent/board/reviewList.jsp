@@ -40,8 +40,8 @@
 
 				<c:forEach var="item" items="${list}">
 					<tr>
-						<td><a href="<%=request.getContextPath()%>/board?cmd=review_detail&cont_id=${item.cont_id}">${item.cont_id}</a></td>
-						<td>${item.cont_title}</td>
+						<td>${item.cont_id}</td>
+						<td><a href="<%=request.getContextPath()%>/board?cmd=review_detail&cont_id=${item.cont_id}">${item.cont_title}</a></td>
 						<td>${item.cont_content}</td>
 						<td>${item.user_pid}</td>
 						<td>${item.insert_dt}</td>
