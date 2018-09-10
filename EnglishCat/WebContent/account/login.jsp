@@ -2,6 +2,12 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+
+<!-- 네이버로그인 임포트 시도중 -->
+<%@ page import="java.net.URLEncoder" %>
+<%@ page import="java.security.SecureRandom" %>
+<%@ page import="java.math.BigInteger" %>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -67,9 +73,30 @@
               </div>
               <button type="submit" id="submit" class="btn btn-common">Login</button>    
             </form>
+            
+            
+            <!-- 네이버 아이디 로그인 시도중 -->
+            <div id="naver_id_login"></div>
+			<script type="text/javascript"
+					src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js"
+					charset="utf-8"></script>
+			
+			<script type="text/javascript">
+					var clientId = "UF9JmYLiZGmrawFZDLar";
+					var callbackUrl = "http://localhost:8000/EnglishCat/account/callback.jsp";
+					var naver_id_login = new naver_id_login(clientId, callbackUrl);
+					var state = naver_id_login.getUniqState();
+					naver_id_login.setButton("white", 3, 40);
+					naver_id_login.setDomain("localhost:8000/EnglishCat/main.jsp");
+					naver_id_login.setState(state);
+					naver_id_login.setPopup();
+					naver_id_login.init_naver_id_login();
+			</script>
+
+            
+            
           </div>
-       
-       
+             
         <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="img-thumb">
                 <img src="<%=request.getContextPath()%>/assets/img/login/login4.jpg" alt="">
