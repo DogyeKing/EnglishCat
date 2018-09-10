@@ -43,16 +43,19 @@
 
 			
 					<tr>
-						<td>${item.cont_id}</td>
-						<td>${item.cont_title}</td>
-						<td>${item.cont_content}</td>
-						<td>${item.user_pid}</td>
+						<td>${contReviewVO.cont_id}</td>
+						<td>${contReviewVO.cont_title}</td>
+						<td>${contReviewVO.cont_content}</td>
+						<td>${contReviewVO.user_pid}</td>
 				
 
 					</tr>
 			
                </table>
-               
+               <br>
+               <br>
+     		   <a class="btn btn-primary" href="<%=request.getContextPath() %>/board/reviewUpdateForm.jsp">수정</a>
+               <button class="btn btn-primary" onclick="">삭제</button>
                      </div>
                      <!-- row(12분할) END -->
                   </div>

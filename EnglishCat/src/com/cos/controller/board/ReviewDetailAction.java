@@ -24,16 +24,8 @@ public class ReviewDetailAction implements Action {
 		ContReviewDAO contReviewDAO = new ContReviewDAO();
 		
 		ContReviewVO contReviewVO = contReviewDAO.select(cont_id);
-		 	
-		contReviewVO.setCont_id(contReviewVO.getCont_id());
-		contReviewVO.setCont_title(contReviewVO.getCont_title());
-		contReviewVO.setCont_content(contReviewVO.getCont_content());
-		contReviewVO.setUser_pid(contReviewVO.getUser_pid());
-
-		request.setAttribute("cont_id", cont_id);
+				
 		request.setAttribute("contReviewVO", contReviewVO);
-		
-		System.out.println("2");
 		
 		RequestDispatcher dis = request.getRequestDispatcher(url);
         dis.forward(request, response);
