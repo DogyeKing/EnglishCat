@@ -42,6 +42,32 @@ public class RegistDAO {
 		return -1;
 	}
 	
+	//네이버 회원가입
+	public int naverRegist(RegistVO regist) {
+		System.out.println("naverRegist start");
+		String SQL = "INSERT INTO TB_USER_INFO VALUES (FN_NEXT_PID('USERPID'), ?, NULL, ?, NULL, ?, NULL, NULL, NULL, 'YES', 'NAVER_USER', SYSDATE, NULL, NULL, NULL)";
+		
+		/*String SQL = "INSERT INTO TB_USER_INFO VALUES (?,?,?,?,?,?,?,?,'NO',SYSDATE,SYSDATE,'NO','NO')";*/
+		Connection conn = DBManager.getConnection();
+		System.out.println("connection ok");
+		try {
+			pstmt = conn.prepareStatement(SQL);
+			pstmt.setString(1, regist.getUser_id());
+			pstmt.setString(2, regist.getUser_name());
+			pstmt.setString(3, regist.getUser_mail());
+			
+			pstmt.executeUpdate();
+			
+			return 1;
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBManager.close(conn, pstmt);
+		}
+		
+		return -1;
+	}
+	
 	// select_id
 			public int select_id(RegistVO regist) {
 				String SQL = "SELECT user_mail_avail_yn FROM TB_USER_INFO WHERE user_id = ? AND user_pass= ?";
@@ -159,6 +185,7 @@ public class RegistDAO {
 			rs = pstmt.executeQuery();
 			
 			if(rs.next()) {
+				System.out.println("찾앗당");
 				RegistVO regist = new RegistVO();
 				regist.setUser_id(rs.getString("user_id"));
 				regist.setUser_name(rs.getString("user_name"));
