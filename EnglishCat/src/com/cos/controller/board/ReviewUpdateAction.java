@@ -2,6 +2,7 @@ package com.cos.controller.board;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -12,24 +13,26 @@ import com.cos.dto.ContReviewVO;
 import com.cos.util.Script;
 
 public class ReviewUpdateAction implements Action {
-
+	private static String naming = "ReviewUpdateAction : ";
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	String url = "board/reviewList.jsp";
+	System.out.println(naming);
+		
+	String url = "board/ReviewUpdateForm.jsp";
+	
+	String cont_id = request.getParameter("cont_id");
 	
 	ContReviewDAO contReviewDAO = new ContReviewDAO();
-	ContReviewVO contReviewVO = new ContReviewVO();
+	ContReviewVO contReviewVO = contReviewDAO.select(cont_id);
 	
-	contReviewVO.setCont_title(request.getParameter("cont_title"));
-	contReviewVO.setCont_content(request.getParameter("cont_content"));
-	contReviewVO.setUser_pid(request.getParameter("user_pid"));
 	
-	int result = contReviewDAO.update(contReviewVO);
-	if ( result == 1) {
-		System.out.println("업데이트 성공");
-		Script.moving(response, "업데이트 성공", url);
+	if (contReviewVO == null) {
+		System.out.println(naming + "update error");
+		Script.moving(response, "데이터 베이스 에러");
 	}else {
-		Script.moving(response, "업데이트 실패", url);
+		request.setAttribute("contReviewVO", contReviewVO);
+		RequestDispatcher dis = request.getRequestDispatcher(url);
+		dis.forward(request, response);
 	}
 	}
 }

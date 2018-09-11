@@ -11,31 +11,27 @@ import com.cos.dao.ContReviewDAO;
 import com.cos.dto.ContReviewVO;
 import com.cos.util.Script;
 
-public class ReviewWriteAction implements Action{
+public class ReviewUpdateProcAction implements Action {
+	private static String naming = "ReviewUpdateAction : ";
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "index.jsp";
-		
-		
+		System.out.println(naming);
+
 		ContReviewVO contReviewVO = new ContReviewVO();
-		ContReviewDAO contReviewDAO = new ContReviewDAO();
-		
+		contReviewVO.setCont_id(request.getParameter("cont_id"));
 		contReviewVO.setCont_title(request.getParameter("cont_title"));
 		contReviewVO.setCont_content(request.getParameter("cont_content"));
-		//session과 user_id와 연동하기 
-		contReviewVO.setUser_pid(request.getParameter("user_pid"));
 
-		int result = contReviewDAO.write(contReviewVO);
-		System.out.println(result);
-		if(result == 1) {
-	
-			Script.moving(response, "글쓰기 성공", url);
-			
-		}else if(result == -1){
-			Script.moving(response, "글쓰기 실패");
+		String url = "board?cmd=review_detail&cont_id=" + contReviewVO.getCont_id();
+		ContReviewDAO contReviewDAO = new ContReviewDAO();
+
+		int result = contReviewDAO.update(contReviewVO);
+		if (result == 1) {
+			Script.moving(response, "글수정 성공", url);
+		}else if(result == -1) {
+			System.out.println(naming + "update error");
+			Script.moving(response, "업데이트 에러");
 		}
-	
-		
 	}
 }
