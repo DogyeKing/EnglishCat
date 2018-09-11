@@ -1,6 +1,6 @@
-<%@page import="com.cos.util.Script"%>
-<%@page import="com.cos.dto.RegistVO"%>
-<%@page import="com.cos.dao.RegistDAO"%>
+<%@ page import="com.cos.util.Script"%>
+<%@ page import="com.cos.dto.RegistVO"%>
+<%@ page import="com.cos.dao.RegistDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="com.cos.util.APIExamMemberProfile"%>
 <%@ page import="org.json.simple.parser.JSONParser"%>

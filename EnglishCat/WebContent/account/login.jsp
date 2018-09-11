@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 
-<!-- 네이버로그인 임포트 시도중 -->
+<!-- 네이버로그인 임포트 -->
 <%@ page import="java.net.URLEncoder" %>
 <%@ page import="java.security.SecureRandom" %>
 <%@ page import="java.math.BigInteger" %>
@@ -23,6 +23,33 @@
   </head>
 
   <body>
+  
+  
+  <%  //1. 로그인을 한 상태(session), 2. 로그인을 안한 상태(x)
+	String user_id= null;
+	if(session.getAttribute("user_id") != null){
+		user_id = (String) session.getAttribute("user_id");
+	}
+	
+	//2. 쿠키 확인
+	String cookieID = null;
+	Cookie[] cookies = request.getCookies();
+	
+	for(Cookie c : cookies){
+		if(c.getName().equals("cookieID")){
+			//엘레멘트 찾아서 넣어주면 됨.
+			cookieID = c.getValue();
+			System.out.println(c.getName());
+			System.out.println(c.getValue());
+			System.out.println("쿠쿠이쏘");
+		}else{
+			System.out.println("쿠키 없음");
+		}
+	}
+%>
+
+  
+  
     
     <!-- Header area wrapper Starts -->
    
@@ -59,12 +86,31 @@
             <!-- Form -->
             <form method="post" class="login" action="<%=request.getContextPath()%>/member?cmd=member_login" onsubmit="return hangulCheck(this)">                
               <div class="form-group">
-                <label for="username">User ID <span class="required">*</span></label>
-                <input class="form-control" name="user_id" id="username" maxlength="20" type="text" required autofocus>
+              	
+ 	            <%
+					if(cookieID != null){
+	
+				%>
+
+ 	              
+ 	              
+                <label for="username">User ID <span class="required">*</span></label>                
+                <input class="form-control" value="<%=cookieID %>" name="user_id" id="user_id" maxlength="20" type="text" required autofocus>
+                
+                <%
+					}else{
+				%>
+				
+				<input class="form-control" name="user_id" id="user_id" maxlength="20" type="text" required autofocus>
+				
+				<%
+					}
+				%>
+                
               </div>
               <div class="form-group">
                 <label for="password">Password <span class="required">*</span></label>
-                <input class="form-control" name="user_pass" id="password" type="password" required>
+                <input class="form-control" name="user_pass" id="user_pass" type="password" required>
               </div>              
               <div class="form-group">
                 <label for="rememberme" class="inline">
@@ -74,7 +120,7 @@
               <button type="submit" id="submit" class="btn btn-common">Login</button>    
               
               
-             <!-- 네아로 도전중 -->
+             <!-- 네아로 시작 -->
              <%
 			    String clientId = "UF9JmYLiZGmrawFZDLar";//애플리케이션 클라이언트 아이디값";
 			    String redirectURI = URLEncoder.encode("http://localhost:8000/EnglishCat/account/callback.jsp", "UTF-8");
@@ -89,11 +135,8 @@
   			 <a href="<%=apiURL%>"><img height="42" src="http://static.nid.naver.com/oauth/small_g_in.PNG"/></a>
   			
   			 <!-- 네아로 끝 -->
-              
-              
-            </form>
-            
-
+                            
+            </form>          
             
           </div>
              
@@ -105,13 +148,17 @@
         </div>
       </div>
     </section>
-           <br>
+       <br>
        <br>
        <br>       <br>
        <br>
 
 
     <!-- End Content Section  -->
+    
+    
+
+
 
 <!-- Start Call to Action Section -->
      <div class="cta">
@@ -127,6 +174,11 @@
       </div>
     </div>
     <!-- End Call to Action Section  -->
+    
+    
+    
+    
+    
 
     <!-- Footer Section -->
 

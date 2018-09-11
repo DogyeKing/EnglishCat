@@ -393,7 +393,7 @@
                             <h2 class="heading-title">Sign Up Now</h2>
                             <p class="desc">Get Free Courses</p>
                         </div>
-                        <form role="form" class="login-form" name="a" action="#" method="post">
+                        <form role="form" class="login-form" name="a" action="sendMail.jsp" method="post">
                             <div class="form-group">
                                 <input type="text" id="sender-email" class="form-control" name="email" placeholder="Enter your Email">
                             </div> 
@@ -411,8 +411,6 @@
 							    document.a.submit();
 							}
 							</script>
-
-
 
 
                           </form>
