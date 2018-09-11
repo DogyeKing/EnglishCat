@@ -141,7 +141,7 @@
     <!-- End Content Section  -->
 
     <!-- Start Call to Action Section -->
-    <div class="cta">
+    <!-- <div class="cta">
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-sm-8">
@@ -152,7 +152,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- End Call to Action Section -->
 
     <!-- Footer Section -->

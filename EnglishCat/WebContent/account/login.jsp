@@ -88,7 +88,7 @@
 			    //session.setAttribute("state", state);
 			 %>
   			
-  			<a href="<%=apiURL%>"><img height="50" src="http://static.nid.naver.com/oauth/small_g_in.PNG"/></a>
+  			<a href="<%=apiURL%>"><img height="42" src="http://static.nid.naver.com/oauth/small_g_in.PNG"/></a>
 
             
             
@@ -111,19 +111,19 @@
     <!-- End Content Section  -->
 
 <!-- Start Call to Action Section -->
-  <!--   <div class="cta">
+     <div class="cta">
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-sm-8">
             <h3>Learning Management System</h3>
           </div>
           <div class="col-md-4 col-sm-4">
-            <a href="#" class="btn btn-border">Create Account</a>
+            <a href="<%=request.getContextPath()%>/account/registration.jsp" class="btn btn-border">Create Account</a>
           </div>
         </div>
       </div>
     </div>
-    End Call to Action Section  -->
+    <!-- End Call to Action Section  -->
 
     <!-- Footer Section -->
 
