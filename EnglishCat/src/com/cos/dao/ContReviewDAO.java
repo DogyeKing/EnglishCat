@@ -18,7 +18,7 @@ public class ContReviewDAO {
 		
 		//게시판 리스트 뽑기
 		public List<ContReviewVO> contReviewSelectList(){
-			String SQL = "select * from tb_cont_review";
+			String SQL = "select * from tb_cont_review order by cont_id desc";
 			Connection conn = DBManager.getConnection();
 			try {
 				pstmt = conn.prepareStatement(SQL);		
@@ -130,6 +130,30 @@ public class ContReviewDAO {
 			} finally {
 				DBManager.close(conn, pstmt);
 			} return -1;
+		}
+		
+
+		public ContReviewVO select_ajax() {
+			String SQL = "select * from tb_cont_review order by cont_id DESC";
+			Connection conn = DBManager.getConnection();
+			try {
+				pstmt = conn.prepareStatement(SQL);				
+				rs = pstmt.executeQuery();				
+					if(rs.next()) {
+						ContReviewVO contReviewVO = new ContReviewVO();
+						contReviewVO.setCont_id(rs.getString("cont_id"));
+						contReviewVO.setCont_title(rs.getString("cont_title"));
+						contReviewVO.setCont_content(rs.getString("cont_content"));
+						contReviewVO.setUser_pid(rs.getString("user_pid"));
+						return contReviewVO;
+					}
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				DBManager.close(conn, pstmt);
+			} return null;
+			
+		
 		}
 		
 }

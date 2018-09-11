@@ -1,5 +1,6 @@
 package com.cos.action;
 
+import com.cos.controller.board.AjaxAction;
 import com.cos.controller.board.ReviewDeleteAction;
 import com.cos.controller.board.ReviewDetailAction;
 import com.cos.controller.board.ReviewListAction;
@@ -54,6 +55,8 @@ public class ActionFactory {
 			return new ReviewUpdateProcAction();
 		}else if(cmd.equals("review_delete")) {
 			return new ReviewDeleteAction();
+		}else if(cmd.equals("ajax")) {
+			return new AjaxAction();
 		}
 			
 		return null;
