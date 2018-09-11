@@ -390,20 +390,31 @@
                 <div class="col-md-5 col-sm-6 col-xs-12">
                     <div class="sign-up box">
                         <div class="heading">
-                            <h2 class="heading-title">Sing Up Now</h2>
+                            <h2 class="heading-title">Sign Up Now</h2>
                             <p class="desc">Get Free Courses</p>
                         </div>
-                        <form role="form" class="login-form">
-                            <div class="form-group">
-                                <input type="text" id="sender-name" class="form-control" name="name" placeholder="Enter your Name">
-                            </div> 
+                        <form role="form" class="login-form" name="a" action="#" method="post">
                             <div class="form-group">
                                 <input type="text" id="sender-email" class="form-control" name="email" placeholder="Enter your Email">
                             </div> 
                             <div class="form-group">
-                                <input type="text" id="sender-phone" class="form-control" placeholder="Enter your Phone">
+                                <input type="text" id="sender-subject" class="form-control" name="subject" placeholder="Enter your Subject">
+                            </div> 
+                            <div class="form-group">
+                                <input type="text" id="sender-content" class="form-control" name="content" placeholder="Enter your Content">
                             </div>   
-                            <button class="btn btn-common">Enroll Now</button>
+                            <button class="btn btn-common" onclick="check()">Enroll Now</button>
+                            <input type="hidden" name="to" value="#@naver.com"> 
+							<input type="hidden" name="from" value="#@naver.com">
+							<script> 
+							 function check() {
+							    document.a.submit();
+							}
+							</script>
+
+
+
+
                           </form>
                     </div>
                 </div>

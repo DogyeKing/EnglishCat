@@ -1,3 +1,6 @@
+<%@page import="com.cos.util.Script"%>
+<%@page import="com.cos.dto.RegistVO"%>
+<%@page import="com.cos.dao.RegistDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="com.cos.util.APIExamMemberProfile"%>
 <%@ page import="org.json.simple.parser.JSONParser"%>
@@ -14,6 +17,7 @@
   </head>
   <body>
   <%
+  	RegistDAO rdao = new RegistDAO();
     String clientId = "UF9JmYLiZGmrawFZDLar";//애플리케이션 클라이언트 아이디값";
     String clientSecret = "oWs6XrjtIz";//애플리케이션 클라이언트 시크릿값";
     String code = request.getParameter("code");
@@ -35,7 +39,7 @@
       con.setRequestMethod("GET");
       int responseCode = con.getResponseCode();
       BufferedReader br;
-      System.out.print("responseCode="+responseCode);
+      System.out.println("responseCode="+responseCode);
       if(responseCode==200) { // 정상 호출
         br = new BufferedReader(new InputStreamReader(con.getInputStream()));
       } else {  // 에러 발생
@@ -48,22 +52,12 @@
       }
       br.close();
       if(responseCode==200) {
-        JSONParser parser = new JSONParser();
-        JSONObject getData = (JSONObject)parser.parse(res.toString());
-        JSONObject resp = (JSONObject) getData.get("response");
-        String id = resp.get("id").toString();
-        String gender = resp.get("gender").toString();
-        String email = resp.get("email").toString();
-        String name = resp.get("name").toString();
-		RegistDAO regist = new RegistDAO()
-				if(regist == null) {
-					
-					
-				}
-		
-
-        id = new APIExamMemberProfile().getProfile(getData.get("access_token").toString());
-        
+          JSONParser parser = new JSONParser();
+  		JSONObject getData = (JSONObject)parser.parse(res.toString());
+          String user_id = new APIExamMemberProfile().getProfile(getData.get("access_token").toString());
+          session.setAttribute("user_id", user_id);
+          
+          Script.moving(response, "네이버 로그인 완료", request.getContextPath()+"/main.jsp");
       }
     } catch (Exception e) {
       System.out.println(e);
