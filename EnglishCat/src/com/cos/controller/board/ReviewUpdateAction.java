@@ -18,7 +18,7 @@ public class ReviewUpdateAction implements Action {
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	System.out.println(naming);
 		
-	String url = "board/ReviewUpdateForm.jsp";
+	String url = "board/reviewUpdateForm.jsp";
 	
 	String cont_id = request.getParameter("cont_id");
 	
