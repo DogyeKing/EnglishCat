@@ -1,8 +1,10 @@
 package com.cos.action;
 
+import com.cos.controller.board.ReviewDeleteAction;
 import com.cos.controller.board.ReviewDetailAction;
 import com.cos.controller.board.ReviewListAction;
 import com.cos.controller.board.ReviewUpdateAction;
+import com.cos.controller.board.ReviewUpdateProcAction;
 import com.cos.controller.board.ReviewWriteAction;
 import com.cos.controller.member.MemberIDCheckAction;
 import com.cos.controller.member.MemberLoginAction;
@@ -47,8 +49,13 @@ public class ActionFactory {
 		}else if(cmd.equals("review_detail")) {
 			return new ReviewDetailAction();
 		}else if(cmd.equals("review_update")) {
-			return null;
+			return new ReviewUpdateAction();
+		}else if(cmd.equals("review_updateProc")) {
+			return new ReviewUpdateProcAction();
+		}else if(cmd.equals("review_delete")) {
+			return new ReviewDeleteAction();
 		}
+			
 		return null;
 	}
 	

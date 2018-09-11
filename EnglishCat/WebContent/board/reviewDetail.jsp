@@ -54,8 +54,8 @@
                </table>
                <br>
                <br>
-     		   <a class="btn btn-primary" href="<%=request.getContextPath() %>/board/reviewUpdateForm.jsp">수정</a>
-               <button class="btn btn-primary" onclick="">삭제</button>
+     		   <a class="btn btn-primary" href="<%=request.getContextPath() %>/board?cmd=review_update&cont_id=${contReviewVO.cont_id}">수정</a>
+                  <a class="btn btn-primary" href="<%=request.getContextPath() %>/board?cmd=review_delete&cont_id=${contReviewVO.cont_id}">삭제</a>
                      </div>
                      <!-- row(12분할) END -->
                   </div>
