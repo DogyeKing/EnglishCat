@@ -28,8 +28,14 @@ public class ReviewWriteAction implements Action{
 		String user_id = null;
 		HttpSession session = request.getSession();
 		
-		if(session.getAttribute("user_id") != null) {
-			user_id = (String)session.getAttribute("user_id");
+		if(session.getAttribute("user_id") != null || session.getAttribute("naver_id") != null) {
+			
+			if(session.getAttribute("user_id") != null) {
+				user_id = (String)session.getAttribute("user_id");
+			} else if(session.getAttribute("naver_id") != null) {
+				user_id = (String)session.getAttribute("naver_id");
+			}
+			
 			int result = registDAO.check_id(user_id);
 			
 				if(result != 1) {
