@@ -947,10 +947,10 @@
 
 		setInterval(getAjaxList, 900000);
 	</script>
-<<<<<<< HEAD
+
 
 </body>
-=======
+
                 
                 
                 <div class="col-md-4 col-sm-6 col-xs-12">
@@ -1200,24 +1200,22 @@
                             <h2 class="heading-title">Sign Up Now</h2>
                             <p class="desc">Get Free Courses</p>
                         </div>
-                        <form role="form" class="login-form" name="a" action="sendMail.jsp" method="post">
+                        <form role="form" class="login-form" action="<%=request.getContextPath()%>/sendMail.jsp" method="post">
                             <div class="form-group">
-                                <input type="text" id="sender-email" class="form-control" name="email" placeholder="Enter your Email">
-                            </div> 
+                                <input type="text" id="sender-from" class="form-control" name="from" placeholder="Enter your Email">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="sender-to" class="form-control" name="to" placeholder="Enter your Email">
+                            </div>  
                             <div class="form-group">
                                 <input type="text" id="sender-subject" class="form-control" name="subject" placeholder="Enter your Subject">
                             </div> 
                             <div class="form-group">
                                 <input type="text" id="sender-content" class="form-control" name="content" placeholder="Enter your Content">
                             </div>   
-                            <button class="btn btn-common" onclick="check()">Enroll Now</button>
-                            <input type="hidden" name="to" value="#@naver.com"> 
-							<input type="hidden" name="from" value="#@naver.com">
-							<script> 
-							 function check() {
-							    document.a.submit();
-							}
-							</script>
+                            <button class="btn btn-common" onclick="check()" value="transmission">Enroll Now</button>
+                            
+							
 
 
                           </form>
@@ -1642,5 +1640,5 @@
     <%@include file="include/jquery.jsp" %>
 
   </body>
->>>>>>> 416bbbd56c49d8e3293cd2e8b01720ac7e7524df
+
 </html>
