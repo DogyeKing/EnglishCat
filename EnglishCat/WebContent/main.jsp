@@ -947,6 +947,7 @@
 
 		setInterval(getAjaxList, 900000);
 	</script>
+<<<<<<< HEAD
 
 
 </body>
@@ -1641,4 +1642,7 @@
 
   </body>
 
+=======
+</body>
+>>>>>>> b8dba3ef2de190e1f9984831a2087f71dfc214fd
 </html>
