@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
     
@@ -38,6 +37,7 @@
               <!-- Wellcome Starts -->
               <div class="pull-left">
                 <i class="fa fa-map-o" aria-hidden="true"></i> Sydney NSW 2052, Australia
+
               </div>
               <!-- Wellcome End -->
 
@@ -47,7 +47,7 @@
               
               <div class="quick-contacts pull-right">
               <c:choose>
-          		<c:when test="${empty sessionScope.user_id and empty sessionScope.naver_id}">
+          		<c:when test="${empty sessionScope.user_id && empty sessionScope.naver_id}">
                   <span><i class="fa fa-phone"></i> +61 2 9385 1000</span>
                   <span><i class="fa fa-envelope"></i><a href="#">hello@brightuniversity.edu</a></span>
                   <span><a href="<%=request.getContextPath()%>/account/login.jsp"><i class="fa fa-user"></i> Login</a> / <a href="<%=request.getContextPath()%>/account/registration.jsp">Register</a></span>

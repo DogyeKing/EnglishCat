@@ -1,17 +1,18 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
-
-<%@include file="/include/header.jsp"%>
-
+<!DOCTYPE html>
+<html>
+<head>
+</head>
  <!-- Smart Editor -->
    <script type="text/javascript" src="<%=request.getContextPath()%>/editor/js/HuskyEZCreator.js" charset="utf-8"></script>
    <script type="text/javascript" src="<%=request.getContextPath()%>/editor/photo_uploader/plugin/hp_SE2M_AttachQuickPhoto.js" charset="utf-8"></script>
 
  <!-- Page Content -->
+ 
  <body>
+ <%@include file="/include/header.jsp"%>
  <br>
  <br>
   <div class="container">
@@ -20,7 +21,7 @@
       <div class="col-md-8">
            <div class="content-section">
               <form name="w_form" method="POST" action="<%=request.getContextPath()%>/board?cmd=review_updateProc">
-           		
+           			
            		
 <%--            		   <input type="hidden" name="user_pid" value="${contReviewVO.user_pid}"> --%>
            		      <input type="hidden" name="cont_id" value="${contReviewVO.cont_id}">
@@ -89,3 +90,4 @@
 <br>
 <%@include file="/include/footer.jsp"%>
 <%@include file="/include/jquery.jsp"%>
+</html>
