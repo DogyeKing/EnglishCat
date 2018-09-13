@@ -938,7 +938,8 @@
 					});
 					var link3 = $('#link2');
 					link3.click(function() {
-						link3.attr('href', '/BBS/board/view.jsp?bdID='+ data[0].bdID);
+						link3.attr('href', '/BBS/board/view.jsp?bdID='
+								+ data[0].bdID);
 					});
 				}
 			});
