@@ -60,7 +60,7 @@
               	 <c:when test="${!empty sessionScope.user_id}">
 	              	 <span><i class="fa fa-phone"></i> +61 2 9385 1000</span>
 	              	 <span><i class="fa fa-envelope"></i><a href="#">hello@brightuniversity.edu</a></span>
-	              	 <span><a href="<%=request.getContextPath()%>/member?cmd=member_update"><i class="fa fa-user"></i> Account</a></span>
+	             <%--  	 <span><a href="<%=request.getContextPath()%>/member?cmd=member_update"><i class="fa fa-user"></i> Account</a></span> --%>
 	              	 <span><a href="<%=request.getContextPath()%>/member?cmd=member_logout"><i class="fa fa-user"></i> Logout</a></span>
               	</c:when>
               </c:choose>
@@ -142,7 +142,7 @@
                     <li><a href="single-post.html">자유게시판</a></li>   
                   </ul>                        
                 </li>             
-                <li><a href="contact.html">마이페이지</a></li>
+                <li><a href="<%=request.getContextPath()%>/member?cmd=member_update">마이페이지</a></li>
               </ul>
             </div>  
             

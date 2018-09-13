@@ -33,19 +33,19 @@
 			</ol>
 			<div class="carousel-inner">
 				<div class="item active"
-					style="background-image: url(assets/img/slider/bg-1.jpg);">
+					style="background-image: url(assets/img/slider/bg-44.png);">
 					<div class="carousel-caption">
-						<p>Bright - Bootstrap HTML5 Education Template</p>
+					<p>Bright - Bootstrap HTML5 Education Template</p>
 						<h1>
 							Excellent and Friendly<br> Faculty Members
-						</h1>
+						</h1> 
 						<a class="btn btn-lg btn-common" href="single-teacher.html"> <i
 							class="fa fa-arrow-circle-right"> </i> Learn More
 						</a>
 					</div>
 				</div>
 				<div class="item"
-					style="background-image: url(assets/img/slider/bg-2.jpg);">
+					style="background-image: url(assets/img/slider/bg-5.png);">
 					<div class="carousel-caption">
 						<p>Ready to Launch - School, College, University or Course
 							Website</p>
@@ -60,7 +60,7 @@
 					</div>
 				</div>
 				<div class="item"
-					style="background-image: url(assets/img/slider/bg-3.jpg);">
+					style="background-image: url(assets/img/slider/bg-8.jpg);">
 					<div class="carousel-caption">
 						<p>50+ Built-in Pages to Create any Kind of Education Site</p>
 						<h1>
@@ -80,9 +80,164 @@
 	</div>
 	<!-- Main Carousel Section End -->
 
+<!-- Why Choose section Start -->
+	<div class="why-choose">
+		<div class="container">
+			<div class="row">
+				<h2 class="section-title">Why Choose Our University</h2>
+				<div class="col-md-7 col-sm-7 col-xl-12">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="why-wrap">
+								<div class="icon">
+									<i class="fa fa-line-chart"></i>
+								</div>
+								<div class="why-text">
+									<h4>
+										<a href="#">Modern Courses</a>
+									</h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing
+										elit. Repellendus, quaerat beatae nulla.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="why-wrap">
+								<div class="icon">
+									<i class="fa fa-trophy"></i>
+								</div>
+								<div class="why-text">
+									<h4>
+										<a href="#">High-profile Faculties</a>
+									</h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing
+										elit. Repellendus, quaerat beatae nulla.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="why-wrap">
+								<div class="icon">
+									<i class="fa fa-briefcase"></i>
+								</div>
+								<div class="why-text">
+									<h4>
+										<a href="#">Guaranteed Career</a>
+									</h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing
+										elit. Repellendus, quaerat beatae nulla.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="why-wrap">
+								<div class="icon">
+									<i class="fa fa-magic"></i>
+								</div>
+								<div class="why-text">
+									<h4>
+										<a href="#">Research Programs</a>
+									</h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing
+										elit. Repellendus, quaerat beatae nulla.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="why-wrap">
+								<div class="icon">
+									<i class="fa fa-money"></i>
+								</div>
+								<div class="why-text">
+									<h4>
+										<a href="#">Affordable Costs</a>
+									</h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing
+										elit. Repellendus, quaerat beatae nulla.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="why-wrap">
+								<div class="icon">
+									<i class="fa fa-film"></i>
+								</div>
+								<div class="why-text">
+									<h4>
+										<a href="#">Cultural Events</a>
+									</h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing
+										elit. Repellendus, quaerat beatae nulla.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 
+				<div class="col-md-5 col-sm-5 col-xl-12">
+					<div class="featured-thumb">
+						<img src="assets/img/features/why.png" alt="">
+					</div>
+				</div>
 
+			</div>
+		</div>
+	</div>
+	<!-- Why Choose section End -->
 
+<!-- Counter Section Start -->
+	<section id="counter">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="counting">
+						<div class="icon-left">
+							<i class="fa fa-users"></i>
+						</div>
+						<div class="desc media-body">
+							<h3>Enrolled Students</h3>
+							<div class="counter" data-count="8565">0</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="counting">
+						<div class="icon-left">
+							<i class="fa fa-graduation-cap"></i>
+						</div>
+						<div class="desc media-body">
+							<h3>Education Awards</h3>
+							<div class="counter" data-count="120">0</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="counting">
+						<div class="icon-left">
+							<i class="fa fa-diamond"></i>
+						</div>
+						<div class="desc media-body">
+							<h3>Certified Teachers</h3>
+							<div class="counter" data-count="193">0</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="counting">
+						<div class="icon-left">
+							<i class="fa fa-flask"></i>
+						</div>
+						<div class="desc media-body">
+							<h3>Library and Labs</h3>
+							<div class="counter" data-count="150">0</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Counter Section End -->
+	
 	<!-- Activity Area Start -->
 	<section class="activity-area section">
 		<div class="container">
@@ -201,7 +356,7 @@
 	<!-- Features Area End -->
 
 	<!-- Courses Section Start -->
-	<section class="courses section">
+	<!-- <section class="courses section">
 		<div class="container">
 			<div class="row">
 				<h2 class="section-title">Featured Courses</h2>
@@ -371,7 +526,7 @@
 			<a href="courses-list.html">More Courses <i
 				class="fa fa-arrow-right" aria-hidden="true"></i></a>
 		</div>
-	</section>
+	</section> -->
 	<!-- Courses Section End -->
 
 	<!-- Coaching Area Start -->
@@ -432,163 +587,9 @@
 	</section>
 	<!-- Coaching Area End -->
 
-	<!-- Why Choose section Start -->
-	<div class="why-choose">
-		<div class="container">
-			<div class="row">
-				<h2 class="section-title">Why Choose Our University</h2>
-				<div class="col-md-7 col-sm-7 col-xl-12">
-					<div class="row">
-						<div class="col-md-6">
-							<div class="why-wrap">
-								<div class="icon">
-									<i class="fa fa-line-chart"></i>
-								</div>
-								<div class="why-text">
-									<h4>
-										<a href="#">Modern Courses</a>
-									</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing
-										elit. Repellendus, quaerat beatae nulla.</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="why-wrap">
-								<div class="icon">
-									<i class="fa fa-trophy"></i>
-								</div>
-								<div class="why-text">
-									<h4>
-										<a href="#">High-profile Faculties</a>
-									</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing
-										elit. Repellendus, quaerat beatae nulla.</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="why-wrap">
-								<div class="icon">
-									<i class="fa fa-briefcase"></i>
-								</div>
-								<div class="why-text">
-									<h4>
-										<a href="#">Guaranteed Career</a>
-									</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing
-										elit. Repellendus, quaerat beatae nulla.</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="why-wrap">
-								<div class="icon">
-									<i class="fa fa-magic"></i>
-								</div>
-								<div class="why-text">
-									<h4>
-										<a href="#">Research Programs</a>
-									</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing
-										elit. Repellendus, quaerat beatae nulla.</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="why-wrap">
-								<div class="icon">
-									<i class="fa fa-money"></i>
-								</div>
-								<div class="why-text">
-									<h4>
-										<a href="#">Affordable Costs</a>
-									</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing
-										elit. Repellendus, quaerat beatae nulla.</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="why-wrap">
-								<div class="icon">
-									<i class="fa fa-film"></i>
-								</div>
-								<div class="why-text">
-									<h4>
-										<a href="#">Cultural Events</a>
-									</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing
-										elit. Repellendus, quaerat beatae nulla.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+	
 
-				<div class="col-md-5 col-sm-5 col-xl-12">
-					<div class="featured-thumb">
-						<img src="assets/img/features/why.png" alt="">
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
-	<!-- Why Choose section End -->
-
-	<!-- Counter Section Start -->
-	<section id="counter">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-3 col-sm-6 col-xs-12">
-					<div class="counting">
-						<div class="icon-left">
-							<i class="fa fa-users"></i>
-						</div>
-						<div class="desc media-body">
-							<h3>Enrolled Students</h3>
-							<div class="counter" data-count="8565">0</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 col-xs-12">
-					<div class="counting">
-						<div class="icon-left">
-							<i class="fa fa-graduation-cap"></i>
-						</div>
-						<div class="desc media-body">
-							<h3>Education Awards</h3>
-							<div class="counter" data-count="120">0</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 col-xs-12">
-					<div class="counting">
-						<div class="icon-left">
-							<i class="fa fa-diamond"></i>
-						</div>
-						<div class="desc media-body">
-							<h3>Certified Teachers</h3>
-							<div class="counter" data-count="193">0</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 col-xs-12">
-					<div class="counting">
-						<div class="icon-left">
-							<i class="fa fa-flask"></i>
-						</div>
-						<div class="desc media-body">
-							<h3>Library and Labs</h3>
-							<div class="counter" data-count="150">0</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Counter Section End -->
+	
 
 	<!-- Teacher Section Start -->
 	<section class="teacher section">
@@ -750,7 +751,7 @@
 	<!-- End Testimonial Section  -->
 
 	<!-- Latest New Section Start -->
-	<section class="latest-news section">
+<!-- 	<section class="latest-news section">
 		<div class="container">
 			<div class="row">
 				<h2 class="section-title">From The Blog</h2>
@@ -862,7 +863,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 	<!-- Latest New Section End -->
 
 	<!-- NewsLetter Section Start -->

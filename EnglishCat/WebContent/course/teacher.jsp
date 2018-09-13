@@ -73,7 +73,8 @@
                       <a class="social" href="#"><i class="fa fa-pinterest"></i></a>
                     </div>
                     <div class="desc">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ea qui, voluptas vitae pariatur nihil odit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium nisi repudiandae est molestias aut ullam, labore porro, nihil unde veritatis, vel. Iure, rerum, deleniti! Eveniet rerum commodi dignissimos itaque dicta.</p>
+                      <p>Hi! 
+My name is Romeo. I’m an English tutor. I teach students from Korea, Japan, China, Vietnam, Taiwan and France. Teaching is my passion and I’ve been doing it for 11 years. The subjects that I teach include grammar, conversation, vocabulary and reading comprehension. Through living in Australia for 1 year and traveling to other countries, I have developed a deeper understanding of other cultures that I can incorporate in my classes. I also believe that humor, positivity and encouragement play an important role in learning. Thus, making my class fun, interactive and utmost ideal for the development of your English Skill. </p>
                       <h4>Biography</h4>
                       <p><strong>Teacher name was born in the middle of 70’s in the generation that swore to be young forever and with this young soul the teacher name saw your professional life arises so fast. Read the details below:</strong></p>
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum eius dolorum officia debitis, quaerat dolor deleniti amet animi quo repudiandae, illo, beatae esse voluptatum numquam sequi iusto magni inventore recusandae? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, dolore! Maiores officiis cum aspernatur, eligendi enim. Minus cumque, unde rerum dolorum maxime illum, blanditiis suscipit ipsa nemo impedit laboriosam magni.</p>
