@@ -20,7 +20,7 @@ public class MemberLogoutAction implements Action {
       String url = "main.jsp";
       
       HttpSession session = request.getSession();
-      session.setAttribute("user_id", null);
+      session.invalidate();
       Script.moving(response, "로그아웃 되었습니다.", url);
    }
 }
