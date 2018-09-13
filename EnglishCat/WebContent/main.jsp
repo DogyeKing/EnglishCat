@@ -112,7 +112,7 @@
 
 						<h3>수강후기</h3>
 						<p class="ajax">ajax</p>
-						<a id="link2" class="btn btn-rm btn-common" href="#">Explore</a>
+						<a id="link2" class="btn btn-rm btn-common" href="#">상세보기</a>
 					</div>
 				</div>
 

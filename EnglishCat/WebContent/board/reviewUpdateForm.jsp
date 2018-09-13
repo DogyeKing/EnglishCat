@@ -22,16 +22,22 @@
               <form name="w_form" method="POST" action="<%=request.getContextPath()%>/board?cmd=review_updateProc">
            		
            		
-           		   <input type="hidden" name="user_pid" value="${contReviewVO.user_pid}">
+<%--            		   <input type="hidden" name="user_pid" value="${contReviewVO.user_pid}"> --%>
            		      <input type="hidden" name="cont_id" value="${contReviewVO.cont_id}">
                  <fieldset class="form-group">
                     <legend class="border-bottom mb-4">업데이트</legend>                   
+                  
+                      <div class="form-group">
+                       <label class="form-control-label">아이디</label>
+                       <input class="form-control form-control-lg" name="user_pid" type="text" value="${contReviewVO.user_pid}" readonly>
+                    </div>
+                    
                     <div class="form-group">
-                       <label class="form-control-label">title</label>
+                       <label class="form-control-label">제목</label>
                        <input class="form-control form-control-lg" name="cont_title" type="text" value="${contReviewVO.cont_title}" required autofocus>
                     </div>
                     <div class="form-group">
-                       <label class="form-control-label">content</label>
+                       <label class="form-control-label">내용</label>
                        <textarea id="textAreaContent" name="cont_content" rows="15" cols="80" style="width:100%">${contReviewVO.cont_content}</textarea>
                     </div>                 
                     <div class="form-group">

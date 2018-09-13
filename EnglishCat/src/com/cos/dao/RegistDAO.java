@@ -239,4 +239,48 @@ public class RegistDAO {
 		}
 		return -1;
 	}
+	
+	//session이 가진 user_id로 user_pid 뽑아오기
+	public String get_pid(String user_id) {
+		String SQL = "SELECT user_pid FROM TB_USER_INFO WHERE user_id = ?";
+		Connection conn = DBManager.getConnection();
+		try {
+			pstmt = conn.prepareStatement(SQL);
+			pstmt.setString(1, user_id);			
+			rs = pstmt.executeQuery();
+
+			if (rs.next()){				
+					return rs.getString("user_pid"); //id 존재
+				}else{
+					return "null"; //없음
+				}			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBManager.close(conn, pstmt, rs);
+		}
+		return "error";
+	}
+	
+	//session이 가진 user_pid로 user_id 뽑아오기
+		public String get_id(String user_pid) {
+			String SQL = "SELECT user_id FROM TB_USER_INFO WHERE user_pid = ?";
+			Connection conn = DBManager.getConnection();
+			try {
+				pstmt = conn.prepareStatement(SQL);
+				pstmt.setString(1, user_pid);			
+				rs = pstmt.executeQuery();
+
+				if (rs.next()){				
+						return rs.getString("user_id"); //id 존재
+					}else{
+						return "null"; //없음
+					}			
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				DBManager.close(conn, pstmt, rs);
+			}
+			return "error";
+		}
 }

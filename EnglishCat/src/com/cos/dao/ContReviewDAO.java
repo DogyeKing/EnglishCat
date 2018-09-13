@@ -18,13 +18,15 @@ public class ContReviewDAO {
 		
 		//게시판 리스트 뽑기
 		public List<ContReviewVO> contReviewSelectList(){
-			String SQL = "select * from tb_cont_review order by cont_id desc";
+			String SQL = "select * from tb_cont_review order by cont_id DESC";
 			Connection conn = DBManager.getConnection();
+			
 			try {
 				pstmt = conn.prepareStatement(SQL);		
 				rs = pstmt.executeQuery();
 				List<ContReviewVO> list = new ArrayList<>();
-				System.out.println(rs.next());					
+				
+									
 				while (rs.next()) {
 					ContReviewVO contReviewVO = new ContReviewVO();
 					contReviewVO.setCont_id(rs.getString("cont_id"));
@@ -35,6 +37,9 @@ public class ContReviewDAO {
 					contReviewVO.setUpdate_dt(rs.getString("update_pid"));
 					contReviewVO.setUpdate_pid(rs.getString("update_pid"));
 					contReviewVO.setDelete_yn(rs.getString("delete_yn"));
+					RegistDAO rdao = new RegistDAO();
+					contReviewVO.setUser_pid(rdao.get_id(contReviewVO.getUser_pid()));
+					
 					list.add(contReviewVO);		
 				}
 				return list;
@@ -85,6 +90,8 @@ public class ContReviewDAO {
 								contReviewVO.setCont_title(rs.getString("cont_title"));
 								contReviewVO.setCont_content(rs.getString("cont_content"));
 								contReviewVO.setUser_pid(rs.getString("user_pid"));
+								RegistDAO rdao = new RegistDAO();
+								contReviewVO.setUser_pid(rdao.get_id(contReviewVO.getUser_pid()));
 								return contReviewVO;
 							}
 					} catch (Exception e) {
@@ -123,7 +130,6 @@ public class ContReviewDAO {
 				pstmt = conn.prepareStatement(SQL);
 				pstmt.setString(1, cont_id);
 				pstmt.executeUpdate();
-				pstmt.executeUpdate();
 				return 1;
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -153,7 +159,27 @@ public class ContReviewDAO {
 				DBManager.close(conn, pstmt);
 			} return null;
 		}
+		
+		public int checkId(String cont_id, String user_pid) {
+			String SQL = "select * from tb_cont_review where user_pid = ? and cont_id = ?";			
+			Connection conn = DBManager.getConnection();
+			try {
+				pstmt = conn.prepareStatement(SQL);
+				pstmt.setString(1, user_pid);
+				pstmt.setString(2, cont_id);
+				rs = pstmt.executeQuery();
 				
+				if(rs.next()) {
+					return 1;
+				}
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}	finally {
+				DBManager.close(conn, pstmt, rs);
+			}
+			return -1;
+		}
 }
 
 	
