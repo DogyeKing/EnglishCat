@@ -55,7 +55,7 @@
           JSONParser parser = new JSONParser();
   		JSONObject getData = (JSONObject)parser.parse(res.toString());
           String user_id = new APIExamMemberProfile().getProfile(getData.get("access_token").toString());
-          session.setAttribute("user_id", user_id);
+          session.setAttribute("naver_id", user_id);
           
           Script.moving(response, "네이버 로그인 완료", request.getContextPath()+"/main.jsp");
       }

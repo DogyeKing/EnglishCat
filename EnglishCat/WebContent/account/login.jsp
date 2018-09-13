@@ -43,7 +43,7 @@
 			System.out.println(c.getValue());
 			System.out.println("쿠쿠이쏘");
 		}else{
-			System.out.println("쿠키 없음");
+			System.out.println("쿠키 없쏘");
 		}
 	}
 %>
@@ -64,7 +64,7 @@
           <div class="col-md-12">
             <div class="breadcrumb-wrapper">
               <h2 class="page-title">로그인</h2>
-              <a href="index.html">Home</a>
+              <a href="<%=request.getContextPath()%>/main.jsp">Home</a>
               <span>/</span>
               <span class="current">Login</span>
             </div>
@@ -92,8 +92,6 @@
 	
 				%>
 
- 	              
- 	              
                 <label for="username">User ID <span class="required">*</span></label>                
                 <input class="form-control" value="<%=cookieID %>" name="user_id" id="user_id" maxlength="20" type="text" required autofocus>
                 
@@ -119,7 +117,7 @@
               </div>
               <button type="submit" id="submit" class="btn btn-common">Login</button>    
               
-              
+                         
              <!-- 네아로 시작 -->
              <%
 			    String clientId = "UF9JmYLiZGmrawFZDLar";//애플리케이션 클라이언트 아이디값";
@@ -133,8 +131,9 @@
 			    //session.setAttribute("state", state);
 			 %>  		
   			 <a href="<%=apiURL%>"><img height="42" src="http://static.nid.naver.com/oauth/small_g_in.PNG"/></a>
-  			
+  			 
   			 <!-- 네아로 끝 -->
+  			
                             
             </form>          
             
