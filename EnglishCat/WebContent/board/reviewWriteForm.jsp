@@ -22,7 +22,8 @@
               <form name="w_form" method="POST" action="<%=request.getContextPath()%>/board?cmd=review_write">
            		
            		
-           		   <input type="hidden" name="user_pid" value="ID0001">
+     				<!-- <<input type="hidden" name="user_pid" value="USER001"> -->
+     				 
                  <fieldset class="form-group">
                     <legend class="border-bottom mb-4">New Post</legend>
                     <div class="form-group">

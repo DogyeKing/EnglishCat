@@ -28,6 +28,7 @@ public class ReviewListAction implements Action {
 		List<ContReviewVO> list = contReviewdao.contReviewSelectList();
 
 		request.setAttribute("list", list);
+		
 	/*	request.setAttribute("pageNum", pageNum);*/
 		
 		RequestDispatcher dis = request.getRequestDispatcher(url);
