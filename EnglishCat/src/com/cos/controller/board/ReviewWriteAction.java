@@ -24,7 +24,7 @@ public class ReviewWriteAction implements Action{
 		System.out.println(naming);
 		
 		ContReviewVO contReviewVO = new ContReviewVO();
-		ContReviewDAO contReviewDAO = new ContReviewDAO();
+
 		//세션 연결
 		RegistDAO registDAO = new RegistDAO();
 		

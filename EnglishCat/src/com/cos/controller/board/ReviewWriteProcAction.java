@@ -24,9 +24,11 @@ public class ReviewWriteProcAction implements Action {
 		ContReviewVO contReviewVO = new ContReviewVO();
 		RegistDAO rdao = new RegistDAO();
 		HttpSession session = request.getSession();
+		//user_id 세션값을 가져온다.
 		String user_id = (String)session.getAttribute("user_id");
 		contReviewVO.setCont_title(request.getParameter("cont_title"));
 		contReviewVO.setCont_content(request.getParameter("cont_content"));
+		//user_id세션값을 user_pid로 호출
 		contReviewVO.setUser_pid(rdao.get_pid(user_id));
 
 		String url = "board?cmd=review_list";
