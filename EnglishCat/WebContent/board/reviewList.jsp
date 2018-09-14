@@ -61,8 +61,8 @@
       </div>
    </section>
    
-  <!-- Go To Top Link -->
-    <a href="#" class="back-to-top">
+ <!-- Go To Top Link -->
+   <!--  <a href="#" class="back-to-top">
       <i class="fa fa-arrow-up"></i>
     </a>
 
@@ -74,8 +74,8 @@
           <span></span>
           <span></span>
       </div>
-    </div>
-
+    </div> -->
+ 
 
     <!-- Footer Section -->
 
