@@ -49,17 +49,17 @@
               <c:choose>
           		<c:when test="${empty sessionScope.user_id && empty sessionScope.naver_id}">
                   <span><i class="fa fa-phone"></i> +61 2 9385 1000</span>
-                  <span><i class="fa fa-envelope"></i><a href="#">hello@brightuniversity.edu</a></span>
+                  <span><i class="fa fa-envelope"></i><a href="#">uhc1224@naver.com</a></span>
                   <span><a href="<%=request.getContextPath()%>/account/login.jsp"><i class="fa fa-user"></i> Login</a> / <a href="<%=request.getContextPath()%>/account/registration.jsp">Register</a></span>
               	 </c:when>
               	 <c:when test="${!empty sessionScope.naver_id}">
 	              	 <span><i class="fa fa-phone"></i> +61 2 9385 1000</span>
-	              	 <span><i class="fa fa-envelope"></i><a href="#">hello@brightuniversity.edu</a></span>
+	              	 <span><i class="fa fa-envelope"></i><a href="#">uhc1224@naver.com</a></span>
 	              	 <span><a href="<%=request.getContextPath()%>/member?cmd=member_logout"><i class="fa fa-user"></i> Logout</a></span>
               	 </c:when>
               	 <c:when test="${!empty sessionScope.user_id}">
 	              	 <span><i class="fa fa-phone"></i> +61 2 9385 1000</span>
-	              	 <span><i class="fa fa-envelope"></i><a href="#">hello@brightuniversity.edu</a></span>
+	              	 <span><i class="fa fa-envelope"></i><a href="#">uhc1224@naver.com</a></span>
 	             <%--  	 <span><a href="<%=request.getContextPath()%>/member?cmd=member_update"><i class="fa fa-user"></i> Account</a></span> --%>
 	              	 <span><a href="<%=request.getContextPath()%>/member?cmd=member_logout"><i class="fa fa-user"></i> Logout</a></span>
               	</c:when>
@@ -141,8 +141,17 @@
                     <li><a href="<%=request.getContextPath()%>/board?cmd=review_list">수강후기</a></li>   
                     <li><a href="single-post.html">자유게시판</a></li>   
                   </ul>                        
-                </li>             
-                <li><a href="<%=request.getContextPath()%>/member?cmd=member_update">마이페이지</a></li>
+                </li> 
+                
+                
+                <li class="dropdown dropdown-toggle">
+                  <a href="#" data-toggle="dropdown">마이페이지 <i class="fa fa-angle-down"></i></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="<%=request.getContextPath()%>/member?cmd=member_update">회원정보수정</a></li>   
+                  </ul>                        
+                </li>
+                                            
+                <%-- <li><a href="<%=request.getContextPath()%>/member?cmd=member_update">마이페이지</a></li> --%>
               </ul>
             </div>  
             
