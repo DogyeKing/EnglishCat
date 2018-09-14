@@ -7,6 +7,7 @@ import com.cos.controller.board.ReviewListAction;
 import com.cos.controller.board.ReviewUpdateAction;
 import com.cos.controller.board.ReviewUpdateProcAction;
 import com.cos.controller.board.ReviewWriteAction;
+import com.cos.controller.board.ReviewWriteProcAction;
 import com.cos.controller.member.MemberIDCheckAction;
 import com.cos.controller.member.MemberLoginAction;
 import com.cos.controller.member.MemberLogoutAction;
@@ -57,8 +58,9 @@ public class ActionFactory {
 			return new ReviewDeleteAction();
 		}else if(cmd.equals("ajax")) {
 			return new AjaxAction();
-		}
-			
+		}else if(cmd.equals("review_writeProc")){
+			return new ReviewWriteProcAction();
+	}
 		return null;
 	}
 	

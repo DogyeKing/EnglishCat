@@ -124,7 +124,7 @@ public class ContReviewDAO {
 		
 		//게시판 삭제
 		public int delete(String cont_id) {
-			String SQL = "delete tb_cont_review where cont_id = ?";
+			String SQL = "delete from tb_cont_review where cont_id = ?";
 			Connection conn = DBManager.getConnection();
 			try {
 				pstmt = conn.prepareStatement(SQL);

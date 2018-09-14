@@ -18,7 +18,7 @@
       <!-- Blog Entries Column -->
       <div class="col-md-8">
            <div class="content-section">
-              <form name="w_form" method="POST" action="<%=request.getContextPath()%>/board?cmd=review_write">
+              <form name="w_form" method="POST" action="<%=request.getContextPath()%>/board?cmd=review_writeProc">
            		
            		
      				<!-- <<input type="hidden" name="user_pid" value="USER001"> -->

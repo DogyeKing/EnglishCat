@@ -49,7 +49,7 @@
 					</tr>
 				</c:forEach>
                </table>
-                    <a class="btn btn-primary" href="<%=request.getContextPath()%>/board/reviewWriteForm.jsp">글쓰기</a>
+                    <a class="btn btn-primary" href="<%=request.getContextPath()%>/board?cmd=review_write">글쓰기</a>
                      </div>
                      <!-- row(12분할) END -->
                   </div>

@@ -12,7 +12,7 @@ import com.cos.action.Action;
 import com.cos.dao.ContReviewDAO;
 import com.cos.dto.ContReviewVO;
 import com.cos.util.Script;
-
+//updateProcAction로 연결시켜줌
 public class ReviewUpdateAction implements Action {
 	private static String naming = "ReviewUpdateAction : ";
 	@Override

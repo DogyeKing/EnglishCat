@@ -54,8 +54,21 @@
                </table>
                <br>
                <br>
-     		   <a class="btn btn-primary" href="<%=request.getContextPath() %>/board?cmd=review_update&cont_id=${contReviewVO.cont_id}">수정</a>
-                  <a class="btn btn-primary" href="<%=request.getContextPath() %>/board?cmd=review_delete&cont_id=${contReviewVO.cont_id}">삭제</a>
+               <c:choose>
+                    <c:when test="${empty sessionScope.user_id && empty sessionScope.naver_id }">
+    		 		 <%--   <a class="btn btn-primary" href="<%=request.getContextPath() %>/board?cmd=review_update&cont_id=${contReviewVO.cont_id}">수정</a> --%>
+             	   	   <%-- <a class="btn btn-primary" href="<%=request.getContextPath() %>/board?cmd=review_delete&cont_id=${contReviewVO.cont_id}">삭제</a> --%>
+                    </c:when>
+                  <c:when test="${!empty sessionScope.user_id}">
+    		          	<a class="btn btn-primary" href="<%=request.getContextPath() %>/board?cmd=review_update&cont_id=${contReviewVO.cont_id}">수정</a>
+             	   	    <a class="btn btn-primary" href="<%=request.getContextPath() %>/board?cmd=review_delete&cont_id=${contReviewVO.cont_id}">삭제</a>
+                    </c:when>
+                   <c:when test="${!empty sessionScope.naver_id}">
+    		 		   <a class="btn btn-primary" href="<%=request.getContextPath() %>/board?cmd=review_update&cont_id=${contReviewVO.cont_id}">수정</a>
+             	   	   <a class="btn btn-primary" href="<%=request.getContextPath() %>/board?cmd=review_delete&cont_id=${contReviewVO.cont_id}">삭제</a>
+                    </c:when>
+               </c:choose>
+                     
                      </div>
                      <!-- row(12분할) END -->
                   </div>

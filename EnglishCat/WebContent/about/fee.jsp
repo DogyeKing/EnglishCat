@@ -53,7 +53,7 @@
 	
 <div class="container">
 
-<div  style="background:#538bca;height:30px;line-height:30px;width:130px;text-align:center;color:#fff"><span>20분 수업</span></div>
+<div  style="background:#538bca;height:30px;line-height:30px;width:130px;text-align:right;color:#fff"><span>20분 수업</span></div>
 	<table border="0" cellpadding="0" cellspacing="0" class="common_table_border" style="margin-top: 10px; width: 100%">
 		<colgroup>
 			<col width="25%" />
@@ -69,7 +69,7 @@
 				<th>주5회</th>
 			</tr>
 			<tr height="28">
-				<td style="text-align: center">1개월(4주)</td>
+				<td style="text-align: right">1개월(4주)</td>
 				<td align="right"><input type="radio" name="article"
 					id="article" value="40000|1개월(4주)|4|20|2"
 					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">40,000(원)&nbsp;</td>
@@ -81,7 +81,7 @@
 					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">90,000(원)&nbsp;</td>
 			</tr>
 			<tr height="28">
-				<td style="text-align: center">3개월(12주)</td>
+				<td style="text-align: right">3개월(12주)</td>
 				<td align="right"><input type="radio" name="article"
 					id="article" value="100000|3개월(12주)|12|20|2"
 					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">100,000(원)&nbsp;</td>
@@ -93,7 +93,7 @@
 					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">240,000(원)&nbsp;</td>
 			</tr>
 			<tr height="28">
-				<td style="text-align: center">6개월(24주)</td>
+				<td style="text-align: right">6개월(24주)</td>
 				<td align="right"><input type="radio" name="article"
 					id="article" value="190000|6개월(24주)|24|20|2"
 					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">190,000(원)&nbsp;</td>

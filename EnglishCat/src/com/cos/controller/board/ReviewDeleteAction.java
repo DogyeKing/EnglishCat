@@ -22,6 +22,7 @@ public class ReviewDeleteAction implements Action{
 		String url = "board?cmd=review_list";
 		ContReviewDAO contReviewDAO = new ContReviewDAO();
 		RegistDAO rdao = new RegistDAO();
+	
 		String cont_id = request.getParameter("cont_id");
 
 		// 세션받기 -- 주소공격 방지

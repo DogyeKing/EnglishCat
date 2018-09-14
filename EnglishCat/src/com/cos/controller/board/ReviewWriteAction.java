@@ -2,6 +2,7 @@ package com.cos.controller.board;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -13,12 +14,14 @@ import com.cos.dao.RegistDAO;
 import com.cos.dto.ContReviewVO;
 import com.cos.util.Script;
 
-public class ReviewWriteAction implements Action{
 
+//writeActionPro로 연결시켜줌
+public class ReviewWriteAction implements Action{
+	private static String naming = "reviewWriteAction : ";
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "board?cmd=review_list";
-		
+		String url = "board/reviewWriteForm.jsp";
+		System.out.println(naming);
 		
 		ContReviewVO contReviewVO = new ContReviewVO();
 		ContReviewDAO contReviewDAO = new ContReviewDAO();
@@ -43,18 +46,11 @@ public class ReviewWriteAction implements Action{
 				}else{
 					//session과 user_id와 연동하기 
 					/*contReviewVO.setUser_pid(request.getParameter("user_pid"));*/
-				
-					contReviewVO.setCont_title(request.getParameter("cont_title"));
-					contReviewVO.setCont_content(request.getParameter("cont_content"));
-					RegistDAO rdao = new RegistDAO();
-					contReviewVO.setUser_pid(rdao.get_pid(user_id));
+					session.setAttribute("user_id", user_id);
+					request.setAttribute("contReviewVO", contReviewVO);
+					RequestDispatcher dis = request.getRequestDispatcher(url);
+					dis.forward(request, response);
 
-					int result2 = contReviewDAO.write(contReviewVO);
-					if(result2 == 1) {
-						Script.moving(response, "글쓰기성공", url);
-					}else if(result == -1) {
-						Script.moving(response, "DB 에러");
-					}
 				}
 		}else {
 			Script.moving(response, "먼저 로그인을 진행해주세요.", "account/login.jsp");
