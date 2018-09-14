@@ -33,7 +33,7 @@
 			</ol>
 			<div class="carousel-inner">
 				<div class="item active"
-					style="background-image: url(assets/img/slider/bg-44.png);">
+					style="background-image: url(assets/img/slider/bg-44444.png);">
 					<div class="carousel-caption">
 					<p>Bright - Bootstrap HTML5 Education Template</p>
 						<h1>
@@ -45,7 +45,7 @@
 					</div>
 				</div>
 				<div class="item"
-					style="background-image: url(assets/img/slider/bg-5.png);">
+					style="background-image: url(assets/img/slider/bg-55555.png);">
 					<div class="carousel-caption">
 						<p>Ready to Launch - School, College, University or Course
 							Website</p>
@@ -60,7 +60,7 @@
 					</div>
 				</div>
 				<div class="item"
-					style="background-image: url(assets/img/slider/bg-8.jpg);">
+					style="background-image: url(assets/img/slider/bg-88.png);">
 					<div class="carousel-caption">
 						<p>50+ Built-in Pages to Create any Kind of Education Site</p>
 						<h1>
