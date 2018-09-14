@@ -41,6 +41,7 @@
 
   <%@include file="../include/header.jsp" %>
     
+    
 
     <!-- Page Header Start -->
     <div class="page-header" style="background: url(<%=request.getContextPath()%>/assets/img/banner1.jpg);">
@@ -260,6 +261,6 @@
 
     </script>
 
-
+%>
   </body>
 </html>

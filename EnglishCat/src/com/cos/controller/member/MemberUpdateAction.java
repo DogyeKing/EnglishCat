@@ -21,15 +21,17 @@ public class MemberUpdateAction implements Action{
 		
 		HttpSession session = request.getSession();
 		String user_id = (String)session.getAttribute("user_id");
-		
+				
 		RegistDAO dao = new RegistDAO();
 		RegistVO regist = dao.select(user_id);
-		
+
 		request.setAttribute("member", regist);
 		
-		if(regist == null) {
-			Script.moving(response, "DB 에러");
-		}else {
+		if(session.getAttribute("naver_id") != null) {
+			Script.moving(response, "네이버 아이디로 로그인하셧습니다.", "index.jsp");
+		} else if(regist == null) {
+			Script.moving(response, "먼저 로그인을 진행해주세요.", "account/login.jsp");
+		} else {
 			RequestDispatcher dis = request.getRequestDispatcher(url);
 			dis.forward(request, response);
 		}
