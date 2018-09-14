@@ -42,9 +42,9 @@
               A powerhouse of cutting-edge education, research & teaching in The World
             </p>  
             <ul class="address">
-                <li><i class="fa fa-home"></i> Sydney NSW 2052, Australia</li>
-                <li><i class="fa fa-phone"></i> +61 2 9385 1000</li>
-                <li><i class="fa fa-envelope"></i> hello@brightuniversity.edu</li>
+                <li><i class="fa fa-home"></i> Busan, Republic of Korea</li>
+                <li><i class="fa fa-phone"></i> +82 051 753 5600</li>
+                <li><i class="fa fa-envelope"></i> uhc1224@naver.com</li>
             </ul>        
           </div><!-- Footer Widget Ends -->
           
@@ -158,15 +158,15 @@
           <div class="row">
             <div class="col-md-6  col-sm-6">
               <p class="copyright-text">
-                Â© All rights reserved 2017 - Design &amp; Developed by <a href="http://graygrids.com">GrayGrids</a>
+                 All rights reserved 2017 - Design &amp; Developed by <a href="#">EnglishCat</a>
               </p>
             </div>
             <div class="col-md-6  col-sm-6">                
               <div class="bottom-social-icons pull-right">  
-                <a class="facebook" target="_blank" href="https://web.facebook.com/GrayGrids"><i class="fa fa-facebook"></i></a> 
-                <a class="twitter" target="_blank" href="https://twitter.com/GrayGrids"><i class="fa fa-twitter"></i></a>
-                <a class="google-plus" target="_blank" href="https://plus.google.com"><i class="fa fa-google-plus"></i></a>
-                <a class="linkedin" target="_blank" href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
+                <a class="facebook" target="_blank" href="<%=request.getContextPath()%>/404.jsp"><i class="fa fa-facebook"></i></a> 
+                <a class="twitter" target="_blank" href="<%=request.getContextPath()%>/404.jsp"><i class="fa fa-twitter"></i></a>
+                <a class="google-plus" target="_blank" href="<%=request.getContextPath()%>/404.jsp"><i class="fa fa-google-plus"></i></a>
+                <a class="linkedin" target="_blank" href="<%=request.getContextPath()%>/404.jsp"><i class="fa fa-linkedin"></i></a>
               </div>            
             </div>
           </div>

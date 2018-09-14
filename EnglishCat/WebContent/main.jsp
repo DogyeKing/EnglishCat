@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Bright">
 
-<title>Bright a Bootstrap HTML5 Education Template</title>
+<title>EnglishCat</title>
 
 </head>
 <body>
