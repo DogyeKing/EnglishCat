@@ -23,20 +23,20 @@ public class MemberLoginAction implements Action{
 		RegistDAO dao = new RegistDAO();
 		RegistVO regist = new RegistVO();
 		
-		String user_id = request.getParameter("user_id");
-		String salt = dao.select_salt(user_id);
+		String user_pid = request.getParameter("user_pid");
+		String salt = dao.select_salt(user_pid);
 		if(salt == null){
 			Script.moving(response, "아이디가 존재하지 않습니다.");
 		}
 		String user_pass = SHA256.getEncrypt(request.getParameter("user_pass"), salt);
 		
-		regist.setUser_id(user_id);
+		regist.setUser_pid(user_pid);
 		regist.setUser_pass(user_pass);
 
 		
 		//쿠키저장
 		if(request.getParameter("rememberme") != null){
-			Cookie cookie = new Cookie("cookieID",regist.getUser_id());
+			Cookie cookie = new Cookie("cookieID",regist.getUser_pid());
 			cookie.setMaxAge(6000);
 			response.addCookie(cookie);
 		}else{
@@ -48,11 +48,11 @@ public class MemberLoginAction implements Action{
 		int result = dao.select_id(regist);
 		if(result == 1){
 			HttpSession session = request.getSession();
-			session.setAttribute("user_id", regist.getUser_id());
+			session.setAttribute("user_pid", regist.getUser_pid());
 			Script.moving(response, "로그인 성공", url);
 		}else if(result == 2){
 			HttpSession session = request.getSession();
-			session.setAttribute("user_id", regist.getUser_id());
+			session.setAttribute("user_pid", regist.getUser_pid());
 			Script.moving(response, "미인증 회원입니다. 글쓰기가 제한됩니다.", url);
 		}else{
 			System.out.println(naming+"sql error");

@@ -22,15 +22,15 @@ public class ReviewDetailAction implements Action {
 	
 		String cont_id = request.getParameter("cont_id");		
 		HttpSession session = request.getSession();
-		String user_id= null;
-		user_id= (String)session.getAttribute("user_id");
+		String user_pid= null;
+		user_pid= (String)session.getAttribute("user_pid");
 
 		
 		ContReviewDAO contReviewDAO = new ContReviewDAO();
 		
 		ContReviewVO contReviewVO = contReviewDAO.select(cont_id);
 		
-		if(user_id != null && user_id.equals(contReviewVO.getUser_pid())) {
+		if(user_pid != null && user_pid.equals(contReviewVO.getUser_pid())) {
 		request.setAttribute("user_pid", "ok");
 		}
 		

@@ -17,8 +17,8 @@
 <%
 	RegistDAO dao = new RegistDAO();
 	String id = null;
-	if(session.getAttribute("user_id") != null){
-		id = (String)session.getAttribute("user_id");
+	if(session.getAttribute("user_pid") != null){
+		id = (String)session.getAttribute("user_pid");
 	}
 	
 	int emailChecked = dao.select_user_mail_avail_yn(id);

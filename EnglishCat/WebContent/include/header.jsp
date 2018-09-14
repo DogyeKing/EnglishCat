@@ -47,7 +47,7 @@
               
               <div class="quick-contacts pull-right">
               <c:choose>
-          		<c:when test="${empty sessionScope.user_id && empty sessionScope.naver_id}">
+          		<c:when test="${empty sessionScope.user_pid && empty sessionScope.naver_id}">
                   <span><i class="fa fa-phone"></i> +82 051 753 5600</span>
                   <span><i class="fa fa-envelope"></i><a href="#">uhc1224@naver.com</a></span>
                   <span><a href="<%=request.getContextPath()%>/account/login.jsp"><i class="fa fa-user"></i> Login</a> / <a href="<%=request.getContextPath()%>/account/registration.jsp">Register</a></span>
@@ -57,7 +57,7 @@
 	              	 <span><i class="fa fa-envelope"></i><a href="#">uhc1224@naver.com</a></span>
 	              	 <span><a href="<%=request.getContextPath()%>/member?cmd=member_logout"><i class="fa fa-user"></i> Logout</a></span>
               	 </c:when>
-              	 <c:when test="${!empty sessionScope.user_id}">
+              	 <c:when test="${!empty sessionScope.user_pid}">
 	              	 <span><i class="fa fa-phone"></i> +82 051 753 5600</span>
 	              	 <span><i class="fa fa-envelope"></i><a href="#">uhc1224@naver.com</a></span>
 	             <%--  	 <span><a href="<%=request.getContextPath()%>/member?cmd=member_update"><i class="fa fa-user"></i> Account</a></span> --%>

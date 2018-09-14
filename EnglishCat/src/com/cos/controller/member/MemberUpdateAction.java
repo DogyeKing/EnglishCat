@@ -20,10 +20,10 @@ public class MemberUpdateAction implements Action{
 		String url = "account/updateForm.jsp";
 		
 		HttpSession session = request.getSession();
-		String user_id = (String)session.getAttribute("user_id");
+		String user_pid = (String)session.getAttribute("user_pid");
 				
 		RegistDAO dao = new RegistDAO();
-		RegistVO regist = dao.select(user_id);
+		RegistVO regist = dao.select(user_pid);
 
 		request.setAttribute("member", regist);
 		

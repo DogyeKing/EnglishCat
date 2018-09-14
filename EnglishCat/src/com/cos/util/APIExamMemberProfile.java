@@ -48,7 +48,7 @@ public class APIExamMemberProfile {
         if(rdao.select(id) == null) {
         	System.out.println("naverRegist_access");
             RegistVO regist = new RegistVO();
-        	regist.setUser_id(id);
+        	regist.setUser_pid(id);
  			regist.setUser_mail(email);
  			regist.setUser_name(name);
  			

@@ -22,6 +22,7 @@ public class MemberRegisterAction implements Action{
 		RegistDAO dao = new RegistDAO();	
 		
 		String user_id = null;
+		//String user_pid = null;
 		String user_pass = null;
 		String user_name = null;
 		String user_phone = null;
@@ -35,6 +36,11 @@ public class MemberRegisterAction implements Action{
 			user_id = request.getParameter("user_id");
 			System.out.println(user_id);
 		}
+		
+		/*if(request.getParameter("user_pid") != null) {
+			user_pid = request.getParameter("user_pid");
+			System.out.println(user_pid);
+		}*/
 		
 		if(request.getParameter("user_pass") != null) {
 			System.out.println("user_pass is not null");
@@ -61,8 +67,8 @@ public class MemberRegisterAction implements Action{
 		}
 		
 		
+		//regist.setUser_pid(user_pid);
 		regist.setUser_id(user_id);
-		
 		regist.setUser_pass(user_pass);
 		regist.setUser_name(user_name);
 		regist.setUser_phone(user_phone);
@@ -77,11 +83,11 @@ public class MemberRegisterAction implements Action{
 		if(result == 1) {
 			
 			HttpSession session = request.getSession();
-			session.setAttribute("user_id", regist.getUser_id());
+			session.setAttribute("user_pid", regist.getUser_pid());
 			Script.moving(response, "구글 인증 페이지", url);
 		}else if(result == -1) {
 			
-			Script.moving(response, "데이터베이스 에러");
+			Script.moving(response, "구글 인증 페이지 데이터베이스 에러");
 		}
 	}
 }

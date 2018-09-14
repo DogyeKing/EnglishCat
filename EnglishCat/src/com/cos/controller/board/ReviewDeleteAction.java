@@ -21,14 +21,14 @@ public class ReviewDeleteAction implements Action{
 		
 		String url = "board?cmd=review_list";
 		ContReviewDAO contReviewDAO = new ContReviewDAO();
-		RegistDAO rdao = new RegistDAO();
+		//RegistDAO rdao = new RegistDAO();
 	
 		String cont_id = request.getParameter("cont_id");
 
 		// 세션받기 -- 주소공격 방지
 		HttpSession session = request.getSession();
-		String user_id = (String) session.getAttribute("user_id");
-		String user_pid = rdao.get_pid(user_id);
+		String user_pid = (String) session.getAttribute("user_pid");
+		/*//String user_pid = rdao.get_pid(user_id);*/
 
 		int result2 = contReviewDAO.checkId(cont_id, user_pid);
 		

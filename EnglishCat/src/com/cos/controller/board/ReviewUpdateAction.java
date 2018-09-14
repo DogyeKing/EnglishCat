@@ -22,8 +22,8 @@ public class ReviewUpdateAction implements Action {
 		String url = "board/reviewUpdateForm.jsp";
 		
 		HttpSession session = request.getSession();
-		String user_id = session.getAttribute("user_id").toString();
-		System.out.println(user_id);
+		String user_pid = session.getAttribute("user_pid").toString();
+		System.out.println(user_pid);
 		
 		String cont_id = request.getParameter("cont_id");
 		
@@ -35,7 +35,7 @@ public class ReviewUpdateAction implements Action {
 			System.out.println(naming + "update error");
 			Script.moving(response, "데이터 베이스 에러");
 		}else {
-			session.setAttribute("user_id", user_id);
+			session.setAttribute("user_pid", user_pid);
 			request.setAttribute("contReviewVO", contReviewVO);
 			RequestDispatcher dis = request.getRequestDispatcher(url);
 			dis.forward(request, response);

@@ -70,14 +70,14 @@ public class RegistDAO {
 	
 	// select_id
 			public int select_id(RegistVO regist) {
-				String SQL = "SELECT user_mail_avail_yn FROM TB_USER_INFO WHERE user_id = ? AND user_pass= ?";
+				String SQL = "SELECT user_mail_avail_yn FROM TB_USER_INFO WHERE user_pid = ? AND user_pass= ?";
 				Connection conn = DBManager.getConnection();
 				try {
 					pstmt = conn.prepareStatement(SQL);
-					pstmt.setString(1, regist.getUser_id());
+					pstmt.setString(1, regist.getUser_pid());
 					pstmt.setString(2, regist.getUser_pass());
 					rs = pstmt.executeQuery();
-
+System.out.println("SQL : " + SQL);
 					if (rs.next()){
 						String user_mail_avail_yn = rs.getString("user_mail_avail_yn");
 						if(user_mail_avail_yn.equals("YES")){
@@ -96,12 +96,12 @@ public class RegistDAO {
 	
 			
 			
-	public String select_user_mail(String user_id) {
-		String SQL = "SELECT user_mail FROM tb_user_info WHERE user_id = ?";
+	public String select_user_mail(String user_pid) {
+		String SQL = "SELECT user_mail FROM tb_user_info WHERE user_pid = ?";
 		Connection conn = DBManager.getConnection();
 		try {
 			pstmt = conn.prepareStatement(SQL);
-			pstmt.setString(1, user_id);
+			pstmt.setString(1, user_pid);
 			rs = pstmt.executeQuery();
 			if(rs.next()) {
 				String user_mail = rs.getString("user_mail");
@@ -115,12 +115,12 @@ public class RegistDAO {
 		return null;
 	}
 	
-	public String select_salt(String user_id) {
-		String SQL = "SELECT salt FROM tb_user_info WHERE user_id = ?";
+	public String select_salt(String user_pid) {
+		String SQL = "SELECT salt FROM tb_user_info WHERE user_pid = ?";
 		Connection conn = DBManager.getConnection();
 		try {
 			pstmt = conn.prepareStatement(SQL);
-			pstmt.setString(1, user_id);
+			pstmt.setString(1, user_pid);
 			rs = pstmt.executeQuery();
 			if(rs.next()) {
 				String salt = rs.getString("salt");
@@ -134,13 +134,13 @@ public class RegistDAO {
 		return null;
 	}
 	
-	public int update_user_mail_avail_yn(String user_id) {
-		String SQL = "UPDATE tb_user_info SET user_mail_avail_yn = ? WHERE user_id = ?";
+	public int update_user_mail_avail_yn(String user_pid) {
+		String SQL = "UPDATE tb_user_info SET user_mail_avail_yn = ? WHERE user_pid = ?";
 		Connection conn = DBManager.getConnection();
 		try {
 			pstmt = conn.prepareStatement(SQL);
 			pstmt.setString(1, "YES");
-			pstmt.setString(2, user_id);
+			pstmt.setString(2, user_pid);
 			pstmt.executeUpdate();
 			return 1;
 		} catch (Exception e) {
@@ -152,12 +152,12 @@ public class RegistDAO {
 	}
 	
 	//이메일 인증
-	public int select_user_mail_avail_yn(String user_id) {
-		String SQL = "SELECT user_mail_avail_yn FROM tb_user_info WHERE user_id = ?";
-		Connection conn = DBManager.getConnection();
+	public int select_user_mail_avail_yn(String user_pid) {
+		String SQL = "SELECT user_mail_avail_yn FROM tb_user_info WHERE user_pid = ?";
+		Connection conn = DBManager.getConnection();System.out.println("SQL : " + SQL);
 		try {
 			pstmt = conn.prepareStatement(SQL);
-			pstmt.setString(1, user_id);
+			pstmt.setString(1, user_pid);
 			rs = pstmt.executeQuery();
 			if(rs.next()) {
 				String user_mail_avail_yn = rs.getString("user_mail_avail_yn");
@@ -176,18 +176,18 @@ public class RegistDAO {
 	}
 	
 	
-	public RegistVO select(String user_id) {
-		String SQL = "SELECT * FROM tb_user_info WHERE user_id = ?";
+	public RegistVO select(String user_pid) {
+		String SQL = "SELECT * FROM tb_user_info WHERE user_pid = ?";
 		Connection conn = DBManager.getConnection();
 		try {
 			pstmt = conn.prepareStatement(SQL);
-			pstmt.setString(1, user_id);
+			pstmt.setString(1, user_pid);
 			rs = pstmt.executeQuery();
 			
 			if(rs.next()) {
 				System.out.println("찾앗당");
 				RegistVO regist = new RegistVO();
-				regist.setUser_id(rs.getString("user_id"));
+				regist.setUser_pid(rs.getString("user_pid"));
 				regist.setUser_name(rs.getString("user_name"));
 				regist.setRoadFullAddr(rs.getString("roadFullAddr"));
 				regist.setUser_mail(rs.getString("user_mail"));
@@ -201,12 +201,12 @@ public class RegistDAO {
 		return null;
 	}
 	
-	public int check_id(String user_id) {
-		String SQL = "SELECT user_id FROM TB_USER_INFO WHERE user_id = ?";
+	public int check_id(String user_pid) {
+		String SQL = "SELECT user_pid FROM TB_USER_INFO WHERE user_pid = ?";
 		Connection conn = DBManager.getConnection();
 		try {
 			pstmt = conn.prepareStatement(SQL);
-			pstmt.setString(1, user_id);			
+			pstmt.setString(1, user_pid);			
 			rs = pstmt.executeQuery();
 
 			if (rs.next()){				
@@ -223,7 +223,7 @@ public class RegistDAO {
 	}
 	
 	public int update(RegistVO regist) {
-		String SQL = "UPDATE TB_USER_INFO SET user_pass = ?, roadFullAddr = ?, user_mail = ? WHERE user_id = ?";
+		String SQL = "UPDATE TB_USER_INFO SET user_pass = ?, roadFullAddr = ?, user_mail = ? WHERE user_pid = ?";
 		Connection conn = DBManager.getConnection();
 		try {
 			pstmt = conn.prepareStatement(SQL);
@@ -231,7 +231,7 @@ public class RegistDAO {
 			pstmt.setString(1, regist.getUser_pass());
 			pstmt.setString(2, regist.getRoadFullAddr());
 			pstmt.setString(3, regist.getUser_mail());
-			pstmt.setString(4, regist.getUser_id());
+			pstmt.setString(4, regist.getUser_pid());
 			pstmt.executeUpdate();
 			return 1;
 		} catch (Exception e) {
@@ -241,7 +241,7 @@ public class RegistDAO {
 	}
 	
 	//session이 가진 user_id로 user_pid 뽑아오기
-	public String get_pid(String user_id) {
+	/*public String get_pid(String user_id) {
 		String SQL = "SELECT user_pid FROM TB_USER_INFO WHERE user_id = ?";
 		Connection conn = DBManager.getConnection();
 		try {
@@ -260,7 +260,7 @@ public class RegistDAO {
 			DBManager.close(conn, pstmt, rs);
 		}
 		return "error";
-	}
+	}*/
 	
 	//session이 가진 user_pid로 user_id 뽑아오기
 		public String get_id(String user_pid) {
