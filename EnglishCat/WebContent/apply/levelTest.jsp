@@ -52,15 +52,15 @@
     </div>
     <div class="choices">
         <span id="ctl00_MainContent_QuizHostInstance_5_QuestionsRadioButtonList"><span class="blueBG">
-        <input id="question1" type="radio" name="question1" 
+        <input id="ctl00_MainContent_QuizHostInstance_5_QuestionsRadioButtonList_0" type="radio" name="question1" 
         value="1" /><label for="ctl00_MainContent_QuizHostInstance_5_QuestionsRadioButtonList_0">are</label></span><br /><span class="greyBG">
-        <input id="question1" type="radio" name="question1" 
+        <input id="ctl00_MainContent_QuizHostInstance_5_QuestionsRadioButtonList_1" type="radio" name="question1" 
         value="2" /><label for="ctl00_MainContent_QuizHostInstance_5_QuestionsRadioButtonList_1">was</label></span><br /><span class="blueBG">
-        <input id="question1" type="radio" name="question1" 
+        <input id="ctl00_MainContent_QuizHostInstance_5_QuestionsRadioButtonList_2" type="radio" name="question1" 
         value="3" /><label for="ctl00_MainContent_QuizHostInstance_5_QuestionsRadioButtonList_2">can</label></span><br /><span class="greyBG">
-        <input id="question1" type="radio" name="question1" 
+        <input id="ctl00_MainContent_QuizHostInstance_5_QuestionsRadioButtonList_3" type="radio" name="question1" 
         value="4" /><label for="ctl00_MainContent_QuizHostInstance_5_QuestionsRadioButtonList_3">were</label></span><br /><span class="blueBG">
-        <input id="question1" type="radio" name="question1" 
+        <input id="ctl00_MainContent_QuizHostInstance_5_QuestionsRadioButtonList_4" type="radio" name="question1" 
         value="5" /><label for="ctl00_MainContent_QuizHostInstance_5_QuestionsRadioButtonList_4">do</label></span></span>
     </div>
     
@@ -175,7 +175,7 @@
         <img src="//tridionassets.kaplaninternational.com/css.min/QuizEngine/nextBarC2.gif" Width="11" Height="38" />
     </div>
     <div class="right" style="padding-top: 5px;">
-    	<input type="hidden" name="score">
+    	<input type="hidden" id="score" name="score">
         <input type="image" name="ctl00$MainContent$QuizHostInstance$ctl00$NextPageImageButton" 
         id="ctl00_MainContent_QuizHostInstance_ctl00_NextPageImageButton" class="NextButton" 
          src="<%=request.getContextPath()%>/assets/img/next.png" alt="Next" style="/* border-width:0px;height:26px;width:78px; */" />
@@ -191,9 +191,30 @@
     </form>
         <script>
         	function score(){
-        		var answer = document.getElementById("question1").value;
-        		console.log(answer);
-        		return false;
+        		var score = 0;
+        		var answer1 = document.getElementsByName('question1');
+        		if(answer1 == 4){
+        			score = score +5;
+        		}
+        		var answer2 = document.getElementsByName('question2');
+        		if(answer2 == 8){
+        			score = score +5;
+        		}
+        		var answer3 = document.getElementsByName('question3');
+        		if(answer3 == 15){
+        			score = score +5;
+        		}
+        		var answer4 = document.getElementsByName('question4');
+        		if(answer4 == 16){
+        			score = score +5;
+        		}
+        		var answer5 = document.getElementsByName('question5');
+        		if(answer5 == 21){
+        			score = score +5;
+        		}
+        		
+        		document.getElementsById('score').value = score;        		
+
         	}
         
         </script>

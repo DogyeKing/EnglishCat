@@ -177,6 +177,7 @@
         <img src="//tridionassets.kaplaninternational.com/css.min/QuizEngine/nextBarC2.gif" Width="11" Height="38" />
     </div>
     <div class="right" style="padding-top: 5px;">
+    <input type="hidden" id="score" name="score" value="${score }">
         <input type="image" name="ctl00$MainContent$QuizHostInstance$ctl00$NextPageImageButton" id="ctl00_MainContent_QuizHostInstance_ctl00_NextPageImageButton" 
         class="NextButton" src="<%=request.getContextPath()%>/assets/img/check.png" alt="Next" style="/* border-width:0px;height:26px;width:78px; */" />
     </div>

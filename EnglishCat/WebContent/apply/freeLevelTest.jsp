@@ -135,7 +135,7 @@
 
 
     <!-- Start Map Section -->
-    <div id="" class="container">
+    <div class="container">
     <img src="<%=request.getContextPath()%>/assets/img/apply/img1.jpg">
     </div>
     <!-- End Map Section -->
