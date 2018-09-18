@@ -33,41 +33,42 @@
 			</ol>
 			<div class="carousel-inner">
 				<div class="item active"
-					style="background-image: url(assets/img/slider/bg-44444.png);">
+					style="background-image: url(assets/img/slider/bg-55555.png);">
 					<div class="carousel-caption">
-					<p>Bright - Bootstrap HTML5 Education Template</p>
+					<p></p>
+						<p>영어회화 도대체 어떻게 해야하나요?</p>
 						<h1>
-							Excellent and Friendly<br> Faculty Members
+							영어 회화 해답은?<br> 1:1 온라인 화상 영어!
 						</h1> 
-						<a class="btn btn-lg btn-common" href="single-teacher.html"> <i
-							class="fa fa-arrow-circle-right"> </i> Learn More
+						<a class="btn btn-lg btn-common" href="apply/freeLevelTest.jsp"> <i
+							class="fa fa-arrow-circle-right"> </i> 무료체험신청
 						</a>
 					</div>
 				</div>
 				<div class="item"
-					style="background-image: url(assets/img/slider/bg-55555.png);">
+					style="background-image: url(assets/img/slider/bg-44444.png);">
 					<div class="carousel-caption">
-						<p>Ready to Launch - School, College, University or Course
-							Website</p>
+						<!-- <p>영어회화 도대체 어떻게 해야하나요?</p> -->
 						<h1>
-							Innovation paradise<br> for Students
+							저렴한 수강료 but<br>수준 높은 강사진!
 						</h1>
-						<a class="btn btn-lg btn-common" href="contact.html"> <i
-							class="fa fa-check"> </i> Apply Now
-						</a> <a class="btn btn-lg btn-border" href="courses-grid.html"> <i
-							class="fa fa-envelope-open"> </i> Contact Us
+							<p>Now Join us!</p>
+						<a class="btn btn-lg btn-common" href="course/teacher.jsp"> <i
+							class="fa fa-check"> </i> 강사진 보기
+						</a> <a class="btn btn-lg btn-border" href="about/fee.jsp"> <i
+							class="fa fa-check "> </i> 수강료 안내
 						</a>
 					</div>
 				</div>
 				<div class="item"
 					style="background-image: url(assets/img/slider/bg-88.png);">
 					<div class="carousel-caption">
-						<p>50+ Built-in Pages to Create any Kind of Education Site</p>
+						<p>You Too Can Speak English!</p>
 						<h1>
-							Your ideas will be <br>heard & supported
+							당신도 영어로 대화 할 수 있습니다. <br>주저말고 신청하세요!
 						</h1>
-						<a class="btn btn-lg btn-border" href="event-grid.html"> <i
-							class="fa fa-calendar"> </i> Upcoming Events
+						<a class="btn btn-lg btn-common" href="course/seniorCourse.jsp"> <i
+							class="fa fa-arrow-circle-right"> </i> 과정 안내
 						</a>
 					</div>
 				</div>

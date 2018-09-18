@@ -31,7 +31,7 @@
 
 	<!-- navigation -->
 	<%@include file="/include/header.jsp"%>
-    <form name="aspnetForm" method="post" action="leveltest2.jsp" id="aspnetForm"  class="container">
+    <form name="aspnetForm" method="post" action="../member?cmd=member_score" id="aspnetForm" class="container">
     
 <div id="wrapper">
     <div id="pagebody">
