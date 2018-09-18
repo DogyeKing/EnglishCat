@@ -49,128 +49,185 @@
 		</div>
 	</div>
 
+	 <!-- Start Content -->
+    <div id="content" class="event">
+      <div class="container">
+        <div class="row">
+          <!-- Start Event Posts -->
+          <div class="col-md-8">              
 
-	
-<div class="container">
+            <!-- Start Event Post -->
+            <div class="event-post">  
+                 
+      
+              <!-- Post thumb -->
+              <div class="event-thumb">
+                <a href="#"><img src="<%=request.getContextPath()%>/assets/img/apply/img2.jpg" alt=""></a><br><br>
+                
+                <h3 class="medium-title">※ 등록전 꼭 확인해주세요!</h3>
+              </div>
+              <!-- End thumb -->
+              <!-- Post Content -->
+              <div class="post-content"> 
+                <li>수업은 ‘횟수제’입니다.  1개월 주5회(20회), 주3회(12회), 주2회(8회)이며 월1일에 시작하여 말일까지 하는 것이 아닌 희망하는 시기에 시작하여 횟수를 사용할 때까지 수업을 진행하는 것입니다.</li><br>
+                <li>한달을 기준으로 주5회는 2회, 주3회는 1회의 연장 혹은 보강이 가능합니다. 연장요청은 전날 업무시간 오후1시반부터 9시반사이에  마이페이지에 들어오셔서 연장요청을 하실 수 있습니다.</li><br>
+                <li>각 수강당 1회 가능하며,  2일 이상 연속으로 연장할 경우 적용됩니다. 장기연장을 사용하시면 단기연장 사용이 불가능합니다.</li><br>
+                <li>담당선생님의 작문교정, 월말평가서, 온라인교재가 지원됩니다.</li><br><br>            
+              </div>
+              <!-- Post Content -->
+            </div>
+            <!-- End Event Post -->
 
-<div  style="background:#538bca;height:30px;line-height:30px;width:130px;text-align:right;color:#fff"><span>20분 수업</span></div>
-	<table border="0" cellpadding="0" cellspacing="0" class="common_table_border" style="margin-top: 10px; width: 100%">
-		<colgroup>
-			<col width="25%" />
-			<col width="25%" />
-			<col width="25%" />
-			<col width="25%" />
-		</colgroup>
-		<tbody>
-			<tr>
-				<th>기간</th>
-				<th>주2회</th>
-				<th>주3회</th>
-				<th>주5회</th>
-			</tr>
-			<tr height="28">
-				<td style="text-align: right">1개월(4주)</td>
-				<td align="right"><input type="radio" name="article"
-					id="article" value="40000|1개월(4주)|4|20|2"
-					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">40,000(원)&nbsp;</td>
-				<td align="right"><input type="radio" name="article"
-					id="article" value="55000|1개월(4주)|4|20|3"
-					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">55,000(원)&nbsp;</td>
-				<td align="right"><input type="radio" name="article"
-					id="article" value="90000|1개월(4주)|4|20|5"
-					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">90,000(원)&nbsp;</td>
-			</tr>
-			<tr height="28">
-				<td style="text-align: right">3개월(12주)</td>
-				<td align="right"><input type="radio" name="article"
-					id="article" value="100000|3개월(12주)|12|20|2"
-					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">100,000(원)&nbsp;</td>
-				<td align="right"><input type="radio" name="article"
-					id="article" value="150000|3개월(12주)|12|20|3"
-					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">150,000(원)&nbsp;</td>
-				<td align="right"><input type="radio" name="article"
-					id="article" value="240000|3개월(12주)|12|20|5"
-					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">240,000(원)&nbsp;</td>
-			</tr>
-			<tr height="28">
-				<td style="text-align: right">6개월(24주)</td>
-				<td align="right"><input type="radio" name="article"
-					id="article" value="190000|6개월(24주)|24|20|2"
-					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">190,000(원)&nbsp;</td>
-				<td align="right"><input type="radio" name="article"
-					id="article" value="280000|6개월(24주)|24|20|3"
-					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">280,000(원)&nbsp;</td>
-				<td align="right"><input type="radio" name="article"
-					id="article" value="450000|6개월(24주)|24|20|5"
-					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">450,000(원)&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
+           
 
+          </div>
+          <!-- End Blog Posts -->
 
+          <!--Sidebar-->
+          <aside id="sidebar" class="col-md-4">
+            <!-- Categories Widget -->
+            <div class="widget widget-box">
+            
+            <h3 class="medium-title">※ 수강료 한눈에 보기</a></h3>
+            
+              <table class="custom-table" border=1px width=100% align="center">
+				<thead>
+				<tr>
+				<th colspan="3" height="40">1개월</th>
+				</tr>
+					</thead>
+					<tbody align="center">
+					<tr>
+					<td>주 분</td>
+					<td>25분</td>
+					<td>50분</td>
+					</tr>
+					<tr>
+					<td>주 2회</td>
+					<td>40,000원</td>
+					<td>85,000원</td>
+					</tr>
+					<tr>
+					<td>주 3회</td>
+					<td>55,000원</td>
+					<td>120,000원</td>
+					</tr>
+					<tr>
+					<td>주 5회</td>
+					<td>90,000원</td>
+					<td>200,000원</td>
+					</tr>
+					</tbody>
+					</table>
+					
+					<table class="custom-table" border=1px width=100% align="center">
+					<thead>
+					<tr>
+					<th colspan="3" height="40">3개월</th>
+					</tr>
+					</thead>
+					<tbody align="center">
+					<tr>
+					<td>주 분</td>
+					<td>25분</td>
+					<td>50분</td>
+					</tr>
+					<tr>
+					<td>주 2회</td>
+					<td>100,000원</td>
+					<td>230,000원</td>
+					</tr>
+					<tr>
+					<td>주 3회</td>
+					<td>150,000원</td>
+					<td>340,000원</td>
+					</tr>
+					<tr>
+					<td>주 5회</td>
+					<td>240,000원</td>
+					<td>560,000원</td>
+					</tr>
+					</tbody>
+				</table>
+				
+				<table class="custom-table" border=1px width=100% align="center">
+					<thead>
+					<tr>
+					<th colspan="3" height="40">6개월</th>
+					</tr>
+					</thead>
+					<tbody align="center">
+					<tr>
+					<td>주 분</td>
+					<td>25분</td>
+					<td>50분</td>
+					</tr>
+					<tr>
+					<td>주 2회</td>
+					<td>190,000원</td>
+					<td>440,000원</td>
+					</tr>
+					<tr>
+					<td>주 3회</td>
+					<td>280,000원</td>
+					<td>650,000원</td>
+					</tr>
+					
+					<tr>
+					<td>주 5회</td>
+					<td>450,000원</td>
+					<td>1,000,000원</td>
+					</tr>
+					</tbody>
+				</table>
+				
+				
+				<table class="custom-table" border=1px width=100% align="center">
+					<thead>
+					<tr>
+					<th colspan="3" height="40">12개월</th>
+					</tr>
+					</thead>
+					<tbody align="center">
+					<tr>
+					<td>주 분</td>
+					<td>25분</td>
+					<td>50분</td>
+					</tr>
+					<tr>
+					<td>주 2회</td>
+					<td>190,000원</td>
+					<td>440,000원</td>
+					</tr>
+					<tr>
+					<td>주 3회</td>
+					<td>280,000원</td>
+					<td>650,000원</td>
+					</tr>
+					
+					<tr>
+					<td>주 5회</td>
+					<td>450,000원</td>
+					<td>1,000,000원</td>
+					</tr>
+					</tbody>
+				</table>
+				
+            </div>
+          </aside>
+          <!--End sidebar-->
 
-
-	<div style="background: #538bca; height: 30px; line-height: 30px; width: 130px; text-align: center; color: #fff">
-		<span>50분 수업</span>
+        </div>
+      </div>
+    </div>
+    <!-- End Content -->
+    
+      
+    <div class="loader">
+		<div class="preloader2">
+			<span></span> <span></span> <span></span> <span></span> <span></span>
+		</div>
 	</div>
-
-	<table border="0" cellpadding="0" cellspacing="0" class="common_table_border" style="margin-top: 10px; width: 100%">
-		<colgroup>
-			<col width="25%" />
-			<col width="25%" />
-			<col width="25%" />
-			<col width="25%" />
-		</colgroup>
-		<tbody>
-			<tr>
-				<th>기간</th>
-				<th>주2회</th>
-				<th>주3회</th>
-				<th>주5회</th>
-			</tr>
-			<tr height="28">
-				<td style="text-align: center">1개월(4주)</td>
-				<td align="right"><input type="radio" name="article"
-					id="article" value="85000|1개월(4주)|4|50|2"
-					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">85,000(원)&nbsp;</td>
-				<td align="right"><input type="radio" name="article"
-					id="article" value="120000|1개월(4주)|4|50|3"
-					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">120,000(원)&nbsp;</td>
-				<td align="right"><input type="radio" name="article"
-					id="article" value="200000|1개월(4주)|4|50|5"
-					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">200,000(원)&nbsp;</td>
-			</tr>
-			<tr height="28">
-				<td style="text-align: center">3개월(12주)</td>
-				<td align="right"><input type="radio" name="article"
-					id="article" value="230000|3개월(12주)|12|50|2"
-					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">230,000(원)&nbsp;</td>
-				<td align="right"><input type="radio" name="article"
-					id="article" value="340000|3개월(12주)|12|50|3"
-					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">340,000(원)&nbsp;</td>
-				<td align="right"><input type="radio" name="article"
-					id="article" value="560000|3개월(12주)|12|50|5"
-					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">560,000(원)&nbsp;</td>
-			</tr>
-			<tr height="28">
-				<td style="text-align: center">6개월(24주)</td>
-				<td align="right"><input type="radio" name="article"
-					id="article" value="440000|6개월(24주)|24|50|2"
-					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">440,000(원)&nbsp;</td>
-				<td align="right"><input type="radio" name="article"
-					id="article" value="650000|6개월(24주)|24|50|3"
-					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">650,000(원)&nbsp;</td>
-				<td align="right"><input type="radio" name="article"
-					id="article" value="1000000|6개월(24주)|24|50|5"
-					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">1,000,000(원)&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-
-
-
-
 
 	<jsp:include page="/include/footer.jsp" />
 	<!-- Footer Section End-->
@@ -179,11 +236,7 @@
 	<a href="#" class="back-to-top"> <i class="fa fa-arrow-up"></i>
 	</a>
 
-	<div class="loader">
-		<div class="preloader2">
-			<span></span> <span></span> <span></span> <span></span> <span></span>
-		</div>
-	</div>
+	
 
 	<!-- jQuery  -->
 	<%@include file="../include/jquery.jsp"%>
