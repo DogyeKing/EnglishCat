@@ -115,14 +115,11 @@
                 <li class="dropdown dropdown-toggle">
                   <a href="#" data-toggle="dropdown">수강신청 <i class="fa fa-angle-down"></i></a>
                   <ul class="dropdown-menu">
-                    <li><a href="<%=request.getContextPath()%>/about/about.jsp">About Page</a></li>                     
-                    <li><a href="gallery.html">Image Gallery</a></li>
-                    <li><a href="faq.html">FAQ</a></li>    
-                    <li><a href="login.html">Login Page</a></li> 
-                    <li><a href="single-teacher.html">Single Teacher</a></li> 
-                    <li><a href="registration.html">Registration Form</a></li> 
-                    <li><a href="contact.html">Contacts</a></li> 
-                    <li><a href="404.html">404</a></li> 
+                    <li><a href="<%=request.getContextPath()%>/about/about.jsp">무료체험신청</a></li>                     
+                    <li><a href="gallery.html">수강신청</a></li>
+                    <li><a href="faq.html">결제안내</a></li>    
+                    <li><a href="<%=request.getContextPath()%>/apply/levelTest.jsp">레벨 테스트</a></li> 
+
                   </ul>                        
                 </li>
                 <li class="dropdown dropdown-toggle">

@@ -12,62 +12,55 @@ import com.cos.controller.member.MemberIDCheckAction;
 import com.cos.controller.member.MemberLoginAction;
 import com.cos.controller.member.MemberLogoutAction;
 import com.cos.controller.member.MemberRegisterAction;
+import com.cos.controller.member.MemberScoreAction;
 import com.cos.controller.member.MemberUpdateAction;
 import com.cos.controller.member.MemberUpdateProcAction;
-
 
 public class ActionFactory {
 	private static String naming = "ActionFactory : ";
 
-
 	private static ActionFactory instance = new ActionFactory();
-
 
 	private ActionFactory() {
 	}
 
-
 	public static ActionFactory getInstance() {
 		return instance;
 	}
-	
-	public Action getAction(String cmd) {		
-		if(cmd.equals("review_list")) {
+
+	public Action getAction(String cmd) {
+		if (cmd.equals("review_list")) {
 			return new ReviewListAction();
-		}else if(cmd.equals("member_register")) {
+		} else if (cmd.equals("member_register")) {
 			return new MemberRegisterAction();
-		}else if(cmd.equals("member_login")) {
+		} else if (cmd.equals("member_login")) {
 			return new MemberLoginAction();
-		}else if(cmd.equals("member_logout")) {
+		} else if (cmd.equals("member_logout")) {
 			return new MemberLogoutAction();
-		}else if(cmd.equals("member_update")) {			
+		} else if (cmd.equals("member_update")) {
 			return new MemberUpdateAction();
-		}else if(cmd.equals("member_updateProc")) {
+		} else if (cmd.equals("member_updateProc")) {
 			return new MemberUpdateProcAction();
-		}else if(cmd.equals("review_write")) {
+		} else if (cmd.equals("review_write")) {
 			return new ReviewWriteAction();
-		}else if(cmd.equals("member_idcheck")) {			
+		} else if (cmd.equals("member_idcheck")) {
 			return new MemberIDCheckAction();
-		}else if(cmd.equals("review_detail")) {
+		} else if (cmd.equals("review_detail")) {
 			return new ReviewDetailAction();
-		}else if(cmd.equals("review_update")) {
+		} else if (cmd.equals("review_update")) {
 			return new ReviewUpdateAction();
-		}else if(cmd.equals("review_updateProc")) {
+		} else if (cmd.equals("review_updateProc")) {
 			return new ReviewUpdateProcAction();
-		}else if(cmd.equals("review_delete")) {
+		} else if (cmd.equals("review_delete")) {
 			return new ReviewDeleteAction();
-		}else if(cmd.equals("ajax")) {
+		} else if (cmd.equals("ajax")) {
 			return new AjaxAction();
-		}else if(cmd.equals("review_writeProc")){
+		} else if (cmd.equals("review_writeProc")) {
 			return new ReviewWriteProcAction();
-	}
+		} else if (cmd.equals("member_score")) {
+			return new MemberScoreAction();  
+		}
 		return null;
 	}
-	
-	
+
 }
-
-
-
-
-
