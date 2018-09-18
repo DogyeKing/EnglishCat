@@ -117,7 +117,7 @@
                   <ul class="dropdown-menu">
                     <li><a href="<%=request.getContextPath()%>/apply/freeLevelTest.jsp">무료체험신청</a></li>                     
                     <li><a href="<%=request.getContextPath()%>/apply/application.jsp">수강신청</a></li>
-                    <li><a href="faq.html">결제안내</a></li>    
+                    <li><a href="<%=request.getContextPath()%>/apply/applyinfo.jsp">결제안내</a></li>    
                     <li><a href="<%=request.getContextPath()%>/apply/levelTest.jsp">레벨 테스트</a></li> 
 
                   </ul>                        

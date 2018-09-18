@@ -96,7 +96,7 @@ My name is Romeo. I’m an English tutor. I teach students from Korea, Japan, Ch
     <!-- Single Teacher Section End -->
 
     <!-- Start Call to Action Section -->
-    <div class="cta">
+    <!-- <div class="cta">
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-sm-8">
@@ -107,7 +107,7 @@ My name is Romeo. I’m an English tutor. I teach students from Korea, Japan, Ch
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- End Call to Action Section -->
 
     <!-- Footer Section -->
