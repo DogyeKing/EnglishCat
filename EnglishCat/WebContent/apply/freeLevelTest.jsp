@@ -133,6 +133,7 @@
     </section>
     <!-- End Content Section  -->
 
+<<<<<<< HEAD
     <!-- Start Map Section -->
     <div id="" class="container">
     <img src="<%=request.getContextPath()%>/assets/img/apply/img1.jpg">
@@ -278,6 +279,9 @@
       }
       google.maps.event.addDomListener(window, 'load', initialize);
     </script> -->
+=======
+    
+>>>>>>> 2c20449def758a75f573e9e7c56b82d4814fed56
 
 	<!-- Footer Section -->
 	<jsp:include page="/include/footer.jsp" />
@@ -287,7 +291,7 @@
 	<a href="#" class="back-to-top"> <i class="fa fa-arrow-up"></i>
 	</a>
 
-	<div class="loader">
+	<!-- <div class="loader">
 		<div class="preloader2">
 			<span></span> <span></span> <span></span> <span></span> <span></span>
 		</div>
