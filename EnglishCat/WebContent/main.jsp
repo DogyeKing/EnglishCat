@@ -33,7 +33,7 @@
 			</ol>
 			<div class="carousel-inner">
 				<div class="item active"
-					style="background-image: url(assets/img/slider/bg-55555.png);">
+					style="background-image: url(assets/img/slider/bg1.jpg);">
 					<div class="carousel-caption">
 					<p></p>
 						<p>영어회화 도대체 어떻게 해야하나요?</p>
@@ -46,7 +46,7 @@
 					</div>
 				</div>
 				<div class="item"
-					style="background-image: url(assets/img/slider/bg-44444.png);">
+					style="background-image: url(assets/img/slider/bg22.png);">
 					<div class="carousel-caption">
 						<!-- <p>영어회화 도대체 어떻게 해야하나요?</p> -->
 						<h1>
@@ -61,7 +61,7 @@
 					</div>
 				</div>
 				<div class="item"
-					style="background-image: url(assets/img/slider/bg-88.png);">
+					style="background-image: url(assets/img/slider/bg3.jpg);">
 					<div class="carousel-caption">
 						<p>You Too Can Speak English!</p>
 						<h1>

@@ -13,10 +13,10 @@ public class MemberScoreAction implements Action{
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String url = "index.jsp";
-		String question16 = request.getParameter("question16");
-		System.out.println(question16);
+		String score = request.getParameter("score");
+		System.out.println(score);
 		
-		Script.moving(response, question16, url);
+		Script.moving(response, score, url);
 		
 		
 	}

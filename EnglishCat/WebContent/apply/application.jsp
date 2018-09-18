@@ -192,7 +192,9 @@
     
     <!-- End Content -->
     
-    
+        <div class="container">
+    <img src="<%=request.getContextPath()%>/assets/img/apply/img1.jpg">
+    </div>
 
      <!-- Footer Section -->
     
