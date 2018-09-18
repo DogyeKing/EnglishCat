@@ -30,6 +30,8 @@
 	<!-- Header area wrapper Starts -->
 
 	<%@include file="../include/header.jsp"%>
+	
+	<link rel="stylesheet" href="/EnglishCat/assets/css/custom-components.css">
 
 	<!-- Header area wrapper End -->
 
@@ -196,19 +198,19 @@
 					</tr>
 					<tr>
 					<td>주 2회</td>
-					<td>190,000원</td>
-					<td>440,000원</td>
+					<td>300,000원</td>
+					<td>800,000원</td>
 					</tr>
 					<tr>
 					<td>주 3회</td>
-					<td>280,000원</td>
-					<td>650,000원</td>
+					<td>480,000원</td>
+					<td>1,220,000원</td>
 					</tr>
 					
 					<tr>
 					<td>주 5회</td>
 					<td>450,000원</td>
-					<td>1,000,000원</td>
+					<td>1,800,000원</td>
 					</tr>
 					</tbody>
 				</table>

@@ -1320,3 +1320,9 @@ footer #copyright .bottom-social-icons .linkedin:hover {
 .single-teacher .teacher-info .desc ul li i {
   margin-right: 5px;
 }
+
+
+.custom-table th {
+	
+	background: #cc9a001c;
+}

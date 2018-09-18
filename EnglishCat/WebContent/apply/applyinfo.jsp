@@ -37,7 +37,11 @@
                 </div>
                 
  
-                <!-- Courses Slider Start -->
+ 				<div class="item">
+                      <a href="#"><img src="<%=request.getContextPath()%>/assets/img/event/img666.jpg" alt=""></a>
+                </div>
+
+                <%-- <!-- Courses Slider Start -->
                 <div class="Courses-slider">
                   <div class="touch-slider owl-carousel" data-slider-pagination="true">
                     <div class="item">
@@ -50,8 +54,8 @@
                       <a href="#"><img src="<%=request.getContextPath()%>/assets/img/event/img-3.jpg" alt=""></a>
                     </div>
                   </div>
-                </div>
-                <br><br>
+                </div> --%>
+                <br>
                 
                 
                 <!-- Courses Slider End -->
