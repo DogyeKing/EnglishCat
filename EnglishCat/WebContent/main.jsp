@@ -46,7 +46,7 @@
 					</div>
 				</div>
 				<div class="item"
-					style="background-image: url(assets/img/slider/bg22.png);">
+					style="background-image: url(assets/img/slider/bg2.jpg);">
 					<div class="carousel-caption">
 						<!-- <p>영어회화 도대체 어떻게 해야하나요?</p> -->
 						<h1>
@@ -61,7 +61,7 @@
 					</div>
 				</div>
 				<div class="item"
-					style="background-image: url(assets/img/slider/bg3.jpg);">
+					style="background-image: url(assets/img/slider/bg33.jpg);">
 					<div class="carousel-caption">
 						<p>You Too Can Speak English!</p>
 						<h1>
