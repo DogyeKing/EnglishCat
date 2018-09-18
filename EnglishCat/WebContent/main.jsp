@@ -575,6 +575,9 @@
                             <div class="form-group">
                                 <input type="text" id="sender-subject" class="form-control" name="subject" placeholder="Enter your Subject">
                             </div> 
+                                                        <div class="form-group">
+                                <input type="text" id="sender-subject" class="form-control" name="subject" placeholder="Enter your Subject">
+                            </div> 
                             <div class="form-group">
                                 <input type="text" id="sender-content" class="form-control" name="content" placeholder="Enter your Content">
                             </div>   

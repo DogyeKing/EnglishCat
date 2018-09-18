@@ -115,8 +115,8 @@
                 <li class="dropdown dropdown-toggle">
                   <a href="#" data-toggle="dropdown">수강신청 <i class="fa fa-angle-down"></i></a>
                   <ul class="dropdown-menu">
-                    <li><a href="<%=request.getContextPath()%>/about/about.jsp">무료체험신청</a></li>                     
-                    <li><a href="gallery.html">수강신청</a></li>
+                    <li><a href="<%=request.getContextPath()%>/apply/freeLevelTest.jsp">무료체험신청</a></li>                     
+                    <li><a href="<%=request.getContextPath()%>/apply/application.jsp">수강신청</a></li>
                     <li><a href="faq.html">결제안내</a></li>    
                     <li><a href="<%=request.getContextPath()%>/apply/levelTest.jsp">레벨 테스트</a></li> 
 

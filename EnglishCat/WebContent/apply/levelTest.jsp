@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Bright">
 <title>
-	English Test
+	English Test	
 </title>
 
 
@@ -26,12 +26,12 @@
         })();
     </script>
 </head>
+
+
 <body>
-
-
 	<!-- navigation -->
 	<%@include file="/include/header.jsp"%>
-    <form name="aspnetForm" method="post" action="levelTest2.jsp" id="aspnetForm">
+    <form name="aspnetForm" method="post" action="levelTest2.jsp" id="aspnetForm" class="container">
     
 <div id="wrapper">
     <div id="pagebody">
