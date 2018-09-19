@@ -39,7 +39,9 @@
             <h2 class="medium-title">무료체험 신청서</h2>   
             <!-- Form -->
           
-            <form id="contactForm" name="form" role="form" class="contact-form" data-toggle="validator" method="post" action="<%=request.getContextPath()%>/member?cmd=member_FreeTest" >
+      <%--       <form id="contactForm" name="form" role="form" class="contact-form" data-toggle="validator" method="post" action="<%=request.getContextPath()%>/member?cmd=member_FreeTest" > --%>
+      	<form name="form" method="post" action="<%=request.getContextPath()%>/member?cmd=member_FreeTest">
+      
               <div class="row">
                 <div class="col-md-6">
                   <input type="text" class="form-control" id="name" name="name" placeholder="이름:" required data-error="이름을 입력하세요.">
@@ -58,12 +60,13 @@
                   <div class="help-block with-errors"></div>
                 </div>            
                 <div class="col-md-12">
-                  <textarea class="form-control" placeholder="원하시는 날짜,시간 입력 ex(2018-09-18, 18:00)" id="content" rows="9" required data-error="원하시는 날짜, 시간을 반드시 입력하세요"></textarea>
+                  <textarea class="form-control" placeholder="원하시는 날짜,시간 입력 ex(2018-09-18, 18:00)" id="content" name="content" rows="9" required data-error="원하시는 날짜, 시간을 반드시 입력하세요"></textarea>
                   <div class="help-block with-errors"></div>
                 </div>
                 <div class="col-md-6">
                
-                  <button type="submit" id="submit" class="btn btn-common">Send Now</button>
+              <!--     <button type="submit" id="submit" class="btn btn-common">Send Now</button> -->
+              <button type="submit" id="submit" class="btn btn-common">send now</button>
                   <div id="msgSubmit" class="hidden"></div> 
                   <div class="clearfix"></div>  
                 </div>
