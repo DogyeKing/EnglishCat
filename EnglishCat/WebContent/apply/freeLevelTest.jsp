@@ -8,16 +8,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Bright">
-
-<!--     Google Maps
-    <style>
-      #google-map,
-      body,
-      html {
-        padding: 0;
-        height: 400px;
-      }
-    </style> -->
     
   </head>
   <body>
@@ -40,34 +30,7 @@
       </div>
     </div>
     <!-- Page Header End --> 
-  
-  <%-- <div class="col-md-5 col-sm-6 col-xs-12">
-                    <div class="sign-up box">
-                        <div class="heading">
-                            <h2 class="heading-title">Sign Up Now</h2>
-                            <p class="desc">Get Free Courses</p>
-                        </div>
-                        <form role="form" class="login-form" action="<%=request.getContextPath()%>/sendMail.jsp" method="post">
-                            <div class="form-group">
-                                <input type="text" id="sender-from" class="form-control" name="from" placeholder="Enter your Email">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" id="sender-to" class="form-control" name="to" placeholder="Enter your Email">
-                            </div>  
-                            <div class="form-group">
-                                <input type="text" id="sender-subject" class="form-control" name="subject" placeholder="Enter your Subject">
-                            </div> 
-                                                        <div class="form-group">
-                                <input type="text" id="sender-subject" class="form-control" name="subject" placeholder="Enter your Subject">
-                            </div> 
-                            <div class="form-group">
-                                <input type="text" id="sender-content" class="form-control" name="content" placeholder="Enter your Content">
-                            </div>   
-                            <button class="btn btn-common" onclick="check()" value="transmission">Enroll Now</button>
-                          </form>
-                    </div>
-                </div> --%>
-                
+                  
     <!-- Start Content Section -->
     <section id="content">
       <div class="container">
@@ -141,147 +104,6 @@
     </div>
     <!-- End Map Section -->
 
-<!--       Google Maps API
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHo_WtZ2nIYCgCLf7sINZaqcrpqSDio9o"></script>
-      Google Maps JS Only for Contact Pages
-      <script type="text/javascript">
-      var map;
-      var defult = new google.maps.LatLng(55.8638037, -4.2834354,13.67);
-      var mapCoordinates = new google.maps.LatLng(55.8638037, -4.2834354,13.67); 
-      
-      
-      var markers = [];
-      var image = new google.maps.MarkerImage(
-        'assets/img/map-marker.png',
-        new google.maps.Size(84, 70),
-        new google.maps.Point(0, 0),
-        new google.maps.Point(60, 60)
-      );
-      
-      function addMarker() {
-        markers.push(new google.maps.Marker({
-          position: defult,
-          raiseOnDrag: false,
-          icon: image,
-          map: map,
-          draggable: false
-        }
-      ));
-        
-      }
-      
-      function initialize() {
-        var mapOptions = {
-          backgroundColor: "#ffffff",
-          zoom: 15,
-          disableDefaultUI: true,
-          center: mapCoordinates,
-          zoomControl: false,
-          scaleControl: false,
-          scrollwheel: false,
-          disableDoubleClickZoom: true,
-          mapTypeId: google.maps.MapTypeId.ROADMAP,
-          styles: [{
-            "featureType": "landscape.natural",
-            "elementType": "geometry.fill",
-            "stylers": [{
-              "color": "#ffffff"
-            }
-                       ]
-          }
-                   , {
-                     "featureType": "landscape.man_made",
-                     "stylers": [{
-                       "color": "#ffffff"
-                     }
-                                 , {
-                                   "visibility": "off"
-                                 }
-                                ]
-                   }
-                   , {
-                     "featureType": "water",
-                     "stylers": [{
-                       "color": "#80C8E5"
-                     }
-                                 , {
-                                   "saturation": 0
-                                 }
-                                ]
-                   }
-                   , {
-                     "featureType": "road.arterial",
-                     "elementType": "geometry",
-                     "stylers": [{
-                       "color": "#999999"
-                     }
-                                ]
-                   }
-                   , {
-                     "elementType": "labels.text.stroke",
-                     "stylers": [{
-                       "visibility": "off"
-                     }
-                                ]
-                   }
-                   , {
-                     "elementType": "labels.text",
-                     "stylers": [{
-                       "color": "#333333"
-                     }
-                                ]
-                   }
-                   
-                   , {
-                     "featureType": "road.local",
-                     "stylers": [{
-                       "color": "#dedede"
-                     }
-                                ]
-                   }
-                   , {
-                     "featureType": "road.local",
-                     "elementType": "labels.text",
-                     "stylers": [{
-                       "color": "#666666"
-                     }
-                                ]
-                   }
-                   , {
-                     "featureType": "transit.station.bus",
-                     "stylers": [{
-                       "saturation": -57
-                     }
-                                ]
-                   }
-                   , {
-                     "featureType": "road.highway",
-                     "elementType": "labels.icon",
-                     "stylers": [{
-                       "visibility": "off"
-                     }
-                                ]
-                   }
-                   , {
-                     "featureType": "poi",
-                     "stylers": [{
-                       "visibility": "off"
-                     }
-                                ]
-                   }
-                   
-                  ]
-          
-        }
-            ;
-        map = new google.maps.Map(document.getElementById('google-map'), mapOptions);
-        addMarker();
-        
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
-    </script> -->
-
-
 	<!-- Footer Section -->
 	<jsp:include page="/include/footer.jsp" />
 	<!-- Footer Section End-->
@@ -290,11 +112,11 @@
 	<a href="#" class="back-to-top"> <i class="fa fa-arrow-up"></i>
 	</a>
 
-	<!-- <div class="loader">
+	<div class="loader">
 		<div class="preloader2">
 			<span></span> <span></span> <span></span> <span></span> <span></span>
 		</div>
-	</div> -->
+	</div>
 
 	<!-- jQuery  -->
 	<%@include file="/include/jquery.jsp"%>

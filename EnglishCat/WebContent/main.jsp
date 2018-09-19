@@ -82,10 +82,10 @@
 	<!-- Main Carousel Section End -->
 
 <!-- Why Choose section Start -->
-	<div class="why-choose">
+	<!-- <div class="why-choose">
 		<div class="container">
 			<div class="row">
-				<h2 class="section-title">Why Choose Our University</h2>
+				<h2 class="section-title">잉글리쉬캣에 오신걸 환영합니다.</h2>
 				<div class="col-md-7 col-sm-7 col-xl-12">
 					<div class="row">
 						<div class="col-md-6">
@@ -184,9 +184,9 @@
 			</div>
 		</div>
 	</div>
-	<!-- Why Choose section End -->
+	Why Choose section End
 
-<!-- Counter Section Start -->
+Counter Section Start
 	<section id="counter">
 		<div class="container">
 			<div class="row">
@@ -236,7 +236,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 	<!-- Counter Section End -->
 	
 	<!-- Activity Area Start -->
@@ -245,8 +245,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<h2 class="section-title">
-						A powerhouse of cutting-edge <br>education, research &
-						teaching in The World
+						<span>잉글리쉬캣</span>만의 이유 있는 자신감! <br>고객님과의 약속과 신뢰를 반드시 지키는 영어교육센터입니다.
 					</h2>
 				</div>
 				<div class="col-md-4 col-sm-6 col-xs-12">
@@ -296,9 +295,8 @@
 						<div class="col-md-7 col-sm-12 col-xs-12">
 							<div class="features-main">
 								<div class="features-header">
-									<h2>Welecome To Bright University</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing
-										elit.</p>
+									<h2> Why Choose EnglishCat?</h2>
+									<p>   왜 잉글리쉬캣을 선택해야 할까요? 그 이유는 바로</p>
 								</div>
 								<div class="row info">
 									<div class="col-sm-6">
@@ -306,9 +304,8 @@
 											<i class="fa fa-group"></i>
 										</div>
 										<div class="content">
-											<h3>Skilled Professors</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing
-												elit. Repellendus, quaerat beatae.</p>
+											<h3> 최고의 강사진</h3>
+											<p>필리핀 최고의 교육도시인 일로일로에서 엄격한 자격심사를 통해 고용된 최고의 강사진으로 구성되어 있습니다.</p>
 										</div>
 									</div>
 									<div class="col-sm-6">
@@ -316,9 +313,8 @@
 											<i class="fa fa-university"></i>
 										</div>
 										<div class="content">
-											<h3>Best Infrastructure</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing
-												elit. Repellendus, quaerat beatae.</p>
+											<h3> 탄탄한 커리큘럼</h3>
+											<p>어린 학생부터 성인까지 단기간에 최고의 효율로 회화실력을 향상 시킬 수 있는 탄탄한 커리큘럼이 준비되어 있습니다. </p>
 										</div>
 									</div>
 									<div class="col-sm-6">
@@ -326,9 +322,8 @@
 											<i class="fa fa-cogs"></i>
 										</div>
 										<div class="content">
-											<h3>Well Equiped Labs</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing
-												elit. Repellendus, quaerat beatae.</p>
+											<h3> 높은 수준의 화상품질</h3>
+											<p>현지에서의 24시간 인터넷 품질관리 모니터링으로 깔끔한 영상과 음성으로 편안히 수업을 받을 수 있습니다.</p>
 										</div>
 									</div>
 									<div class="col-sm-6">
@@ -336,9 +331,8 @@
 											<i class="fa fa-book"></i>
 										</div>
 										<div class="content">
-											<h3>Big Library</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing
-												elit. Repellendus, quaerat beatae.</p>
+											<h3> 합리적인 수강료</h3>
+											<p>동종업계 대비 최저의 수강료로 최고의 수업퀄리티를 제공합니다. 잉글리쉬캣은 고객을 항상 먼저 생각하기 때문입니다.</p>
 										</div>
 									</div>
 								</div>
@@ -346,7 +340,9 @@
 						</div>
 						<div class="col-md-5 col-sm-12 col-xs-12">
 							<div class="img-thumb">
-								<img src="assets/img/features/img1.png" alt="">
+								<img src="assets/img/teacher/img-3.png" alt="">
+									<!-- <img src="assets/img/features/why.png" alt=""> -->
+										<!-- <img src="assets/img/teacher/img-3.png" alt=""> -->
 							</div>
 						</div>
 					</div>
@@ -537,20 +533,21 @@
 				<div class="col-md-7 col-sm-6 col-xs-12 col-offset-2">
 					<div class="coaching-wrapper">
 						<h3>
-							Get <span>Free</span> Training on Business Development<br>
-							By John Smith
+							잉글리쉬캣을 <span>무료</span>로 체험해보세요!<br>
+							서두르세요 곧 마감됩니다.
 						</h3>
-						<p>It's limited seating! Hurry Up</p>
+						<p>회원가입 후 신청 가능합니다.</p>
+						<br>
 						<div class="timer">
 							<div id="clock" class="time-count">
 								<div class="time-entry days">
-									<span>00</span> Days
+									<span>7</span> Days
 								</div>
 								<div class="time-entry hours">
-									<span>00</span> Hours
+									<span>12</span> Hours
 								</div>
 								<div class="time-entry minutes">
-									<span>00</span> Minutes
+									<span>59</span> Minutes
 								</div>
 								<div class="time-entry seconds">
 									<span>00</span> Seconds
@@ -563,26 +560,26 @@
 			                <div class="col-md-5 col-sm-6 col-xs-12">
                     <div class="sign-up box">
                         <div class="heading">
-                            <h2 class="heading-title">Sign Up Now</h2>
-                            <p class="desc">Get Free Courses</p>
+                            <h2 class="heading-title">무료체험 신청</h2>
+                            <p class="desc">잉글리쉬캣을 먼저 체험해보세요</p>
                         </div>
                         <form role="form" class="login-form" action="<%=request.getContextPath()%>/sendMail.jsp" method="post">
                             <div class="form-group">
-                                <input type="text" id="sender-from" class="form-control" name="from" placeholder="Enter your Email">
+                                <input type="text" id="name" class="form-control" name="name" placeholder="이름">
                             </div>
                             <div class="form-group">
-                                <input type="text" id="sender-to" class="form-control" name="to" placeholder="Enter your Email">
+                                <input type="text" id="age" class="form-control" name="age" placeholder="나이">
                             </div>  
                             <div class="form-group">
-                                <input type="text" id="sender-subject" class="form-control" name="subject" placeholder="Enter your Subject">
-                            </div> 
-                                                        <div class="form-group">
-                                <input type="text" id="sender-subject" class="form-control" name="subject" placeholder="Enter your Subject">
+                                <input type="text" id="phone" class="form-control" name="phone" placeholder="전화번호">
                             </div> 
                             <div class="form-group">
-                                <input type="text" id="sender-content" class="form-control" name="content" placeholder="Enter your Content">
+                                <input type="text" id="email" class="form-control" name="email" placeholder="이메일">
+                            </div> 
+                            <div class="form-group">
+                                <input type="text" id="content" class="form-control" name="content" placeholder="원하시는 날짜,시간 입력 ex(2018-09-18, 18:00)">
                             </div>   
-                            <button class="btn btn-common" onclick="check()" value="transmission">Enroll Now</button>
+                            <button class="btn btn-common" onclick="check()" value="transmission">신청하기</button>
                           </form>
                     </div>
                 </div>
@@ -611,9 +608,10 @@
 							<h3>
 								<a href="single-teacher.html">엄 희철</a>
 							</h3>
-							<span>Head of Computer Science Dept.</span>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-								Ex ea qui, voluptas vitae pariatur nihil odit.</p>
+							<span>87.12.24년생 (만 30세) </span>
+							<p>홈페이지 기획
+							<br>개발
+							<br>게시판 담당</p>
 							<div class="social-icon">
 								<a class="social" href="#"><i class="fa fa-twitter"></i></a> <a
 									class="social" href="#"><i class="fa fa-facebook"></i></a> <a
@@ -679,17 +677,14 @@
 					<div class="item">
 						<div class="testimonial-item">
 							<div class="testimonial-inner">
-								<p>When I commenced the programme. I gave myself one year to
-									challenge my thinking. change my outlook and choose my next
-									step. This could not have been achierved without the remarkable
-									opportunities to me.</p>
+								<p>안녕 얘들아 너희와 함께 일하게 되어 영광이야 김영광이야 열심히 해서 좋은작품 만들자 그러니 열심히 일하길바라 노예처럼^^; 내 족쇄 이쁘지??^^;; 니 족쇄는 금색이구나 슈밤</p>
 							</div>
 							<div class="quote-author">
-								<a href="#"><img src="assets/img/testimonial/avatar1.jpg"
+								<a href="#"><img src="assets/img/teacher/um1.png"
 									alt=""></a>
 								<div class="quote-footer">
-									<h5 class="name">John Mathew</h5>
-									<span> / Alumini</span>
+									<h5 class="name">엄희철</h5>
+									<span> / 예비 개발자</span>
 								</div>
 							</div>
 						</div>

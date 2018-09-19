@@ -31,7 +31,7 @@
 <body>
 	<!-- navigation -->
 	<%@include file="/include/header.jsp"%>
-    <form name="aspnetForm" method="post" action="levelTest2.jsp" id="aspnetForm" class="container" onsubmit="return score()">
+    <form name="aspnetForm" method="post" action="levelTest2.jsp" id="aspnetForm" class="container">
     
 <div id="wrapper">
     <div id="pagebody">
@@ -177,7 +177,7 @@
     <div class="right" style="padding-top: 5px;">
     	<input type="hidden" id="score" name="score">
         <input type="image" name="ctl00$MainContent$QuizHostInstance$ctl00$NextPageImageButton" 
-        id="ctl00_MainContent_QuizHostInstance_ctl00_NextPageImageButton" class="NextButton" 
+        id="NextPageImageButton" class="NextButton" 
          src="<%=request.getContextPath()%>/assets/img/next.png" alt="Next" style="/* border-width:0px;height:26px;width:78px; */" />
     </div>
 </div>
@@ -190,32 +190,35 @@
     <input name="ctl00$MainContent$uniqueLeadId" type="hidden" id="ctl00_MainContent_uniqueLeadId" />
     </form>
         <script>
-        	function score(){
-        		var score = 0;
-        		var answer1 = document.getElementsByName('question1');
-        		if(answer1 == 4){
-        			score = score +5;
-        		}
-        		var answer2 = document.getElementsByName('question2');
-        		if(answer2 == 8){
-        			score = score +5;
-        		}
-        		var answer3 = document.getElementsByName('question3');
-        		if(answer3 == 15){
-        			score = score +5;
-        		}
-        		var answer4 = document.getElementsByName('question4');
-        		if(answer4 == 16){
-        			score = score +5;
-        		}
-        		var answer5 = document.getElementsByName('question5');
-        		if(answer5 == 21){
-        			score = score +5;
-        		}
-        		
-        		document.getElementsById('score').value = score;        		
-
-        	}
+        	$(document).ready(function score(){
+        		$('#NextPageImageButton').click(function(){
+        			var score = 0;
+        			
+            		var answer1 = $(input[name="question1"]:checked).val();
+            		if(answer1 == 4){
+            			score = score +5;
+            		}
+            		        		
+            		var answer2 = $(input[name="question2"]:checked).val();
+            		if(answer2 == 8){
+            			score = score +5;
+            		}
+            		var answer3 = $(input[name="question3"]:checked).val();
+            		if(answer3 == 15){
+            			score = score +5;
+            		}
+            		var answer4 = $(input[name="question4"]:checked).val();
+            		if(answer4 == 16){
+            			score = score +5;
+            		}
+            		var answer5 = $(input[name="question5"]:checked).val();
+            		if(answer5 == 21){
+            			score = score +5;
+            		}
+            		document.getElementsById('score').value = score; 
+            		alert(score);
+        		})
+        	
         
         </script>
 
