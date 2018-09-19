@@ -8,6 +8,7 @@ import com.cos.controller.board.ReviewUpdateAction;
 import com.cos.controller.board.ReviewUpdateProcAction;
 import com.cos.controller.board.ReviewWriteAction;
 import com.cos.controller.board.ReviewWriteProcAction;
+import com.cos.controller.member.MemberFreeTestAction;
 import com.cos.controller.member.MemberIDCheckAction;
 import com.cos.controller.member.MemberLoginAction;
 import com.cos.controller.member.MemberLogoutAction;
@@ -59,6 +60,8 @@ public class ActionFactory {
 			return new ReviewWriteProcAction();
 		} else if (cmd.equals("member_score")) {
 			return new MemberScoreAction();  
+		} else if (cmd.equals("member_FreeTest")) {
+			return new MemberFreeTestAction();  
 		}
 		return null;
 	}
