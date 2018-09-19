@@ -563,26 +563,26 @@
 			                <div class="col-md-5 col-sm-6 col-xs-12">
                     <div class="sign-up box">
                         <div class="heading">
-                            <h2 class="heading-title">Sign Up Now</h2>
-                            <p class="desc">Get Free Courses</p>
+                            <h2 class="heading-title">무료체험 신청</h2>
+                            <p class="desc">잉글리쉬캣을 먼저 체험해보세요</p>
                         </div>
                         <form role="form" class="login-form" action="<%=request.getContextPath()%>/sendMail.jsp" method="post">
                             <div class="form-group">
-                                <input type="text" id="sender-from" class="form-control" name="from" placeholder="Enter your Email">
+                                <input type="text" id="name" class="form-control" name="name" placeholder="이름">
                             </div>
                             <div class="form-group">
-                                <input type="text" id="sender-to" class="form-control" name="to" placeholder="Enter your Email">
+                                <input type="text" id="age" class="form-control" name="age" placeholder="나이">
                             </div>  
                             <div class="form-group">
-                                <input type="text" id="sender-subject" class="form-control" name="subject" placeholder="Enter your Subject">
-                            </div> 
-                                                        <div class="form-group">
-                                <input type="text" id="sender-subject" class="form-control" name="subject" placeholder="Enter your Subject">
+                                <input type="text" id="phone" class="form-control" name="phone" placeholder="전화번호">
                             </div> 
                             <div class="form-group">
-                                <input type="text" id="sender-content" class="form-control" name="content" placeholder="Enter your Content">
+                                <input type="text" id="email" class="form-control" name="email" placeholder="이메일">
+                            </div> 
+                            <div class="form-group">
+                                <input type="text" id="content" class="form-control" name="content" placeholder="원하시는 날짜,시간 입력 ex(2018-09-18, 18:00)">
                             </div>   
-                            <button class="btn btn-common" onclick="check()" value="transmission">Enroll Now</button>
+                            <button class="btn btn-common" onclick="check()" value="transmission">신청하기</button>
                           </form>
                     </div>
                 </div>
