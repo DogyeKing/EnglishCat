@@ -56,7 +56,7 @@
                             <div class="course-content">
                                 <h3><a href="courses-single.html">Pre-Level</a></h3>
                                 <p>짧은 문장을 읽고 듣고 이해하며 기본적인 단어로 영어를 표현 하며 자신의 생각을 영어로 이야기 할 수있다. 영어문장에 대한 기본적인 문법적 구조를 터득한다.</p>
-                                <a href="#" class="btn btn-common btn-sm">Apply Now</a>
+                                <a href="<%=request.getContextPath() %>/apply/application.jsp" class="btn btn-common btn-sm">Apply Now</a>
                             </div>
                         </div>
                     </div>
@@ -78,7 +78,7 @@
                             <div class="course-content">
                                 <h3><a href="courses-single.html">Beginner</a></h3>
                                 <p>영어의 기본적인 체계를 잡고 기본적인 글을 이해하며 문법에 맞게 영어를 자신감 있게 이야기 할 수 있다. 일상생활에 관련된 표현들을 무리없이 구사할 수 있다.</p>
-                                <a href="#" class="btn btn-common btn-sm">Apply Now</a>
+                                <a href="<%=request.getContextPath() %>/apply/application.jsp" class="btn btn-common btn-sm">Apply Now</a>
                             </div>
                         </div>
                     </div>
@@ -100,7 +100,7 @@
                             <div class="course-content">
                                 <h3><a href="courses-single.html">Intermediate</a></h3>
                                 <p>다양한 상황의 글을 읽고 짧은 문장으로 자신의 의견을 자신감있게 이야기 할 수 있다. 일상생활에 관련된 주제를 넘어 사회적으로 이슈가 되는 문제들, 뉴스 기사 등에 대해 토론 할 수 있다.</p>
-                                <a href="#" class="btn btn-common btn-sm">Apply Now</a>
+                                <a href="<%=request.getContextPath() %>/apply/application.jsp" class="btn btn-common btn-sm">Apply Now</a>
                             </div>
                         </div>
                     </div>
@@ -122,7 +122,7 @@
                             <div class="course-content">
                                 <h3><a href="courses-single.html">Middle-Intermediate</a></h3>
                                 <p>고2 이상 수준의 글을 읽고 긴문장으로 자신 있게 표현 할 수 있다. 심도 있는 주제에 대해 토론하는 능력을 기른다. 토론에 필요한 표현력, 어휘력, 문법 등을 강화시킨다.</p>
-                                <a href="#" class="btn btn-common btn-sm">Apply Now</a>
+                                <a href="<%=request.getContextPath() %>/apply/application.jsp" class="btn btn-common btn-sm">Apply Now</a>
                             </div>
                         </div>
                     </div>
@@ -146,7 +146,7 @@
                                 <p>다양한 이슈에 대해서 영어로 자연스럽게 이야기 할 수 있다. 일상생활에 영어를 사용함에 있어서 전혀 어려움을 느끼지 못하며 다양한 표현을 유연하게 구사한다.</p>
 
 
-                                <a href="#" class="btn btn-common btn-sm">Apply Now</a>
+                                <a href="<%=request.getContextPath() %>/apply/application.jsp" class="btn btn-common btn-sm">Apply Now</a>
                             </div>
                         </div>
                     </div>
@@ -168,7 +168,7 @@
                             <div class="course-content">
                                 <h3><a href="courses-single.html">Advance</a></h3>
                                 <p>일상적으로 사용하는 영어 수준이 아닌 학술적 영어를 구사하기 위한 표현법, 어휘 등에 대한 능력을 기른다. 기초자연과학에 관련해서 영어로 원활하게 토론을 할 수 있는 수준.</p>
-                                <a href="#" class="btn btn-common btn-sm">Apply Now</a>
+                                <a href="<%=request.getContextPath() %>/apply/application.jsp" class="btn btn-common btn-sm">Apply Now</a>
                             </div>
                         </div>
                     </div>
