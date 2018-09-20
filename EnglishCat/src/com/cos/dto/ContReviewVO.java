@@ -2,6 +2,8 @@ package com.cos.dto;
 
 public class ContReviewVO {
 	private String cont_id;
+	private String cont_seq;
+	private String cont_page_seq;
 	private String cont_title;
 	private String cont_content;
 	private String user_pid;
@@ -15,6 +17,18 @@ public class ContReviewVO {
 	}
 	public void setCont_id(String cont_id) {
 		this.cont_id = cont_id;
+	}
+	public String getCont_seq() {
+		return cont_seq;
+	}
+	public void setCont_seq(String cont_seq) {
+		this.cont_seq = cont_seq;
+	}
+	public String getCont_page_seq() {
+		return cont_page_seq;
+	}
+	public void setCont_page_seq(String cont_page_seq) {
+		this.cont_page_seq = cont_page_seq;
 	}
 	public String getCont_title() {
 		return cont_title;

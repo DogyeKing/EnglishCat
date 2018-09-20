@@ -18,7 +18,21 @@ public class ContReviewDAO {
 		
 		//게시판 리스트 뽑기
 		public List<ContReviewVO> contReviewSelectList(){
-			String SQL = "select * from tb_cont_review order by cont_id DESC";
+			String SQL = "WITH TEMP_CONT_CNT AS (SELECT COUNT(1) CONT_CNT\r\n" + 
+					"        FROM TB_CONT_REVIEW\r\n" + 
+					"        WHERE DELETE_YN IS NULL)\r\n" + 
+					"    , TEMP_CONT_REVIEW AS (SELECT CONT_ID\r\n" + 
+					"            , ROW_NUMBER() OVER(ORDER BY CONT_ID DESC) CONT_SEQ_DESC\r\n" + 
+					"            , CONT_TITLE, CONT_CONTENT, USER_PID, INSERT_DT\r\n" + 
+					"    FROM TB_CONT_REVIEW\r\n" + 
+					"    WHERE DELETE_YN IS NULL\r\n" + 
+					"    )\r\n" + 
+					"SELECT CONT_ID, (CONT_CNT - CONT_SEQ_DESC + 1) CONT_SEQ\r\n" + 
+					"    , TRUNC(CONT_SEQ_DESC/10, 0) CONT_PAGE_SEQ\r\n" + 
+					"    , CONT_TITLE, CONT_CONTENT, USER_PID, INSERT_DT\r\n" + 
+					"FROM TEMP_CONT_REVIEW, TEMP_CONT_CNT\r\n" + 
+					"WHERE TRUNC(CONT_SEQ_DESC/10, 0) = '0'\r\n" + 
+					"ORDER BY CONT_SEQ DESC";
 			Connection conn = DBManager.getConnection();
 			
 			try {
@@ -30,13 +44,15 @@ public class ContReviewDAO {
 				while (rs.next()) {
 					ContReviewVO contReviewVO = new ContReviewVO();
 					contReviewVO.setCont_id(rs.getString("cont_id"));
+					contReviewVO.setCont_seq(rs.getString("cont_seq"));
+					contReviewVO.setCont_page_seq(rs.getString("cont_page_seq"));
 					contReviewVO.setCont_title(rs.getString("cont_title"));
 					contReviewVO.setCont_content(rs.getString("cont_content"));
 					contReviewVO.setUser_pid(rs.getString("user_pid"));
 					contReviewVO.setInsert_dt(rs.getString("insert_dt"));
-					contReviewVO.setUpdate_dt(rs.getString("update_pid"));
+					/*contReviewVO.setUpdate_dt(rs.getString("update_pid"));
 					contReviewVO.setUpdate_pid(rs.getString("update_pid"));
-					contReviewVO.setDelete_yn(rs.getString("delete_yn"));
+					contReviewVO.setDelete_yn(rs.getString("delete_yn"));*/
 					RegistDAO rdao = new RegistDAO();
 					contReviewVO.setUser_pid(rdao.get_id(contReviewVO.getUser_pid()));
 					
@@ -77,7 +93,7 @@ public class ContReviewDAO {
 		
 		//게시판 보기
 				public ContReviewVO select(String cont_id) {
-					String SQL = "select * from tb_cont_review where cont_id = ?";
+					String SQL = "SELECT * FROM TB_CONT_REVIEW WHERE CONT_ID = ?";
 					Connection conn = DBManager.getConnection();
 					try {
 						pstmt = conn.prepareStatement(SQL);
@@ -105,7 +121,7 @@ public class ContReviewDAO {
 				
 				//게시판 수정
 				public int update(ContReviewVO contReviewVO) {
-					String SQL = "update tb_cont_review set cont_title = ?, cont_content = ? where cont_id = ?";
+					String SQL = "UPDATE TB_CONT_REVIEW SET CONT_TITLE = ?, CONT_CONTENT = ? WHERE CONT_ID = ?";
 					Connection conn = DBManager.getConnection();
 					try {
 						pstmt = conn.prepareStatement(SQL);
@@ -123,8 +139,8 @@ public class ContReviewDAO {
 
 		
 		//게시판 삭제
-		public int delete(String cont_id) {
-			String SQL = "delete from tb_cont_review where cont_id = ?";
+		public int update_cont_review(String cont_id) {
+			String SQL = "UPDATE TB_CONT_REVIEW SET DELETE_YN = 'Y' WHERE CONT_ID = ?";
 			Connection conn = DBManager.getConnection();
 			try {
 				pstmt = conn.prepareStatement(SQL);
@@ -140,7 +156,7 @@ public class ContReviewDAO {
 		
 
 		public ContReviewVO select_ajax() {
-			String SQL = "select * from tb_cont_review order by cont_id DESC";
+			String SQL = "SELECT * FROM TB_CONT_REVIEW ORDER BY CONT_ID DESC";
 			Connection conn = DBManager.getConnection();
 			try {
 				pstmt = conn.prepareStatement(SQL);				
@@ -161,7 +177,7 @@ public class ContReviewDAO {
 		}
 		
 		public int checkId(String cont_id, String user_pid) {
-			String SQL = "select * from tb_cont_review where user_pid = ? and cont_id = ?";			
+			String SQL = "SELECT * FROM TB_CONT_REVIEW WHERE USER_PID = ? AND CONT_ID = ?";			
 			Connection conn = DBManager.getConnection();
 			try {
 				pstmt = conn.prepareStatement(SQL);

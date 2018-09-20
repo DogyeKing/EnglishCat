@@ -29,6 +29,9 @@
     <!-- Color CSS Styles  -->
     <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/assets/css/colors/sky.css" media="screen" />
     
+    <!-- Respective Style -->
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/respective.css">
+    
   <!-- Header area wrapper Starts -->
     <header id="header-wrap">
       <!-- Roof area Starts -->

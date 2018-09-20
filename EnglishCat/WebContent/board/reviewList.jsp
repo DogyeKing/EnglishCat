@@ -21,28 +21,24 @@
          <!-- <hr class="star-dark mb-5"> -->
          <br>
          <div class="row">
-            <div class="col-lg-8 mx-auto">
+            <div class="col-lg-8">
                <div id="board-list" class="container">
                   <!-- 부트스트랩 이용한 그리드 시스템 -->
                   <div class="row">
-                     <!-- 12칸 분할 -->
-                     <div class="col-lg-2"></div>
-                     <div class="col-lg-8">
+                     <div class="reviewListContainer">
             <table class="table table-striped">
 
            		<tr>
 					<td>번호</td>
 					<td>제목</td>
-					<td>내용</td>
 					<td>아이디</td>
 					<td>작성일자</td>
 				</tr>
 
 				<c:forEach var="item" items="${list}">
 					<tr>
-						<td>${item.cont_id}</td>
+						<td>${item.cont_seq}</td>
 						<td><a href="<%=request.getContextPath()%>/board?cmd=review_detail&cont_id=${item.cont_id}">${item.cont_title}</a></td>
-						<td><a href="<%=request.getContextPath()%>/board?cmd=review_detail&cont_id=${item.cont_id}">${item.cont_content}</a></td>
 						<td>${item.user_pid}</td>
 						<td>${item.insert_dt}</td>
 

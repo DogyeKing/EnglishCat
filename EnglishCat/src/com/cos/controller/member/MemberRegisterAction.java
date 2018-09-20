@@ -22,7 +22,7 @@ public class MemberRegisterAction implements Action{
 		RegistDAO dao = new RegistDAO();	
 		
 		String user_id = null;
-		//String user_pid = null;
+		String user_pid = null;
 		String user_pass = null;
 		String user_name = null;
 		String user_phone = null;
@@ -36,11 +36,6 @@ public class MemberRegisterAction implements Action{
 			user_id = request.getParameter("user_id");
 			System.out.println(user_id);
 		}
-		
-		/*if(request.getParameter("user_pid") != null) {
-			user_pid = request.getParameter("user_pid");
-			System.out.println(user_pid);
-		}*/
 		
 		if(request.getParameter("user_pass") != null) {
 			System.out.println("user_pass is not null");
@@ -66,8 +61,11 @@ public class MemberRegisterAction implements Action{
 			roadFullAddr = request.getParameter("roadFullAddr");
 		}
 		
+		// next pid ���� DB���� ������
+		String next_pid = dao.selectUserNextPid();
+		System.out.println("next_pid : " + next_pid);
 		
-		//regist.setUser_pid(user_pid);
+		regist.setUser_pid(next_pid);
 		regist.setUser_id(user_id);
 		regist.setUser_pass(user_pass);
 		regist.setUser_name(user_name);
@@ -78,7 +76,7 @@ public class MemberRegisterAction implements Action{
 		regist.setSalt(salt);
 		
 		
-		int result = dao.insert(regist);
+		int result = dao.insertUserInfo(regist);
 		
 		if(result == 1) {
 			

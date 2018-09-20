@@ -33,7 +33,7 @@ public class ReviewDeleteAction implements Action{
 		int result2 = contReviewDAO.checkId(cont_id, user_pid);
 		
 		if( result2 == 1) {
-			int result = contReviewDAO.delete(cont_id);
+			int result = contReviewDAO.update_cont_review(cont_id);
 			
 			if(result == 1) {
 				Script.moving(response, "삭제 성공", url);			
