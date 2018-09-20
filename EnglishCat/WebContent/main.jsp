@@ -645,15 +645,16 @@ Counter Section Start
 				<div class="col-md-4 col-sm-6 col-xs-12">
 					<div class="teacher-item wow fadeIn" data-wow-delay="0.5s">
 						<div class="thumb-teacher">
-							<img src="assets/img/teacher/img-3.png" alt="">
+							<img src="assets/img/teacher/um33.jpg" alt="">
 						</div>
 						<div class="teacher-desc">
 							<h3>
-								<a href="single-teacher.html">Sarah Robert</a>
+								<a href="single-teacher.html">김 대홍</a>
 							</h3>
-							<span>Student Advisor</span>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-								Ex ea qui, voluptas vitae pariatur nihil odit.</p>
+							<span>87.11.1년생 (만 30세) </span>
+							<p>홈페이지 기획
+							<br>개발
+							<br>잡일 담당</p>
 							<div class="social-icon">
 								<a class="social" href="#"><i class="fa fa-twitter"></i></a> <a
 									class="social" href="#"><i class="fa fa-facebook"></i></a> <a
@@ -692,17 +693,14 @@ Counter Section Start
 					<div class="item">
 						<div class="testimonial-item">
 							<div class="testimonial-inner">
-								<p>When I commenced the programme. I gave myself one year to
-									challenge my thinking. change my outlook and choose my next
-									step. This could not have been achierved without the remarkable
-									opportunities to me.</p>
+								<p>졸지마 ㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠ알겠냐고 엄희철아 졸지말고 수업잘들어 </p>
 							</div>
 							<div class="quote-author">
-								<a href="#"><img src="assets/img/testimonial/avatar2.jpg"
+								<a href="#"><img src="assets/img/teacher/hong1.jpg"
 									alt=""></a>
 								<div class="quote-footer">
-									<h5 class="name">Maria Ashe</h5>
-									<span> / Parent</span>
+									<h5 class="name">김대홍</h5>
+									<span> / 왕따</span>
 								</div>
 							</div>
 						</div>

@@ -24,12 +24,12 @@
           </div>
         </div>
       </div>
-    </div>
+   </div>
+  </head>
     <!-- Page Header End --> 
-  
-
-
+ <body>
     <!-- Start Content -->
+    
     <div id="content">
       <div class="container">
         <div class="row">
@@ -183,21 +183,18 @@
 	
 	<!-- Read btn -->
     <div class="read-btn" align="center">                
-       <a class="btn btn-common" href="#">결제 <i class="fa fa-angle-right"></i></a>
+       <a class="btn btn-common" href="#" onclick="window.open('payPage.jsp','_blank','width=800, height=600, top=50, left=50')">결제 <i class="fa fa-angle-right"></i></a>
     </div>
     
     <br><br><br>
 </div>
-    
-    
     <!-- End Content -->
     
-        <div class="container">
+     <div class="container">
     <img src="<%=request.getContextPath()%>/assets/img/apply/img1.jpg">
     </div>
-
-     <!-- Footer Section -->
-    
+   
+     <!-- Footer Section -->  
     <%@include file="/include/footer.jsp" %>
     
     <!-- Footer Section End-->
@@ -222,6 +219,5 @@
 	<%@include file="/include/jquery.jsp" %>
 	
 	<!-- jQuery Section End-->
-
   </body>
 </html>
