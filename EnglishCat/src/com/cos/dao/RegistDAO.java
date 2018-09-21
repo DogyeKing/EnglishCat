@@ -89,29 +89,25 @@ public class RegistDAO {
 	}
 	
 	// select_id
-			public int select_id(RegistVO regist) {
-				String SQL = "SELECT user_mail_avail_yn FROM TB_USER_INFO WHERE user_pid = ? AND user_pass= ?";
+			public RegistVO select_id(RegistVO regist) {				
+				String SQL = "SELECT user_pid, user_mail_avail_yn FROM TB_USER_INFO WHERE user_id = ? AND user_pass= ?";
 				Connection conn = DBManager.getConnection();
 				try {
 					pstmt = conn.prepareStatement(SQL);
-					pstmt.setString(1, regist.getUser_pid());
+					pstmt.setString(1, regist.getUser_id());
 					pstmt.setString(2, regist.getUser_pass());
 					rs = pstmt.executeQuery();
 
 					if (rs.next()){
-						String user_mail_avail_yn = rs.getString("user_mail_avail_yn");
-						if(user_mail_avail_yn.equals("YES")){
-							return 1;
-						}else{
-							return 2;
-						}
+						regist.setUser_pid(rs.getString("user_pid"));
+						regist.setUser_mail_avail_yn(rs.getString("user_mail_avail_yn"));						
 					}
 				} catch (Exception e) {
 					e.printStackTrace();
 				} finally {
 					DBManager.close(conn, pstmt, rs);
 				}
-				return -1;
+				return regist;
 			}
 	
 			
@@ -135,12 +131,12 @@ public class RegistDAO {
 		return null;
 	}
 	
-	public String select_salt(String user_pid) {
-		String SQL = "SELECT salt FROM tb_user_info WHERE user_pid = ?";
+	public String select_salt(String user_id) {
+		String SQL = "SELECT salt FROM tb_user_info WHERE user_id = ?";
 		Connection conn = DBManager.getConnection();
 		try {
 			pstmt = conn.prepareStatement(SQL);
-			pstmt.setString(1, user_pid);
+			pstmt.setString(1, user_id);
 			rs = pstmt.executeQuery();
 			if(rs.next()) {
 				String salt = rs.getString("salt");
@@ -210,8 +206,8 @@ public class RegistDAO {
 				regist.setUser_pid(rs.getString("user_pid"));
 				regist.setUser_name(rs.getString("user_name"));
 				regist.setRoadFullAddr(rs.getString("roadFullAddr"));
-				regist.setUser_mail(rs.getString("user_mail"));
-				regist.setuser_mail_avail_yn(rs.getString("user_mail_avail_yn"));
+				regist.setUser_mail(rs.getString("user_mail"));				
+				regist.setUser_mail_avail_yn(rs.getString("user_mail_avail_yn"));				
 
 				return regist;
 			}
@@ -221,12 +217,12 @@ public class RegistDAO {
 		return null;
 	}
 	
-	public int check_id(String user_pid) {
-		String SQL = "SELECT user_pid FROM TB_USER_INFO WHERE user_pid = ?";
+	public int check_id(String user_id) {
+		String SQL = "SELECT user_id FROM TB_USER_INFO WHERE user_id = ?";
 		Connection conn = DBManager.getConnection();
 		try {
 			pstmt = conn.prepareStatement(SQL);
-			pstmt.setString(1, user_pid);			
+			pstmt.setString(1, user_id);			
 			rs = pstmt.executeQuery();
 
 			if (rs.next()){				

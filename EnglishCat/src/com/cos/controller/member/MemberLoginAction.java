@@ -23,14 +23,16 @@ public class MemberLoginAction implements Action{
 		RegistDAO dao = new RegistDAO();
 		RegistVO regist = new RegistVO();
 		
-		String user_pid = request.getParameter("user_pid");
-		String salt = dao.select_salt(user_pid);
+		String user_id = request.getParameter("user_id");		
+		String salt = dao.select_salt(user_id);
+		
+	
 		if(salt == null){
 			Script.moving(response, "아이디가 존재하지 않습니다.");
 		}
 		String user_pass = SHA256.getEncrypt(request.getParameter("user_pass"), salt);
 		
-		regist.setUser_pid(user_pid);
+		regist.setUser_id(user_id);
 		regist.setUser_pass(user_pass);
 
 		
@@ -45,12 +47,12 @@ public class MemberLoginAction implements Action{
 			response.addCookie(cookie); 
 		}
 
-		int result = dao.select_id(regist);
-		if(result == 1){
+		regist = dao.select_id(regist);
+		if(regist.getUser_mail_avail_yn().equals("YES")){
 			HttpSession session = request.getSession();
 			session.setAttribute("user_pid", regist.getUser_pid());
 			Script.moving(response, "로그인 성공", url);
-		}else if(result == 2){
+		}else if(regist.getUser_mail_avail_yn().equals("NO")){
 			HttpSession session = request.getSession();
 			session.setAttribute("user_pid", regist.getUser_pid());
 			Script.moving(response, "미인증 회원입니다. 글쓰기가 제한됩니다.", url);

@@ -17,11 +17,13 @@
 <%
 	RegistDAO dao = new RegistDAO();
 	String id = null;
+	String pid = null;
 	if(session.getAttribute("user_pid") != null){
-		id = (String)session.getAttribute("user_pid");
+		pid = (String)session.getAttribute("user_pid");
+		id = dao.get_id(pid);
 	}
 	
-	int emailChecked = dao.select_user_mail_avail_yn(id);
+	int emailChecked = dao.select_user_mail_avail_yn(pid);
 	System.out.println("ec : " + emailChecked);
 	if(emailChecked == 1){
 		Script.moving(response, "이미 인증된 회원입니다.");
@@ -38,7 +40,7 @@
 	
 	System.out.println("HOST : "+ host);
 	String from = "englishcat5600@gmail.com";
-	String to = dao.select_user_mail(id);
+	String to = dao.select_user_mail(pid);
 	String salt = dao.select_salt(id);
 	String code = SHA256.getEncrypt(to, salt);
 	

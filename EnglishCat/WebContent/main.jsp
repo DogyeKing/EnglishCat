@@ -18,9 +18,7 @@
 	<!-- navigation -->
 	<%@include file="include/header.jsp"%>
 
-	<%
-		
-	%>
+	
 	<!-- Main Carousel Section Start -->
 	<div id="carousel-area">
 		<div id="carousel-slider" class="carousel slide" data-interval="3000">

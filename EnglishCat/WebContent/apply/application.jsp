@@ -10,6 +10,28 @@
 
 	<%@include file="/include/header.jsp" %>
 
+ <script>
+    
+ function goPay(){
+
+    var amount = document.querySelector('input[name="article"]:checked').value
+    	
+
+
+	var popPay = window.open("payPage.jsp?amount="+amount,"pop","width=570,height=420, scrollbars=yes, resizable=yes"); 
+	
+	
+     
+	}
+
+
+	/* function jusoCallBack(roadFullAddr){
+		// 팝업페이지에서 주소입력한 정보를 받아서, 현 페이지에 정보를 등록합니다.
+		document.form.roadFullAddr.value = roadFullAddr;
+		 */
+		
+	</script>
+
     <!-- Page Header Start -->
     <div class="page-header" style="background: url(<%=request.getContextPath()%>/assets/img/banner1.jpg);">
       <div class="container">
@@ -66,6 +88,7 @@
     </div>
 
       <div class="container">
+  <!--       <form class="" name="" role="" method="post"> -->
 <div  style="background:#538bca;height:30px;line-height:30px;width:130px;text-align:center;color:#fff"><span>하루 25분</span></div>
 	<table border="0" cellpadding="0" cellspacing="0" class="common_table_border" style="margin-top: 10px; width: 100%">
 		<colgroup>
@@ -84,37 +107,37 @@
 			<tr height="28">
 				<td style="text-align: center">1개월(4주)</td>
 				<td align="center"><input type="radio" name="article"
-					id="article" value="40000|1개월(4주)|4|20|2"
-					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">40,000(원)&nbsp;</td>
+					id="article" value="1000"
+					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">1000(원)&nbsp;</td>
 				<td align="center"><input type="radio" name="article"
-					id="article" value="55000|1개월(4주)|4|20|3"
+					id="article" value="55000"
 					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">55,000(원)&nbsp;</td>
 				<td align="center"><input type="radio" name="article"
-					id="article" value="90000|1개월(4주)|4|20|5"
+					id="article" value="90000"
 					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">90,000(원)&nbsp;</td>
 			</tr>
 			<tr height="28">
 				<td style="text-align: center">3개월(12주)</td>
 				<td align="center"><input type="radio" name="article"
-					id="article" value="100000|3개월(12주)|12|20|2"
+					id="article" value="100000"
 					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">100,000(원)&nbsp;</td>
 				<td align="center"><input type="radio" name="article"
-					id="article" value="150000|3개월(12주)|12|20|3"
+					id="article" value="150000"
 					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">150,000(원)&nbsp;</td>
 				<td align="center"><input type="radio" name="article"
-					id="article" value="240000|3개월(12주)|12|20|5"
+					id="article" value="240000"
 					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">240,000(원)&nbsp;</td>
 			</tr>
 			<tr height="28">
 				<td style="text-align: center">6개월(24주)</td>
 				<td align="center"><input type="radio" name="article"
-					id="article" value="190000|6개월(24주)|24|20|2"
+					id="article" value="190000"
 					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">190,000(원)&nbsp;</td>
 				<td align="center"><input type="radio" name="article"
-					id="article" value="280000|6개월(24주)|24|20|3"
+					id="article" value="280000"
 					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">280,000(원)&nbsp;</td>
 				<td align="center"><input type="radio" name="article"
-					id="article" value="450000|6개월(24주)|24|20|5"
+					id="article" value="450000"
 					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">450,000(원)&nbsp;</td>
 			</tr>
 		</tbody>
@@ -145,47 +168,47 @@
 			<tr height="28">
 				<td style="text-align: center">1개월(4주)</td>
 				<td align="center"><input type="radio" name="article"
-					id="article" value="85000|1개월(4주)|4|50|2"
+					id="article" value="85000"
 					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">85,000(원)&nbsp;</td>
 				<td align="center"><input type="radio" name="article"
-					id="article" value="120000|1개월(4주)|4|50|3"
+					id="article" value="120000"
 					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">120,000(원)&nbsp;</td>
 				<td align="center"><input type="radio" name="article"
-					id="article" value="200000|1개월(4주)|4|50|5"
+					id="article" value="200000"
 					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">200,000(원)&nbsp;</td>
 			</tr>
 			<tr height="28">
 				<td style="text-align: center">3개월(12주)</td>
 				<td align="center"><input type="radio" name="article"
-					id="article" value="230000|3개월(12주)|12|50|2"
+					id="article" value="230000"
 					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">230,000(원)&nbsp;</td>
 				<td align="center"><input type="radio" name="article"
-					id="article" value="340000|3개월(12주)|12|50|3"
+					id="article" value="340000"
 					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">340,000(원)&nbsp;</td>
 				<td align="center"><input type="radio" name="article"
-					id="article" value="560000|3개월(12주)|12|50|5"
+					id="article" value="560000"
 					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">560,000(원)&nbsp;</td>
 			</tr>
 			<tr height="28">
 				<td style="text-align: center">6개월(24주)</td>
 				<td align="center"><input type="radio" name="article"
-					id="article" value="440000|6개월(24주)|24|50|2"
+					id="article" value="440000"
 					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">440,000(원)&nbsp;</td>
 				<td align="center"><input type="radio" name="article"
-					id="article" value="650000|6개월(24주)|24|50|3"
+					id="article" value="650000"
 					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">650,000(원)&nbsp;</td>
 				<td align="center"><input type="radio" name="article"
-					id="article" value="1000000|6개월(24주)|24|50|5"
+					id="article" value="1000000"
 					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">1,000,000(원)&nbsp;</td>
 			</tr>
 		</tbody>
 	</table><br><br>
 	
 	<!-- Read btn -->
-    <div class="read-btn" align="center">                
+    <!-- <div class="read-btn" align="center">                
        <a class="btn btn-common" href="#" onclick="window.open('payPage.jsp','_blank','width=800, height=600, top=50, left=50')">결제 <i class="fa fa-angle-right"></i></a>
-    </div>
-    
+    </div> -->
+     <button class="btn btn-common" type="submit" id="submit" onclick="goPay()">결제<i class="fa fa-angle-right"></i></button>
     <br><br><br>
 </div>
     <!-- End Content -->

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>  
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,13 +13,15 @@
 
 <script>
 IMP.init('imp51152500');
+var amount =<%= request.getParameter("amount") %>
+
 
 IMP.request_pay({
     pg : 'inicis', // version 1.1.0부터 지원.
     pay_method : 'card',
     merchant_uid : 'merchant_' + new Date().getTime(),
     name : '주문명:결제테스트',
-    amount : 1000, 					 //판매 가격
+    amount : amount, 					 //판매 가격
     buyer_email : 'iamport@siot.do', //user_email
     buyer_name : '구매자이름',			 //user_name
     buyer_tel : '010-1234-5678',	 //user_phone
