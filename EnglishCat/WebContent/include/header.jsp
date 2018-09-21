@@ -148,7 +148,8 @@
                   <a href="#" data-toggle="dropdown">마이페이지 <i class="fa fa-angle-down"></i></a>
                   <ul class="dropdown-menu">
                   
-                    <li><a href="<%=request.getContextPath()%>/member?cmd=member_update">회원정보수정</a></li>   
+                    <li><a href="<%=request.getContextPath()%>/member?cmd=member_update">회원정보수정</a></li>
+                    <li><a href="<%=request.getContextPath()%>/account/payment.jsp">결제내역</a></li>   
                   </ul>                        
                 </li>
                                             
