@@ -47,10 +47,10 @@
               <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="thumb">
                   <img src="<%=request.getContextPath() %>/assets/img/courses/story11.jpg" alt="">
-                  <div class="courses-price">
+<!--                   <div class="courses-price">
                       <p class="years">Duration: 3 Years</p>
                       <span class="price">$2000</span>
-                  </div>
+                  </div> -->
                 </div>
               </div> 
               <div class="col-md-8 col-sm-6 col-xs-12">
@@ -62,7 +62,7 @@
                     <span class="meta-part"><a href="#"><i class="fa fa-commenting"></i> 5</a></span>
                   </div>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea vero doloribus facilis dolor est in provident laboriosam esse corrupti et quia fuga perspiciatis reiciendis minima autem itaque reprehenderit, labore repellendus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi incidunt animi ratione eos architecto aspernatur, mollitia sequi. Eius, perferendis nostrum fugit! Sequi deleniti itaque unde aspernatur.</p>
-                  <a href="<%=request.getContextPath() %>/apply/application.jsp" class="btn btn-common btn-sm">Apply Now</a>
+                  <a href="<%=request.getContextPath() %>/member?cmd=member_application" class="btn btn-common btn-sm">Apply Now</a>
                 </div>
               </div>
             </div>
@@ -71,10 +71,10 @@
               <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="thumb">
                   <img src="<%=request.getContextPath() %>/assets/img/courses/story22.jpg" alt="">
-                  <div class="courses-price">
+ <!--                  <div class="courses-price">
                       <p class="years">Duration: 3 Years</p>
                       <span class="price">$2000</span>
-                  </div>
+                  </div> -->
                 </div>
               </div> 
               <div class="col-md-8 col-sm-6 col-xs-12">
@@ -86,7 +86,7 @@
                     <span class="meta-part"><a href="#"><i class="fa fa-commenting"></i> 5</a></span>
                   </div>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea vero doloribus facilis dolor est in provident laboriosam esse corrupti et quia fuga perspiciatis reiciendis minima autem itaque reprehenderit, labore repellendus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi incidunt animi ratione eos architecto aspernatur, mollitia sequi. Eius, perferendis nostrum fugit! Sequi deleniti itaque unde aspernatur.</p>
-                  <a href="<%=request.getContextPath() %>/apply/application.jsp" class="btn btn-common btn-sm">Apply Now</a>
+                  <a href="<%=request.getContextPath() %>/member?cmd=member_application" class="btn btn-common btn-sm">Apply Now</a>
                 </div>
               </div>
             </div>
@@ -95,10 +95,10 @@
               <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="thumb">
                   <img src="<%=request.getContextPath() %>/assets/img/courses/story33.jpg" alt="">
-                  <div class="courses-price">
+     <!--              <div class="courses-price">
                       <p class="years">Duration: 3 Years</p>
                       <span class="price">$2000</span>
-                  </div>
+                  </div> -->
                 </div>
               </div> 
               <div class="col-md-8 col-sm-6 col-xs-12">
@@ -110,7 +110,7 @@
                     <span class="meta-part"><a href="#"><i class="fa fa-commenting"></i> 5</a></span>
                   </div>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea vero doloribus facilis dolor est in provident laboriosam esse corrupti et quia fuga perspiciatis reiciendis minima autem itaque reprehenderit, labore repellendus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi incidunt animi ratione eos architecto aspernatur, mollitia sequi. Eius, perferendis nostrum fugit! Sequi deleniti itaque unde aspernatur.</p>
-                  <a href="<%=request.getContextPath() %>/apply/application.jsp" class="btn btn-common btn-sm">Apply Now</a>
+                  <a href="<%=request.getContextPath() %>/member?cmd=member_application" class="btn btn-common btn-sm">Apply Now</a>
                 </div>
               </div>
             </div>
@@ -119,10 +119,10 @@
               <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="thumb">
                   <img src="<%=request.getContextPath() %>/assets/img/courses/story44.jpg" alt="">
-                  <div class="courses-price">
+<!--                   <div class="courses-price">
                       <p class="years">Duration: 3 Years</p>
                       <span class="price">$2000</span>
-                  </div>
+                  </div> -->
                 </div>
               </div> 
               <div class="col-md-8 col-sm-6 col-xs-12">
@@ -134,7 +134,7 @@
                     <span class="meta-part"><a href="#"><i class="fa fa-commenting"></i> 5</a></span>
                   </div>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea vero doloribus facilis dolor est in provident laboriosam esse corrupti et quia fuga perspiciatis reiciendis minima autem itaque reprehenderit, labore repellendus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi incidunt animi ratione eos architecto aspernatur, mollitia sequi. Eius, perferendis nostrum fugit! Sequi deleniti itaque unde aspernatur.</p>
-                  <a href="<%=request.getContextPath() %>/apply/application.jsp" class="btn btn-common btn-sm">Apply Now</a>
+                  <a href="<%=request.getContextPath() %>/member?cmd=member_application" class="btn btn-common btn-sm">Apply Now</a>
                 </div>
               </div>
             </div>
@@ -143,10 +143,10 @@
               <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="thumb">
                   <img src="<%=request.getContextPath() %>/assets/img/courses/story55.jpg" alt="">
-                  <div class="courses-price">
+<!--                   <div class="courses-price">
                       <p class="years">Duration: 3 Years</p>
                       <span class="price">$2000</span>
-                  </div>
+                  </div> -->
                 </div>
               </div> 
               <div class="col-md-8 col-sm-6 col-xs-12">
@@ -158,7 +158,7 @@
                     <span class="meta-part"><a href="#"><i class="fa fa-commenting"></i> 5</a></span>
                   </div>
                   <p>고1 -2 수준의 글을 읽고 이해하며  관계대명사, 분사를 활용한 긴문장으로 영어를 자신감 있게 이야기 할수 있다. Chat room for teens 교재보다 더욱 상위의 고급 토론 실력을 기른다. 어려운 사회적 이슈에 대해서 유창하게 토론할 수 있다.</p>
-                  <a href="<%=request.getContextPath() %>/apply/application.jsp" class="btn btn-common btn-sm">Apply Now</a>
+                  <a href="<%=request.getContextPath() %>/member?cmd=member_application" class="btn btn-common btn-sm">Apply Now</a>
                 </div>
               </div>
             </div>

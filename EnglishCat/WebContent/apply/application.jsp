@@ -63,7 +63,7 @@
             <div class="blog-post">
               <!-- Post feature-inner -->
               <div class="feature-inner">
-                <a class="lightbox" href="assets/img/blog/post-1.jpg"><img src="assets/img/blog/post-1.jpg" alt=""></a>
+                <a class="lightbox" href="#"><img src="<%=request.getContextPath()%>/assets/img/blog/post-2.jpg" alt=""></a>
               </div>
               <!-- End Post feature-inner -->
               
@@ -213,9 +213,9 @@
 </div>
     <!-- End Content -->
     
-     <div class="container">
+<%--      <div class="container">
     <img src="<%=request.getContextPath()%>/assets/img/apply/img1.jpg">
-    </div>
+    </div> --%>
    
      <!-- Footer Section -->  
     <%@include file="/include/footer.jsp" %>

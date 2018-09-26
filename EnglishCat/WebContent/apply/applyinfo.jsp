@@ -172,11 +172,11 @@
     </div>
     <!-- End Content -->
     
-    <!-- Start Map Section -->
-    <div id="" class="container">
+    <!-- 하단 이미지  -->
+<%--     <div id="" class="container">
     <img src="<%=request.getContextPath()%>/assets/img/apply/img1.jpg">
-    </div>
-    <!-- End Map Section -->
+    </div> --%>
+     <!-- 하단 이미지 end -->
 
     
 
