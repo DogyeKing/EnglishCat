@@ -90,7 +90,7 @@ public class RegistDAO {
 	
 	// select_id
 			public RegistVO select_id(RegistVO regist) {				
-				String SQL = "SELECT user_pid, user_mail_avail_yn FROM TB_USER_INFO WHERE user_id = ? AND user_pass= ?";
+				String SQL = "SELECT user_pid, user_mail_avail_yn FROM TB_USER_INFO WHERE DELETE_YN IS NULL AND user_id = ? AND user_pass= ?";
 				Connection conn = DBManager.getConnection();
 				try {
 					pstmt = conn.prepareStatement(SQL);
@@ -132,7 +132,7 @@ public class RegistDAO {
 	}
 	
 	public String select_salt(String user_id) {
-		String SQL = "SELECT salt FROM tb_user_info WHERE user_id = ?";
+		String SQL = "SELECT salt FROM tb_user_info WHERE DELETE_YN IS NULL AND user_id = ?";
 		Connection conn = DBManager.getConnection();
 		try {
 			pstmt = conn.prepareStatement(SQL);
@@ -218,7 +218,7 @@ public class RegistDAO {
 	}
 	
 	public int check_id(String user_id) {
-		String SQL = "SELECT user_id FROM TB_USER_INFO WHERE user_id = ?";
+		String SQL = "SELECT user_id FROM TB_USER_INFO WHERE (DELETE_YN IS NOT NULL AND UPDATE_DT >= (SYSDATE-30)) AND user_id = ?";
 		Connection conn = DBManager.getConnection();
 		try {
 			pstmt = conn.prepareStatement(SQL);
