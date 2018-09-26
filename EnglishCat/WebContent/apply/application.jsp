@@ -69,7 +69,7 @@
               
               <!-- Post Content -->
               <div class="post-content"> 
-
+			<p>안녕하세요, ${member.user_name}님</p>
                 <p>당신의 레벨은 [...] 입니다.</p>
                 <p>추천하는 강의는 [...] 입니다.</p>
               </div>

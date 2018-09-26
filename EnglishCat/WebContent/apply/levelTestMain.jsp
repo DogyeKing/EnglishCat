@@ -41,14 +41,14 @@
             <div class="blog-post">
               <!-- Post feature-inner -->
               <div class="feature-inner">
-                <a class="lightbox" href="assets/img/blog/post-1.jpg"><img src="assets/img/blog/post-1.jpg" alt=""></a>
+                <a class="lightbox"><img src="<%=request.getContextPath() %>/assets/img/blog/post-1.jpg" alt=""></a>
               </div>
               <!-- End Post feature-inner -->
               
               <!-- Post Content -->
               <div class="post-content"> 
 
-                <p>안녕하세요[...]님</p>
+                <p>안녕하세요, ${member.user_name}님</p>
                 <p>레벨테스트 문항은 총 20문제 입니다.</p>
                 <p>아래의 버튼을 클릭하시면 레벨 테스트가 시작됩니다.</p>
               </div>
@@ -66,16 +66,16 @@
       </div>
     </div>
     <div class="read-btn" align="center">                
-       <a class="btn btn-common" href="#" onclick="window.open('levelTestAll.jsp','_blank','width=800, height=600, top=50, left=50')">레벨 테스트 시작 <i class="fa fa-angle-right"></i></a>
+       <a class="btn btn-common" href="#" onclick="window.open('apply/levelTestAll.jsp','_blank','width=800, height=600, top=50, left=50')">레벨 테스트 시작 <i class="fa fa-angle-right"></i></a>
     </div>
    <!-- <button class="btn btn-common" type="submit" id="submit" onclick="goLevel()">레벨 테스트 start <i class="fa fa-angle-right"></i></button> -->
     <br><br><br>
     
     <!-- End Content -->
     
-     <div class="container">
+<%--      <div class="container">
     <img src="<%=request.getContextPath()%>/assets/img/apply/img1.jpg">
-    </div>
+    </div> --%>
    
      <!-- Footer Section -->  
     <%@include file="/include/footer.jsp" %>

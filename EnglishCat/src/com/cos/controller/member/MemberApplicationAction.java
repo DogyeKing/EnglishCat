@@ -13,10 +13,10 @@ import com.cos.dao.RegistDAO;
 import com.cos.dto.RegistVO;
 import com.cos.util.Script;
 
-public class MemberScoreAction implements Action{
+public class MemberApplicationAction implements Action{
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "apply/levelTestMain.jsp";
+		String url = "apply/application.jsp";
 		
 		HttpSession session = request.getSession();
 		String user_pid = (String)session.getAttribute("user_pid");
@@ -35,5 +35,4 @@ public class MemberScoreAction implements Action{
 			dis.forward(request, response);	
 		}
 	}
- }
-
+}

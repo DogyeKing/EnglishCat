@@ -9,6 +9,7 @@ import com.cos.controller.board.ReviewUpdateAction;
 import com.cos.controller.board.ReviewUpdateProcAction;
 import com.cos.controller.board.ReviewWriteAction;
 import com.cos.controller.board.ReviewWriteProcAction;
+import com.cos.controller.member.MemberApplicationAction;
 import com.cos.controller.member.MemberFreeTestAction;
 import com.cos.controller.member.MemberIDCheckAction;
 import com.cos.controller.member.MemberLoginAction;
@@ -68,6 +69,10 @@ public class ActionFactory {
 			return new PayAction();
 		} else if (cmd.equals("member_payment")) {
 			return new MemberPayAction();
+		} else if (cmd.equals("member_application")) {
+			return new MemberApplicationAction();
+		} else if (cmd.equals("member_levelTest")) {
+			return new MemberScoreAction();
 		}
 		return null;
 	}
