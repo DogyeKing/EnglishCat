@@ -11,10 +11,11 @@ import com.cos.dao.FreeLevelTestDAO;
 import com.cos.dto.FreeLevelTestVO;
 import com.cos.util.Script;
 
-public class MemberFreeTestAction implements Action{
+public class MemberFreeTestMainAction implements Action{
+
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "apply/freeLevelTest.jsp";
+		String url = "main.jsp";
 		
 		FreeLevelTestVO regist = new FreeLevelTestVO();
 		FreeLevelTestDAO dao = new FreeLevelTestDAO();
@@ -31,6 +32,6 @@ public class MemberFreeTestAction implements Action{
 		}else if(result == -1) {
 			Script.moving(response, "무료체험신청 실패", url);
 		}
-	
+		
 	}
 }

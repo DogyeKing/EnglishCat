@@ -11,6 +11,7 @@ import com.cos.controller.board.ReviewWriteAction;
 import com.cos.controller.board.ReviewWriteProcAction;
 import com.cos.controller.member.MemberApplicationAction;
 import com.cos.controller.member.MemberFreeTestAction;
+import com.cos.controller.member.MemberFreeTestMainAction;
 import com.cos.controller.member.MemberIDCheckAction;
 import com.cos.controller.member.MemberLoginAction;
 import com.cos.controller.member.MemberLogoutAction;
@@ -73,6 +74,8 @@ public class ActionFactory {
 			return new MemberApplicationAction();
 		} else if (cmd.equals("member_levelTest")) {
 			return new MemberScoreAction();
+		} else if (cmd.equals("member_freeTestMain")){
+			return new MemberFreeTestMainAction();
 		}
 		return null;
 	}
