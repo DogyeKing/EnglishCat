@@ -84,8 +84,9 @@
                 <div class="form-group">
                 	<label class="form-control-label">ID</label>
                 
-     				<input class="form-control" type="text" name="user_id" id="user_id" maxlength="15" required readonly autofocus value="${member.user_id}" onkeydown="fn_press_han(this);" style="ime-mode:disabled;"/>
-     				<small id="checkMsg"></small>
+     				<input class="form-control" type="text" name="user_id" id="user_id" maxlength="15" readonly value="${member.user_id}"/>
+     				<%-- <input class="form-control" type="text" name="user_id" id="user_id" maxlength="15" required readonly autofocus value="${member.user_id}" onkeydown="fn_press_han(this);" style="ime-mode:disabled;"/> --%>
+     		<!-- 		<small id="checkMsg"></small> -->
                 </div>              
                 
                 <div class="form-group">  
@@ -106,7 +107,7 @@
                 
                 <div class="form-group">
                 <label class="form-control-label">Phone</label>
-                	<input class="form-control" type="text" name="user_phone" maxlength="15" onkeypress="return fn_press(event, 'numbers');" onkeydown="fn_press_han(this);" style="ime-mode:disabled;"/>
+                	<input class="form-control" type="text" name="user_phone" value="${member.user_phone}" maxlength="15" onkeypress="return fn_press(event, 'numbers');" onkeydown="fn_press_han(this);" style="ime-mode:disabled;"/>
 
                   	<!-- <input class="form-control" type="tel" name="user_phone" maxlength="20"> -->
                 </div>

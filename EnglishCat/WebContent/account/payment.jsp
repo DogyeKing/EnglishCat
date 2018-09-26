@@ -1,10 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">    
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta name="author" content="Bright">
 
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>결제내역 페이지</title>
 
 	<%@include file="/include/header.jsp" %>
 
@@ -77,32 +83,31 @@
                  <h3>회원 정보</h3><br>
           	 	 <!-- Register Form -->
           		 
-          		 <form class="register-form" name="form" role="form" method="post" action="<%=request.getContextPath()%>/member?cmd=member_register" onsubmit="return hangulCheck(this)" readonly>
-                	<div class="form-group">
+          		 
+          		 <div class="form-group">
+     				<input class="form-control" type="hidden" name="user_pid" id="user_pid" value="${member.user_pid}" maxlength="15"/>
+                </div>       
+          		 
+                <div class="form-group">
                 	<label class="form-control-label">ID</label>
-       
-     				<input class="form-control" type="text" name="user_id" id="user_id" maxlength="15" required autofocus readonly onkeydown="fn_press_han(this);" style="ime-mode:disabled;"/>
-     				<small id="checkMsg"></small>
+     				<input class="form-control" type="text" name="user_id" id="user_id" maxlength="15" value="${member.user_id}"/>
                 </div>              
       
                 <div class="form-group">
                 <label class="form-control-label">Name</label>
-                  <input class="form-control" type="text" name="user_name" maxlength="10" readonly>
+                  <input class="form-control" type="text" name="user_name" id="user_name" maxlength="10" value="${member.user_name}" readonly>
                 </div>    
                 
                 <div class="form-group">
                 <label class="form-control-label">Phone</label>
-                	<input class="form-control" type="text" name="user_phone" maxlength="15" readonly onkeypress="return fn_press(event, 'numbers');" onkeydown="fn_press_han(this);" style="ime-mode:disabled;"/>
+                	<input class="form-control" type="text" name="user_phone" id="user_phone" maxlength="15" value="${member.user_phone}" readonly onkeypress="return fn_press(event, 'numbers');" onkeydown="fn_press_han(this);" style="ime-mode:disabled;"/>
 
                 </div>
                 
                 <div class="form-group">
                  <label class="form-control-label">Email</label>	
-                  <input class="form-control" type="Email" name="user_mail" maxlength="20" readonly>
+                  <input class="form-control" type="Email" name="user_mail" id="user_mail" maxlength="20" value="${member.user_mail}" readonly>
                 </div> 
-            
-        	    </form>
-     		
 
                 </div>
                 

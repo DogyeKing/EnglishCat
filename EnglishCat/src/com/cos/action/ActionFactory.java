@@ -17,6 +17,7 @@ import com.cos.controller.member.MemberRegisterAction;
 import com.cos.controller.member.MemberScoreAction;
 import com.cos.controller.member.MemberUpdateAction;
 import com.cos.controller.member.MemberUpdateProcAction;
+import com.cos.controller.member.MemberPayAction;
 
 public class ActionFactory {
 	private static String naming = "ActionFactory : ";
@@ -65,6 +66,8 @@ public class ActionFactory {
 			return new MemberFreeTestAction();  
 		} else if (cmd.equals("board_pay")) {
 			return new PayAction();
+		} else if (cmd.equals("member_payment")) {
+			return new MemberPayAction();
 		}
 		return null;
 	}

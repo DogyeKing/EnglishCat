@@ -201,10 +201,10 @@ public class RegistDAO {
 			rs = pstmt.executeQuery();
 			
 			if(rs.next()) {
-				System.out.println("찾앗당");
 				RegistVO regist = new RegistVO();
 				regist.setUser_pid(rs.getString("user_pid"));
 				regist.setUser_name(rs.getString("user_name"));
+				regist.setUser_phone(rs.getString("user_phone"));
 				regist.setRoadFullAddr(rs.getString("roadFullAddr"));
 				regist.setUser_mail(rs.getString("user_mail"));				
 				regist.setUser_mail_avail_yn(rs.getString("user_mail_avail_yn"));				
@@ -298,5 +298,31 @@ public class RegistDAO {
 				DBManager.close(conn, pstmt, rs);
 			}
 			return "error";
+		}
+		
+		public RegistVO selectPayment(String user_pid) {
+			String SQL = "SELECT * FROM tb_user_info WHERE user_pid = ?";
+			Connection conn = DBManager.getConnection();
+			try {
+				pstmt = conn.prepareStatement(SQL);
+				pstmt.setString(1, user_pid);
+				rs = pstmt.executeQuery();
+				
+				if(rs.next()) {
+				
+					RegistVO regist = new RegistVO();
+					regist.setUser_pid(rs.getString("user_pid"));
+					regist.setUser_id(rs.getString("user_id"));
+					regist.setUser_name(rs.getString("user_name"));
+					regist.setUser_phone(rs.getString("user_phone"));
+					regist.setUser_mail(rs.getString("user_mail"));				
+									
+
+					return regist;
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			return null;
 		}
 }

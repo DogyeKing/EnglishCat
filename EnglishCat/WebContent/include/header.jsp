@@ -121,7 +121,7 @@
                     <li><a href="<%=request.getContextPath()%>/apply/freeLevelTest.jsp">무료체험신청</a></li>                     
                     <li><a href="<%=request.getContextPath()%>/apply/application.jsp">수강신청</a></li>
                     <li><a href="<%=request.getContextPath()%>/apply/applyinfo.jsp">결제안내</a></li>    
-                    <li><a href="<%=request.getContextPath()%>/apply/levelTest.jsp">레벨 테스트</a></li> 
+                    <li><a href="<%=request.getContextPath()%>/apply/levelTestMain.jsp">레벨 테스트</a></li> 
 
                   </ul>                        
                 </li>
@@ -149,7 +149,7 @@
                   <ul class="dropdown-menu">
                   
                     <li><a href="<%=request.getContextPath()%>/member?cmd=member_update">회원정보수정</a></li>
-                    <li><a href="<%=request.getContextPath()%>/account/payment.jsp">결제내역</a></li>   
+                    <li><a href="<%=request.getContextPath()%>/member?cmd=member_payment">결제내역</a></li>   
                   </ul>                        
                 </li>
                                             
