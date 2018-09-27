@@ -106,8 +106,7 @@ public class ContReviewDAO {
 								contReviewVO.setCont_title(rs.getString("cont_title"));
 								contReviewVO.setCont_content(rs.getString("cont_content"));
 								contReviewVO.setUser_pid(rs.getString("user_pid"));
-								RegistDAO rdao = new RegistDAO();
-								contReviewVO.setUser_pid(rdao.get_id(contReviewVO.getUser_pid()));
+								
 								return contReviewVO;
 							}
 					} catch (Exception e) {

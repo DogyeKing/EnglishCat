@@ -91,7 +91,7 @@
                         
               <div class="contact-datails">
                 <p><i class="fa fa-phone"></i>   051 753 5600</p>
-                <p><i class="fa fa-envelope"></i> hello@brightuniversity.edu</p>
+                <p><i class="fa fa-envelope"></i> uhc1224@naver.com</p>
               </div>
             </div>
           </div>

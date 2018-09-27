@@ -19,7 +19,7 @@
       <div class="container">
          <h2 class="text-center text-uppercase text-secondary mb-0">수강후기</h2>
          <!-- <hr class="star-dark mb-5"> -->
-         <br>
+         <br><br>
          
          <div id="cont_id" class="row">
             <div class="col-lg-8 mx-auto">
@@ -29,7 +29,7 @@
                      <!-- 12칸 분할 -->
                      <div class="col-lg-2"></div>
                      <div class="col-lg-8">
-            <table class="table table-striped">
+            	<table class="table table-striped">
 		
 		
 	
@@ -56,10 +56,10 @@
                <br>
                               
                <c:choose>                    
-                  <c:when test="${!empty sessionScope.user_pid}">
+                  <c:when test="${check_pid eq 'ok'}">
     		          	<a class="btn btn-primary" href="<%=request.getContextPath() %>/board?cmd=review_update&cont_id=${contReviewVO.cont_id}">수정</a>
-             	   	    <a class="btn btn-primary" href="<%=request.getContextPath() %>/board?cmd=review_delete&cont_id=${contReviewVO.cont_id}">삭제</a>
-                    </c:when>
+             	   	    <a class="btn btn-primary" href="<%=request.getContextPath() %>/board?cmd=review_delete&cont_id=${contReviewVO.cont_id}">삭제</a><br><br><br>
+                  </c:when>
                </c:choose>
                      
                      </div>
