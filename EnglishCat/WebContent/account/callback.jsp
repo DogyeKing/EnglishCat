@@ -53,10 +53,10 @@
       br.close();
       if(responseCode==200) {
           JSONParser parser = new JSONParser();
-  		JSONObject getData = (JSONObject)parser.parse(res.toString());
+  		  JSONObject getData = (JSONObject)parser.parse(res.toString());
           String user_pid = new APIExamMemberProfile().getProfile(getData.get("access_token").toString());
-          session.setAttribute("naver_id", user_pid);
-          
+          session.setAttribute("user_pid", user_pid);
+          session.setAttribute("user_confirm", rdao.login_confirm(user_pid));
           Script.moving(response, "네이버 로그인 완료", request.getContextPath()+"/main.jsp");
       }
     } catch (Exception e) {

@@ -89,27 +89,27 @@ public class RegistDAO {
 		return -1;
 	}
 	
-			// pid와 구글이메일 인증여부 조회
-			public RegistVO select_id(RegistVO regist) {				
-				String SQL = "SELECT user_pid, user_mail_avail_yn FROM TB_USER_INFO WHERE DELETE_YN IS NULL AND user_id = ? AND user_pass= ?";
-				Connection conn = DBManager.getConnection();
-				try {
-					pstmt = conn.prepareStatement(SQL);
-					pstmt.setString(1, regist.getUser_id());
-					pstmt.setString(2, regist.getUser_pass());
-					rs = pstmt.executeQuery();
+	// pid와 구글이메일 인증여부 조회
+	public RegistVO select_id(RegistVO regist) {				
+		String SQL = "SELECT user_pid, user_mail_avail_yn FROM TB_USER_INFO WHERE DELETE_YN IS NULL AND user_id = ? AND user_pass= ?";
+		Connection conn = DBManager.getConnection();
+		try {
+			pstmt = conn.prepareStatement(SQL);
+			pstmt.setString(1, regist.getUser_id());
+			pstmt.setString(2, regist.getUser_pass());
+			rs = pstmt.executeQuery();
 
-					if (rs.next()){
-						regist.setUser_pid(rs.getString("user_pid"));
-						regist.setUser_mail_avail_yn(rs.getString("user_mail_avail_yn"));						
-					}
-				} catch (Exception e) {
-					e.printStackTrace();
-				} finally {
-					DBManager.close(conn, pstmt, rs);
-				}
-				return regist;
+			if (rs.next()){
+				regist.setUser_pid(rs.getString("user_pid"));
+				regist.setUser_mail_avail_yn(rs.getString("user_mail_avail_yn"));						
 			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBManager.close(conn, pstmt, rs);
+		}
+		return regist;
+	}
 	
 			
 	// 이메일 조회		
@@ -195,12 +195,12 @@ public class RegistDAO {
 	}
 	
 	// user_pid 조회
-	public RegistVO select(String user_pid) {
+	public RegistVO select(String user_id) {
 		String SQL = "SELECT * FROM tb_user_info WHERE user_pid = ?";
 		Connection conn = DBManager.getConnection();
 		try {
 			pstmt = conn.prepareStatement(SQL);
-			pstmt.setString(1, user_pid);
+			pstmt.setString(1, user_id);
 			rs = pstmt.executeQuery();
 			
 			if(rs.next()) {
@@ -300,7 +300,7 @@ public class RegistDAO {
 		}*/
 	
 	
-		//session이 가진 user_pid로 user_id 뽑아오기	
+		//session이 가진 user_pid로 user_id 뽑아오기	 ????
 		public String get_id(String user_pid) {
 			String SQL = "SELECT user_id FROM TB_USER_INFO WHERE user_pid = ?";
 			Connection conn = DBManager.getConnection();
@@ -310,16 +310,14 @@ public class RegistDAO {
 				rs = pstmt.executeQuery();
 
 				if (rs.next()){				
-						return rs.getString("user_id"); //id 존재
-					}else{
-						return "null"; //없음
-					}			
+					return rs.getString("user_id"); //id 존재
+				}			
 			} catch (Exception e) {
 				e.printStackTrace();
 			} finally {
 				DBManager.close(conn, pstmt, rs);
 			}
-			return "error";
+			return null;
 		}
 		
 		// user_pid를 조회해서 결제할때 회원정보 뽑아오기
@@ -347,4 +345,38 @@ public class RegistDAO {
 			}
 			return null;
 		}
+		
+		public String login_confirm(String user_pid) {
+			String SQL = "SELECT AUTH_CODE FROM tb_user_info WHERE user_pid = ?";
+			Connection conn = DBManager.getConnection();
+			try {
+				pstmt = conn.prepareStatement(SQL);
+				pstmt.setString(1, user_pid);
+				rs = pstmt.executeQuery();
+				
+				if(rs.next()) {					
+					return rs.getString("AUTH_CODE");
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			return null;
+		}
+		
+		public String select_pid(String user_id) {
+			String SQL = "SELECT user_pid FROM tb_user_info WHERE user_id = ?";
+			Connection conn = DBManager.getConnection();
+			try {
+				pstmt = conn.prepareStatement(SQL);
+				pstmt.setString(1, user_id);
+				rs = pstmt.executeQuery();
+				
+				if(rs.next()) {					
+					return rs.getString("user_pid");
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			return null;
+		} 
 }

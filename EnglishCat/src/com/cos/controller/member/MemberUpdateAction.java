@@ -21,13 +21,13 @@ public class MemberUpdateAction implements Action{
 		
 		HttpSession session = request.getSession();
 		String user_pid = (String)session.getAttribute("user_pid");
-				
+		System.out.println(user_pid);
 		RegistDAO dao = new RegistDAO();
 		RegistVO regist = dao.select(user_pid);
 
 		request.setAttribute("member", regist);
 		
-		if(session.getAttribute("naver_id") != null) {
+		if(dao.login_confirm(user_pid).equals("NAVER_USER")) {
 			Script.moving(response, "네이버 아이디로 로그인하셨습니다.", "index.jsp");
 		} else if(regist == null) {
 			Script.moving(response, "먼저 로그인을 진행해주세요.", "account/login.jsp");
