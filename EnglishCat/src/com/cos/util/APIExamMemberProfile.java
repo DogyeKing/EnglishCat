@@ -14,9 +14,8 @@ import com.cos.dto.RegistVO;
 
 public class APIExamMemberProfile {
 
- public String getProfile(String tocken) {
+ public String getProfile(String token) {
 	 RegistDAO rdao = new RegistDAO();
-     String token = tocken;// 네이버 로그인 접근 토큰;
      String header = "Bearer " + token; // Bearer 다음에 공백 추가
      try{
         String apiURL = "https://openapi.naver.com/v1/nid/me";
@@ -43,21 +42,22 @@ public class APIExamMemberProfile {
         JSONObject resp = (JSONObject) getData.get("response");
         String id = resp.get("id").toString();
         System.out.println("id : " + id);
-        String email = resp.get("email").toString();
-        String name = resp.get("name").toString();
-        if(rdao.select(id) == null) {
+        String user_pid = rdao.select_pid(id); // 기존에 존재하는 pid를 가져옴
+        if(user_pid == null) {
         	System.out.println("naverRegist_access");
             RegistVO regist = new RegistVO();
-        	regist.setUser_pid(id);
- 			regist.setUser_mail(email);
- 			regist.setUser_name(name);
+        	regist.setUser_id(id);
+ 			regist.setUser_mail(resp.get("email").toString());
+ 			regist.setUser_name(resp.get("name").toString());
  			
  			rdao.naverRegist(regist);
+ 			
+ 			user_pid = rdao.select_pid(id); //새로 넣은 데이터의 pid를 가져옴
         }
         System.out.println("return id");
-        return id;
+        return user_pid; 
      } catch (Exception e) {
-         System.out.println(e);
+         e.printStackTrace();
      }
      return null;
  }

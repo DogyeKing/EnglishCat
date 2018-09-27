@@ -25,13 +25,20 @@ public class ReviewWriteProcAction implements Action {
 		RegistDAO rdao = new RegistDAO();
 		
 		HttpSession session = request.getSession();
+		String user_pid = null;
 		//user_pid 세션값을 가져온다.
-		String user_pid = (String)session.getAttribute("user_pid");
+		if(session.getAttribute("user_pid") != null) {
+			user_pid = (String)session.getAttribute("user_pid");
+		} else if(session.getAttribute("naver_id") != null) {
+			user_pid = (String)session.getAttribute("naver_id");
+		}
+		
+		contReviewVO.setUser_pid(user_pid);
 		contReviewVO.setCont_title(request.getParameter("cont_title"));
 		contReviewVO.setCont_content(request.getParameter("cont_content"));
 		
 		//user_id세션값을 user_pid로 호출
-		//contReviewVO.setUser_pid(rdao.get_pid(user_id));
+		//contReviewVO.setUser_pid(rdao.get_pid(user_id)); <- 뭐지용?
 
 		String url = "board?cmd=review_list";
 		ContReviewDAO contReviewDAO = new ContReviewDAO();

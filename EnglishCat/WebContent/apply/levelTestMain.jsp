@@ -46,7 +46,7 @@
               <!-- End Post feature-inner -->
               
               <!-- Post Content -->
-              <div class="post-content"> 
+              <div class="post-content"><br><br> 
 
                 <p>안녕하세요, ${member.user_name}님</p>
                 <p>레벨테스트 문항은 총 20문제 입니다.</p>
@@ -66,7 +66,7 @@
       </div>
     </div>
     <div class="read-btn" align="center">                
-       <a class="btn btn-common" href="#" onclick="window.open('apply/levelTestAll.jsp','_blank','width=800, height=600, top=50, left=50')">레벨 테스트 시작 <i class="fa fa-angle-right"></i></a>
+       <a class="btn btn-common" href="#" onclick="window.open('apply/levelTestAll.jsp','_blank','width=800, height=600, top=50, left=50')">레벨 테스트 시작 <i class="fa fa-angle-right"></i></a><br><br>
     </div>
    <!-- <button class="btn btn-common" type="submit" id="submit" onclick="goLevel()">레벨 테스트 start <i class="fa fa-angle-right"></i></button> -->
     <br><br><br>

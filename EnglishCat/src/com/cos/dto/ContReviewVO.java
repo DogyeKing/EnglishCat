@@ -11,7 +11,14 @@ public class ContReviewVO {
 	private String update_dt;
 	private String update_pid;
 	private String delete_yn;
+	private String user_id;
 	
+	public String getUser_id() {
+		return user_id;
+	}
+	public void setUser_id(String user_id) {
+		this.user_id = user_id;
+	}
 	public String getCont_id() {
 		return cont_id;
 	}

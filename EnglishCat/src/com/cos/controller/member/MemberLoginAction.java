@@ -54,6 +54,7 @@ public class MemberLoginAction implements Action {
 			if (regist.getUser_mail_avail_yn().equals("YES")) {
 				HttpSession session = request.getSession();
 				session.setAttribute("user_pid", regist.getUser_pid());
+				session.setAttribute("user_confirm", dao.login_confirm(regist.getUser_pid()));
 				Script.moving(response, "로그인 성공", url);
 			} else if (regist.getUser_mail_avail_yn().equals("NO")) {
 				HttpSession session = request.getSession();

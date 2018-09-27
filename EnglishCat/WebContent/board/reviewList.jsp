@@ -19,7 +19,7 @@
       <div class="container">
          <h2 class="text-center text-uppercase text-secondary mb-0">수강후기</h2>
          <!-- <hr class="star-dark mb-5"> -->
-         <br>
+         <br><br>
          <div class="row">
             <div class="col-lg-8">
                <div id="board-list" class="container">
@@ -44,8 +44,8 @@
 
 					</tr>
 				</c:forEach>
-               </table>
-                    <a class="btn btn-primary" href="<%=request.getContextPath()%>/board?cmd=review_write">글쓰기</a>
+               </table><br>
+                    <a class="btn btn-primary" href="<%=request.getContextPath()%>/board?cmd=review_write">글쓰기</a><br><br><br>
                      </div>
                      <!-- row(12분할) END -->
                   </div>

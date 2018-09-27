@@ -31,12 +31,10 @@ public class ReviewWriteAction implements Action{
 		String user_pid = null;
 		HttpSession session = request.getSession();
 		
-		if(session.getAttribute("user_pid") != null || session.getAttribute("naver_id") != null) {
+		if(session.getAttribute("user_pid") != null) {
 			
 			if(session.getAttribute("user_pid") != null) {
 				user_pid = (String)session.getAttribute("user_pid");
-			} else if(session.getAttribute("naver_id") != null) {
-				user_pid = (String)session.getAttribute("naver_id");
 			}
 			
 			int result = registDAO.check_id(user_pid);
@@ -46,7 +44,7 @@ public class ReviewWriteAction implements Action{
 				}else{
 					//session과 user_pid와 연동하기 
 					/*contReviewVO.setUser_pid(request.getParameter("user_pid"));*/
-					session.setAttribute("user_pid", user_pid);
+					// session.setAttribute("user_pid", user_pid); 안씁니다.
 					request.setAttribute("contReviewVO", contReviewVO);
 					RequestDispatcher dis = request.getRequestDispatcher(url);
 					dis.forward(request, response);
