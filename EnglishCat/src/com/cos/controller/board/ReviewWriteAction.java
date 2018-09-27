@@ -42,7 +42,7 @@ public class ReviewWriteAction implements Action{
 			int result = registDAO.check_id(user_pid);
 			
 				if(result != 1) {
-					Script.moving(response, "먼저 인증을 해주세요", "member?cmd=member_update");
+					Script.moving(response, "먼저 인증을 해주세요", "board?cmd=board_list");
 				}else{
 					//session과 user_pid와 연동하기 
 					/*contReviewVO.setUser_pid(request.getParameter("user_pid"));*/

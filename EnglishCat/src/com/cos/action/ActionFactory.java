@@ -15,11 +15,11 @@ import com.cos.controller.member.MemberFreeTestMainAction;
 import com.cos.controller.member.MemberIDCheckAction;
 import com.cos.controller.member.MemberLoginAction;
 import com.cos.controller.member.MemberLogoutAction;
+import com.cos.controller.member.MemberPayAction;
 import com.cos.controller.member.MemberRegisterAction;
 import com.cos.controller.member.MemberScoreAction;
 import com.cos.controller.member.MemberUpdateAction;
 import com.cos.controller.member.MemberUpdateProcAction;
-import com.cos.controller.member.MemberPayAction;
 
 public class ActionFactory {
 	private static String naming = "ActionFactory : ";
