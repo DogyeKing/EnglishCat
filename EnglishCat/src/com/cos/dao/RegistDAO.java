@@ -217,19 +217,36 @@ public class RegistDAO {
 		return null;
 	}
 	
-	public int check_id(String user_id) {
-		String SQL = "SELECT user_id FROM TB_USER_INFO WHERE (DELETE_YN IS NOT NULL AND UPDATE_DT >= (SYSDATE-30)) AND user_id = ?";
+	//인증, 미인증 회원구별
+	public int check_id(String user_pid) {
+		//이건 이전 쿼리문
+		//String SQL = "SELECT user_id FROM TB_USER_INFO WHERE (DELETE_YN IS NOT NULL AND UPDATE_DT >= (SYSDATE-30)) AND user_id = ?";
+		
+		//수정한 쿼리문
+		String SQL = "SELECT USER_MAIL_AVAIL_YN FROM TB_USER_INFO WHERE user_pid = ?";
 		Connection conn = DBManager.getConnection();
 		try {
 			pstmt = conn.prepareStatement(SQL);
-			pstmt.setString(1, user_id);			
+			pstmt.setString(1, user_pid);			
 			rs = pstmt.executeQuery();
+			
+			//수정한 if문
+			if(rs.next()) {
+				
+				if(rs.getString("USER_MAIL_AVAIL_YN").equals("YES")) {
+					return 1;
+				}else if(rs.getString("USER_MAIL_AVAIL_YN").equals("NO")) {
+					return 2;
+				}
+			}
 
-			if (rs.next()){				
+			//이건 이전 if문
+			/*if (rs.next()){				
 					return 1; //id 존재
 				}else{
 					return 2; //없음
-				}			
+				}	*/		
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
