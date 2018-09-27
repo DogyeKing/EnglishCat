@@ -29,7 +29,8 @@ public class RegistDAO {
 		}
 		return null;
 	}
-	// registration
+	
+	// 회원가입
 	public int insertUserInfo(RegistVO regist) {
 		System.out.println("insert start");
 		String SQL = "INSERT INTO TB_USER_INFO VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 'NO', 'USER', SYSDATE, NULL, NULL, NULL)";
@@ -61,7 +62,7 @@ public class RegistDAO {
 		return -1;
 	}
 	
-	//네이버 회원가입
+	// 네이버 회원가입
 	public int naverRegist(RegistVO regist) {
 		System.out.println("naverRegist start");
 		String SQL = "INSERT INTO TB_USER_INFO VALUES (?, ?, NULL, ?, NULL, ?, NULL, NULL, NULL, 'YES', 'NAVER_USER', SYSDATE, NULL, NULL, NULL)";
@@ -88,7 +89,7 @@ public class RegistDAO {
 		return -1;
 	}
 	
-	// select_id
+			// pid와 구글이메일 인증여부 조회
 			public RegistVO select_id(RegistVO regist) {				
 				String SQL = "SELECT user_pid, user_mail_avail_yn FROM TB_USER_INFO WHERE DELETE_YN IS NULL AND user_id = ? AND user_pass= ?";
 				Connection conn = DBManager.getConnection();
@@ -111,7 +112,7 @@ public class RegistDAO {
 			}
 	
 			
-			
+	// 이메일 조회		
 	public String select_user_mail(String user_pid) {
 		String SQL = "SELECT user_mail FROM tb_user_info WHERE user_pid = ?";
 		Connection conn = DBManager.getConnection();
@@ -131,6 +132,7 @@ public class RegistDAO {
 		return null;
 	}
 	
+	// salt 조회
 	public String select_salt(String user_id) {
 		String SQL = "SELECT salt FROM tb_user_info WHERE DELETE_YN IS NULL AND user_id = ?";
 		Connection conn = DBManager.getConnection();
@@ -150,6 +152,7 @@ public class RegistDAO {
 		return null;
 	}
 	
+	// 구글 이메일 인증된 회원으로 update
 	public int update_user_mail_avail_yn(String user_pid) {
 		String SQL = "UPDATE tb_user_info SET user_mail_avail_yn = ? WHERE user_pid = ?";
 		Connection conn = DBManager.getConnection();
@@ -167,7 +170,7 @@ public class RegistDAO {
 		return -1;
 	}
 	
-	//이메일 인증
+	// 구글 이메일 인증
 	public int select_user_mail_avail_yn(String user_pid) {
 		String SQL = "SELECT user_mail_avail_yn FROM tb_user_info WHERE user_pid = ?";
 		Connection conn = DBManager.getConnection();
@@ -191,7 +194,7 @@ public class RegistDAO {
 		return -1;
 	}
 	
-	
+	// user_pid 조회
 	public RegistVO select(String user_pid) {
 		String SQL = "SELECT * FROM tb_user_info WHERE user_pid = ?";
 		Connection conn = DBManager.getConnection();
@@ -217,7 +220,7 @@ public class RegistDAO {
 		return null;
 	}
 	
-	//인증, 미인증 회원구별
+	// 인증, 미인증 회원 구별
 	public int check_id(String user_pid) {
 		//이건 이전 쿼리문
 		//String SQL = "SELECT user_id FROM TB_USER_INFO WHERE (DELETE_YN IS NOT NULL AND UPDATE_DT >= (SYSDATE-30)) AND user_id = ?";
@@ -255,6 +258,7 @@ public class RegistDAO {
 		return -1;
 	}
 	
+	// 회원정보 수정
 	public int update(RegistVO regist) {
 		String SQL = "UPDATE TB_USER_INFO SET user_pass = ?, roadFullAddr = ?, user_mail = ? WHERE user_pid = ?";
 		Connection conn = DBManager.getConnection();
@@ -273,29 +277,30 @@ public class RegistDAO {
 		return -1;
 	}
 	
-	//session이 가진 user_id로 user_pid 뽑아오기
-	/*public String get_pid(String user_id) {
-		String SQL = "SELECT user_pid FROM TB_USER_INFO WHERE user_id = ?";
-		Connection conn = DBManager.getConnection();
-		try {
-			pstmt = conn.prepareStatement(SQL);
-			pstmt.setString(1, user_id);			
-			rs = pstmt.executeQuery();
-
-			if (rs.next()){				
-					return rs.getString("user_pid"); //id 존재
-				}else{
-					return "null"; //없음
-				}			
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			DBManager.close(conn, pstmt, rs);
-		}
-		return "error";
-	}*/
+		//session이 가진 user_id로 user_pid 뽑아오기
+		/*public String get_pid(String user_id) {
+			String SQL = "SELECT user_pid FROM TB_USER_INFO WHERE user_id = ?";
+			Connection conn = DBManager.getConnection();
+			try {
+				pstmt = conn.prepareStatement(SQL);
+				pstmt.setString(1, user_id);			
+				rs = pstmt.executeQuery();
 	
-	//session이 가진 user_pid로 user_id 뽑아오기
+				if (rs.next()){				
+						return rs.getString("user_pid"); //id 존재
+					}else{
+						return "null"; //없음
+					}			
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				DBManager.close(conn, pstmt, rs);
+			}
+			return "error";
+		}*/
+	
+	
+		//session이 가진 user_pid로 user_id 뽑아오기	
 		public String get_id(String user_pid) {
 			String SQL = "SELECT user_id FROM TB_USER_INFO WHERE user_pid = ?";
 			Connection conn = DBManager.getConnection();
@@ -317,6 +322,7 @@ public class RegistDAO {
 			return "error";
 		}
 		
+		// user_pid를 조회해서 결제할때 회원정보 뽑아오기
 		public RegistVO selectPayment(String user_pid) {
 			String SQL = "SELECT * FROM tb_user_info WHERE user_pid = ?";
 			Connection conn = DBManager.getConnection();
@@ -334,7 +340,6 @@ public class RegistDAO {
 					regist.setUser_phone(rs.getString("user_phone"));
 					regist.setUser_mail(rs.getString("user_mail"));				
 									
-
 					return regist;
 				}
 			} catch (Exception e) {
