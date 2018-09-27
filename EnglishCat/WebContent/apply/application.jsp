@@ -18,7 +18,7 @@
     	
 
 
-	var popPay = window.open("payPage.jsp?amount="+amount,"pop","width=570,height=420, scrollbars=yes, resizable=yes"); 
+	var popPay = window.open("apply/payPage.jsp?amount="+amount,"pop","width=570,height=420, scrollbars=yes, resizable=yes"); 
 	
 	
      
