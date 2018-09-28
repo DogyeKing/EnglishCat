@@ -83,7 +83,7 @@
                 <div class="form-group">
                 	<label class="form-control-label">ID</label>
 
-                
+     				
      				<input class="form-control" type="text" name="user_id" id="user_id" maxlength="15" required autofocus onkeydown="fn_press_han(this);" style="ime-mode:disabled;"/>
      				<small id="checkMsg"></small>
                 </div>              

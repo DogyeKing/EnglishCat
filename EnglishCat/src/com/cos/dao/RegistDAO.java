@@ -195,17 +195,18 @@ public class RegistDAO {
 	}
 	
 	// user_pid 조회
-	public RegistVO select(String user_id) {
+	public RegistVO select(String user_pid) {
 		String SQL = "SELECT * FROM tb_user_info WHERE user_pid = ?";
 		Connection conn = DBManager.getConnection();
 		try {
 			pstmt = conn.prepareStatement(SQL);
-			pstmt.setString(1, user_id);
+			pstmt.setString(1, user_pid);
 			rs = pstmt.executeQuery();
 			
 			if(rs.next()) {
 				RegistVO regist = new RegistVO();
 				regist.setUser_pid(rs.getString("user_pid"));
+				regist.setUser_id(rs.getString("user_id"));
 				regist.setUser_name(rs.getString("user_name"));
 				regist.setUser_phone(rs.getString("user_phone"));
 				regist.setRoadFullAddr(rs.getString("roadFullAddr"));
@@ -221,21 +222,20 @@ public class RegistDAO {
 	}
 	
 	// 인증, 미인증 회원 구별
-	public int check_id(String user_pid) {
+	public int check_id(String user_id) {
 		//이건 이전 쿼리문
 		//String SQL = "SELECT user_id FROM TB_USER_INFO WHERE (DELETE_YN IS NOT NULL AND UPDATE_DT >= (SYSDATE-30)) AND user_id = ?";
 		
 		//수정한 쿼리문
-		String SQL = "SELECT USER_MAIL_AVAIL_YN FROM TB_USER_INFO WHERE user_pid = ?";
+		String SQL = "SELECT USER_MAIL_AVAIL_YN FROM TB_USER_INFO WHERE user_id = ?";
 		Connection conn = DBManager.getConnection();
 		try {
 			pstmt = conn.prepareStatement(SQL);
-			pstmt.setString(1, user_pid);			
+			pstmt.setString(1, user_id);			
 			rs = pstmt.executeQuery();
 			
 			//수정한 if문
-			if(rs.next()) {
-				
+			if(rs.next()) {	
 				if(rs.getString("USER_MAIL_AVAIL_YN").equals("YES")) {
 					return 1;
 				}else if(rs.getString("USER_MAIL_AVAIL_YN").equals("NO")) {

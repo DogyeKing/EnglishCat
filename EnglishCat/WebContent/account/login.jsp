@@ -24,7 +24,7 @@
 
 <c:if test="${sessionScope.user_pid != null}">
 	<script>
-		alert('이미 로그인 되어있습니다. 바본가?');
+		alert('이미 로그인 되어있습니다.');
 		location.href='<%=request.getContextPath()%>/index.jsp';
 	</script>
 </c:if>

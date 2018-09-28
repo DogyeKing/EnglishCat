@@ -147,16 +147,21 @@
                   </ul>                   
                 </li>                    
          </c:when>
+      	 <c:when test="${user_confirm eq 'NAVER_USER'}">
+                <li class="dropdown dropdown-toggle">    		  
+           		<a href="#" data-toggle="dropdown">마이페이지<i class="fa fa-angle-down"></i></a>
+                  <ul class="dropdown-menu">             	
+                    <li><a href="<%=request.getContextPath()%>/member?cmd=member_payment">결제내역</a></li>
+                  </ul>                   
+                </li>                    
+         </c:when>
          <c:otherwise>
-         	
                 <li><a href="#" onclick="myPage()" data-toggle="dropdown" >마이페이지</a></li>
          </c:otherwise>
 	  </c:choose>  
     	        </ul>
             </div>  
-            
-            
-            
+
              <!-- Form for navbar search area -->
             <form class="full-search">
               <div class="container">
@@ -231,6 +236,6 @@
     	function myPage(){
     		alert("로그인을 먼저 해주세요.");
     		
-    		document.location.href="account/login.jsp";
+    		document.location.href="<%=request.getContextPath()%>/account/login.jsp";
     	}
     </script>
