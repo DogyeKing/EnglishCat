@@ -137,21 +137,22 @@
                   </ul>                        
                 </li> 
                 
-                
-                <li class="dropdown dropdown-toggle">
-                  <a href="#" data-toggle="dropdown">마이페이지 <c:if test="${user_confirm eq 'USER'}"><i class="fa fa-angle-down"></i></c:if></a>
-                  <ul class="dropdown-menu">
-                  	<c:if test="${user_confirm eq 'USER'}">
+       <c:choose>
+       	 <c:when test="${user_confirm eq 'USER'}">
+                <li class="dropdown dropdown-toggle">    		  
+           		<a href="#" data-toggle="dropdown">마이페이지<i class="fa fa-angle-down"></i></a>
+                  <ul class="dropdown-menu">             	
                     <li><a href="<%=request.getContextPath()%>/member?cmd=member_update">회원정보수정</a></li>
-                    </c:if>
-                    <c:if test="${user_confirm eq 'USER'}">
                     <li><a href="<%=request.getContextPath()%>/member?cmd=member_payment">결제내역</a></li>
-                    </c:if>   
-                  </ul>                        
-                </li>
-                                            
-                <%-- <li><a href="<%=request.getContextPath()%>/member?cmd=member_update">마이페이지</a></li> --%>
-              </ul>
+                  </ul>                   
+                </li>                    
+         </c:when>
+         <c:otherwise>
+         	
+                <li><a href="#" onclick="myPage()" data-toggle="dropdown" >마이페이지</a></li>
+         </c:otherwise>
+	  </c:choose>  
+    	        </ul>
             </div>  
             
             
@@ -223,6 +224,13 @@
           </div>
       </nav>
       <!-- Navbar End -->
-
     </header>
     <!-- Header area wrapper End -->
+    
+    <script>
+    	function myPage(){
+    		alert("로그인을 먼저 해주세요.");
+    		
+    		document.location.href="account/login.jsp";
+    	}
+    </script>
