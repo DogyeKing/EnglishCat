@@ -155,7 +155,7 @@ public class ContReviewDAO {
 		
 
 		public ContReviewVO select_ajax() {
-			String SQL = "SELECT * FROM TB_CONT_REVIEW ORDER BY CONT_ID DESC";
+			String SQL = "SELECT * FROM TB_CONT_REVIEW WHERE DELETE_YN IS NULL ORDER BY CONT_ID DESC";
 			Connection conn = DBManager.getConnection();
 			try {
 				pstmt = conn.prepareStatement(SQL);				

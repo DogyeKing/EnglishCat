@@ -139,12 +139,14 @@
                 
                 
                 <li class="dropdown dropdown-toggle">
-                  <a href="#" data-toggle="dropdown">마이페이지 <i class="fa fa-angle-down"></i></a>
+                  <a href="#" data-toggle="dropdown">마이페이지 <c:if test="${user_confirm eq 'USER'}"><i class="fa fa-angle-down"></i></c:if></a>
                   <ul class="dropdown-menu">
                   	<c:if test="${user_confirm eq 'USER'}">
                     <li><a href="<%=request.getContextPath()%>/member?cmd=member_update">회원정보수정</a></li>
                     </c:if>
-                    <li><a href="<%=request.getContextPath()%>/member?cmd=member_payment">결제내역</a></li>   
+                    <c:if test="${user_confirm eq 'USER'}">
+                    <li><a href="<%=request.getContextPath()%>/member?cmd=member_payment">결제내역</a></li>
+                    </c:if>   
                   </ul>                        
                 </li>
                                             
