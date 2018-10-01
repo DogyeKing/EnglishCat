@@ -90,6 +90,7 @@ public class RegistDAO {
 	}
 	
 	// pid와 구글이메일 인증여부 조회
+	// DELETE_YN = 휴먼계정여부 
 	public RegistVO select_id(RegistVO regist) {				
 		String SQL = "SELECT user_pid, user_mail_avail_yn FROM TB_USER_INFO WHERE DELETE_YN IS NULL AND user_id = ? AND user_pass= ?";
 		Connection conn = DBManager.getConnection();
@@ -132,7 +133,7 @@ public class RegistDAO {
 		return null;
 	}
 	
-	// salt 조회
+	// user_id를 조회해서 salt값 뽑아오기
 	public String select_salt(String user_id) {
 		String SQL = "SELECT salt FROM tb_user_info WHERE DELETE_YN IS NULL AND user_id = ?";
 		Connection conn = DBManager.getConnection();
@@ -152,7 +153,7 @@ public class RegistDAO {
 		return null;
 	}
 	
-	// 구글 이메일 인증된 회원으로 update
+	// user_mail_avil_yn의 값이 yes이면 구글 이메일 인증된 회원으로 update
 	public int update_user_mail_avail_yn(String user_pid) {
 		String SQL = "UPDATE tb_user_info SET user_mail_avail_yn = ? WHERE user_pid = ?";
 		Connection conn = DBManager.getConnection();
@@ -170,7 +171,8 @@ public class RegistDAO {
 		return -1;
 	}
 	
-	// 구글 이메일 인증
+	// 구글 이메일 인증 여부확인
+	// user_pid 조회해서 user_mail_avail_yn의 값이 yes냐 no냐
 	public int select_user_mail_avail_yn(String user_pid) {
 		String SQL = "SELECT user_mail_avail_yn FROM tb_user_info WHERE user_pid = ?";
 		Connection conn = DBManager.getConnection();
@@ -194,7 +196,7 @@ public class RegistDAO {
 		return -1;
 	}
 	
-	// user_pid 조회
+	// user_pid 조회하여 전체 컬럼 값
 	public RegistVO select(String user_pid) {
 		String SQL = "SELECT * FROM tb_user_info WHERE user_pid = ?";
 		Connection conn = DBManager.getConnection();
@@ -226,8 +228,11 @@ public class RegistDAO {
 		//이건 이전 쿼리문
 		//String SQL = "SELECT user_id FROM TB_USER_INFO WHERE (DELETE_YN IS NOT NULL AND UPDATE_DT >= (SYSDATE-30)) AND user_id = ?";
 		
-		//수정한 쿼리문
-		String SQL = "SELECT USER_MAIL_AVAIL_YN FROM TB_USER_INFO WHERE user_id = ?";
+		//수정한 쿼리문(되는거)
+		//String SQL = "SELECT USER_MAIL_AVAIL_YN FROM TB_USER_INFO WHERE user_id = ?";
+		
+		//한번 해보는 쿼리문
+		String SQL = "SELECT USER_MAIL_AVAIL_YN FROM TB_USER_INFO WHERE (DELETE_YN IS NOT NULL AND UPDATE_DT >= (SYSDATE-30)) AND user_id = ?";
 		Connection conn = DBManager.getConnection();
 		try {
 			pstmt = conn.prepareStatement(SQL);
@@ -300,7 +305,7 @@ public class RegistDAO {
 		}*/
 	
 	
-		//session이 가진 user_pid로 user_id 뽑아오기	 ????
+		//session이 가진 user_pid로 user_id 뽑아오기	 ???? (뭔지 모르겠당)
 		public String get_id(String user_pid) {
 			String SQL = "SELECT user_id FROM TB_USER_INFO WHERE user_pid = ?";
 			Connection conn = DBManager.getConnection();
@@ -346,6 +351,7 @@ public class RegistDAO {
 			return null;
 		}
 		
+		//auth_code로 user, naver_user 구분 
 		public String login_confirm(String user_pid) {
 			String SQL = "SELECT AUTH_CODE FROM tb_user_info WHERE user_pid = ?";
 			Connection conn = DBManager.getConnection();
@@ -363,6 +369,7 @@ public class RegistDAO {
 			return null;
 		}
 		
+		// user_id로 user_pid 뽑아오기 
 		public String select_pid(String user_id) {
 			String SQL = "SELECT user_pid FROM tb_user_info WHERE user_id = ?";
 			Connection conn = DBManager.getConnection();
