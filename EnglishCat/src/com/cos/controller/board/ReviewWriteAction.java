@@ -35,10 +35,11 @@ public class ReviewWriteAction implements Action{
 			
 			if(session.getAttribute("user_pid") != null) {
 				user_pid = (String)session.getAttribute("user_pid");
+				System.out.println(user_pid);
 			}
 			
-			int result = registDAO.check_id(user_pid);
-			
+			int result = registDAO.select_user_mail_avail_yn(user_pid);
+				System.out.println(result);
 				if(result != 1) {
 					Script.moving(response, "먼저 인증을 해주세요");
 				}else{
@@ -53,13 +54,5 @@ public class ReviewWriteAction implements Action{
 		}else {
 			Script.moving(response, "먼저 로그인을 진행해주세요.", "account/login.jsp");
 		}
-		
-	
-
-	
-
-
-	
-		
 	}
 }
