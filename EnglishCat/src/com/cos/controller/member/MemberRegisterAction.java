@@ -22,7 +22,7 @@ public class MemberRegisterAction implements Action{
 		RegistDAO dao = new RegistDAO();	
 		
 		String user_id = null;
-		String user_pid = null;
+/*		String user_pid = null;*/
 		String user_pass = null;
 		String user_name = null;
 		String user_phone = null;

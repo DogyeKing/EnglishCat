@@ -37,7 +37,7 @@ public class RegistDAO {
 		
 		/*String SQL = "INSERT INTO TB_USER_INFO VALUES (?,?,?,?,?,?,?,?,'NO',SYSDATE,SYSDATE,'NO','NO')";*/
 		Connection conn = DBManager.getConnection();
-		System.out.println("connection ok");
+		System.out.println("insert connection ok");
 		try {
 			pstmt = conn.prepareStatement(SQL);
 			pstmt.setString(1, regist.getUser_pid());

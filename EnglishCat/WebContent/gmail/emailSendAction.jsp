@@ -16,14 +16,14 @@
 
 <%
 	RegistDAO dao = new RegistDAO();
-	String id = null;
-	String pid = null;
+	String user_id = null;
+	String user_pid = null;
 	if(session.getAttribute("user_pid") != null){
-		pid = (String)session.getAttribute("user_pid");
-		id = dao.get_id(pid);
+		user_pid = (String)session.getAttribute("user_pid");
+		user_id = dao.get_id(user_pid);
 	}
 	
-	int emailChecked = dao.select_user_mail_avail_yn(pid);
+	int emailChecked = dao.select_user_mail_avail_yn(user_pid);
 	System.out.println("ec : " + emailChecked);
 	if(emailChecked == 1){
 		Script.moving(response, "이미 인증된 회원입니다.");
@@ -40,8 +40,8 @@
 	
 	System.out.println("HOST : "+ host);
 	String from = "englishcat5600@gmail.com";
-	String to = dao.select_user_mail(pid);
-	String salt = dao.select_salt(id);
+	String to = dao.select_user_mail(user_pid);
+	String salt = dao.select_salt(user_id);
 	String code = SHA256.getEncrypt(to, salt);
 	
 	String subject = "회원가입을 위한 이메일 인증 메일입니다.";
