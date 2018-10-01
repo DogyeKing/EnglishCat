@@ -117,8 +117,7 @@
 </head>
 <body>
 <!-- Navigation -->
-<jsp:include page="/include/header.jsp"/>
-
+	<jsp:include page="/include/header.jsp"/>
 <br>
 <br>
 <div class="container">

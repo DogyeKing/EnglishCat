@@ -3,8 +3,8 @@
 <%@page import="com.cos.dao.RegistDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
-	String url = request.getContextPath()+"/index.jsp";
-	String url1 = request.getContextPath()+"/apply/registration.jsp";
+	String url = request.getContextPath()+"/account/login.jsp";
+	String url1 = request.getContextPath()+"/account/registration.jsp";
 	
 	RegistDAO dao = new RegistDAO();
 	String user_id = null;
@@ -30,7 +30,9 @@
 	if(isTrue){
 		int result = dao.update_user_mail_avail_yn(user_pid);
 		if(result == 1){
-			Script.moving(response, "인증에 성공하였습니다.", url);
+		    session.invalidate();
+			Script.moving(response, "인증에 성공하였습니다.");
+			Script.moving(response, "로그인 창으로 이동합니다.", url);
 		}else{
 			Script.moving(response, "데이터베이스 오류");
 		}
