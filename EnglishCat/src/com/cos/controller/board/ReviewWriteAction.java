@@ -53,13 +53,7 @@ public class ReviewWriteAction implements Action{
 		}else {
 			Script.moving(response, "먼저 로그인을 진행해주세요.", "account/login.jsp");
 		}
-		
-	
 
-	
-
-
-	
 		
 	}
 }
