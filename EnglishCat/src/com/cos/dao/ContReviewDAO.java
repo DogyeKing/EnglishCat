@@ -50,9 +50,9 @@ public class ContReviewDAO {
 					contReviewVO.setCont_content(rs.getString("cont_content"));
 					contReviewVO.setUser_pid(rs.getString("user_pid"));
 					contReviewVO.setInsert_dt(rs.getString("insert_dt"));
-					/*contReviewVO.setUpdate_dt(rs.getString("update_pid"));
-					contReviewVO.setUpdate_pid(rs.getString("update_pid"));
-					contReviewVO.setDelete_yn(rs.getString("delete_yn"));*/
+					/*contReviewVO.setUpdate_dt(rs.getString("update_dt"));*/
+					/*contReviewVO.setUpdate_pid(rs.getString("update_pid"));*/
+					/*contReviewVO.setDelete_yn(rs.getString("delete_yn"));*/
 					
 					RegistDAO rdao = new RegistDAO();
 					contReviewVO.setUser_pid(rdao.get_id(contReviewVO.getUser_pid()));
@@ -121,6 +121,8 @@ public class ContReviewDAO {
 				
 				//게시판 수정
 				public int update(ContReviewVO contReviewVO) {
+					//UPDATE_DT 뽑기용 SQL문
+					/*String SQL = "UPDATE TB_CONT_REVIEW SET CONT_TITLE = ?, CONT_CONTENT = ?, UPDATE_DT = SYSDATE WHERE CONT_ID = ?";*/
 					String SQL = "UPDATE TB_CONT_REVIEW SET CONT_TITLE = ?, CONT_CONTENT = ? WHERE CONT_ID = ?";
 					Connection conn = DBManager.getConnection();
 					try {

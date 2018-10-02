@@ -33,6 +33,7 @@
 					<td>제목</td>
 					<td>아이디</td>
 					<td>작성일자</td>
+					<!-- <td>수정일자</td> -->
 				</tr>
 
 				<c:forEach var="item" items="${list}">
@@ -41,6 +42,7 @@
 						<td><a href="<%=request.getContextPath()%>/board?cmd=review_detail&cont_id=${item.cont_id}">${item.cont_title}</a></td>
 						<td>${item.user_pid}</td>
 						<td>${item.insert_dt}</td>
+						<%-- <td>${item.update_dt}</td> --%>
 
 					</tr>
 				</c:forEach>

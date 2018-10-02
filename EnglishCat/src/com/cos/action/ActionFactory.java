@@ -2,6 +2,7 @@ package com.cos.action;
 
 import com.cos.controller.board.AjaxAction;
 import com.cos.controller.board.PayAction;
+import com.cos.controller.board.PayCompleteAction;
 import com.cos.controller.board.ReviewDeleteAction;
 import com.cos.controller.board.ReviewDetailAction;
 import com.cos.controller.board.ReviewListAction;
@@ -76,6 +77,8 @@ public class ActionFactory {
 			return new MemberScoreAction();
 		} else if (cmd.equals("member_freeTestMain")){
 			return new MemberFreeTestMainAction();
+		} else if (cmd.equals("pay_complete")) {
+			return new PayCompleteAction();
 		}
 		return null;
 	}
