@@ -32,7 +32,7 @@
   <body>
   
   
-  <%  //1. 로그인을 한 상태(session), 2. 로그인을 안한 상태(x)
+  <%  //1. 로그인을 한 상태(session), 2. 로그인을 안한 상태(x) 3
 	String user_pid= null;
 	if(session.getAttribute("user_pid") != null){
 		user_pid = (String) session.getAttribute("user_pid");
