@@ -241,26 +241,20 @@ public class RegistDAO {
 			rs = pstmt.executeQuery();			
 
 			if(rs.next()) {
-			return 1;
+			return 1; //id 존재
 			}else {
-				return 2;
+				return 2; //없음
 			}
 			
 			
-/*			if(rs.next()) {	
+			/*if(rs.next()) {	
 				if(rs.getString("USER_MAIL_AVAIL_YN").equals("YES")) {
 					return 1;
 				}else if(rs.getString("USER_MAIL_AVAIL_YN").equals("NO")) {
 					return 2;
 				}
 			}*/
-
-			//이건 이전 if문
-			/*if (rs.next()){				
-					return 1; //id 존재
-				}else{
-					return 2; //없음
-				}	*/		
+	
 			
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -272,15 +266,19 @@ public class RegistDAO {
 	
 	// 회원정보 수정
 	public int update(RegistVO regist) {
-		String SQL = "UPDATE TB_USER_INFO SET user_pass = ?, roadFullAddr = ?, user_mail = ? WHERE user_pid = ?";
+		//String SQL = "UPDATE TB_USER_INFO SET user_pass = ?, roadFullAddr = ?, user_mail = ? WHERE user_pid = ?";
+		
+		//pid로 해야하는가?  id로하니깐 된당..
+		String SQL = "UPDATE TB_USER_INFO SET user_pass = ?, user_phone = ?, user_mail = ?, roadFullAddr = ? WHERE user_id = ?";
 		Connection conn = DBManager.getConnection();
 		try {
 			pstmt = conn.prepareStatement(SQL);
 			
 			pstmt.setString(1, regist.getUser_pass());
-			pstmt.setString(2, regist.getRoadFullAddr());
+			pstmt.setString(2, regist.getUser_phone());
 			pstmt.setString(3, regist.getUser_mail());
-			pstmt.setString(4, regist.getUser_pid());
+			pstmt.setString(4, regist.getRoadFullAddr());
+			pstmt.setString(5, regist.getUser_id());
 			pstmt.executeUpdate();
 			return 1;
 		} catch (Exception e) {
@@ -393,4 +391,23 @@ public class RegistDAO {
 			}
 			return null;
 		} 
+		
+		/*// 흠.. 테스트용
+		public String mail_avail_check(String user_id) {
+			String SQL = "SELECT USER_MAIL_AVAIL_YN FROM tb_user_info WHERE user_id = ?";
+			Connection conn = DBManager.getConnection();
+			try {
+				pstmt = conn.prepareStatement(SQL);
+				pstmt.setString(1, user_id);
+				
+				rs = pstmt.executeQuery();
+				
+				if(rs.next()) {					
+					return rs.getString("USER_MAIL_AVAIL_YN");
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			return null;
+		}*/
 }

@@ -77,6 +77,8 @@
               <button type="submit" id="submit" class="btn btn-common">Login Account</button>                
             </form>
           </div> -->
+          
+          
           <div class="col-md-6">
             <h2 class="medium-title">Modified Form</h2>   
             <!-- Register Form -->
@@ -125,8 +127,18 @@
      					<input class="form-control form-control-lg" type="text" name="roadFullAddr" id="roadFullAddr" maxlength="20" readonly value="${member.roadFullAddr}">
      			</div>
      			</div>                 
-                              
+                
+                <!-- <button class="btn btn-common" type="submit" id="submit">Modified</button> -->
+                
+                <c:choose>      
+                	<c:when test="${mail_avail_check eq 'YES'}">        
                 <button class="btn btn-common" type="submit" id="submit">Modified</button>
+                	</c:when>
+                	<c:when test="${mail_avail_check eq 'NO'}">
+                <button class="btn btn-common" type="submit" id="submit">Modified</button>
+                <button class="btn btn-common" type="submit" id="submit">Modified123</button>	
+                	</c:when>
+                </c:choose>
             </form>
      		</div>
      		

@@ -49,10 +49,10 @@ public class APIExamMemberProfile {
         	regist.setUser_id(id);
  			regist.setUser_mail(resp.get("email").toString());
  			regist.setUser_name(resp.get("name").toString());
- 			
+ 
+ 			user_pid = rdao.selectUserNextPid(); //새로 넣은 데이터의 pid를 가져옴
+ 			regist.setUser_pid(user_pid); 			
  			rdao.naverRegist(regist);
- 			
- 			user_pid = rdao.select_pid(id); //새로 넣은 데이터의 pid를 가져옴
         }
         System.out.println("return id");
         return user_pid; 
