@@ -22,7 +22,7 @@ public class MemberUpdateProcAction implements Action{
 		
 		String user_pid = request.getParameter("user_pid");
 		String user_id = request.getParameter("user_id");
-		String salt = dao.select_salt(user_pid);
+		String salt = dao.select_salt(user_id);
 		String user_pass = SHA256.getEncrypt(request.getParameter("user_pass"), salt);
 		String roadFullAddr = request.getParameter("roadFullAddr");
 		String user_mail = request.getParameter("user_mail");

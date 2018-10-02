@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page import="javax.servlet.http.HttpSession"%>
 
-
+  
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,14 +13,14 @@
 <meta name="author" content="Bright">
 
 <title>EnglishCat</title>
-
+  
 </head>
 <body>
-<%
+<%-- <%
 	HttpSession session1 = request.getSession();
 	session1.setAttribute("user_pid","ID0027");
 %>
-
+ --%>
 
 	<!-- navigation -->
 	<%@include file="include/header.jsp"%>
@@ -43,7 +43,7 @@
 					<p></p>
 						<p>영어회화 도대체 어떻게 해야하나요?</p>
 						<h1>
-							영어 회화 해답은?<br> 1:1 온라인 화상 영어! ${sessionScope.user_pid}
+							영어 회화 해답은?<br> 1:1 온라인 화상 영어!<%--  ${sessionScope.user_pid} --%>
 						</h1> 
 						<a class="btn btn-lg btn-common" href="apply/freeLevelTest.jsp"> <i
 							class="fa fa-arrow-circle-right"> </i> 무료체험신청

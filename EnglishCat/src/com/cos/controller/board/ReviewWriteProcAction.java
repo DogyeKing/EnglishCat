@@ -32,6 +32,7 @@ public class ReviewWriteProcAction implements Action {
 		} else if(session.getAttribute("naver_id") != null) {
 			user_pid = (String)session.getAttribute("naver_id");
 		}
+		System.out.println(user_pid);
 		
 		contReviewVO.setUser_pid(user_pid);
 		contReviewVO.setCont_title(request.getParameter("cont_title"));
@@ -43,7 +44,7 @@ public class ReviewWriteProcAction implements Action {
 		String url = "board?cmd=review_list";
 		ContReviewDAO contReviewDAO = new ContReviewDAO();
 
-		int result = contReviewDAO.write(contReviewVO);
+		int result = contReviewDAO.insert(contReviewVO);
 		if (result == 1) {
 			Script.moving(response, "글쓰기 성공", url);
 		}else if(result == -1) {

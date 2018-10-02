@@ -122,7 +122,7 @@
      					<button class="btn btn-primary pull-right" type="button" onclick="goPopup()">Search Korean Address</button>
      					<div id="list"></div>
 						<div id="callBackDiv">
-     					<input class="form-control form-control-lg" type="text" name="roadFullAddr" id="roadFullAddr" maxlength="20" value="${member.roadFullAddr}" required readonly>
+     					<input class="form-control form-control-lg" type="text" name="roadFullAddr" id="roadFullAddr" maxlength="20" readonly value="${member.roadFullAddr}">
      			</div>
      			</div>                 
                               

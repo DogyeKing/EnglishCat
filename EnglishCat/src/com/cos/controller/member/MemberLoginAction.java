@@ -37,7 +37,7 @@ public class MemberLoginAction implements Action {
 
 		// 쿠키저장
 		if (request.getParameter("rememberme") != null) {
-			Cookie cookie = new Cookie("cookieID", regist.getUser_pid());
+			Cookie cookie = new Cookie("cookieID", regist.getUser_id());
 			cookie.setMaxAge(6000);
 			response.addCookie(cookie);
 		} else {
@@ -59,6 +59,7 @@ public class MemberLoginAction implements Action {
 			} else if (regist.getUser_mail_avail_yn().equals("NO")) {
 				HttpSession session = request.getSession();
 				session.setAttribute("user_pid", regist.getUser_pid());
+				session.setAttribute("user_confirm", dao.login_confirm(regist.getUser_pid()));
 				Script.moving(response, "미인증 회원입니다. 글쓰기가 제한됩니다.", url);
 			}
 

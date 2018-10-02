@@ -69,7 +69,7 @@ public class ContReviewDAO {
 		}
 
 	//게시판 글쓰기
-		public int write(ContReviewVO contReview) {
+		public int insert(ContReviewVO contReview) {
 			String SQL = "INSERT INTO TB_CONT_REVIEW (CONT_ID, CONT_TITLE, CONT_CONTENT, USER_PID, INSERT_DT, UPDATE_DT, UPDATE_PID, DELETE_YN) VALUES (FN_NEXT_PID('MAIN001'), ?, ?, ?, SYSDATE, NULL, NULL, NULL)";
 
 			Connection conn = DBManager.getConnection();

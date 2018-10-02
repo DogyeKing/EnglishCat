@@ -37,7 +37,7 @@ public class RegistDAO {
 		
 		/*String SQL = "INSERT INTO TB_USER_INFO VALUES (?,?,?,?,?,?,?,?,'NO',SYSDATE,SYSDATE,'NO','NO')";*/
 		Connection conn = DBManager.getConnection();
-		System.out.println("connection ok");
+		System.out.println("insert connection ok");
 		try {
 			pstmt = conn.prepareStatement(SQL);
 			pstmt.setString(1, regist.getUser_pid());
@@ -229,24 +229,31 @@ public class RegistDAO {
 		//String SQL = "SELECT user_id FROM TB_USER_INFO WHERE (DELETE_YN IS NOT NULL AND UPDATE_DT >= (SYSDATE-30)) AND user_id = ?";
 		
 		//수정한 쿼리문(되는거)
-		//String SQL = "SELECT USER_MAIL_AVAIL_YN FROM TB_USER_INFO WHERE user_id = ?";
+		String SQL = "SELECT USER_MAIL_AVAIL_YN FROM TB_USER_INFO WHERE user_id = ?";
 		
 		//한번 해보는 쿼리문
-		String SQL = "SELECT USER_MAIL_AVAIL_YN FROM TB_USER_INFO WHERE (DELETE_YN IS NOT NULL AND UPDATE_DT >= (SYSDATE-30)) AND user_id = ?";
+		/*String SQL = "SELECT USER_MAIL_AVAIL_YN FROM TB_USER_INFO WHERE (DELETE_YN IS NOT NULL AND UPDATE_DT >= (SYSDATE-30)) AND user_id = ?";*/
+		
 		Connection conn = DBManager.getConnection();
 		try {
 			pstmt = conn.prepareStatement(SQL);
 			pstmt.setString(1, user_id);			
-			rs = pstmt.executeQuery();
+			rs = pstmt.executeQuery();			
+
+			if(rs.next()) {
+			return 1;
+			}else {
+				return 2;
+			}
 			
-			//수정한 if문
-			if(rs.next()) {	
+			
+/*			if(rs.next()) {	
 				if(rs.getString("USER_MAIL_AVAIL_YN").equals("YES")) {
 					return 1;
 				}else if(rs.getString("USER_MAIL_AVAIL_YN").equals("NO")) {
 					return 2;
 				}
-			}
+			}*/
 
 			//이건 이전 if문
 			/*if (rs.next()){				
