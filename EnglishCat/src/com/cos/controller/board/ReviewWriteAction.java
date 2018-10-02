@@ -27,7 +27,7 @@ public class ReviewWriteAction implements Action{
 
 		//세션 연결
 		RegistDAO registDAO = new RegistDAO();
-		
+		//ㅇㅇ
 		String user_pid = null;
 		HttpSession session = request.getSession();
 		
