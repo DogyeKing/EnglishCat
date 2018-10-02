@@ -48,9 +48,9 @@
 			cookieID = c.getValue();
 			System.out.println(c.getName());
 			System.out.println(c.getValue());
-			
+			System.out.println("쿠쿠이쏘");
 		}else{
-		
+			System.out.println("쿠키 없쏘");
 		}
 	}
 %>

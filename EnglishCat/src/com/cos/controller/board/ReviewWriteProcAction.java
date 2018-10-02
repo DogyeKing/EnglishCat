@@ -18,7 +18,7 @@ public class ReviewWriteProcAction implements Action {
 	
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+		//안녕하세요
 		System.out.println(naming);
 		
 		ContReviewVO contReviewVO = new ContReviewVO();
