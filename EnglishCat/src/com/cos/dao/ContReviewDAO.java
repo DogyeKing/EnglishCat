@@ -53,6 +53,7 @@ public class ContReviewDAO {
 					/*contReviewVO.setUpdate_dt(rs.getString("update_pid"));
 					contReviewVO.setUpdate_pid(rs.getString("update_pid"));
 					contReviewVO.setDelete_yn(rs.getString("delete_yn"));*/
+					
 					RegistDAO rdao = new RegistDAO();
 					contReviewVO.setUser_pid(rdao.get_id(contReviewVO.getUser_pid()));
 					

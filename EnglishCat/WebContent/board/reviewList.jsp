@@ -39,7 +39,7 @@
 					<tr>
 						<td>${item.cont_seq}</td>
 						<td><a href="<%=request.getContextPath()%>/board?cmd=review_detail&cont_id=${item.cont_id}">${item.cont_title}</a></td>
-						<td>${item.user_id}</td>
+						<td>${item.user_pid}</td>
 						<td>${item.insert_dt}</td>
 
 					</tr>
