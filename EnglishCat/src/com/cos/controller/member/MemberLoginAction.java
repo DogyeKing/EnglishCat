@@ -37,7 +37,7 @@ public class MemberLoginAction implements Action {
 
 		// 쿠키저장
 		if (request.getParameter("rememberme") != null) {
-			Cookie cookie = new Cookie("cookieID", regist.getUser_id());
+			Cookie cookie = new Cookie("cookieID", regist.getUser_pid());
 			cookie.setMaxAge(6000);
 			response.addCookie(cookie);
 		} else {
