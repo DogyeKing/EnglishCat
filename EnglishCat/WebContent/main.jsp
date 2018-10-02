@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page import="javax.servlet.http.HttpSession"%>
 
- 
+  
 <!DOCTYPE html>
 <html>
 <head>
