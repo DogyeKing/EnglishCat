@@ -203,6 +203,7 @@ public class RegistDAO {
 			if(rs.next()) {
 				RegistVO regist = new RegistVO();
 				regist.setUser_pid(rs.getString("user_pid"));
+				regist.setUser_id(rs.getString("user_id"));
 				regist.setUser_name(rs.getString("user_name"));
 				regist.setUser_phone(rs.getString("user_phone"));
 				regist.setRoadFullAddr(rs.getString("roadFullAddr"));

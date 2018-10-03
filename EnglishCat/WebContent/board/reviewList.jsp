@@ -8,11 +8,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">    
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <meta name="author" content="Bright">
+<%@include file="/include/header.jsp" %>
+	<script>
+		/*var page_list = 
+		$(".pagingContainer").add*/
+	</script>
 
 <title>Home</title>
 </head>
 <body>
-<%@include file="/include/header.jsp" %>
 <br>
 <br>
 <section id="view">
@@ -31,6 +35,7 @@
            		<tr>
 					<td>번호</td>
 					<td>제목</td>
+					<td>조회수</td>
 					<td>아이디</td>
 					<td>작성일자</td>
 				</tr>
@@ -39,15 +44,20 @@
 					<tr>
 						<td>${item.cont_seq}</td>
 						<td><a href="<%=request.getContextPath()%>/board?cmd=review_detail&cont_id=${item.cont_id}">${item.cont_title}</a></td>
+						<td>${item.read_cnt}</td>
 						<td>${item.user_pid}</td>
 						<td>${item.insert_dt}</td>
 
 					</tr>
 				</c:forEach>
                </table>
+                     <div class="pagingContainer">${page_len}</div>
+					
                     <a class="btn btn-primary" href="<%=request.getContextPath()%>/board?cmd=review_write">글쓰기</a>
                      </div>
                      <!-- row(12분할) END -->
+                     
+                     
                   </div>
                   <!-- container END -->
                </div>

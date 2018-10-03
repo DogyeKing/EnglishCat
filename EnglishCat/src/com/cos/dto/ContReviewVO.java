@@ -4,6 +4,7 @@ public class ContReviewVO {
 	private String cont_id;
 	private String cont_seq;
 	private String cont_page_seq;
+	private String read_cnt;
 	private String cont_title;
 	private String cont_content;
 	private String user_pid;
@@ -29,6 +30,12 @@ public class ContReviewVO {
 	}
 	public void setCont_page_seq(String cont_page_seq) {
 		this.cont_page_seq = cont_page_seq;
+	}
+	public String getRead_cnt() {
+		return read_cnt;
+	}
+	public void setRead_cnt(String read_cnt) {
+		this.read_cnt = read_cnt;
 	}
 	public String getCont_title() {
 		return cont_title;

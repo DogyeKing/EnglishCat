@@ -17,21 +17,23 @@ public class ContReviewDAO {
 		
 		
 		//게시판 리스트 뽑기
-		public List<ContReviewVO> contReviewSelectList(){
+		public List<ContReviewVO> contReviewSelectList(int cont_page_seq){
 			String SQL = "WITH TEMP_CONT_CNT AS (SELECT COUNT(1) CONT_CNT\r\n" + 
 					"        FROM TB_CONT_REVIEW\r\n" + 
 					"        WHERE DELETE_YN IS NULL)\r\n" + 
 					"    , TEMP_CONT_REVIEW AS (SELECT CONT_ID\r\n" + 
 					"            , ROW_NUMBER() OVER(ORDER BY CONT_ID DESC) CONT_SEQ_DESC\r\n" + 
-					"            , CONT_TITLE, CONT_CONTENT, USER_PID, INSERT_DT\r\n" + 
-					"    FROM TB_CONT_REVIEW\r\n" + 
+					"            , CONT_TITLE, USER_PID, INSERT_DT\r\n" + 
+					"            , (SELECT COUNT(1) CNT FROM TB_CONT_READ_CNT B WHERE A.CONT_ID = B.CONT_ID)\r\n" + 
+					"             READ_CNT\r\n" + 
+					"    FROM TB_CONT_REVIEW A\r\n" + 
 					"    WHERE DELETE_YN IS NULL\r\n" + 
 					"    )\r\n" + 
 					"SELECT CONT_ID, (CONT_CNT - CONT_SEQ_DESC + 1) CONT_SEQ\r\n" + 
 					"    , TRUNC(CONT_SEQ_DESC/10, 0) CONT_PAGE_SEQ\r\n" + 
-					"    , CONT_TITLE, CONT_CONTENT, USER_PID, INSERT_DT\r\n" + 
+					"    , CONT_TITLE, READ_CNT, USER_PID, INSERT_DT\r\n" + 
 					"FROM TEMP_CONT_REVIEW, TEMP_CONT_CNT\r\n" + 
-					"WHERE TRUNC(CONT_SEQ_DESC/10, 0) = '0'\r\n" + 
+					"WHERE TRUNC(CONT_SEQ_DESC/10, 0)+1 = 1\r\n" + 
 					"ORDER BY CONT_SEQ DESC";
 			Connection conn = DBManager.getConnection();
 			
@@ -47,12 +49,9 @@ public class ContReviewDAO {
 					contReviewVO.setCont_seq(rs.getString("cont_seq"));
 					contReviewVO.setCont_page_seq(rs.getString("cont_page_seq"));
 					contReviewVO.setCont_title(rs.getString("cont_title"));
-					contReviewVO.setCont_content(rs.getString("cont_content"));
+					contReviewVO.setRead_cnt(rs.getString("read_cnt"));
 					contReviewVO.setUser_pid(rs.getString("user_pid"));
 					contReviewVO.setInsert_dt(rs.getString("insert_dt"));
-					/*contReviewVO.setUpdate_dt(rs.getString("update_pid"));
-					contReviewVO.setUpdate_pid(rs.getString("update_pid"));
-					contReviewVO.setDelete_yn(rs.getString("delete_yn"));*/
 					RegistDAO rdao = new RegistDAO();
 					contReviewVO.setUser_pid(rdao.get_id(contReviewVO.getUser_pid()));
 					
@@ -64,6 +63,33 @@ public class ContReviewDAO {
 			}finally{
 				DBManager.close(conn, pstmt, rs);
 			}return null;
+			
+			
+		}
+		
+		//게시판 리스트 페이지 수 가져오기
+		public int contReviewSelectPageLen(){
+			String SQL = "SELECT TRUNC(COUNT(1)/10, 0)+1 CONT_PAGE_CNT FROM TB_CONT_REVIEW";
+			Connection conn = DBManager.getConnection();
+			
+			try {
+				pstmt = conn.prepareStatement(SQL);		
+				rs = pstmt.executeQuery();
+				
+				int page_length = 0;
+				
+				while (rs.next()) {
+					page_length = Integer.parseInt(rs.getString("cont_page_cnt"));
+				}
+				
+				return page_length;
+				
+			}catch (Exception e) {
+				e.printStackTrace();
+			}finally{
+				DBManager.close(conn, pstmt, rs);
+			}
+			return 0;
 			
 			
 		}

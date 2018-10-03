@@ -20,9 +20,11 @@ public class ReviewListAction implements Action {
 		String url = "board/reviewList.jsp";
 		ContReviewDAO contReviewdao = new ContReviewDAO();
 
-		List<ContReviewVO> list = contReviewdao.contReviewSelectList();
+		List<ContReviewVO> list = contReviewdao.contReviewSelectList(1);
+		int page_len = contReviewdao.contReviewSelectPageLen();
 
 		request.setAttribute("list", list);
+		request.setAttribute("page_len", page_len);
 		
 		
 		RequestDispatcher dis = request.getRequestDispatcher(url);
