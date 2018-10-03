@@ -10,7 +10,7 @@ public class PayVO {
 		private int user_postcode;
 		private String pay_id;
 		private String pay_merid;
-		private int carnum;
+		private int cardnum;
 		public int getPay_amount() {
 			return pay_amount;
 		}
@@ -65,11 +65,11 @@ public class PayVO {
 		public void setPay_merid(String pay_merid) {
 			this.pay_merid = pay_merid;
 		}
-		public int getCarnum() {
-			return carnum;
+		public int getCardnum() {
+			return cardnum;
 		}
 		public void setCarnum(int carnum) {
-			this.carnum = carnum;
+			this.cardnum = carnum;
 		}
 		
 		

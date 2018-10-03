@@ -15,10 +15,10 @@
  function goPay(){
 
     var amount = document.querySelector('input[name="article"]:checked').value
-    	
+ 	var name = document.querySelector('input[name="name"]').value
+	
 
-
-	var popPay = window.open("apply/payPage.jsp?amount="+amount,"pop","width=570,height=420, scrollbars=yes, resizable=yes"); 
+	var popPay = window.open("apply/payPage.jsp?amount="+amount+"&name="+name,"pop","width=570,height=420, scrollbars=yes, resizable=yes"); 
 	
 	
      
@@ -70,6 +70,7 @@
               <!-- Post Content -->
               <div class="post-content"><br><br> 
 				<p>안녕하세요, ${member.user_name}님</p>
+				<input type="hidden" name="name" id="name" value="${member.user_name}">
                 <p>당신의 레벨은 [...] 입니다.</p>
                 <p>추천하는 강의는 [...] 입니다.</p>
               </div>
