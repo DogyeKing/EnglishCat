@@ -50,22 +50,16 @@
               
               <div class="quick-contacts pull-right">
               <c:choose>
-          		<c:when test="${empty sessionScope.user_pid && empty sessionScope.naver_id}">
+          		<c:when test="${empty sessionScope.user_pid}">
                   <span><i class="fa fa-phone"></i> +82 051 753 5600</span>
                   <span><i class="fa fa-envelope"></i><a href="#">uhc1224@naver.com</a></span>
                   <span><a href="<%=request.getContextPath()%>/account/login.jsp"><i class="fa fa-user"></i> Login</a> / <a href="<%=request.getContextPath()%>/account/registration.jsp">Register</a></span>
               	 </c:when>
-              	 <c:when test="${!empty sessionScope.naver_id}">
+              	 <c:otherwise>
 	              	 <span><i class="fa fa-phone"></i> +82 051 753 5600</span>
 	              	 <span><i class="fa fa-envelope"></i><a href="#">uhc1224@naver.com</a></span>
 	              	 <span><a href="<%=request.getContextPath()%>/member?cmd=member_logout"><i class="fa fa-user"></i> Logout</a></span>
-              	 </c:when>
-              	 <c:when test="${!empty sessionScope.user_pid}">
-	              	 <span><i class="fa fa-phone"></i> +82 051 753 5600</span>
-	              	 <span><i class="fa fa-envelope"></i><a href="#">uhc1224@naver.com</a></span>
-	             <%--  	 <span><a href="<%=request.getContextPath()%>/member?cmd=member_update"><i class="fa fa-user"></i> Account</a></span> --%>
-	              	 <span><a href="<%=request.getContextPath()%>/member?cmd=member_logout"><i class="fa fa-user"></i> Logout</a></span>
-              	</c:when>
+              	</c:otherwise>
               </c:choose>
               
               </div>
@@ -143,22 +137,31 @@
                   </ul>                        
                 </li> 
                 
-                
-                <li class="dropdown dropdown-toggle">
-                  <a href="#" data-toggle="dropdown">마이페이지 <i class="fa fa-angle-down"></i></a>
-                  <ul class="dropdown-menu">
-                  
+       <c:choose>
+       	 <c:when test="${user_confirm eq 'USER'}">
+                <li class="dropdown dropdown-toggle">    		  
+           		<a href="#" data-toggle="dropdown">마이페이지<i class="fa fa-angle-down"></i></a>
+                  <ul class="dropdown-menu">             	
                     <li><a href="<%=request.getContextPath()%>/member?cmd=member_update">회원정보수정</a></li>
-                    <li><a href="<%=request.getContextPath()%>/member?cmd=member_payment">결제내역</a></li>   
-                  </ul>                        
-                </li>
-                                            
-                <%-- <li><a href="<%=request.getContextPath()%>/member?cmd=member_update">마이페이지</a></li> --%>
-              </ul>
+                    <li><a href="<%=request.getContextPath()%>/member?cmd=member_payment">결제내역</a></li>
+                  </ul>                   
+                </li>                    
+         </c:when>
+      	 <c:when test="${user_confirm eq 'NAVER_USER'}">
+                <li class="dropdown dropdown-toggle">    		  
+           		<a href="#" data-toggle="dropdown">마이페이지<i class="fa fa-angle-down"></i></a>
+                  <ul class="dropdown-menu">             	
+                    <li><a href="<%=request.getContextPath()%>/member?cmd=member_payment">결제내역</a></li>
+                  </ul>                   
+                </li>                    
+         </c:when>
+         <c:otherwise>
+                <li><a href="#" onclick="myPage()" data-toggle="dropdown" >마이페이지</a></li>
+         </c:otherwise>
+	  </c:choose>  
+    	        </ul>
             </div>  
-            
-            
-            
+
              <!-- Form for navbar search area -->
             <form class="full-search">
               <div class="container">
@@ -226,6 +229,13 @@
           </div>
       </nav>
       <!-- Navbar End -->
-
     </header>
     <!-- Header area wrapper End -->
+    
+    <script>
+    	function myPage(){
+    		alert("로그인을 먼저 해주세요.");
+    		
+    		document.location.href="<%=request.getContextPath()%>/account/login.jsp";
+    	}
+    </script>

@@ -22,7 +22,7 @@ public class MemberRegisterAction implements Action{
 		RegistDAO dao = new RegistDAO();	
 		
 		String user_id = null;
-		String user_pid = null;
+/*		String user_pid = null;*/
 		String user_pass = null;
 		String user_name = null;
 		String user_phone = null;
@@ -31,7 +31,7 @@ public class MemberRegisterAction implements Action{
 		String user_zipcode= null;
 		String salt = SHA256.generateSalt();
 		
-		
+
 		if(request.getParameter("user_id") != null) {
 			user_id = request.getParameter("user_id");
 			System.out.println(user_id);

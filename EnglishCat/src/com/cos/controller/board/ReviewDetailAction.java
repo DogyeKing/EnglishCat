@@ -30,9 +30,13 @@ public class ReviewDetailAction implements Action {
 		
 		ContReviewVO contReviewVO = contReviewDAO.select(cont_id);
 		
+		//세션을 가진 사람과 글을 읽는 사람이 같으면 check_pid를 보냄.
 		if(user_pid != null && user_pid.equals(contReviewVO.getUser_pid())) {
-		request.setAttribute("user_pid", "ok");
+		request.setAttribute("check_pid", "ok");
 		}
+		
+		RegistDAO rdao = new RegistDAO();
+		contReviewVO.setUser_pid(rdao.get_id(contReviewVO.getUser_pid()));
 		
 		request.setAttribute("contReviewVO", contReviewVO);
 		

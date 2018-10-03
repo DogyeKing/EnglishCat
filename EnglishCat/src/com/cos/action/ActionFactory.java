@@ -2,6 +2,7 @@ package com.cos.action;
 
 import com.cos.controller.board.AjaxAction;
 import com.cos.controller.board.PayAction;
+import com.cos.controller.board.PayCompleteAction;
 import com.cos.controller.board.ReviewDeleteAction;
 import com.cos.controller.board.ReviewDetailAction;
 import com.cos.controller.board.ReviewListAction;
@@ -11,14 +12,15 @@ import com.cos.controller.board.ReviewWriteAction;
 import com.cos.controller.board.ReviewWriteProcAction;
 import com.cos.controller.member.MemberApplicationAction;
 import com.cos.controller.member.MemberFreeTestAction;
+import com.cos.controller.member.MemberFreeTestMainAction;
 import com.cos.controller.member.MemberIDCheckAction;
 import com.cos.controller.member.MemberLoginAction;
 import com.cos.controller.member.MemberLogoutAction;
+import com.cos.controller.member.MemberPayAction;
 import com.cos.controller.member.MemberRegisterAction;
 import com.cos.controller.member.MemberScoreAction;
 import com.cos.controller.member.MemberUpdateAction;
 import com.cos.controller.member.MemberUpdateProcAction;
-import com.cos.controller.member.MemberPayAction;
 
 public class ActionFactory {
 	private static String naming = "ActionFactory : ";
@@ -73,6 +75,10 @@ public class ActionFactory {
 			return new MemberApplicationAction();
 		} else if (cmd.equals("member_levelTest")) {
 			return new MemberScoreAction();
+		} else if (cmd.equals("member_freeTestMain")){
+			return new MemberFreeTestMainAction();
+		} else if (cmd.equals("pay_complete")) {
+			return new PayCompleteAction();
 		}
 		return null;
 	}

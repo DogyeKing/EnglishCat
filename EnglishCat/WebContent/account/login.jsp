@@ -22,10 +22,17 @@
 
   </head>
 
+<c:if test="${sessionScope.user_pid != null}">
+	<script>
+		alert('이미 로그인 되어있습니다.');
+		location.href='<%=request.getContextPath()%>/index.jsp';
+	</script>
+</c:if>
+
   <body>
   
   
-  <%  //1. 로그인을 한 상태(session), 2. 로그인을 안한 상태(x)
+  <%  //1. 로그인을 한 상태(session), 2. 로그인을 안한 상태(x) 3
 	String user_pid= null;
 	if(session.getAttribute("user_pid") != null){
 		user_pid = (String) session.getAttribute("user_pid");
@@ -43,7 +50,6 @@
 			System.out.println(c.getValue());
 			System.out.println("쿠쿠이쏘");
 		}else{
-			System.out.println("쿠키 없쏘");
 		}
 	}
 %>

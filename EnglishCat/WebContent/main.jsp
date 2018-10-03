@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@page import="javax.servlet.http.HttpSession"%>
+
+  
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,10 +13,14 @@
 <meta name="author" content="Bright">
 
 <title>EnglishCat</title>
-
+  
 </head>
 <body>
-
+<%-- <%
+	HttpSession session1 = request.getSession();
+	session1.setAttribute("user_pid","ID0027");
+%>
+ --%>
 
 	<!-- navigation -->
 	<%@include file="include/header.jsp"%>
@@ -36,7 +43,7 @@
 					<p></p>
 						<p>영어회화 도대체 어떻게 해야하나요?</p>
 						<h1>
-							영어 회화 해답은?<br> 1:1 온라인 화상 영어!
+							영어 회화 해답은?<br> 1:1 온라인 화상 영어!<%--  ${sessionScope.user_pid} --%>
 						</h1> 
 						<a class="btn btn-lg btn-common" href="apply/freeLevelTest.jsp"> <i
 							class="fa fa-arrow-circle-right"> </i> 무료체험신청
@@ -561,23 +568,23 @@ Counter Section Start
                             <h2 class="heading-title">무료체험 신청</h2>
                             <p class="desc">잉글리쉬캣을 먼저 체험해보세요</p>
                         </div>
-                        <form role="form" class="login-form" action="<%=request.getContextPath()%>/sendMail.jsp" method="post">
+                        <form role="form" class="login-form" action="member?cmd=member_freeTestMain" method="post">
                             <div class="form-group">
-                                <input type="text" id="name" class="form-control" name="name" placeholder="이름">
+                                <input type="text" id="name" class="form-control" name="name" placeholder="이름" required data-error="이름을 입력하세요.">
                             </div>
                             <div class="form-group">
-                                <input type="text" id="age" class="form-control" name="age" placeholder="나이">
+                                <input type="text" id="age" class="form-control" name="age" placeholder="나이" required data-error="나이를 입력하세요">
                             </div>  
                             <div class="form-group">
-                                <input type="text" id="phone" class="form-control" name="phone" placeholder="전화번호">
+                                <input type="text" id="phone" class="form-control" name="phone" placeholder="전화번호" required data-error="전화번호를 입력하세요">
                             </div> 
                             <div class="form-group">
-                                <input type="text" id="email" class="form-control" name="email" placeholder="이메일">
+                                <input type="email" id="email" class="form-control" name="email" placeholder="이메일" required data-error="이메일을 입력하세요">
                             </div> 
                             <div class="form-group">
-                                <input type="text" id="content" class="form-control" name="content" placeholder="원하시는 날짜,시간 입력 ex(2018-09-18, 18:00)">
+                                <input type="text" id="content" class="form-control" name="content" placeholder="원하시는 날짜,시간 입력 ex(2018-09-18, 18:00)"  required data-error="원하시는 날짜, 시간을 반드시 입력하세요">
                             </div>   
-                            <button class="btn btn-common" onclick="check()" value="transmission">신청하기</button>
+                            <button class="btn btn-common">신청하기</button>
                           </form>
                     </div>
                 </div>

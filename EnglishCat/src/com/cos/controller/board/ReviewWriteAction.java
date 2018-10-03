@@ -27,26 +27,25 @@ public class ReviewWriteAction implements Action{
 
 		//세션 연결
 		RegistDAO registDAO = new RegistDAO();
-		
+		//ㅇㅇ
 		String user_pid = null;
 		HttpSession session = request.getSession();
 		
-		if(session.getAttribute("user_pid") != null || session.getAttribute("naver_id") != null) {
+		if(session.getAttribute("user_pid") != null) {
 			
 			if(session.getAttribute("user_pid") != null) {
 				user_pid = (String)session.getAttribute("user_pid");
-			} else if(session.getAttribute("naver_id") != null) {
-				user_pid = (String)session.getAttribute("naver_id");
+				System.out.println(user_pid);
 			}
 			
-			int result = registDAO.check_id(user_pid);
-			
+			int result = registDAO.select_user_mail_avail_yn(user_pid);
+				System.out.println(result);
 				if(result != 1) {
-					Script.moving(response, "먼저 인증을 해주세요", "member?cmd=member_update");
+					Script.moving(response, "먼저 인증을 해주세요");
 				}else{
 					//session과 user_pid와 연동하기 
 					/*contReviewVO.setUser_pid(request.getParameter("user_pid"));*/
-					session.setAttribute("user_pid", user_pid);
+					// session.setAttribute("user_pid", user_pid); 안씁니다.
 					request.setAttribute("contReviewVO", contReviewVO);
 					RequestDispatcher dis = request.getRequestDispatcher(url);
 					dis.forward(request, response);
@@ -55,13 +54,5 @@ public class ReviewWriteAction implements Action{
 		}else {
 			Script.moving(response, "먼저 로그인을 진행해주세요.", "account/login.jsp");
 		}
-		
-	
-
-	
-
-
-	
-		
 	}
 }

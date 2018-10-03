@@ -95,7 +95,7 @@ public class ContReviewDAO {
 		}
 
 	//게시판 글쓰기
-		public int write(ContReviewVO contReview) {
+		public int insert(ContReviewVO contReview) {
 			String SQL = "INSERT INTO TB_CONT_REVIEW (CONT_ID, CONT_TITLE, CONT_CONTENT, USER_PID, INSERT_DT, UPDATE_DT, UPDATE_PID, DELETE_YN) VALUES (FN_NEXT_PID('MAIN001'), ?, ?, ?, SYSDATE, NULL, NULL, NULL)";
 
 			Connection conn = DBManager.getConnection();
@@ -132,8 +132,7 @@ public class ContReviewDAO {
 								contReviewVO.setCont_title(rs.getString("cont_title"));
 								contReviewVO.setCont_content(rs.getString("cont_content"));
 								contReviewVO.setUser_pid(rs.getString("user_pid"));
-								RegistDAO rdao = new RegistDAO();
-								contReviewVO.setUser_pid(rdao.get_id(contReviewVO.getUser_pid()));
+								
 								return contReviewVO;
 							}
 					} catch (Exception e) {
@@ -147,6 +146,8 @@ public class ContReviewDAO {
 				
 				//게시판 수정
 				public int update(ContReviewVO contReviewVO) {
+					//UPDATE_DT 뽑기용 SQL문
+					/*String SQL = "UPDATE TB_CONT_REVIEW SET CONT_TITLE = ?, CONT_CONTENT = ?, UPDATE_DT = SYSDATE WHERE CONT_ID = ?";*/
 					String SQL = "UPDATE TB_CONT_REVIEW SET CONT_TITLE = ?, CONT_CONTENT = ? WHERE CONT_ID = ?";
 					Connection conn = DBManager.getConnection();
 					try {
@@ -182,7 +183,7 @@ public class ContReviewDAO {
 		
 
 		public ContReviewVO select_ajax() {
-			String SQL = "SELECT * FROM TB_CONT_REVIEW ORDER BY CONT_ID DESC";
+			String SQL = "SELECT * FROM TB_CONT_REVIEW WHERE DELETE_YN IS NULL ORDER BY CONT_ID DESC";
 			Connection conn = DBManager.getConnection();
 			try {
 				pstmt = conn.prepareStatement(SQL);				
