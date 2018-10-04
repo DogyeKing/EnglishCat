@@ -127,18 +127,9 @@
      					<input class="form-control form-control-lg" type="text" name="roadFullAddr" id="roadFullAddr" maxlength="20" readonly value="${member.roadFullAddr}">
      			</div>
      			</div>                 
-                
-                <!-- <button class="btn btn-common" type="submit" id="submit">Modified</button> -->
-                
-                <c:choose>      
-                	<c:when test="${mail_avail_check eq 'YES'}">        
+                <small><a href="<%=request.getContextPath()%>/gmail/emailSendAction.jsp">인증메일이 필요하시면 눌러주세요</a></small><br>
                 <button class="btn btn-common" type="submit" id="submit">Modified</button>
-                	</c:when>
-                	<c:when test="${mail_avail_check eq 'NO'}">
-                <button class="btn btn-common" type="submit" id="submit">Modified</button>
-                <button class="btn btn-common" type="submit" id="submit">Modified123</button>	
-                	</c:when>
-                </c:choose>
+
             </form>
      		</div>
      		

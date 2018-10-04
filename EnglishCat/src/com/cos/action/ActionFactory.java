@@ -14,6 +14,7 @@ import com.cos.controller.member.MemberApplicationAction;
 import com.cos.controller.member.MemberFreeTestAction;
 import com.cos.controller.member.MemberFreeTestMainAction;
 import com.cos.controller.member.MemberIDCheckAction;
+import com.cos.controller.member.MemberLevelTestAction;
 import com.cos.controller.member.MemberLoginAction;
 import com.cos.controller.member.MemberLogoutAction;
 import com.cos.controller.member.MemberPayAction;
@@ -79,7 +80,9 @@ public class ActionFactory {
 			return new MemberFreeTestMainAction();
 		} else if (cmd.equals("pay_complete")) {
 			return new PayCompleteAction();
-		}
+		} else if (cmd.equals("member_levelTestProc")) {
+	        return new MemberLevelTestAction();
+	    }
 		return null;
 	}
 

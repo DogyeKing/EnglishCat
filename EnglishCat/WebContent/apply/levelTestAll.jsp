@@ -31,7 +31,7 @@
 <body>
 	<!-- navigation -->
 <%-- 	<%@include file="/include/header.jsp"%> --%>
-    <form name="aspnetForm" method="post" action="levelTest2.jsp" id="aspnetForm" class="container">
+    <form name="aspnetForm" method="post" action="<%=request.getContextPath()%>/member?cmd=member_levelTestProc&user_pid=${sessionScope.user_pid}" id="aspnetForm" class="container">
     
 <div id="wrapper">
     <div id="pagebody">
@@ -79,15 +79,15 @@
     <div class="choices">
         <span id="ctl00_MainContent_QuizHostInstance_6_QuestionsRadioButtonList"><span class="blueBG">
         <input id="ctl00_MainContent_QuizHostInstance_6_QuestionsRadioButtonList_0" type="radio" name="question2" 
-        value="6" /><label for="ctl00_MainContent_QuizHostInstance_6_QuestionsRadioButtonList_0">doing</label></span><br /><span class="greyBG">
+        value="1" /><label for="ctl00_MainContent_QuizHostInstance_6_QuestionsRadioButtonList_0">doing</label></span><br /><span class="greyBG">
         <input id="ctl00_MainContent_QuizHostInstance_6_QuestionsRadioButtonList_1" type="radio" name="question2" 
-        value="7" /><label for="ctl00_MainContent_QuizHostInstance_6_QuestionsRadioButtonList_1">are</label></span><br /><span class="blueBG">
+        value="2" /><label for="ctl00_MainContent_QuizHostInstance_6_QuestionsRadioButtonList_1">are</label></span><br /><span class="blueBG">
         <input id="ctl00_MainContent_QuizHostInstance_6_QuestionsRadioButtonList_2" type="radio" name="question2" 
-        value="8" /><label for="ctl00_MainContent_QuizHostInstance_6_QuestionsRadioButtonList_2">does</label></span><br /><span class="greyBG">
+        value="3" /><label for="ctl00_MainContent_QuizHostInstance_6_QuestionsRadioButtonList_2">does</label></span><br /><span class="greyBG">
         <input id="ctl00_MainContent_QuizHostInstance_6_QuestionsRadioButtonList_3" type="radio" name="question2" 
-        value="9" /><label for="ctl00_MainContent_QuizHostInstance_6_QuestionsRadioButtonList_3">do</label></span><br /><span class="blueBG">
+        value="4" /><label for="ctl00_MainContent_QuizHostInstance_6_QuestionsRadioButtonList_3">do</label></span><br /><span class="blueBG">
         <input id="ctl00_MainContent_QuizHostInstance_6_QuestionsRadioButtonList_4" type="radio" name="question2" 
-        value="10" /><label for="ctl00_MainContent_QuizHostInstance_6_QuestionsRadioButtonList_4">is</label></span></span>
+        value="5" /><label for="ctl00_MainContent_QuizHostInstance_6_QuestionsRadioButtonList_4">is</label></span></span>
     </div>
 </div>
 
@@ -104,15 +104,15 @@
     <div class="choices">
         <span id="ctl00_MainContent_QuizHostInstance_7_QuestionsRadioButtonList"><span class="blueBG">
         <input id="ctl00_MainContent_QuizHostInstance_7_QuestionsRadioButtonList_0" type="radio" name="question3" 
-        value="11" /><label for="ctl00_MainContent_QuizHostInstance_7_QuestionsRadioButtonList_0">highest</label></span><br /><span class="greyBG">
+        value="1" /><label for="ctl00_MainContent_QuizHostInstance_7_QuestionsRadioButtonList_0">highest</label></span><br /><span class="greyBG">
         <input id="ctl00_MainContent_QuizHostInstance_7_QuestionsRadioButtonList_1" type="radio" name="question3" 
-        value="12" /><label for="ctl00_MainContent_QuizHostInstance_7_QuestionsRadioButtonList_1">high</label></span><br /><span class="blueBG">
+        value="2" /><label for="ctl00_MainContent_QuizHostInstance_7_QuestionsRadioButtonList_1">high</label></span><br /><span class="blueBG">
         <input id="ctl00_MainContent_QuizHostInstance_7_QuestionsRadioButtonList_2" type="radio" name="question3" 
-        value="13" /><label for="ctl00_MainContent_QuizHostInstance_7_QuestionsRadioButtonList_2">the higher</label></span><br /><span class="greyBG">
+        value="3" /><label for="ctl00_MainContent_QuizHostInstance_7_QuestionsRadioButtonList_2">the higher</label></span><br /><span class="greyBG">
         <input id="ctl00_MainContent_QuizHostInstance_7_QuestionsRadioButtonList_3" type="radio" name="question3" 
-        value="14" /><label for="ctl00_MainContent_QuizHostInstance_7_QuestionsRadioButtonList_3">more high</label></span><br /><span class="blueBG">
+        value="4" /><label for="ctl00_MainContent_QuizHostInstance_7_QuestionsRadioButtonList_3">more high</label></span><br /><span class="blueBG">
         <input id="ctl00_MainContent_QuizHostInstance_7_QuestionsRadioButtonList_4" type="radio" name="question3" 
-        value="15" /><label for="ctl00_MainContent_QuizHostInstance_7_QuestionsRadioButtonList_4">higher</label></span></span>
+        value="5" /><label for="ctl00_MainContent_QuizHostInstance_7_QuestionsRadioButtonList_4">higher</label></span></span>
     </div>
 </div>
 
@@ -129,15 +129,15 @@
     <div class="choices">
         <span id="ctl00_MainContent_QuizHostInstance_8_QuestionsRadioButtonList"><span class="blueBG">
         <input id="ctl00_MainContent_QuizHostInstance_8_QuestionsRadioButtonList_0" type="radio" name="question4" 
-        value="16" /><label for="ctl00_MainContent_QuizHostInstance_8_QuestionsRadioButtonList_0">choice </label></span><br /><span class="greyBG">
+        value="1" /><label for="ctl00_MainContent_QuizHostInstance_8_QuestionsRadioButtonList_0">choice </label></span><br /><span class="greyBG">
         <input id="ctl00_MainContent_QuizHostInstance_8_QuestionsRadioButtonList_1" type="radio" name="question4" 
-        value="17" /><label for="ctl00_MainContent_QuizHostInstance_8_QuestionsRadioButtonList_1">option</label></span><br /><span class="blueBG">
+        value="2" /><label for="ctl00_MainContent_QuizHostInstance_8_QuestionsRadioButtonList_1">option</label></span><br /><span class="blueBG">
         <input id="ctl00_MainContent_QuizHostInstance_8_QuestionsRadioButtonList_2" type="radio" name="question4" 
-        value="18" /><label for="ctl00_MainContent_QuizHostInstance_8_QuestionsRadioButtonList_2">idea</label></span><br /><span class="greyBG">
+        value="3" /><label for="ctl00_MainContent_QuizHostInstance_8_QuestionsRadioButtonList_2">idea</label></span><br /><span class="greyBG">
         <input id="ctl00_MainContent_QuizHostInstance_8_QuestionsRadioButtonList_3" type="radio" name="question4" 
-        value="19" /><label for="ctl00_MainContent_QuizHostInstance_8_QuestionsRadioButtonList_3">decide</label></span><br /><span class="blueBG">
+        value="4" /><label for="ctl00_MainContent_QuizHostInstance_8_QuestionsRadioButtonList_3">decide</label></span><br /><span class="blueBG">
         <input id="ctl00_MainContent_QuizHostInstance_8_QuestionsRadioButtonList_4" type="radio" name="question4" 
-        value="20" /><label for="ctl00_MainContent_QuizHostInstance_8_QuestionsRadioButtonList_4">way</label></span></span>
+        value="5" /><label for="ctl00_MainContent_QuizHostInstance_8_QuestionsRadioButtonList_4">way</label></span></span>
     </div>
 </div>
 
@@ -154,15 +154,15 @@
     <div class="choices">
         <span id="ctl00_MainContent_QuizHostInstance_9_QuestionsRadioButtonList"><span class="blueBG">
         <input id="ctl00_MainContent_QuizHostInstance_9_QuestionsRadioButtonList_0" type="radio" name="question5" 
-        value="21" /><label for="ctl00_MainContent_QuizHostInstance_9_QuestionsRadioButtonList_0">explain</label></span><br /><span class="greyBG">
+        value="1" /><label for="ctl00_MainContent_QuizHostInstance_9_QuestionsRadioButtonList_0">explain</label></span><br /><span class="greyBG">
         <input id="ctl00_MainContent_QuizHostInstance_9_QuestionsRadioButtonList_1" type="radio" name="question5" 
-        value="22" /><label for="ctl00_MainContent_QuizHostInstance_9_QuestionsRadioButtonList_1">speak</label></span><br /><span class="blueBG">
+        value="2" /><label for="ctl00_MainContent_QuizHostInstance_9_QuestionsRadioButtonList_1">speak</label></span><br /><span class="blueBG">
         <input id="ctl00_MainContent_QuizHostInstance_9_QuestionsRadioButtonList_2" type="radio" name="question5" 
-        value="23" /><label for="ctl00_MainContent_QuizHostInstance_9_QuestionsRadioButtonList_2">help</label></span><br /><span class="greyBG">
+        value="3" /><label for="ctl00_MainContent_QuizHostInstance_9_QuestionsRadioButtonList_2">help</label></span><br /><span class="greyBG">
         <input id="ctl00_MainContent_QuizHostInstance_9_QuestionsRadioButtonList_3" type="radio" name="question5"
-         value="24" /><label for="ctl00_MainContent_QuizHostInstance_9_QuestionsRadioButtonList_3">say</label></span><br /><span class="blueBG">
+         value="4" /><label for="ctl00_MainContent_QuizHostInstance_9_QuestionsRadioButtonList_3">say</label></span><br /><span class="blueBG">
          <input id="ctl00_MainContent_QuizHostInstance_9_QuestionsRadioButtonList_4" type="radio" name="question5" 
-         value="25" /><label for="ctl00_MainContent_QuizHostInstance_9_QuestionsRadioButtonList_4">know</label></span></span>
+         value="5" /><label for="ctl00_MainContent_QuizHostInstance_9_QuestionsRadioButtonList_4">know</label></span></span>
     </div>
     
     <div class="questionBlock">
@@ -176,7 +176,17 @@
         </div>
     </div>
     <div class="choices">
-        <span id="ctl00_MainContent_QuizHostInstance_16_QuestionsRadioButtonList"><span class="blueBG"><input id="ctl00_MainContent_QuizHostInstance_16_QuestionsRadioButtonList_0" type="radio" name="ctl00$MainContent$QuizHostInstance$16$QuestionsRadioButtonList" value="26" /><label for="ctl00_MainContent_QuizHostInstance_16_QuestionsRadioButtonList_0">was he</label></span><br /><span class="greyBG"><input id="ctl00_MainContent_QuizHostInstance_16_QuestionsRadioButtonList_1" type="radio" name="ctl00$MainContent$QuizHostInstance$16$QuestionsRadioButtonList" value="27" /><label for="ctl00_MainContent_QuizHostInstance_16_QuestionsRadioButtonList_1">is</label></span><br /><span class="blueBG"><input id="ctl00_MainContent_QuizHostInstance_16_QuestionsRadioButtonList_2" type="radio" name="ctl00$MainContent$QuizHostInstance$16$QuestionsRadioButtonList" value="28" /><label for="ctl00_MainContent_QuizHostInstance_16_QuestionsRadioButtonList_2">did he go</label></span><br /><span class="greyBG"><input id="ctl00_MainContent_QuizHostInstance_16_QuestionsRadioButtonList_3" type="radio" name="ctl00$MainContent$QuizHostInstance$16$QuestionsRadioButtonList" value="29" /><label for="ctl00_MainContent_QuizHostInstance_16_QuestionsRadioButtonList_3">he goes</label></span><br /><span class="blueBG"><input id="ctl00_MainContent_QuizHostInstance_16_QuestionsRadioButtonList_4" type="radio" name="ctl00$MainContent$QuizHostInstance$16$QuestionsRadioButtonList" value="30" /><label for="ctl00_MainContent_QuizHostInstance_16_QuestionsRadioButtonList_4">he went</label></span></span>
+        <span id="ctl00_MainContent_QuizHostInstance_16_QuestionsRadioButtonList"><span class="blueBG">
+        <input id="ctl00_MainContent_QuizHostInstance_16_QuestionsRadioButtonList_0" type="radio" name="question6" 
+        value="1" /><label for="ctl00_MainContent_QuizHostInstance_16_QuestionsRadioButtonList_0">was he</label></span><br /><span class="greyBG">
+        <input id="ctl00_MainContent_QuizHostInstance_16_QuestionsRadioButtonList_1" type="radio" name="question6" 
+        value="2" /><label for="ctl00_MainContent_QuizHostInstance_16_QuestionsRadioButtonList_1">is</label></span><br /><span class="blueBG">
+        <input id="ctl00_MainContent_QuizHostInstance_16_QuestionsRadioButtonList_2" type="radio" name="question6" 
+        value="3" /><label for="ctl00_MainContent_QuizHostInstance_16_QuestionsRadioButtonList_2">did he go</label></span><br /><span class="greyBG">
+        <input id="ctl00_MainContent_QuizHostInstance_16_QuestionsRadioButtonList_3" type="radio" name="question6" 
+        value="4" /><label for="ctl00_MainContent_QuizHostInstance_16_QuestionsRadioButtonList_3">he goes</label></span><br /><span class="blueBG">
+        <input id="ctl00_MainContent_QuizHostInstance_16_QuestionsRadioButtonList_4" type="radio" name="question6" 
+        value="5" /><label for="ctl00_MainContent_QuizHostInstance_16_QuestionsRadioButtonList_4">he went</label></span></span>
     </div>
 </div>
 
@@ -191,7 +201,17 @@
         </div>
     </div>
     <div class="choices">
-        <span id="ctl00_MainContent_QuizHostInstance_17_QuestionsRadioButtonList"><span class="blueBG"><input id="ctl00_MainContent_QuizHostInstance_17_QuestionsRadioButtonList_0" type="radio" name="ctl00$MainContent$QuizHostInstance$17$QuestionsRadioButtonList" value="31" /><label for="ctl00_MainContent_QuizHostInstance_17_QuestionsRadioButtonList_0">am making</label></span><br /><span class="greyBG"><input id="ctl00_MainContent_QuizHostInstance_17_QuestionsRadioButtonList_1" type="radio" name="ctl00$MainContent$QuizHostInstance$17$QuestionsRadioButtonList" value="32" /><label for="ctl00_MainContent_QuizHostInstance_17_QuestionsRadioButtonList_1">did</label></span><br /><span class="blueBG"><input id="ctl00_MainContent_QuizHostInstance_17_QuestionsRadioButtonList_2" type="radio" name="ctl00$MainContent$QuizHostInstance$17$QuestionsRadioButtonList" value="33" /><label for="ctl00_MainContent_QuizHostInstance_17_QuestionsRadioButtonList_2">was making</label></span><br /><span class="greyBG"><input id="ctl00_MainContent_QuizHostInstance_17_QuestionsRadioButtonList_3" type="radio" name="ctl00$MainContent$QuizHostInstance$17$QuestionsRadioButtonList" value="34" /><label for="ctl00_MainContent_QuizHostInstance_17_QuestionsRadioButtonList_3">made</label></span><br /><span class="blueBG"><input id="ctl00_MainContent_QuizHostInstance_17_QuestionsRadioButtonList_4" type="radio" name="ctl00$MainContent$QuizHostInstance$17$QuestionsRadioButtonList" value="35" /><label for="ctl00_MainContent_QuizHostInstance_17_QuestionsRadioButtonList_4">was doing</label></span></span>
+        <span id="ctl00_MainContent_QuizHostInstance_17_QuestionsRadioButtonList"><span class="blueBG">
+        <input id="ctl00_MainContent_QuizHostInstance_17_QuestionsRadioButtonList_0" type="radio" name="question7" 
+        value="1" /><label for="ctl00_MainContent_QuizHostInstance_17_QuestionsRadioButtonList_0">am making</label></span><br /><span class="greyBG">
+        <input id="ctl00_MainContent_QuizHostInstance_17_QuestionsRadioButtonList_1" type="radio" name="question7" 
+        value="2" /><label for="ctl00_MainContent_QuizHostInstance_17_QuestionsRadioButtonList_1">did</label></span><br /><span class="blueBG">
+        <input id="ctl00_MainContent_QuizHostInstance_17_QuestionsRadioButtonList_2" type="radio" name="question7" 
+        value="3" /><label for="ctl00_MainContent_QuizHostInstance_17_QuestionsRadioButtonList_2">was making</label></span><br /><span class="greyBG">
+        <input id="ctl00_MainContent_QuizHostInstance_17_QuestionsRadioButtonList_3" type="radio" name="question7" 
+        value="4" /><label for="ctl00_MainContent_QuizHostInstance_17_QuestionsRadioButtonList_3">made</label></span><br /><span class="blueBG">
+        <input id="ctl00_MainContent_QuizHostInstance_17_QuestionsRadioButtonList_4" type="radio" name="question7" 
+        value="5" /><label for="ctl00_MainContent_QuizHostInstance_17_QuestionsRadioButtonList_4">was doing</label></span></span>
     </div>
 </div>
 
@@ -206,7 +226,17 @@
         </div>
     </div>
     <div class="choices">
-        <span id="ctl00_MainContent_QuizHostInstance_18_QuestionsRadioButtonList"><span class="blueBG"><input id="ctl00_MainContent_QuizHostInstance_18_QuestionsRadioButtonList_0" type="radio" name="ctl00$MainContent$QuizHostInstance$18$QuestionsRadioButtonList" value="36" /><label for="ctl00_MainContent_QuizHostInstance_18_QuestionsRadioButtonList_0">have received</label></span><br /><span class="greyBG"><input id="ctl00_MainContent_QuizHostInstance_18_QuestionsRadioButtonList_1" type="radio" name="ctl00$MainContent$QuizHostInstance$18$QuestionsRadioButtonList" value="37" /><label for="ctl00_MainContent_QuizHostInstance_18_QuestionsRadioButtonList_1">get</label></span><br /><span class="blueBG"><input id="ctl00_MainContent_QuizHostInstance_18_QuestionsRadioButtonList_2" type="radio" name="ctl00$MainContent$QuizHostInstance$18$QuestionsRadioButtonList" value="38" /><label for="ctl00_MainContent_QuizHostInstance_18_QuestionsRadioButtonList_2">received</label></span><br /><span class="greyBG"><input id="ctl00_MainContent_QuizHostInstance_18_QuestionsRadioButtonList_3" type="radio" name="ctl00$MainContent$QuizHostInstance$18$QuestionsRadioButtonList" value="39" /><label for="ctl00_MainContent_QuizHostInstance_18_QuestionsRadioButtonList_3">was written</label></span><br /><span class="blueBG"><input id="ctl00_MainContent_QuizHostInstance_18_QuestionsRadioButtonList_4" type="radio" name="ctl00$MainContent$QuizHostInstance$18$QuestionsRadioButtonList" value="40" /><label for="ctl00_MainContent_QuizHostInstance_18_QuestionsRadioButtonList_4">have got</label></span></span>
+        <span id="ctl00_MainContent_QuizHostInstance_18_QuestionsRadioButtonList"><span class="blueBG">
+        <input id="ctl00_MainContent_QuizHostInstance_18_QuestionsRadioButtonList_0" type="radio" name="question8" 
+        value="1" /><label for="ctl00_MainContent_QuizHostInstance_18_QuestionsRadioButtonList_0">have received</label></span><br /><span class="greyBG">
+        <input id="ctl00_MainContent_QuizHostInstance_18_QuestionsRadioButtonList_1" type="radio" name="question8" 
+        value="2" /><label for="ctl00_MainContent_QuizHostInstance_18_QuestionsRadioButtonList_1">get</label></span><br /><span class="blueBG">
+        <input id="ctl00_MainContent_QuizHostInstance_18_QuestionsRadioButtonList_2" type="radio" name="question8" 
+        value="3" /><label for="ctl00_MainContent_QuizHostInstance_18_QuestionsRadioButtonList_2">received</label></span><br /><span class="greyBG">
+        <input id="ctl00_MainContent_QuizHostInstance_18_QuestionsRadioButtonList_3" type="radio" name="question8"
+		value="4" /><label for="ctl00_MainContent_QuizHostInstance_18_QuestionsRadioButtonList_3">was written</label></span><br /><span class="blueBG">
+		<input id="ctl00_MainContent_QuizHostInstance_18_QuestionsRadioButtonList_4" type="radio" name="question8" 
+		value="5" /><label for="ctl00_MainContent_QuizHostInstance_18_QuestionsRadioButtonList_4">have got</label></span></span>
     </div>
 </div>
 
@@ -221,7 +251,17 @@
         </div>
     </div>
     <div class="choices">
-        <span id="ctl00_MainContent_QuizHostInstance_19_QuestionsRadioButtonList"><span class="blueBG"><input id="ctl00_MainContent_QuizHostInstance_19_QuestionsRadioButtonList_0" type="radio" name="ctl00$MainContent$QuizHostInstance$19$QuestionsRadioButtonList" value="41" /><label for="ctl00_MainContent_QuizHostInstance_19_QuestionsRadioButtonList_0">playing</label></span><br /><span class="greyBG"><input id="ctl00_MainContent_QuizHostInstance_19_QuestionsRadioButtonList_1" type="radio" name="ctl00$MainContent$QuizHostInstance$19$QuestionsRadioButtonList" value="42" /><label for="ctl00_MainContent_QuizHostInstance_19_QuestionsRadioButtonList_1">doing</label></span><br /><span class="blueBG"><input id="ctl00_MainContent_QuizHostInstance_19_QuestionsRadioButtonList_2" type="radio" name="ctl00$MainContent$QuizHostInstance$19$QuestionsRadioButtonList" value="43" /><label for="ctl00_MainContent_QuizHostInstance_19_QuestionsRadioButtonList_2">making</label></span><br /><span class="greyBG"><input id="ctl00_MainContent_QuizHostInstance_19_QuestionsRadioButtonList_3" type="radio" name="ctl00$MainContent$QuizHostInstance$19$QuestionsRadioButtonList" value="44" /><label for="ctl00_MainContent_QuizHostInstance_19_QuestionsRadioButtonList_3">having</label></span><br /><span class="blueBG"><input id="ctl00_MainContent_QuizHostInstance_19_QuestionsRadioButtonList_4" type="radio" name="ctl00$MainContent$QuizHostInstance$19$QuestionsRadioButtonList" value="45" /><label for="ctl00_MainContent_QuizHostInstance_19_QuestionsRadioButtonList_4">seeing</label></span></span>
+        <span id="ctl00_MainContent_QuizHostInstance_19_QuestionsRadioButtonList"><span class="blueBG">
+        <input id="ctl00_MainContent_QuizHostInstance_19_QuestionsRadioButtonList_0" type="radio" name="question9" 
+        value="1" /><label for="ctl00_MainContent_QuizHostInstance_19_QuestionsRadioButtonList_0">playing</label></span><br /><span class="greyBG">
+        <input id="ctl00_MainContent_QuizHostInstance_19_QuestionsRadioButtonList_1" type="radio" name="question9" 
+        value="2" /><label for="ctl00_MainContent_QuizHostInstance_19_QuestionsRadioButtonList_1">doing</label></span><br /><span class="blueBG">
+        <input id="ctl00_MainContent_QuizHostInstance_19_QuestionsRadioButtonList_2" type="radio" name="question9" 
+        value="3" /><label for="ctl00_MainContent_QuizHostInstance_19_QuestionsRadioButtonList_2">making</label></span><br /><span class="greyBG">
+        <input id="ctl00_MainContent_QuizHostInstance_19_QuestionsRadioButtonList_3" type="radio" name="question9" 
+        value="4" /><label for="ctl00_MainContent_QuizHostInstance_19_QuestionsRadioButtonList_3">having</label></span><br /><span class="blueBG">
+        <input id="ctl00_MainContent_QuizHostInstance_19_QuestionsRadioButtonList_4" type="radio" name="question9" 
+        value="5" /><label for="ctl00_MainContent_QuizHostInstance_19_QuestionsRadioButtonList_4">seeing</label></span></span>
     </div>
 </div>
 
@@ -236,7 +276,17 @@
         </div>
     </div>
     <div class="choices">
-        <span id="ctl00_MainContent_QuizHostInstance_20_QuestionsRadioButtonList"><span class="blueBG"><input id="ctl00_MainContent_QuizHostInstance_20_QuestionsRadioButtonList_0" type="radio" name="ctl00$MainContent$QuizHostInstance$20$QuestionsRadioButtonList" value="46" /><label for="ctl00_MainContent_QuizHostInstance_20_QuestionsRadioButtonList_0">is spoken</label></span><br /><span class="greyBG"><input id="ctl00_MainContent_QuizHostInstance_20_QuestionsRadioButtonList_1" type="radio" name="ctl00$MainContent$QuizHostInstance$20$QuestionsRadioButtonList" value="47" /><label for="ctl00_MainContent_QuizHostInstance_20_QuestionsRadioButtonList_1">is speaking</label></span><br /><span class="blueBG"><input id="ctl00_MainContent_QuizHostInstance_20_QuestionsRadioButtonList_2" type="radio" name="ctl00$MainContent$QuizHostInstance$20$QuestionsRadioButtonList" value="48" /><label for="ctl00_MainContent_QuizHostInstance_20_QuestionsRadioButtonList_2">speaking</label></span><br /><span class="greyBG"><input id="ctl00_MainContent_QuizHostInstance_20_QuestionsRadioButtonList_3" type="radio" name="ctl00$MainContent$QuizHostInstance$20$QuestionsRadioButtonList" value="49" /><label for="ctl00_MainContent_QuizHostInstance_20_QuestionsRadioButtonList_3">spoke</label></span><br /><span class="blueBG"><input id="ctl00_MainContent_QuizHostInstance_20_QuestionsRadioButtonList_4" type="radio" name="ctl00$MainContent$QuizHostInstance$20$QuestionsRadioButtonList" value="50" /><label for="ctl00_MainContent_QuizHostInstance_20_QuestionsRadioButtonList_4">speaks</label></span></span>
+        <span id="ctl00_MainContent_QuizHostInstance_20_QuestionsRadioButtonList"><span class="blueBG">
+        <input id="ctl00_MainContent_QuizHostInstance_20_QuestionsRadioButtonList_0" type="radio" name="question10" 
+        value="1" /><label for="ctl00_MainContent_QuizHostInstance_20_QuestionsRadioButtonList_0">is spoken</label></span><br /><span class="greyBG">
+        <input id="ctl00_MainContent_QuizHostInstance_20_QuestionsRadioButtonList_1" type="radio" name="question10" 
+        value="2" /><label for="ctl00_MainContent_QuizHostInstance_20_QuestionsRadioButtonList_1">is speaking</label></span><br /><span class="blueBG">
+        <input id="ctl00_MainContent_QuizHostInstance_20_QuestionsRadioButtonList_2" type="radio" name="question10" 
+        value="3" /><label for="ctl00_MainContent_QuizHostInstance_20_QuestionsRadioButtonList_2">speaking</label></span><br /><span class="greyBG">
+        <input id="ctl00_MainContent_QuizHostInstance_20_QuestionsRadioButtonList_3" type="radio" name="question10" 
+        value="4" /><label for="ctl00_MainContent_QuizHostInstance_20_QuestionsRadioButtonList_3">spoke</label></span><br /><span class="blueBG">
+        <input id="ctl00_MainContent_QuizHostInstance_20_QuestionsRadioButtonList_4" type="radio" name="question10" 
+        value="5" /><label for="ctl00_MainContent_QuizHostInstance_20_QuestionsRadioButtonList_4">speaks</label></span></span>
     </div>
 </div>
 
@@ -250,9 +300,19 @@
             <img src="//tridionassets.kaplaninternational.com/css.min/QuizEngine/questionBarCorner.gif" />
         </div>
     </div>
-    <div class="choices">
-        <span id="ctl00_MainContent_QuizHostInstance_22_QuestionsRadioButtonList"><span class="blueBG"><input id="ctl00_MainContent_QuizHostInstance_22_QuestionsRadioButtonList_0" type="radio" name="ctl00$MainContent$QuizHostInstance$22$QuestionsRadioButtonList" value="56" /><label for="ctl00_MainContent_QuizHostInstance_22_QuestionsRadioButtonList_0">am going to</label></span><br /><span class="greyBG"><input id="ctl00_MainContent_QuizHostInstance_22_QuestionsRadioButtonList_1" type="radio" name="ctl00$MainContent$QuizHostInstance$22$QuestionsRadioButtonList" value="57" /><label for="ctl00_MainContent_QuizHostInstance_22_QuestionsRadioButtonList_1">going to</label></span><br /><span class="blueBG"><input id="ctl00_MainContent_QuizHostInstance_22_QuestionsRadioButtonList_2" type="radio" name="ctl00$MainContent$QuizHostInstance$22$QuestionsRadioButtonList" value="58" /><label for="ctl00_MainContent_QuizHostInstance_22_QuestionsRadioButtonList_2">gone</label></span><br /><span class="greyBG"><input id="ctl00_MainContent_QuizHostInstance_22_QuestionsRadioButtonList_3" type="radio" name="ctl00$MainContent$QuizHostInstance$22$QuestionsRadioButtonList" value="59" /><label for="ctl00_MainContent_QuizHostInstance_22_QuestionsRadioButtonList_3">go</label></span><br /><span class="blueBG"><input id="ctl00_MainContent_QuizHostInstance_22_QuestionsRadioButtonList_4" type="radio" name="ctl00$MainContent$QuizHostInstance$22$QuestionsRadioButtonList" value="60" /><label for="ctl00_MainContent_QuizHostInstance_22_QuestionsRadioButtonList_4">will go</label></span></span>
-    </div>
+	<div class="choices">
+		<span id="ctl00_MainContent_QuizHostInstance_22_QuestionsRadioButtonList"><span class="blueBG">
+		<input id="ctl00_MainContent_QuizHostInstance_22_QuestionsRadioButtonList_0" type="radio" name="question11"
+		value="1" /><label for="ctl00_MainContent_QuizHostInstance_22_QuestionsRadioButtonList_0">am going to</label></span><br /><span class="greyBG">
+		<input id="ctl00_MainContent_QuizHostInstance_22_QuestionsRadioButtonList_1" type="radio" name="question11"
+		value="2" /><label for="ctl00_MainContent_QuizHostInstance_22_QuestionsRadioButtonList_1">going to</label></span><br /><span class="blueBG">
+		<input id="ctl00_MainContent_QuizHostInstance_22_QuestionsRadioButtonList_2" type="radio" name="question11"
+		value="3" /><label for="ctl00_MainContent_QuizHostInstance_22_QuestionsRadioButtonList_2">gone</label></span><br /><span class="greyBG">
+		<input id="ctl00_MainContent_QuizHostInstance_22_QuestionsRadioButtonList_3" type="radio" name="question11"
+		value="4" /><label for="ctl00_MainContent_QuizHostInstance_22_QuestionsRadioButtonList_3">go</label></span><br /><span class="blueBG">
+		<input id="ctl00_MainContent_QuizHostInstance_22_QuestionsRadioButtonList_4" type="radio" name="question11"
+		value="5" /><label for="ctl00_MainContent_QuizHostInstance_22_QuestionsRadioButtonList_4">will go</label></span></span>
+	</div>
 </div>
 
 <div class="questionBlock">
@@ -266,7 +326,17 @@
         </div>
     </div>
     <div class="choices">
-        <span id="ctl00_MainContent_QuizHostInstance_23_QuestionsRadioButtonList"><span class="blueBG"><input id="ctl00_MainContent_QuizHostInstance_23_QuestionsRadioButtonList_0" type="radio" name="ctl00$MainContent$QuizHostInstance$23$QuestionsRadioButtonList" value="61" /><label for="ctl00_MainContent_QuizHostInstance_23_QuestionsRadioButtonList_0">will make</label></span><br /><span class="greyBG"><input id="ctl00_MainContent_QuizHostInstance_23_QuestionsRadioButtonList_1" type="radio" name="ctl00$MainContent$QuizHostInstance$23$QuestionsRadioButtonList" value="62" /><label for="ctl00_MainContent_QuizHostInstance_23_QuestionsRadioButtonList_1">are going</label></span><br /><span class="blueBG"><input id="ctl00_MainContent_QuizHostInstance_23_QuestionsRadioButtonList_2" type="radio" name="ctl00$MainContent$QuizHostInstance$23$QuestionsRadioButtonList" value="63" /><label for="ctl00_MainContent_QuizHostInstance_23_QuestionsRadioButtonList_2">are having </label></span><br /><span class="greyBG"><input id="ctl00_MainContent_QuizHostInstance_23_QuestionsRadioButtonList_3" type="radio" name="ctl00$MainContent$QuizHostInstance$23$QuestionsRadioButtonList" value="64" /><label for="ctl00_MainContent_QuizHostInstance_23_QuestionsRadioButtonList_3">are making </label></span><br /><span class="blueBG"><input id="ctl00_MainContent_QuizHostInstance_23_QuestionsRadioButtonList_4" type="radio" name="ctl00$MainContent$QuizHostInstance$23$QuestionsRadioButtonList" value="65" /><label for="ctl00_MainContent_QuizHostInstance_23_QuestionsRadioButtonList_4">will go</label></span></span>
+        <span id="ctl00_MainContent_QuizHostInstance_23_QuestionsRadioButtonList"><span class="blueBG">
+        <input id="ctl00_MainContent_QuizHostInstance_23_QuestionsRadioButtonList_0" type="radio" name="question12" 
+        value="1" /><label for="ctl00_MainContent_QuizHostInstance_23_QuestionsRadioButtonList_0">will make</label></span><br /><span class="greyBG">
+        <input id="ctl00_MainContent_QuizHostInstance_23_QuestionsRadioButtonList_1" type="radio" name="question12" 
+        value="2" /><label for="ctl00_MainContent_QuizHostInstance_23_QuestionsRadioButtonList_1">are going</label></span><br /><span class="blueBG">
+        <input id="ctl00_MainContent_QuizHostInstance_23_QuestionsRadioButtonList_2" type="radio" name="question12" 
+        value="3" /><label for="ctl00_MainContent_QuizHostInstance_23_QuestionsRadioButtonList_2">are having </label></span><br /><span class="greyBG">
+        <input id="ctl00_MainContent_QuizHostInstance_23_QuestionsRadioButtonList_3" type="radio" name="question12" 
+        value="4" /><label for="ctl00_MainContent_QuizHostInstance_23_QuestionsRadioButtonList_3">are making </label></span><br /><span class="blueBG">
+        <input id="ctl00_MainContent_QuizHostInstance_23_QuestionsRadioButtonList_4" type="radio" name="question12" 
+        value="5" /><label for="ctl00_MainContent_QuizHostInstance_23_QuestionsRadioButtonList_4">will go</label></span></span>
     </div>
 </div>
 
@@ -281,7 +351,17 @@
         </div>
     </div>
     <div class="choices">
-        <span id="ctl00_MainContent_QuizHostInstance_24_QuestionsRadioButtonList"><span class="blueBG"><input id="ctl00_MainContent_QuizHostInstance_24_QuestionsRadioButtonList_0" type="radio" name="ctl00$MainContent$QuizHostInstance$24$QuestionsRadioButtonList" value="66" /><label for="ctl00_MainContent_QuizHostInstance_24_QuestionsRadioButtonList_0">go to the</label></span><br /><span class="greyBG"><input id="ctl00_MainContent_QuizHostInstance_24_QuestionsRadioButtonList_1" type="radio" name="ctl00$MainContent$QuizHostInstance$24$QuestionsRadioButtonList" value="67" /><label for="ctl00_MainContent_QuizHostInstance_24_QuestionsRadioButtonList_1">to go to the</label></span><br /><span class="blueBG"><input id="ctl00_MainContent_QuizHostInstance_24_QuestionsRadioButtonList_2" type="radio" name="ctl00$MainContent$QuizHostInstance$24$QuestionsRadioButtonList" value="68" /><label for="ctl00_MainContent_QuizHostInstance_24_QuestionsRadioButtonList_2">go to</label></span><br /><span class="greyBG"><input id="ctl00_MainContent_QuizHostInstance_24_QuestionsRadioButtonList_3" type="radio" name="ctl00$MainContent$QuizHostInstance$24$QuestionsRadioButtonList" value="69" /><label for="ctl00_MainContent_QuizHostInstance_24_QuestionsRadioButtonList_3">going to</label></span><br /><span class="blueBG"><input id="ctl00_MainContent_QuizHostInstance_24_QuestionsRadioButtonList_4" type="radio" name="ctl00$MainContent$QuizHostInstance$24$QuestionsRadioButtonList" value="70" /><label for="ctl00_MainContent_QuizHostInstance_24_QuestionsRadioButtonList_4">to go to</label></span></span>
+        <span id="ctl00_MainContent_QuizHostInstance_24_QuestionsRadioButtonList"><span class="blueBG">
+        <input id="ctl00_MainContent_QuizHostInstance_24_QuestionsRadioButtonList_0" type="radio" name="question13" 
+        value="1" /><label for="ctl00_MainContent_QuizHostInstance_24_QuestionsRadioButtonList_0">go to the</label></span><br /><span class="greyBG">
+        <input id="ctl00_MainContent_QuizHostInstance_24_QuestionsRadioButtonList_1" type="radio" name="question13" 
+        value="2" /><label for="ctl00_MainContent_QuizHostInstance_24_QuestionsRadioButtonList_1">to go to the</label></span><br /><span class="blueBG">
+        <input id="ctl00_MainContent_QuizHostInstance_24_QuestionsRadioButtonList_2" type="radio" name="question13" 
+        value="3" /><label for="ctl00_MainContent_QuizHostInstance_24_QuestionsRadioButtonList_2">go to</label></span><br /><span class="greyBG">
+        <input id="ctl00_MainContent_QuizHostInstance_24_QuestionsRadioButtonList_3" type="radio" name="question13" 
+        value="4" /><label for="ctl00_MainContent_QuizHostInstance_24_QuestionsRadioButtonList_3">going to</label></span><br /><span class="blueBG">
+        <input id="ctl00_MainContent_QuizHostInstance_24_QuestionsRadioButtonList_4" type="radio" name="question13" 
+        value="5" /><label for="ctl00_MainContent_QuizHostInstance_24_QuestionsRadioButtonList_4">to go to</label></span></span>
     </div>
 </div>
 
@@ -296,7 +376,17 @@
         </div>
     </div>
     <div class="choices">
-        <span id="ctl00_MainContent_QuizHostInstance_25_QuestionsRadioButtonList"><span class="blueBG"><input id="ctl00_MainContent_QuizHostInstance_25_QuestionsRadioButtonList_0" type="radio" name="ctl00$MainContent$QuizHostInstance$25$QuestionsRadioButtonList" value="71" /><label for="ctl00_MainContent_QuizHostInstance_25_QuestionsRadioButtonList_0">loves going</label></span><br /><span class="greyBG"><input id="ctl00_MainContent_QuizHostInstance_25_QuestionsRadioButtonList_1" type="radio" name="ctl00$MainContent$QuizHostInstance$25$QuestionsRadioButtonList" value="72" /><label for="ctl00_MainContent_QuizHostInstance_25_QuestionsRadioButtonList_1">enjoys going for</label></span><br /><span class="blueBG"><input id="ctl00_MainContent_QuizHostInstance_25_QuestionsRadioButtonList_2" type="radio" name="ctl00$MainContent$QuizHostInstance$25$QuestionsRadioButtonList" value="73" /><label for="ctl00_MainContent_QuizHostInstance_25_QuestionsRadioButtonList_2">likes going to</label></span><br /><span class="greyBG"><input id="ctl00_MainContent_QuizHostInstance_25_QuestionsRadioButtonList_3" type="radio" name="ctl00$MainContent$QuizHostInstance$25$QuestionsRadioButtonList" value="74" /><label for="ctl00_MainContent_QuizHostInstance_25_QuestionsRadioButtonList_3">wants to</label></span><br /><span class="blueBG"><input id="ctl00_MainContent_QuizHostInstance_25_QuestionsRadioButtonList_4" type="radio" name="ctl00$MainContent$QuizHostInstance$25$QuestionsRadioButtonList" value="75" /><label for="ctl00_MainContent_QuizHostInstance_25_QuestionsRadioButtonList_4">like to go</label></span></span>
+        <span id="ctl00_MainContent_QuizHostInstance_25_QuestionsRadioButtonList"><span class="blueBG">
+        <input id="ctl00_MainContent_QuizHostInstance_25_QuestionsRadioButtonList_0" type="radio" name="question14" 
+        value="1" /><label for="ctl00_MainContent_QuizHostInstance_25_QuestionsRadioButtonList_0">loves going</label></span><br /><span class="greyBG">
+        <input id="ctl00_MainContent_QuizHostInstance_25_QuestionsRadioButtonList_1" type="radio" name="question14" 
+        value="2" /><label for="ctl00_MainContent_QuizHostInstance_25_QuestionsRadioButtonList_1">enjoys going for</label></span><br /><span class="blueBG">
+        <input id="ctl00_MainContent_QuizHostInstance_25_QuestionsRadioButtonList_2" type="radio" name="question14" 
+        value="3" /><label for="ctl00_MainContent_QuizHostInstance_25_QuestionsRadioButtonList_2">likes going to</label></span><br /><span class="greyBG">
+        <input id="ctl00_MainContent_QuizHostInstance_25_QuestionsRadioButtonList_3" type="radio" name="question14" 
+        value="4" /><label for="ctl00_MainContent_QuizHostInstance_25_QuestionsRadioButtonList_3">wants to</label></span><br /><span class="blueBG">
+        <input id="ctl00_MainContent_QuizHostInstance_25_QuestionsRadioButtonList_4" type="radio" name="question14" 
+        value="5" /><label for="ctl00_MainContent_QuizHostInstance_25_QuestionsRadioButtonList_4">like to go</label></span></span>
     </div>
 </div>
 
@@ -311,7 +401,17 @@
         </div>
     </div>
     <div class="choices">
-        <span id="ctl00_MainContent_QuizHostInstance_26_QuestionsRadioButtonList"><span class="blueBG"><input id="ctl00_MainContent_QuizHostInstance_26_QuestionsRadioButtonList_0" type="radio" name="ctl00$MainContent$QuizHostInstance$26$QuestionsRadioButtonList" value="76" /><label for="ctl00_MainContent_QuizHostInstance_26_QuestionsRadioButtonList_0">have had</label></span><br /><span class="greyBG"><input id="ctl00_MainContent_QuizHostInstance_26_QuestionsRadioButtonList_1" type="radio" name="ctl00$MainContent$QuizHostInstance$26$QuestionsRadioButtonList" value="77" /><label for="ctl00_MainContent_QuizHostInstance_26_QuestionsRadioButtonList_1">had</label></span><br /><span class="blueBG"><input id="ctl00_MainContent_QuizHostInstance_26_QuestionsRadioButtonList_2" type="radio" name="ctl00$MainContent$QuizHostInstance$26$QuestionsRadioButtonList" value="78" /><label for="ctl00_MainContent_QuizHostInstance_26_QuestionsRadioButtonList_2">am having</label></span><br /><span class="greyBG"><input id="ctl00_MainContent_QuizHostInstance_26_QuestionsRadioButtonList_3" type="radio" name="ctl00$MainContent$QuizHostInstance$26$QuestionsRadioButtonList" value="79" /><label for="ctl00_MainContent_QuizHostInstance_26_QuestionsRadioButtonList_3">have</label></span><br /><span class="blueBG"><input id="ctl00_MainContent_QuizHostInstance_26_QuestionsRadioButtonList_4" type="radio" name="ctl00$MainContent$QuizHostInstance$26$QuestionsRadioButtonList" value="80" /><label for="ctl00_MainContent_QuizHostInstance_26_QuestionsRadioButtonList_4">was having</label></span></span>
+        <span id="ctl00_MainContent_QuizHostInstance_26_QuestionsRadioButtonList"><span class="blueBG">
+        <input id="ctl00_MainContent_QuizHostInstance_26_QuestionsRadioButtonList_0" type="radio" name="question15" 
+        value="1" /><label for="ctl00_MainContent_QuizHostInstance_26_QuestionsRadioButtonList_0">have had</label></span><br /><span class="greyBG">
+        <input id="ctl00_MainContent_QuizHostInstance_26_QuestionsRadioButtonList_1" type="radio" name="question15" 
+        value="2" /><label for="ctl00_MainContent_QuizHostInstance_26_QuestionsRadioButtonList_1">had</label></span><br /><span class="blueBG">
+        <input id="ctl00_MainContent_QuizHostInstance_26_QuestionsRadioButtonList_2" type="radio" name="question15" 
+        value="3" /><label for="ctl00_MainContent_QuizHostInstance_26_QuestionsRadioButtonList_2">am having</label></span><br /><span class="greyBG">
+        <input id="ctl00_MainContent_QuizHostInstance_26_QuestionsRadioButtonList_3" type="radio" name="question15" 
+        value="4" /><label for="ctl00_MainContent_QuizHostInstance_26_QuestionsRadioButtonList_3">have</label></span><br /><span class="blueBG">
+        <input id="ctl00_MainContent_QuizHostInstance_26_QuestionsRadioButtonList_4" type="radio" name="question15" 
+        value="5" /><label for="ctl00_MainContent_QuizHostInstance_26_QuestionsRadioButtonList_4">was having</label></span></span>
     </div>
 </div>
 <div class="questionBlock">
@@ -327,15 +427,15 @@
     <div class="choices">
         <span id="ctl00_MainContent_QuizHostInstance_32_QuestionsRadioButtonList"><span class="blueBG">
         <input id="ctl00_MainContent_QuizHostInstance_32_QuestionsRadioButtonList_0" type="radio" name="question16" 
-        value="106" /><label for="ctl00_MainContent_QuizHostInstance_32_QuestionsRadioButtonList_0">want</label></span><br /><span class="greyBG">
+        value="1" /><label for="ctl00_MainContent_QuizHostInstance_32_QuestionsRadioButtonList_0">want</label></span><br /><span class="greyBG">
         <input id="ctl00_MainContent_QuizHostInstance_32_QuestionsRadioButtonList_1" type="radio" name="question16" 
-        value="107" /><label for="ctl00_MainContent_QuizHostInstance_32_QuestionsRadioButtonList_1">is thinking</label></span><br /><span class="blueBG">
+        value="2" /><label for="ctl00_MainContent_QuizHostInstance_32_QuestionsRadioButtonList_1">is thinking</label></span><br /><span class="blueBG">
         <input id="ctl00_MainContent_QuizHostInstance_32_QuestionsRadioButtonList_2" type="radio" name="question16" 
-        value="108" /><label for="ctl00_MainContent_QuizHostInstance_32_QuestionsRadioButtonList_2">made me</label></span><br /><span class="greyBG">
+        value="3" /><label for="ctl00_MainContent_QuizHostInstance_32_QuestionsRadioButtonList_2">made me</label></span><br /><span class="greyBG">
         <input id="ctl00_MainContent_QuizHostInstance_32_QuestionsRadioButtonList_3" type="radio" name="question16" 
-        value="109" /><label for="ctl00_MainContent_QuizHostInstance_32_QuestionsRadioButtonList_3">likes</label></span><br /><span class="blueBG">
+        value="4" /><label for="ctl00_MainContent_QuizHostInstance_32_QuestionsRadioButtonList_3">likes</label></span><br /><span class="blueBG">
         <input id="ctl00_MainContent_QuizHostInstance_32_QuestionsRadioButtonList_4" type="radio" name="question16" 
-        value="110" /><label for="ctl00_MainContent_QuizHostInstance_32_QuestionsRadioButtonList_4">has decided</label></span></span>
+        value="5" /><label for="ctl00_MainContent_QuizHostInstance_32_QuestionsRadioButtonList_4">has decided</label></span></span>
     </div>
 </div>
 
@@ -352,15 +452,15 @@
     <div class="choices">
         <span id="ctl00_MainContent_QuizHostInstance_33_QuestionsRadioButtonList"><span class="blueBG">
         <input id="ctl00_MainContent_QuizHostInstance_33_QuestionsRadioButtonList_0" type="radio" name="question17"
-         value="111" /><label for="ctl00_MainContent_QuizHostInstance_33_QuestionsRadioButtonList_0">used</label></span><br /><span class="greyBG">
+         value="1" /><label for="ctl00_MainContent_QuizHostInstance_33_QuestionsRadioButtonList_0">used</label></span><br /><span class="greyBG">
          <input id="ctl00_MainContent_QuizHostInstance_33_QuestionsRadioButtonList_1" type="radio" name="question17"
-          value="112" /><label for="ctl00_MainContent_QuizHostInstance_33_QuestionsRadioButtonList_1">could wear</label></span><br /><span class="blueBG">
+          value="2" /><label for="ctl00_MainContent_QuizHostInstance_33_QuestionsRadioButtonList_1">could wear</label></span><br /><span class="blueBG">
           <input id="ctl00_MainContent_QuizHostInstance_33_QuestionsRadioButtonList_2" type="radio" name="question17" 
-          value="113" /><label for="ctl00_MainContent_QuizHostInstance_33_QuestionsRadioButtonList_2">can wear</label></span><br /><span class="greyBG">
+          value="3" /><label for="ctl00_MainContent_QuizHostInstance_33_QuestionsRadioButtonList_2">can wear</label></span><br /><span class="greyBG">
           <input id="ctl00_MainContent_QuizHostInstance_33_QuestionsRadioButtonList_3" type="radio" name="question17" 
-          value="114" /><label for="ctl00_MainContent_QuizHostInstance_33_QuestionsRadioButtonList_3">could ware</label></span><br /><span class="blueBG">
+          value="4" /><label for="ctl00_MainContent_QuizHostInstance_33_QuestionsRadioButtonList_3">could ware</label></span><br /><span class="blueBG">
           <input id="ctl00_MainContent_QuizHostInstance_33_QuestionsRadioButtonList_4" type="radio" name="question17" 
-          value="115" /><label for="ctl00_MainContent_QuizHostInstance_33_QuestionsRadioButtonList_4">can take</label></span></span>
+          value="5" /><label for="ctl00_MainContent_QuizHostInstance_33_QuestionsRadioButtonList_4">can take</label></span></span>
     </div>
 </div>
 
@@ -377,15 +477,15 @@
     <div class="choices">
         <span id="ctl00_MainContent_QuizHostInstance_34_QuestionsRadioButtonList"><span class="blueBG">
         <input id="ctl00_MainContent_QuizHostInstance_34_QuestionsRadioButtonList_0" type="radio" name="question18" 
-        value="116" /><label for="ctl00_MainContent_QuizHostInstance_34_QuestionsRadioButtonList_0">if I had been seeing</label></span><br /><span class="greyBG">
+        value="1" /><label for="ctl00_MainContent_QuizHostInstance_34_QuestionsRadioButtonList_0">if I had been seeing</label></span><br /><span class="greyBG">
         <input id="ctl00_MainContent_QuizHostInstance_34_QuestionsRadioButtonList_1" type="radio" name="question18" 
-        value="117" /><label for="ctl00_MainContent_QuizHostInstance_34_QuestionsRadioButtonList_1">if I had seen</label></span><br /><span class="blueBG">
+        value="2" /><label for="ctl00_MainContent_QuizHostInstance_34_QuestionsRadioButtonList_1">if I had seen</label></span><br /><span class="blueBG">
         <input id="ctl00_MainContent_QuizHostInstance_34_QuestionsRadioButtonList_2" type="radio" name="question18" 
-        value="118" /><label for="ctl00_MainContent_QuizHostInstance_34_QuestionsRadioButtonList_2">I was seeing</label></span><br /><span class="greyBG">
+        value="3" /><label for="ctl00_MainContent_QuizHostInstance_34_QuestionsRadioButtonList_2">I was seeing</label></span><br /><span class="greyBG">
         <input id="ctl00_MainContent_QuizHostInstance_34_QuestionsRadioButtonList_3" type="radio" name="question18" 
-        value="119" /><label for="ctl00_MainContent_QuizHostInstance_34_QuestionsRadioButtonList_3">if I have seen</label></span><br /><span class="blueBG">
+        value="4" /><label for="ctl00_MainContent_QuizHostInstance_34_QuestionsRadioButtonList_3">if I have seen</label></span><br /><span class="blueBG">
         <input id="ctl00_MainContent_QuizHostInstance_34_QuestionsRadioButtonList_4" type="radio" name="question18" 
-        value="120" /><label for="ctl00_MainContent_QuizHostInstance_34_QuestionsRadioButtonList_4">I saw</label></span></span>
+        value="5" /><label for="ctl00_MainContent_QuizHostInstance_34_QuestionsRadioButtonList_4">I saw</label></span></span>
     </div>
 </div>
 
@@ -402,15 +502,15 @@
     <div class="choices">
         <span id="ctl00_MainContent_QuizHostInstance_35_QuestionsRadioButtonList"><span class="blueBG">
         <input id="ctl00_MainContent_QuizHostInstance_35_QuestionsRadioButtonList_0" type="radio" name="question19" 
-        value="121" /><label for="ctl00_MainContent_QuizHostInstance_35_QuestionsRadioButtonList_0">like</label></span><br /><span class="greyBG">
+        value="1" /><label for="ctl00_MainContent_QuizHostInstance_35_QuestionsRadioButtonList_0">like</label></span><br /><span class="greyBG">
         <input id="ctl00_MainContent_QuizHostInstance_35_QuestionsRadioButtonList_1" type="radio" name="question19" 
-        value="122" /><label for="ctl00_MainContent_QuizHostInstance_35_QuestionsRadioButtonList_1">am not used</label></span><br /><span class="blueBG">
+        value="2" /><label for="ctl00_MainContent_QuizHostInstance_35_QuestionsRadioButtonList_1">am not used</label></span><br /><span class="blueBG">
         <input id="ctl00_MainContent_QuizHostInstance_35_QuestionsRadioButtonList_2" type="radio" name="question19" 
-        value="123" /><label for="ctl00_MainContent_QuizHostInstance_35_QuestionsRadioButtonList_2">used</label></span><br /><span class="greyBG">
+        value="3" /><label for="ctl00_MainContent_QuizHostInstance_35_QuestionsRadioButtonList_2">used</label></span><br /><span class="greyBG">
         <input id="ctl00_MainContent_QuizHostInstance_35_QuestionsRadioButtonList_3" type="radio" name="question19" 
-        value="124" /><label for="ctl00_MainContent_QuizHostInstance_35_QuestionsRadioButtonList_3">would like</label></span><br /><span class="blueBG">
+        value="4" /><label for="ctl00_MainContent_QuizHostInstance_35_QuestionsRadioButtonList_3">would like</label></span><br /><span class="blueBG">
         <input id="ctl00_MainContent_QuizHostInstance_35_QuestionsRadioButtonList_4" type="radio" name="question19" 
-        value="125" /><label for="ctl00_MainContent_QuizHostInstance_35_QuestionsRadioButtonList_4">didn't use</label></span></span>
+        value="5" /><label for="ctl00_MainContent_QuizHostInstance_35_QuestionsRadioButtonList_4">didn't use</label></span></span>
     </div>
 </div>
 
@@ -427,15 +527,15 @@
     <div class="choices">
         <span id="ctl00_MainContent_QuizHostInstance_36_QuestionsRadioButtonList"><span class="blueBG">
         <input id="ctl00_MainContent_QuizHostInstance_36_QuestionsRadioButtonList_0" type="radio" name="question20" 
-        value="126" /><label for="ctl00_MainContent_QuizHostInstance_36_QuestionsRadioButtonList_0">rains</label></span><br /><span class="greyBG">
+        value="1" /><label for="ctl00_MainContent_QuizHostInstance_36_QuestionsRadioButtonList_0">rains</label></span><br /><span class="greyBG">
         <input id="ctl00_MainContent_QuizHostInstance_36_QuestionsRadioButtonList_1" type="radio" name="question20" 
-        value="127" /><label for="ctl00_MainContent_QuizHostInstance_36_QuestionsRadioButtonList_1">has been reading</label></span><br /><span class="blueBG">
+        value="2" /><label for="ctl00_MainContent_QuizHostInstance_36_QuestionsRadioButtonList_1">has been reading</label></span><br /><span class="blueBG">
         <input id="ctl00_MainContent_QuizHostInstance_36_QuestionsRadioButtonList_2" type="radio" name="question20" 
-        value="128" /><label for="ctl00_MainContent_QuizHostInstance_36_QuestionsRadioButtonList_2">had been raining</label></span><br /><span class="greyBG">
+        value="3" /><label for="ctl00_MainContent_QuizHostInstance_36_QuestionsRadioButtonList_2">had been raining</label></span><br /><span class="greyBG">
         <input id="ctl00_MainContent_QuizHostInstance_36_QuestionsRadioButtonList_3" type="radio" name="question20"
-		value="129" /><label for="ctl00_MainContent_QuizHostInstance_36_QuestionsRadioButtonList_3">had rain</label></span><br /><span class="blueBG">
+		value="4" /><label for="ctl00_MainContent_QuizHostInstance_36_QuestionsRadioButtonList_3">had rain</label></span><br /><span class="blueBG">
 		<input id="ctl00_MainContent_QuizHostInstance_36_QuestionsRadioButtonList_4" type="radio" name="question20" 
-		value="130" /><label for="ctl00_MainContent_QuizHostInstance_36_QuestionsRadioButtonList_4">read</label></span></span>
+		value="5" /><label for="ctl00_MainContent_QuizHostInstance_36_QuestionsRadioButtonList_4">read</label></span></span>
     </div>
 </div>
 
@@ -453,7 +553,7 @@
     	<input type="hidden" id="score" name="score">
         <input type="image" name="ctl00$MainContent$QuizHostInstance$ctl00$NextPageImageButton" 
         id="NextPageImageButton" class="NextButton" 
-         src="<%=request.getContextPath()%>/assets/img/check.png" alt="Next" style="/* border-width:0px;height:26px;width:78px; */" />
+         src="<%=request.getContextPath()%>/assets/img/check.png" alt="Finish" style="/* border-width:0px;height:26px;width:78px; */" />
     </div>
 </div>
 
@@ -462,40 +562,8 @@
     </div>
 </div>
 
-    <input name="ctl00$MainContent$uniqueLeadId" type="hidden" id="ctl00_MainContent_uniqueLeadId" />
-    </form>
-        <script>
-        	$(document).ready(function score(){
-        		$('#NextPageImageButton').click(function(){
-        			var score = 0;
-        			
-            		var answer1 = $(input[name="question1"]:checked).val();
-            		if(answer1 == 4){
-            			score = score +5;
-            		}
-            		        		
-            		var answer2 = $(input[name="question2"]:checked).val();
-            		if(answer2 == 8){
-            			score = score +5;
-            		}
-            		var answer3 = $(input[name="question3"]:checked).val();
-            		if(answer3 == 15){
-            			score = score +5;
-            		}
-            		var answer4 = $(input[name="question4"]:checked).val();
-            		if(answer4 == 16){
-            			score = score +5;
-            		}
-            		var answer5 = $(input[name="question5"]:checked).val();
-            		if(answer5 == 21){
-            			score = score +5;
-            		}
-            		document.getElementsById('score').value = score; 
-            		alert(score);
-        		})
-        	
-        
-        </script>
+    
+    </form>  
 
 	<!-- Footer Section -->
 <%-- 
