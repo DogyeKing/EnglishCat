@@ -9,7 +9,9 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.cos.action.Action;
+import com.cos.dao.PayDAO;
 import com.cos.dao.RegistDAO;
+import com.cos.dto.PayVO;
 import com.cos.dto.RegistVO;
 import com.cos.util.Script;
 
@@ -25,7 +27,11 @@ public class MemberPayAction implements Action {
 		RegistDAO dao = new RegistDAO();
 		RegistVO regist = dao.select(user_pid);
 		
+		PayDAO pdao = new PayDAO();
+		PayVO pay = pdao.select(user_pid);
+		
 		request.setAttribute("member", regist);
+		request.setAttribute("pay", pay);
 		
 		if(session.getAttribute("naver_id") != null) {
 			Script.moving(response, "네이버 아이디로 로그인하셨습니다.", url);

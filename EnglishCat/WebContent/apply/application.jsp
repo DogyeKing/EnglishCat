@@ -10,20 +10,25 @@
 
 	<%@include file="/include/header.jsp" %>
 
- <script>
+  <script>
     
  function goPay(){
 
     var amount = document.querySelector('input[name="article"]:checked').value
- 	var name = document.querySelector('input[name="name"]').value
-	
+    var buyer_email = document.querySelector('input[name="buyer_email"]').value
+    var buyer_name = document.querySelector('input[name="buyer_name"]').value	
+    var buyer_tel = document.querySelector('input[name="buyer_tel"]').value
+    var buyer_addr = document.querySelector('input[name="buyer_addr"]').value
 
-	var popPay = window.open("apply/payPage.jsp?amount="+amount+"&name="+name,"pop","width=570,height=420, scrollbars=yes, resizable=yes"); 
-	
-	
+
+
+	var popPay = window.open("apply/payPage.jsp?amount="+amount+"&buyer_email="+buyer_email+"&buyer_name="+buyer_name+"&buyer_tel="+buyer_tel+"&buyer_addr="+buyer_addr,"pop","width=570,height=420, scrollbars=yes, resizable=yes"); 	
      
+    
 	}
-
+/*  function setChild(){
+	 popPay.document.getElementById("buyer_name").value;
+ } */
 
 	/* function jusoCallBack(roadFullAddr){
 		// 팝업페이지에서 주소입력한 정보를 받아서, 현 페이지에 정보를 등록합니다.
@@ -70,7 +75,7 @@
               <!-- Post Content -->
               <div class="post-content"><br><br> 
 				<p>안녕하세요, ${member.user_name}님</p>
-				<input type="hidden" name="name" id="name" value="${member.user_name}">
+	
                 <p>당신의 레벨은 [...] 입니다.</p>
                 <p>추천하는 강의는 [...] 입니다.</p>
               </div>
@@ -91,6 +96,12 @@
       <div class="container">
   <!--       <form class="" name="" role="" method="post"> -->
 <div  style="background:#538bca;height:30px;line-height:30px;width:130px;text-align:center;color:#fff"><span>하루 25분</span></div>
+	<!-- 회원정보 영역 -->
+	<input type="hidden" name="buyer_email" id="buyer_email" value="${member.user_mail}">
+	<input type="hidden" name="buyer_name" id="buyer_name" value="${member.user_name}">
+	<input type="hidden" name="buyer_tel" id="buyer_tel" value="${member.user_phone}">
+	<input type="hidden" name="buyer_addr" id="buyer_addr" value="${member.roadFullAddr}">
+	
 	<table border="0" cellpadding="0" cellspacing="0" class="common_table_border" style="margin-top: 10px; width: 100%">
 		<colgroup>
 			<col width="25%" />
@@ -99,6 +110,8 @@
 			<col width="25%" />
 		</colgroup>
 		<tbody>
+
+					
 			<tr>
 				<th>주니어</th>
 				<th>주 2회</th>
@@ -108,8 +121,8 @@
 			<tr height="28">
 				<td style="text-align: center">1개월(4주)</td>
 				<td align="center"><input type="radio" name="article"
-					id="article" value="1000"
-					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">1000(원)&nbsp;</td>
+					id="article" value="100"
+					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">100(원)&nbsp;</td>
 				<td align="center"><input type="radio" name="article"
 					id="article" value="55000"
 					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">55,000(원)&nbsp;</td>
@@ -149,6 +162,7 @@
 
 
 	<div style="background: #538bca; height: 30px; line-height: 30px; width: 130px; text-align: center; color: #fff">
+	
 		<span>하루 50분</span>
 	</div>
 
@@ -190,6 +204,7 @@
 					id="article" value="560000"
 					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">560,000(원)&nbsp;</td>
 			</tr>
+			
 			<tr height="28">
 				<td style="text-align: center">6개월(24주)</td>
 				<td align="center"><input type="radio" name="article"
@@ -202,6 +217,7 @@
 					id="article" value="1000000"
 					onclick="ChoiceArticle(this.value)" style="margin-right: 5px">1,000,000(원)&nbsp;</td>
 			</tr>
+			
 		</tbody>
 	</table><br><br>
 	
@@ -209,6 +225,7 @@
     <!-- <div class="read-btn" align="center">                
        <a class="btn btn-common" href="#" onclick="window.open('payPage.jsp','_blank','width=800, height=600, top=50, left=50')">결제 <i class="fa fa-angle-right"></i></a>
     </div> -->
+    
      <button class="btn btn-common" type="submit" id="submit" onclick="goPay()">결제<i class="fa fa-angle-right"></i></button>
     <br><br><br>
 </div>

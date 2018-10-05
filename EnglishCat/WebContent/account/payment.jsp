@@ -72,10 +72,10 @@
                 <div class="des item-inner">
                   <h3>결제 내역</h3><br>
                   <p>기간</p>
-                  <p>금액</p>
-                  <p>결제날짜</p>
-                  <p>결제방법</p>
-                  <p>결제유무</p><br>
+                  <p>금액  ${pay.paid_amount }</p>
+                  <p>결제날짜  ${pay.paid_date }</p>
+                  <p>결제 승인번호  ${pay.apply_num }</p>
+                  <p>상품번호  ${pay.merchant_uid }</p><br>
                 </div>
                 
                 <!-- Courses Slider End -->
