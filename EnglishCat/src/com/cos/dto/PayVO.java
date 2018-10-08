@@ -7,6 +7,9 @@ public class PayVO {
 	private long paid_amount;
 	private String apply_num;
 	private String paid_date;
+	private String month;
+	private String times;
+	private String minutes;
 	public String getUser_pid() {
 		return user_pid;
 	}
@@ -43,10 +46,23 @@ public class PayVO {
 	public void setPaid_date(String paid_date) {
 		this.paid_date = paid_date;
 	}
+	public String getMonth() {
+		return month;
+	}
+	public void setMonth(String month) {
+		this.month = month;
+	}
+	public String getTimes() {
+		return times;
+	}
+	public void setTimes(String times) {
+		this.times = times;
+	}
+	public String getMinutes() {
+		return minutes;
+	}
+	public void setMinutes(String minutes) {
+		this.minutes = minutes;
+	}
 	
-	
-	
-	
-	
-		
 }

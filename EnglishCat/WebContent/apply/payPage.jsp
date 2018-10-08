@@ -15,17 +15,18 @@
 
 	<script>
 IMP.init('imp51152500');
-var amount =<%=request.getParameter("amount")%>;
-var buyer_email = '<%=request.getParameter("buyer_email")%>';
-var buyer_name = '<%=request.getParameter("buyer_name")%>';
-var buyer_tel = '<%=request.getParameter("buyer_tel")%>';
-var buyer_addr = '<%=request.getParameter("buyer_addr")%>';
+var amount =window.opener.document.getElementById("article").value;
+var buyer_email =window.opener.document.getElementById("buyer_email").value;
+var buyer_name =window.opener.document.getElementById("buyer_name").value;
+var buyer_tel =window.opener.document.getElementById("buyer_tel").value;
+var buyer_addr =window.opener.document.getElementById("buyer_addr").value;
+
 
 		IMP.request_pay({
 			pg : 'inicis', // version 1.1.0부터 지원.
 			pay_method : 'card',
 			merchant_uid : 'merchant_' + new Date().getTime(),
-			name : '주문명:결제테스트',
+			name : '수강권 결제',
 			amount : amount, //판매 가격
 			buyer_email : buyer_email, //user_email
 			buyer_name : buyer_name, //user_name

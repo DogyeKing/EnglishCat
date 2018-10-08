@@ -32,6 +32,7 @@ public class MemberPayAction implements Action {
 		
 		request.setAttribute("member", regist);
 		request.setAttribute("pay", pay);
+
 		
 		if(session.getAttribute("naver_id") != null) {
 			Script.moving(response, "네이버 아이디로 로그인하셨습니다.", url);
