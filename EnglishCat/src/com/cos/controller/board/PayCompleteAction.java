@@ -2,6 +2,7 @@ package com.cos.controller.board;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -21,7 +22,7 @@ public class PayCompleteAction implements Action {
 
 @Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	System.out.println("여기오니?");
+
 	BufferedReader in = request.getReader();
     StringBuffer sb = new StringBuffer();
     String line = null;
@@ -52,22 +53,25 @@ public class PayCompleteAction implements Action {
 			pay.setImp_uid((String)json.get("imp_uid"));			
 			pay.setMerchant_uid((String)json.get("merchant_uid"));
 			pay.setPaid_amount((long)json.get("paid_amount"));
-			pay.setApply_num((String)json.get("apply_num"));
-			
+			pay.setApply_num((String)json.get("apply_num"));			
 			
 		} catch (ParseException e) {
-			// TODO Auto-generated catch block
+		
 			e.printStackTrace();
 		}
+		if(pay.getPaid_amount()==100) {
+			pay.setMonth("1개월");
+			pay.setTimes("2회");
+			pay.setMinutes("25분");
+		}
+		
 
 		int result =  dao.insert(pay);
-		
+		PrintWriter out = response.getWriter();
 		if(result != 1) {
-			Script.moving(response, "결제 오류");
+			out.println("fail");
 		}else {
-			
-/*			RequestDispatcher dis = request.getRequestDispatcher(url);
-			dis.forward(request, response);*/
+			out.println("success");			
 		}
 		
 }

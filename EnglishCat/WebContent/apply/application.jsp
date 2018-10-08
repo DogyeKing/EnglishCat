@@ -14,15 +14,15 @@
     
  function goPay(){
 
-    var amount = document.querySelector('input[name="article"]:checked').value
+   /*  var amount = document.querySelector('input[name="article"]:checked').value
     var buyer_email = document.querySelector('input[name="buyer_email"]').value
     var buyer_name = document.querySelector('input[name="buyer_name"]').value	
     var buyer_tel = document.querySelector('input[name="buyer_tel"]').value
-    var buyer_addr = document.querySelector('input[name="buyer_addr"]').value
+    var buyer_addr = document.querySelector('input[name="buyer_addr"]').value */
 
 
 
-	var popPay = window.open("apply/payPage.jsp?amount="+amount+"&buyer_email="+buyer_email+"&buyer_name="+buyer_name+"&buyer_tel="+buyer_tel+"&buyer_addr="+buyer_addr,"pop","width=570,height=420, scrollbars=yes, resizable=yes"); 	
+	var popPay = window.open("apply/payPage.jsp","pop","width=570,height=420, scrollbars=yes, resizable=yes"); 	
      
     
 	}
@@ -75,9 +75,8 @@
               <!-- Post Content -->
               <div class="post-content"><br><br> 
 				<p>안녕하세요, ${member.user_name}님</p>
-	
-                <p>당신의 레벨은 [...] 입니다.</p>
-                <p>추천하는 강의는 [...] 입니다.</p>
+				<p>원하시는 금액과 기간을 설정하신 후 결제 버튼을 눌러주세요</p>
+
               </div>
               
               <div>

@@ -15,7 +15,7 @@ public class PayDAO {
 	
 	//결제 내역 입력
 	public int insert(PayVO pay) {
-		String SQL = "INSERT INTO TB_PAY VALUES(?,?,?,?,?,SYSDATE)";
+		String SQL = "INSERT INTO TB_PAY VALUES(?,?,?,?,?,SYSDATE,?,?,?)";
 		Connection conn = DBManager.getConnection();
 		
 		try { 
@@ -25,6 +25,9 @@ public class PayDAO {
 			pstmt.setString(3, pay.getMerchant_uid());
 			pstmt.setLong(4, pay.getPaid_amount());
 			pstmt.setString(5,pay.getApply_num());
+			pstmt.setString(6, pay.getMonth());
+			pstmt.setString(7, pay.getTimes());
+			pstmt.setString(8, pay.getMinutes());
 			pstmt.executeUpdate();
 			
 			return 1;
@@ -38,7 +41,7 @@ public class PayDAO {
 	}
 
 	public PayVO select(String user_pid) {
-		String SQL = "SELECT * FROM TB_PAY WHERE USER_PID = ?";
+		String SQL = "SELECT * FROM TB_PAY WHERE USER_PID = ? ORDER BY PAID_DATE DESC";
 		Connection conn = DBManager.getConnection();
 		try {
 			pstmt = conn.prepareStatement(SQL);
@@ -51,6 +54,9 @@ public class PayDAO {
 				pay.setPaid_amount(rs.getLong("paid_amount"));
 				pay.setApply_num(rs.getString("apply_num"));
 				pay.setPaid_date(rs.getString("paid_date"));
+				pay.setMonth(rs.getString("month"));
+				pay.setTimes(rs.getString("times"));
+				pay.setMinutes(rs.getString("minutes"));
 			
 				return pay;
 			}
