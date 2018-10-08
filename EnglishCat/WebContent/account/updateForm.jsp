@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -117,8 +118,21 @@
                 <div class="form-group">
                  <label class="form-control-label">Email</label>	
                   <input class="form-control" type="Email" name="user_mail" maxlength="20" value="${member.user_mail}">
-                </div> 
+                </div>
                 
+                
+                <div class="form-group">
+                 <label class="form-control-label">LevelTest Score</label>
+                <c:choose>
+                	<c:when test="${empty level.score}">
+                		<input class="form-control" type="text" name="score" maxlength="20" value="레벨테스트를 진행해주세요">
+                	</c:when>
+                	<c:otherwise>
+                		<input class="form-control" type="text" name="score" maxlength="20" value="${level.score }" readonly="readonly">
+                		<small>${level.update_dt }수행한 레벨테스트 결과입니다.</small>
+                	</c:otherwise>
+                </c:choose> 
+                </div>
                 <div class="form-group">
      					<label class="form-control-label">Address</label>
      					<button class="btn btn-primary pull-right" type="button" onclick="goPopup()">Search Korean Address</button>

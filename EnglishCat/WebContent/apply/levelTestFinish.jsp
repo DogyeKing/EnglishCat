@@ -3,12 +3,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
 <script>
-	location.href="main.jsp";
+
+	opener.location.href='<%=request.getContextPath()%>/index.jsp'; 
+	window.close();
+
 </script>
+
 </body>
 </html>

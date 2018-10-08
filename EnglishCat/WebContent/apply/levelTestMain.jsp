@@ -7,6 +7,11 @@
   <head>
   	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Insert title here</title>
+	<script>
+	function start(){
+		window.open('apply/levelTestAll.jsp','_blank','width=800, height=600, top=50, left=50');
+	}
+	</script>
 
 	<%@include file="/include/header.jsp" %>
 	
@@ -66,7 +71,7 @@
       </div>
     </div>
     <div class="read-btn" align="center">                
-       <a class="btn btn-common" href="#" onclick="window.open('apply/levelTestAll.jsp','_blank','width=800, height=600, top=50, left=50')">레벨 테스트 시작 <i class="fa fa-angle-right"></i></a><br><br>
+       <a class="btn btn-common" href="#" onclick="start()">레벨 테스트 시작 <i class="fa fa-angle-right"></i></a><br><br>
     </div>
    <!-- <button class="btn btn-common" type="submit" id="submit" onclick="goLevel()">레벨 테스트 start <i class="fa fa-angle-right"></i></button> -->
     <br><br><br>

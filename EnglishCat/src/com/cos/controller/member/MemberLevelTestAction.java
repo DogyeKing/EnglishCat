@@ -16,7 +16,7 @@ import com.cos.util.Script;
 public class MemberLevelTestAction implements Action {
    @Override
    public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-      String url = "index.jsp";
+      String url = "apply/levelTestFinish.jsp";
       
       String[] answer = { "2", "3", "5", "1", "1", "3", "4", "3", "1", "1", "5", "3", "5", "1", "2", "2", "2", "4",
             "2", "3" };

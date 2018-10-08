@@ -27,6 +27,7 @@
     </script>
     <script>
     	function close(){
+    		
     		opener.location.href='<%=request.getContextPath()%>/index.jsp'; 
     		window.close();
     	}

@@ -48,7 +48,7 @@ public class UserLevelTestDAO {
    }
    
    public UserLevelTestVO findScore(String user_pid) {
-      String SQL = "select score from TB_USER_LEVEL_TEST where user_pid = ?";
+      String SQL = "select score, update_dt from TB_USER_LEVEL_TEST where user_pid = ?";
       Connection conn = DBManager.getConnection();
       
       try {
@@ -59,7 +59,8 @@ public class UserLevelTestDAO {
             UserLevelTestVO userLevel = new UserLevelTestVO();
             userLevel.setUser_pid(user_pid);
             userLevel.setScore(rs.getInt("score"));
-            userLevel.setUpdate_dt(rs.getString("update_dt"));
+            userLevel.setUpdate_dt(rs.getString("UPDATE_DT"));            
+            
             return userLevel;
          }
       } catch (Exception e) {
