@@ -129,7 +129,7 @@
                 	</c:when>
                 	<c:otherwise>
                 		<input class="form-control" type="text" name="score" maxlength="20" value="${level.score }" readonly="readonly">
-                		<small>${level.update_dt }수행한 레벨테스트 결과입니다.</small>
+                		<small>${level.update_dt } 수행한 레벨테스트 결과입니다.</small>
                 	</c:otherwise>
                 </c:choose> 
                 </div>
