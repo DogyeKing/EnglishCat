@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.cos.action.Action;
 import com.cos.util.Script;
 
-public class PayAction implements Action {
+public class PayAjaxAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

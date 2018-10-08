@@ -1,7 +1,7 @@
 package com.cos.action;
 
 import com.cos.controller.board.AjaxAction;
-import com.cos.controller.board.PayAction;
+import com.cos.controller.board.PayAjaxAction;
 import com.cos.controller.board.PayCompleteAction;
 import com.cos.controller.board.ReviewDeleteAction;
 import com.cos.controller.board.ReviewDetailAction;
@@ -69,7 +69,7 @@ public class ActionFactory {
 		} else if (cmd.equals("member_FreeTest")) {
 			return new MemberFreeTestAction();  
 		} else if (cmd.equals("board_pay")) {
-			return new PayAction();
+			return new PayAjaxAction();
 		} else if (cmd.equals("member_payment")) {
 			return new MemberPayAction();
 		} else if (cmd.equals("member_application")) {
