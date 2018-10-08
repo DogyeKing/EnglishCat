@@ -21,7 +21,7 @@ public class PayCompleteAction implements Action {
 
 @Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	System.out.println("여기오니?");
+	
 	BufferedReader in = request.getReader();
     StringBuffer sb = new StringBuffer();
     String line = null;

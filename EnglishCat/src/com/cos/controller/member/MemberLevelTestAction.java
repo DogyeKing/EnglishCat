@@ -2,6 +2,7 @@ package com.cos.controller.member;
 
 import java.io.IOException;
 
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,7 +16,7 @@ import com.cos.util.Script;
 public class MemberLevelTestAction implements Action {
    @Override
    public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-      
+      String url = "index.jsp";
       
       String[] answer = { "2", "3", "5", "1", "1", "3", "4", "3", "1", "1", "5", "3", "5", "1", "2", "2", "2", "4",
             "2", "3" };
@@ -44,9 +45,9 @@ public class MemberLevelTestAction implements Action {
       }
       
       if(result == 1) {
-         Script.moving(response, "LevelTest Complete");
+    	 Script.moving(response, "레벨테스트 완료", url);
       }else if(result == -1) {
-         Script.moving(response, "LevelTest Fail");
+    	 Script.moving(response, "DB에러");
       }
       
       

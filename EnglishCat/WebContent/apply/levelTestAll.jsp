@@ -555,7 +555,8 @@
     <div class="right">
         <img src="//tridionassets.kaplaninternational.com/css.min/QuizEngine/nextBarC2.gif" Width="11" Height="38" />
     </div>
-    <div class="right" style="padding-top: 5px;">    	
+    <div class="right" style="padding-top: 5px;">
+    	
         <input type="image" name="ctl00$MainContent$QuizHostInstance$ctl00$NextPageImageButton" 
         id="NextPageImageButton" class="NextButton" 
          src="<%=request.getContextPath()%>/assets/img/check.png" alt="Finish" style="/* border-width:0px;height:26px;width:78px; */" />
