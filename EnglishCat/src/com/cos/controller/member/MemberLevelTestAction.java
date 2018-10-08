@@ -5,6 +5,7 @@ import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.cos.action.Action;
 import com.cos.dao.UserLevelTestDAO;
@@ -14,7 +15,7 @@ import com.cos.util.Script;
 public class MemberLevelTestAction implements Action {
    @Override
    public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-      String url = "index.jsp";
+      
       
       String[] answer = { "2", "3", "5", "1", "1", "3", "4", "3", "1", "1", "5", "3", "5", "1", "2", "2", "2", "4",
             "2", "3" };
@@ -29,7 +30,8 @@ public class MemberLevelTestAction implements Action {
       UserLevelTestVO userLevel = new UserLevelTestVO();
       UserLevelTestDAO dao = new UserLevelTestDAO();
       
-      String user_pid = request.getParameter("user_pid");
+      HttpSession session = request.getSession();
+      String user_pid = (String)session.getAttribute("user_pid");
       userLevel.setUser_pid(user_pid);
       userLevel.setScore(score);
       
@@ -42,7 +44,7 @@ public class MemberLevelTestAction implements Action {
       }
       
       if(result == 1) {
-         Script.moving(response, "LevelTest Complete", url);
+         Script.moving(response, "LevelTest Complete");
       }else if(result == -1) {
          Script.moving(response, "LevelTest Fail");
       }

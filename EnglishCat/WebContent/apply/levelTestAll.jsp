@@ -25,13 +25,19 @@
             a = b.getElementsByTagName(c)[0]; a.parentNode.insertBefore(d, a);
         })();
     </script>
+    <script>
+    	function close(){
+    		opener.location.href='<%=request.getContextPath()%>/index.jsp'; 
+    		window.close();
+    	}
+    </script>
 </head>
 
 
 <body>
 	<!-- navigation -->
 <%-- 	<%@include file="/include/header.jsp"%> --%>
-    <form name="aspnetForm" method="post" action="<%=request.getContextPath()%>/member?cmd=member_levelTestProc&user_pid=${sessionScope.user_pid}" id="aspnetForm" class="container">
+    <form name="aspnetForm" method="post" action="<%=request.getContextPath()%>/member?cmd=member_levelTestProc" id="aspnetForm" class="container" onsubmit="close()">
     
 <div id="wrapper">
     <div id="pagebody">
@@ -50,7 +56,7 @@
             <img src="//tridionassets.kaplaninternational.com/css.min/QuizEngine/questionBarCorner.gif" />
         </div>
     </div>
-    <div class="choices">
+    <div class="choices">    
         <span id="ctl00_MainContent_QuizHostInstance_5_QuestionsRadioButtonList"><span class="blueBG">
         <input id="ctl00_MainContent_QuizHostInstance_5_QuestionsRadioButtonList_0" type="radio" name="question1" 
         value="1" /><label for="ctl00_MainContent_QuizHostInstance_5_QuestionsRadioButtonList_0">are</label></span><br /><span class="greyBG">
@@ -549,8 +555,7 @@
     <div class="right">
         <img src="//tridionassets.kaplaninternational.com/css.min/QuizEngine/nextBarC2.gif" Width="11" Height="38" />
     </div>
-    <div class="right" style="padding-top: 5px;">
-    	<input type="hidden" id="score" name="score">
+    <div class="right" style="padding-top: 5px;">    	
         <input type="image" name="ctl00$MainContent$QuizHostInstance$ctl00$NextPageImageButton" 
         id="NextPageImageButton" class="NextButton" 
          src="<%=request.getContextPath()%>/assets/img/check.png" alt="Finish" style="/* border-width:0px;height:26px;width:78px; */" />
