@@ -72,7 +72,7 @@
                 <div class="des item-inner">
                   <h3>결제 내역 : </h3><br>
                   <p><b>기간 : </b> ${pay.month }/${pay.times }/${pay.minutes }</p>
-                  <p><b>금액 : </b>  ${pay.paid_amount }</p>
+                  <p><b>금액 : </b>  ${pay.paid_amount } 원</p>
                   <p><b>결제날짜 : </b>  ${pay.paid_date }</p>
                   <p><b>결제 승인번호 : </b>  ${pay.apply_num }</p>
                   <p><b>상품번호 : </b>  ${pay.merchant_uid }</p><br>
