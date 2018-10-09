@@ -30,7 +30,7 @@
                   
                       <div class="form-group">
                        <label class="form-control-label">아이디</label>
-                       <input class="form-control form-control-lg" name="user_id" type="text" value="${contReviewVO.user_id}" readonly>
+                       <input class="form-control form-control-lg" name="user_pid" type="text" value="${contReviewVO.user_pid}" readonly>
                     </div>
                     
                     <div class="form-group">

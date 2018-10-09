@@ -10,6 +10,7 @@ import javax.servlet.http.HttpSession;
 
 import com.cos.action.Action;
 import com.cos.dao.ContReviewDAO;
+import com.cos.dao.RegistDAO;
 import com.cos.dto.ContReviewVO;
 import com.cos.util.Script;
 //updateProcAction로 연결시켜줌
@@ -37,6 +38,8 @@ public class ReviewUpdateAction implements Action {
 			System.out.println(naming + "update error");
 			Script.moving(response, "데이터 베이스 에러");
 		}else {
+			RegistDAO rdao = new RegistDAO();
+			contReviewVO.setUser_pid(rdao.get_id(contReviewVO.getUser_pid()));
 			session.setAttribute("user_pid", user_pid);
 			request.setAttribute("contReviewVO", contReviewVO);
 			RequestDispatcher dis = request.getRequestDispatcher(url);
