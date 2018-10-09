@@ -35,7 +35,7 @@
            		<tr>
 					<td>번호</td>
 					<td>제목</td>
-					<td>조회수</td>
+					<!-- <td>조회수</td> -->
 					<td>아이디</td>
 					<td>작성일자</td>
 				</tr>
@@ -44,7 +44,7 @@
 					<tr>
 						<td>${item.cont_seq}</td>
 						<td><a href="<%=request.getContextPath()%>/board?cmd=review_detail&cont_id=${item.cont_id}">${item.cont_title}</a></td>
-						<td>${item.read_cnt}</td>
+						<%-- <td>${item.read_cnt}</td> --%>
 						<td>${item.user_pid}</td>
 						<td>${item.insert_dt}</td>
 
@@ -54,6 +54,13 @@
                      <div class="pagingContainer">${page_len}</div>
 					
                     <a class="btn btn-primary" href="<%=request.getContextPath()%>/board?cmd=review_write">글쓰기</a>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
                      </div>
                      <!-- row(12분할) END -->
                      

@@ -27,8 +27,10 @@ public class ReviewUpdateAction implements Action {
 		
 		String cont_id = request.getParameter("cont_id");
 		
+		
 		ContReviewDAO contReviewDAO = new ContReviewDAO();
 		ContReviewVO contReviewVO = contReviewDAO.select(cont_id);
+		
 		
 		
 		if (contReviewVO == null) {

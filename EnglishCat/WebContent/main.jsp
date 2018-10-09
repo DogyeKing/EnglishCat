@@ -259,7 +259,7 @@ Counter Section Start
 							<i class="fa fa-flash"></i>
 						</div>
 						<h3>공지사항</h3>
-						<p class="ajax">10월 공지사항 안내</p>
+						<p class="ajax">10월 공지사항 안내<br>친구 추천 이벤트 실시!!</p>
 						<a id="link1" class="btn btn-rm btn-common" href="courses-grid.html">Explore</a>
 					</div>
 				</div>
@@ -282,7 +282,7 @@ Counter Section Start
 							<i class="fa fa-flask"></i>
 						</div>
 						<h3>자유게시판</h3>
-						<p class="ajax">Romeo 선생님 스케쥴을 알고 싶어요</p>
+						<p class="ajax">Thank you all <br> in BusanIT #503</p>
 						<a id="link3" class="btn btn-rm btn-common" href="courses-grid.html">Explore</a>
 					</div>
 				</div>

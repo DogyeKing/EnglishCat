@@ -22,6 +22,8 @@ public class ReviewUpdateProcAction implements Action {
 		contReviewVO.setCont_id(request.getParameter("cont_id"));
 		contReviewVO.setCont_title(request.getParameter("cont_title"));
 		contReviewVO.setCont_content(request.getParameter("cont_content"));
+		
+		
 
 		String url = "board?cmd=review_detail&cont_id=" + contReviewVO.getCont_id();
 		ContReviewDAO contReviewDAO = new ContReviewDAO();
