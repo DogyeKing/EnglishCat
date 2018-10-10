@@ -133,7 +133,6 @@ public class ContReviewDAO {
 								contReviewVO.setCont_content(rs.getString("cont_content"));
 								contReviewVO.setUser_pid(rs.getString("user_pid"));
 								
-								
 								return contReviewVO;
 							}
 					} catch (Exception e) {

@@ -130,10 +130,10 @@
                 <li class="dropdown dropdown-toggle">
                   <a href="#" data-toggle="dropdown">커뮤니티 <i class="fa fa-angle-down"></i></a>
                   <ul class="dropdown-menu">
-                    <li><a href="blog.html">공지사항</a></li>                     
+                    <li><a href="404.jsp">공지사항</a></li>                     
                     <li><a href="<%=request.getContextPath()%>/board/faqList.jsp">FAQ</a></li>
                     <li><a href="<%=request.getContextPath()%>/board?cmd=review_list">수강후기</a></li>   
-                    <li><a href="single-post.html">자유게시판</a></li>   
+                    <li><a href="404.jsp">자유게시판</a></li>   
                   </ul>                        
                 </li> 
                 

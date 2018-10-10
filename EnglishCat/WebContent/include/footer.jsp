@@ -158,7 +158,7 @@
           <div class="row">
             <div class="col-md-6  col-sm-6">
               <p class="copyright-text">
-                 All rights reserved 2017 - Design &amp; Developed by <a href="#">EnglishCat</a>
+                 All rights reserved 2018 - Design &amp; Developed by <a href="#">EnglishCat</a>
               </p>
             </div>
             <div class="col-md-6  col-sm-6">                
