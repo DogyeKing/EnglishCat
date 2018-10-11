@@ -260,7 +260,7 @@ Counter Section Start
 						</div>
 						<h3>공지사항</h3>
 						<p class="ajax">10월 공지사항 안내<br>친구 추천 이벤트 실시!!</p>
-						<a id="link1" class="btn btn-rm btn-common" href="courses-grid.html">Explore</a>
+						<a id="link1" class="btn btn-rm btn-common" href="404.jsp">Explore</a>
 					</div>
 				</div>
 
@@ -283,7 +283,7 @@ Counter Section Start
 						</div>
 						<h3>자유게시판</h3>
 						<p class="ajax">Thank you all <br> in BusanIT #503</p>
-						<a id="link3" class="btn btn-rm btn-common" href="courses-grid.html">Explore</a>
+						<a id="link3" class="btn btn-rm btn-common" href="404.jsp">Explore</a>
 					</div>
 				</div>
 			</div>
@@ -650,16 +650,16 @@ Counter Section Start
 				<div class="col-md-4 col-sm-6 col-xs-12">
 					<div class="teacher-item wow fadeIn" data-wow-delay="0.5s">
 						<div class="thumb-teacher">
-							<img src="assets/img/teacher/um33.jpg" alt="">
+							<img src="assets/img/teacher/hong22.jpg" alt="">
 						</div>
 						<div class="teacher-desc">
 							<h3>
-								<a href="single-teacher.html">김 대홍</a>
+								<a href="#">김 대홍</a>
 							</h3>
 							<span>87.11.1년생 (만 30세) </span>
 							<p>홈페이지 기획
 							<br>개발
-							<br>잡일 담당</p>
+							<br>웹페이지 개발 담당</p>
 							<div class="social-icon">
 								<a class="social" href="#"><i class="fa fa-twitter"></i></a> <a
 									class="social" href="#"><i class="fa fa-facebook"></i></a> <a
@@ -683,14 +683,14 @@ Counter Section Start
 					<div class="item">
 						<div class="testimonial-item">
 							<div class="testimonial-inner">
-								<p>안녕 얘들아 너희와 함께 일하게 되어 영광이야 김영광이야 열심히 해서 좋은작품 만들자 그러니 열심히 일하길바라 노예처럼^^; 내 족쇄 이쁘지??^^;; 니 족쇄는 금색이구나 슈밤</p>
+								<p>Be thankful for what you have; you'll end up having more. If you concentrate on what you don't have, you will never, ever have enough. Nothing is worth more than this day.</p>
 							</div>
 							<div class="quote-author">
 								<a href="#"><img src="assets/img/teacher/um1.png"
 									alt=""></a>
 								<div class="quote-footer">
 									<h5 class="name">엄희철</h5>
-									<span> / 예비 개발자</span>
+									<span> / web developer</span>
 								</div>
 							</div>
 						</div>
@@ -698,14 +698,14 @@ Counter Section Start
 					<div class="item">
 						<div class="testimonial-item">
 							<div class="testimonial-inner">
-								<p>졸지마 ㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠ알겠냐고 엄희철아 졸지말고 수업잘들어 </p>
+								<p>We're all traveling through time together, every day of our lives All we can do is do our best to relish this remarkable ride. I tried to live evereday as if was the final day of extraordinary, ordinary life.</p>
 							</div>
 							<div class="quote-author">
 								<a href="#"><img src="assets/img/teacher/hong1.jpg"
 									alt=""></a>
 								<div class="quote-footer">
 									<h5 class="name">김대홍</h5>
-									<span> / 왕따</span>
+									<span> / web developer</span>
 								</div>
 							</div>
 						</div>
